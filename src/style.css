@@ -1,0 +1,39 @@
+/* @media screen and (min-height:1280px) {
+  header .navbar {
+    padding: 2.0rem;
+  }
+  footer .navbar{
+    padding: 1.5rem;
+  }
+} */
+.content {
+  display: flex;
+}
+.content-item {
+  margin: 12px;
+}
+.content-item img {
+  max-width:50%;
+}
+.see_more {
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+}
+.card .tweet-image {
+  object-fit: cover;
+  max-height: 750px;
+}
+.card .user-name {
+  font-size: 1.3rem;
+  font-style:normal;
+  display: inline;
+}
+.card .tweet-text {
+  font-size: 1.5rem;
+  font-style:normal;
+}
+.card .add-more {
+  padding-top: 0.5rem;
+  font-size: 1.2rem;
+  font-style:normal;
+}
