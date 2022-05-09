@@ -201,3 +201,267 @@
   }
 }
 
+/* membership form image upload */
+
+.p-membership-form__image-upload__input {
+    display: none;
+}
+
+.p-membership-form__image-upload__drop {
+    background: #ddd;
+    background-image: -webkit-linear-gradient(-45deg, #ddd 45%, #fff 45%, #fff 55%, #ddd 55%);
+    background-image: -moz-linear-gradient(-45deg, #ddd 45%, #fff 45%, #fff 55%, #ddd 55%);
+    background-image: -ms-linear-gradient(-45deg, #ddd 45%, #fff 45%, #fff 55%, #ddd 55%);
+    background-image: linear-gradient(-45deg, #ddd 45%, #fff 45%, #fff 55%, #ddd 55%);
+    -webkit-background-size: 5px 5px;
+    -moz-background-size: 5px 5px;
+    -ms-background-size: 5px 5px;
+    background-size: 5px 5px;
+    padding: 8px;
+}
+
+.p-membership-form__image-upload__drop-inner {
+    background: #fff;
+    background-position: center center;
+    background-size: cover;
+    min-height: 300px;
+    position: relative;
+}
+
+.p-membership-form__image-upload__drop-inner2 {
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.p-membership-form__image-upload__drop-inner3 {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 16px;
+}
+
+.p-membership-form__overlay-button {
+    cursor: pointer;
+    display: none;
+}
+
+.p-membership-form__image-upload__delete-button {
+    background: #999;
+    border: none;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 30px;
+    min-width: 70px;
+    padding: 0 15px;
+    text-align: center;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+}
+
+.p-membership-form__image-upload__rotate-buttons {
+    position: absolute;
+    left: 18px;
+    top: 18px;
+}
+
+.p-membership-form__image-upload__rotate-button1,
+.p-membership-form__image-upload__rotate-button2 {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    min-width: 30px;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 18px;
+}
+
+.p-membership-form__image-upload__rotate-button1 {
+    right: 138px;
+}
+
+.p-membership-form__image-upload__rotate-button2 {
+    right: 100px;
+}
+
+.p-membership-form__image-upload__rotate-button1::before {
+    content: '\e965';
+    font-family: "design_plus";
+}
+
+.p-membership-form__image-upload__rotate-button2::before {
+    content: '\e966';
+    font-family: "design_plus";
+}
+
+.p-membership-form__image-upload__label-headline {
+    color: #0093c5;
+}
+
+.p-membership-form__image-upload__label-headline,
+.p-body .p-membership-form__image-upload__label-headline {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.p-membership-form__image-upload__label-headline .p-membership-form__remark {
+    vertical-align: 3px;
+}
+
+.p-membership-form__image-upload__label-desc {
+    font-size: 14px;
+}
+
+.p-body .p-membership-form__image-upload__label-headline+.p-membership-form__image-upload__label-desc {
+    margin-bottom: 0;
+    margin-top: 1em;
+}
+
+.p-membership-form__image-upload__drop.has-image .p-membership-form__image-upload__drop-inner3,
+.p-membership-form__image-upload__drop.has-upload-preview .p-membership-form__image-upload__drop-inner3 {
+    display: none;
+}
+
+.p-membership-form__image-upload__drop.has-image .p-membership-form__image-upload__delete-button,
+.p-membership-form__image-upload__drop.has-upload-preview .p-membership-form__image-upload__delete-button,
+.p-membership-form__image-upload__drop.has-upload-preview .p-membership-form__image-upload__rotate-button1,
+.p-membership-form__image-upload__drop.has-upload-preview .p-membership-form__image-upload__rotate-button2 {
+    display: block;
+}
+
+body.is-drag-over .p-membership-form__image-upload__drop .p-membership-form__image-upload__drop-inner::before {
+    border: 4px dashed #ddd;
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    top: 8px;
+    z-index: 2;
+}
+
+body.is-drag-over .p-membership-form__image-upload__drop.is-drag-over .p-membership-form__image-upload__drop-inner::after {
+    background: rgba(255, 255, 255, 0.5);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 991px) {
+    .p-membership-form__image-upload__drop-inner {
+        min-height: 200px;
+    }
+    .p-membership-form__image-upload__label-headline,
+    .p-body .p-membership-form__image-upload__label-headline {
+        font-size: 18px;
+    }
+    .p-membership-form__image-upload__label-desc {
+        font-size: 12px;
+    }
+}
+
+.p-membership-form__image-upload-tiny {}
+
+.p-membership-form__image-upload-tiny__drop {
+    padding: 25px 0;
+}
+
+.p-membership-form__image-upload-tiny__label {
+    background: #fff;
+    border: 1px solid #0093c5;
+    border-radius: 30px;
+    color: #0093c5;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    height: 60px;
+    line-height: 58px;
+    margin: 0 auto;
+    min-width: 240px;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+}
+
+.p-membership-form__image-upload-tiny__label:hover {
+    background: #027197;
+    border-color: #027197;
+    color: #fff !important;
+}
+
+.p-membership-form__image-upload-tiny .p-membership-form__image-upload__drop {
+    display: none;
+}
+
+.p-membership-form__image-upload-tiny .p-membership-form__image-upload__drop.has-image,
+.p-membership-form__image-upload-tiny .p-membership-form__image-upload__drop.has-upload-preview {
+    display: block;
+}
+
+.p-membership-form__image-upload-tiny .p-membership-form__image-upload__drop.has-image+.p-membership-form__image-upload-tiny__drop,
+.p-membership-form__image-upload-tiny .p-membership-form__image-upload__drop.has-upload-preview+.p-membership-form__image-upload-tiny__drop {
+    display: none;
+}
+
+body.is-drag-over .p-membership-form__image-upload-tiny__drop .p-membership-form__image-upload-tiny__label::before,
+body.is-drag-over .p-membership-form__image-upload-tiny__drop.is-drag-over .p-membership-form__image-upload-tiny__label::after {
+    border-radius: 42px;
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: -12px;
+    right: -12px;
+    top: -12px;
+}
+
+body.is-drag-over .p-membership-form__image-upload-tiny__drop .p-membership-form__image-upload-tiny__label::before {
+    border: 4px dashed #ddd;
+    z-index: 2;
+}
+
+body.is-drag-over .p-membership-form__image-upload-tiny__drop.is-drag-over .p-membership-form__image-upload-tiny__label::after {
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+@media only screen and (max-width: 991px) {
+    .p-membership-form__image-upload-tiny__drop {
+        padding: 20px 0;
+    }
+    .p-membership-form__image-upload-tiny__label {
+        border-radius: 22.5px;
+        height: 45px;
+        line-height: 43px;
+        margin: 0 auto;
+        min-width: 180px;
+    }
+    body.is-drag-over .p-membership-form__image-upload-tiny__drop .p-membership-form__image-upload-tiny__label::before,
+    body.is-drag-over .p-membership-form__image-upload-tiny__drop.is-drag-over .p-membership-form__image-upload-tiny__label::after {
+        border-radius: 34.5px;
+    }
+}
