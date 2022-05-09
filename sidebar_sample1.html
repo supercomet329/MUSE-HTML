@@ -1,0 +1,93 @@
+<head>
+  <title>Muse</title>
+  <meta name="description" content="">
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="">
+  <link rel="apple-touch-icon" href="">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script type="text/javascript" src=""></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</head>
+<header class="p-b-10">
+  <nav class="navbar navbar-light bg-light fixed-top shadow">
+    <!-- <div class="container d-flex justify-content-between"> -->
+      <a href="profile.html"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle" width="100" height="100"></a>
+      <!-- <strong>UserName</strong> -->
+      <a href="picture_mode.html"><img src="assets/img/icon/logo.png" alt="logo" width="100" height="100"></a>
+      <!-- <strong>Muse</strong> -->
+      <div>
+        <img src="assets/img/icon/change.png" alt="change" data-toggle="modal" data-target="#exampleModal" width="100" height="100">
+      </div>
+      <!-- <strong data-toggle="modal" data-target="#exampleModal">TimeLine</strong> -->
+    <!-- </div> -->
+  </nav>
+</header>
+
+<main role="main">
+
+  <section class="py-5 text-center">
+  </section>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">タイムライン切り替え</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="cp_ipradio">
+            <ul style="list-style: none;">
+              <li class="list_item">
+              <label>
+              <input type="radio" class="option-input" name="a" checked>
+              　通常モード
+              </label>
+              </li>
+              <li class="list_item">
+              <label>
+              <input type="radio" class="option-input" name="a">
+              　ピクチャーモード
+              </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer >
+  <section class="py-5 text-center">
+  </section>
+  <div class="navbar  navbar-light bg-light shadow fixed-bottom" >
+    <a href="picture_mode.html"><img src="assets/img/icon/home.png" alt="home" width="100" height="100"></a>
+      <!-- <strong>Home</strong> -->
+    <a href="search.html"><img src="assets/img/icon/search.png" alt="search" width="100" height="100"></a>
+    <!-- <strong>Search</strong> -->
+    <a href="post.html"><img src="assets/img/icon/post.png" alt="post" width="100" height="100"></a>
+      <!-- <strong>Post</strong> -->
+    <a href="notification.html"><img src="assets/img/icon/notification.png" alt="notification" width="100" height="100"></a>
+    <!-- <strong>Notification</strong> -->
+    <a href="message.html"><img src="assets/img/icon/message.png" alt="message" width="100" height="100"></a>
+    <!-- <strong>Message</strong> -->
+  </div>
+</footer>
