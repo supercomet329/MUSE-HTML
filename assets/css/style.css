@@ -465,3 +465,9 @@ body.is-drag-over .p-membership-form__image-upload-tiny__drop.is-drag-over .p-me
         border-radius: 34.5px;
     }
 }
+
+
+/* ページタイトル文字の大きさ */
+.contents-title{
+  font-size: 20px;
+}
