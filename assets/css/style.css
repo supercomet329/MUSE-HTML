@@ -470,4 +470,34 @@ body.is-drag-over .p-membership-form__image-upload-tiny__drop.is-drag-over .p-me
 /* ページタイトル文字の大きさ */
 .contents-title{
   font-size: 20px;
+  color: #3c7fc3;
+}
+
+/* 通常新規登録ページ */
+/* フォーム送信ボタン */
+.submit-btn {
+    background-color: #3c7fc3 !important;
+    border-color: #3c7fc3 !important;
+    width: 190px !important;
+    height: 45px !important;
+    border-radius: 10px !important;
+    font-size: 15px !important;
+}
+/* ラベル */
+.label-text {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+/* Email入力フォーム */
+.email-form {
+    border-radius: 300px !important;
+    border: none !important;
+    background-color: #e7e7e7 !important;
+}
+/* 会員規約リンク */
+.terms-link {
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
 }
