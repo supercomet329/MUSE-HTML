@@ -1,3 +1,110 @@
+header img {
+  width: 100px;
+  height: 100px;
+}
+
+footer img {
+  width: 60px;
+  height: 60px;
+}
+
+footer nav .notifications{
+  position: relative;
+}
+
+footer nav .messages{
+  position: relative;
+}
+
+.tweet-area .profile-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.header-text {
+  font-size: 32px;
+  font-weight: bold;
+  color: #3c7fc3;
+}
+
+.unread-count {
+  position: absolute;
+  bottom: 20px;
+  right: -2px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 11px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: rgb(252, 158, 173);
+}
+
+header nav {
+  border-bottom: solid 2px #3c7fc3;
+}
+
+footer nav {
+  border-top: solid 2px #3c7fc3;
+}
+
+ul.horizontal-list {
+  padding-left: 0% !important;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+ul.horizontal-list li.item {
+	display: inline-block;
+	margin-top: 24px;
+	margin-bottom: 10px;
+  margin-right: 22px;
+}
+ul.horizontal-list li.item img {
+  width: 100px;
+  height: 100px;
+}
+
+.tweet-area {
+  margin:0; padding-left:0; padding-right:0;
+}
+
+.tweet-area .text-area {
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+  margin-top: 1%;
+}
+
+.tweet-area .post-time {
+  font-size: 14px;
+  color: #e2d2d2;
+}
+
+/* .image {
+  width: 100%;
+  height: 60vh;
+  background-image: url(../img/pixta_40272765_M.jpg);
+  background-size: cover;
+  background-position: center;
+} */
+
+.timeline-image img {
+	width: 100%;
+  height: 60vh;;
+  object-fit: cover;
+}
+
+.logo-area img{
+  width: 100px;
+  height: 100px;
+}
+
+.logo-area {
+  padding-left: 15px;
+}
+
 .content {
   display: flex;
 }
@@ -129,15 +236,71 @@
   margin-left: 2%;
 }
 
-@media screen and (max-width: 600px) {
-  header img, footer img {
-    width: 28px;
-    height: 28px;
+@media only screen and (max-width: 1024px) {
+  header {
+    padding-bottom: 3em;
   }
+
+  footer {
+    padding-bottom: 3em;
+  }
+
+  header nav {
+    border-bottom: solid 2px #3c7fc3;
+  }
+
+  header img{
+    width: 50px;
+    height: 50px;
+  }
+
+  footer img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .unread-count {
+    bottom: -3px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .attention-artist {
+    padding-top: 100px;
+  }
+
+  .horizontal-list {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .horizontal-list::-webkit-scrollbar {
+    display:none;
+  }
+
+  .tweet-area .profile-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3c7fc3;
+    text-align: center;
+  }
+
   .profile-icon {
     width: 28px;
     height: 28px;
   }
+
+  .logo-area img{
+    width: 50px;
+    height: 50px;
+  }
+
   .p-b-10{
     padding-bottom: 4em;
   }
@@ -198,6 +361,25 @@
   .profile-area .username {
     margin-left: 3%;
     font-size: 0.8em;
+  }
+
+  ul.horizontal-list li.item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  header {
+    padding-bottom: 6em;
+  }
+
+  footer {
+    padding-top: 5em;
+  }
+
+  .attention-artist {
+    padding-top: 150px;
   }
 }
 
