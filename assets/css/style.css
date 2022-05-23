@@ -3,6 +3,11 @@ header img {
   height: 100px;
 }
 
+header .change-logo {
+  width: 60px;
+  height: 60px;
+}
+
 footer img {
   width: 60px;
   height: 60px;
@@ -51,6 +56,7 @@ footer nav {
 }
 
 ul.horizontal-list {
+  margin-top: 10px;
   padding-left: 0% !important;
 	overflow-x: auto;
 	white-space: nowrap;
@@ -74,21 +80,14 @@ ul.horizontal-list li.item img {
   font-weight: bold;
   color: black;
   font-size: 18px;
-  margin-top: 1%;
+  margin-left:10px;
+  margin-top: -2px;
 }
 
 .tweet-area .post-time {
   font-size: 14px;
   color: #e2d2d2;
 }
-
-/* .image {
-  width: 100%;
-  height: 60vh;
-  background-image: url(../img/pixta_40272765_M.jpg);
-  background-size: cover;
-  background-position: center;
-} */
 
 .timeline-image img {
 	width: 100%;
@@ -97,11 +96,12 @@ ul.horizontal-list li.item img {
 }
 
 .logo-area img{
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 .logo-area {
+  margin: 10px 0;
   padding-left: 15px;
 }
 
@@ -238,10 +238,14 @@ ul.horizontal-list li.item img {
 
 @media only screen and (max-width: 1024px) {
   header {
-    padding-bottom: 3em;
+    padding-bottom: 5em;
   }
 
   footer {
+    padding-bottom: 3em;
+  }
+
+  body .popular_artist {
     padding-bottom: 3em;
   }
 
@@ -254,9 +258,14 @@ ul.horizontal-list li.item img {
     height: 50px;
   }
 
-  footer img {
+  header .change-logo {
     width: 30px;
     height: 30px;
+  }
+
+  footer img {
+    width: 25px;
+    height: 25px;
   }
 
   .unread-count {
@@ -297,8 +306,8 @@ ul.horizontal-list li.item img {
   }
 
   .logo-area img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
   .p-b-10{
@@ -371,15 +380,15 @@ ul.horizontal-list li.item img {
 
 @media only screen and (min-width: 1025px) {
   header {
-    padding-bottom: 6em;
+    padding-bottom: 9em;
   }
 
   footer {
     padding-top: 5em;
   }
 
-  .attention-artist {
-    padding-top: 150px;
+  body .popular_artist {
+    padding-bottom: 6em;
   }
 }
 
