@@ -108,8 +108,30 @@ ul.horizontal-list li.item img {
 .content {
   display: flex;
 }
+
 .main-color {
-  background: rgb(253, 125, 51);
+  background-color: #3c7fc3 !important;
+}
+
+.outline-btn:hover {
+  background-color: #3c7fc3 !important;
+}
+
+.following-list {
+  width: 33%;
+  margin-right: 2px;
+  margin-left: 2px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  height: 300px;
+}
+.following-list img {
+  width: 200px;
+  height: 200px;
+}
+.following-list button {
+  margin-top: 3px;
+  font-size: 16px;
 }
 .content-item {
   width: 33%;
@@ -140,6 +162,10 @@ ul.horizontal-list li.item img {
   object-fit: cover;
   max-width: 100%;
   max-height: 750px;
+}
+
+.profile-area .icon {
+  position: relative;
 }
 
 .profile-area .icon img {
@@ -238,7 +264,7 @@ ul.horizontal-list li.item img {
 
 @media only screen and (max-width: 1024px) {
   header {
-    padding-bottom: 5em;
+    padding-bottom: 4.2em;
   }
 
   footer {
@@ -264,6 +290,7 @@ ul.horizontal-list li.item img {
   }
 
   footer img {
+    margin-top: 6px;
     width: 25px;
     height: 25px;
   }
@@ -341,6 +368,21 @@ ul.horizontal-list li.item img {
     font-size: 0.6rem;
     font-style: normal;
   }
+  .following-list {
+    width: 33%;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height: 120px;
+  }
+  .following-list img{
+    width: 50px;
+    height: 50px;
+  }
+  .following-list button{
+    font-size: 11px;
+  }
   .content-item {
     width: 33%;
     margin: 1px;
@@ -380,7 +422,7 @@ ul.horizontal-list li.item img {
 
 @media only screen and (min-width: 1025px) {
   header {
-    padding-bottom: 9em;
+    padding-bottom: 7.4em;
   }
 
   footer {
