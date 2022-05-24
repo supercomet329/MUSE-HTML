@@ -21,6 +21,47 @@ footer nav .messages{
   position: relative;
 }
 
+ul.list-area {
+  margin:0; padding:0;
+  list-style: none;
+}
+
+ul.list-area li {
+  padding-bottom: 10px;
+  border-bottom: dashed 1px #e0e0e0;
+}
+
+ul.list-area li img {
+  width: 100px;
+  height: 100px;
+  margin-right: 30px;
+}
+
+ul.list-area li span.btn-area{
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+ul.list-area li span.created_at{
+  padding-left: 5px;
+  margin-left: auto;
+  margin-bottom: auto;
+  font-size: 10px;
+  color: #948f8f;
+}
+
+ul.list-area li span.content{
+  font-weight: normal;
+  font-size: 10px;
+  color: #948f8f;
+}
+
+ul.list-area li span.name{
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .tweet-area .profile-icon {
   width: 100px;
   height: 100px;
@@ -53,6 +94,13 @@ header nav {
 
 footer nav {
   border-top: solid 2px #3c7fc3;
+}
+
+body .title {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #3c7fc3;
 }
 
 ul.horizontal-list {
@@ -108,8 +156,35 @@ ul.horizontal-list li.item img {
 .content {
   display: flex;
 }
+
 .main-color {
-  background: rgb(253, 125, 51);
+  background-color: #3c7fc3 !important;
+}
+
+.outline-btn {
+  font-weight: 2px;
+}
+
+.outline-btn:hover {
+  background-color: #3c7fc3 !important;
+  width: #ddd;
+}
+
+.following-list {
+  width: 33%;
+  margin-right: 2px;
+  margin-left: 2px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  height: 300px;
+}
+.following-list img {
+  width: 200px;
+  height: 200px;
+}
+.following-list button {
+  margin-top: 3px;
+  font-size: 16px;
 }
 .content-item {
   width: 33%;
@@ -151,13 +226,10 @@ ul.horizontal-list li.item img {
   margin-top: -60px;
 }
 
-.profile-area .username {
+.profile-area .username, .profile-area .name {
   margin-left: 2%;
 }
 
-.profile-area .name {
-  margin-left: 2%;
-}
 
 .card .user-name {
   font-style: italic;
@@ -238,7 +310,7 @@ ul.horizontal-list li.item img {
 
 @media only screen and (max-width: 1024px) {
   header {
-    padding-bottom: 5em;
+    padding-bottom: 4.2em;
   }
 
   footer {
@@ -264,6 +336,7 @@ ul.horizontal-list li.item img {
   }
 
   footer img {
+    margin-top: 6px;
     width: 25px;
     height: 25px;
   }
@@ -277,6 +350,13 @@ ul.horizontal-list li.item img {
 
   .attention-artist {
     padding-top: 100px;
+  }
+
+  body .title {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3c7fc3;
   }
 
   .horizontal-list {
@@ -376,11 +456,17 @@ ul.horizontal-list li.item img {
     width: 50px;
     height: 50px;
   }
+
+  ul.list-area li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+  }
 }
 
 @media only screen and (min-width: 1025px) {
   header {
-    padding-bottom: 9em;
+    padding-bottom: 7.4em;
   }
 
   footer {
