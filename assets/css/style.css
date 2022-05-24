@@ -501,3 +501,47 @@ body.is-drag-over .p-membership-form__image-upload-tiny__drop.is-drag-over .p-me
     font-size: 12px;
     font-weight: bold;
 }
+/* 会員規約チェックボックス */
+input[type=checkbox] {
+    display: none;
+}
+.terms-check {
+    box-sizing: border-box;
+    padding: 5px 30px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: auto;
+}
+/* 会員規約チェックボックスが押される前 */
+.terms-check::before {
+    content: '';
+    display: block;
+    background: #ffffff;
+    border: 1px solid #231815;
+    border-radius: 6px;
+    width: 18px;
+    height: 18px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+}
+/* 会員規約チェックボックスが押された後 */
+.terms-check::after {
+    content: '';
+    display: block;
+    border-right: 2px solid #3c7fc3;
+    border-bottom: 2px solid #3c7fc3;
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    width: 6px;
+    height: 9px;
+    margin-top: -7px;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+input[type=checkbox]:checked + .terms-check::after {
+    opacity: 1;
+}
