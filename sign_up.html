@@ -40,10 +40,10 @@
                         <label for="email" class="label-text">メールアドレス</label>
                     </div>
                     <div class="col-12 pt-2 pb-2">
-                        <input class="form-control email-form" type="email" name="email" id="email" placeholder="aaaa@muse.co.jp">
+                        <input class="form-control email-form" type="email" name="email" id="email" placeholder="aaaa@muse.co.jp" onblur="checkInput()">
                     </div>
                     <div class="col-12 text-center pt-4">
-                        <input class="form-check-input" type="checkbox" value="" id="terms" name="terms">
+                        <input class="form-check-input" type="checkbox" value="" id="terms" name="terms" onclick="checkInput()">
                         <label class="form-check-label terms-check pb-2" for="terms">
                             <p class="agree">
                                 <a href="#" target="_blank" rel="noreferrer" class="terms-link">会員規約</a>に同意をしてください
@@ -53,8 +53,6 @@
                     <div class="col-12 text-center pt-3">
                         <button type="submit" class="btn btn-primary text-white submit-btn" id="register-btn" disabled>仮登録</button>
                     </div>
-                    <!-- メールアドレス、会員規約に同意しているかを確認-->
-                    <script>checkInput();</script>
                 </div>
             </form>
         </div>
