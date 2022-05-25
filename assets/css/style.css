@@ -217,6 +217,10 @@ ul.horizontal-list li.item img {
   max-height: 750px;
 }
 
+.profile-area .icon {
+  position: relative;
+}
+
 .profile-area .icon img {
   width: 120px;
   max-height: 120px;
@@ -420,6 +424,21 @@ ul.horizontal-list li.item img {
     /* padding-top: 0.5rem; */
     font-size: 0.6rem;
     font-style: normal;
+  }
+  .following-list {
+    width: 33%;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height: 120px;
+  }
+  .following-list img{
+    width: 50px;
+    height: 50px;
+  }
+  .following-list button{
+    font-size: 11px;
   }
   .content-item {
     width: 33%;
@@ -747,4 +766,88 @@ body.is-drag-over .p-membership-form__image-upload-tiny__drop.is-drag-over .p-me
 /* ページタイトル文字の大きさ */
 .contents-title{
   font-size: 20px;
+  color: #3c7fc3;
+}
+
+/* 通常新規登録ページ */
+/* フォーム送信ボタン */
+.submit-btn {
+    background-color: #3c7fc3 !important;
+    border-color: #3c7fc3 !important;
+    width: 190px !important;
+    height: 45px !important;
+    border-radius: 10px !important;
+    font-size: 15px !important;
+}
+/* ラベル */
+.label-text {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+/* Email入力フォーム */
+.email-form {
+    border-radius: 300px !important;
+    border: none !important;
+    background-color: #e7e7e7 !important;
+}
+/* 会員規約リンク */
+.terms-link {
+    font-size: 12px;
+    font-weight: bold;
+}
+/* 会員規約非リンク文字 */
+.agree {
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* 会員規約チェックボックス */
+input[type=checkbox] {
+    display: none;
+}
+.terms-check {
+    box-sizing: border-box;
+    padding: 5px 30px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: auto;
+}
+/* 会員規約チェックボックスが押される前 */
+.terms-check::before {
+    content: '';
+    display: block;
+    background: #ffffff;
+    border: 1px solid #231815;
+    border-radius: 6px;
+    width: 18px;
+    height: 18px;
+    margin-top: -18px;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+}
+/* 会員規約チェックボックスが押された後 */
+.terms-check::after {
+    content: '';
+    display: block;
+    border-right: 2px solid #3c7fc3;
+    border-bottom: 2px solid #3c7fc3;
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    width: 6px;
+    height: 9px;
+    margin-top: -15px;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+input[type=checkbox]:checked + .terms-check::after {
+    opacity: 1;
+}
+/* 仮登録ボタン */
+#register-btn:disabled {
+    background-color: #75b8ff !important;
+    border: #75b8ff !important;
 }
