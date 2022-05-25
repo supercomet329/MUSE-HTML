@@ -216,13 +216,10 @@ ul.horizontal-list li.item img {
   margin-top: -60px;
 }
 
-.profile-area .username {
+.profile-area .username, .profile-area .name {
   margin-left: 2%;
 }
 
-.profile-area .name {
-  margin-left: 2%;
-}
 
 .card .user-name {
   font-style: italic;
