@@ -44,7 +44,6 @@ ul.list-area li span.btn-area{
 }
 
 ul.list-area li span.created_at{
-  padding-left: 5px;
   margin-left: auto;
   margin-bottom: auto;
   font-size: 10px;
@@ -170,6 +169,10 @@ ul.horizontal-list li.item img {
   width: #ddd;
 }
 
+.border-bottom-dashed {
+  border-bottom: dashed 2px #e0e0e0;
+}
+
 .following-list {
   width: 33%;
   margin-right: 2px;
@@ -199,11 +202,31 @@ ul.horizontal-list li.item img {
 
 .cover-area {
   width: 100%;
+  position: relative;
 }
-.cover-area img {
+
+.cover-area .cover-image {
   object-fit: cover;
   width: 100%;
   max-height: 300px;
+  z-index: -1;
+}
+
+.cover-area .camera-image {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+}
+
+.profile-edit-area .profile-image {
+  width: 100px;
+  height: 100px;
 }
 
 .see_more {
@@ -223,7 +246,17 @@ ul.horizontal-list li.item img {
 
 .profile-area .icon img {
   width: 120px;
-  max-height: 120px;
+  height: 120px;
+}
+
+.profile-area .favorite-area {
+  border-top: dashed 1px #e0e0e0;
+  border-bottom: dashed 1px #e0e0e0;
+}
+
+.profile-area .favorite-area img {
+  width: 60px;
+  height: 60px;
 }
 
 .profile-area {
@@ -234,6 +267,40 @@ ul.horizontal-list li.item img {
   margin-left: 2%;
 }
 
+.profile-area .screen_id {
+  font-weight: normal;
+  color: #948f8f;
+  font-size: 13px;
+}
+
+.profile-area .edit-btn {
+  position: absolute; bottom: 0px; right: 0px;
+}
+
+.profile-area .request-btn {
+  position: absolute; bottom: 0px; right: 7em;
+}
+
+.profile-area .follower, .profile-area .follow{
+  font-size: 14px;
+  float: right;
+  margin-right: 10px;
+  font-weight: normal;
+  color: #000;
+}
+
+body .profile-edit-area .title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #3c7fc3;
+}
+
+body .profile-edit-area input, body .profile-edit-area textarea {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
 
 .card .user-name {
   font-style: italic;
@@ -312,6 +379,35 @@ ul.horizontal-list li.item img {
   margin-left: 2%;
 }
 
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.bigimg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.close-btn {
+  color: #fff;
+  font-size: 40px;
+  position: absolute;
+  left: 20px;
+  top: 0;
+}
+
+.close-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 1024px) {
   header {
     padding-bottom: 4.2em;
@@ -352,8 +448,11 @@ ul.horizontal-list li.item img {
     height: 25px;
   }
 
-  .attention-artist {
-    padding-top: 100px;
+  body .title {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3c7fc3;
   }
 
   body .title {
@@ -450,14 +549,14 @@ ul.horizontal-list li.item img {
     width: 100%;
     max-height: 120px;
   }
-  .cover-area img {
+  .cover-area .cover-image {
     object-fit: cover;
     width: 100%;
     height: 200px;
   }
   .profile-area .icon img {
-    width: 80px;
-    max-height: 120px;
+    width: 90px;
+    height: 90px;
   }
   .profile-area {
     margin-top: -40px;
@@ -469,6 +568,31 @@ ul.horizontal-list li.item img {
   .profile-area .username {
     margin-left: 3%;
     font-size: 0.8em;
+  }
+
+  .profile-area .favorite-area img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .profile-area .follower, .profile-area .follow{
+    font-size: 11px;
+  }
+
+  body .profile-edit-area .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3c7fc3;
+  }
+
+  .cover-area .camera-image, .profile-edit-area .profile-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .selected-icon {
+    border-top: solid 2px #3c7fc3;
+    border-bottom: solid 2px #3c7fc3 ;
   }
 
   ul.horizontal-list li.item img {
@@ -494,6 +618,11 @@ ul.horizontal-list li.item img {
 
   body .popular_artist {
     padding-bottom: 6em;
+  }
+
+  .selected-icon {
+    border-top: solid 3px #3c7fc3;
+    border-bottom: solid 3px #3c7fc3 ;
   }
 }
 
