@@ -1,8 +1,18 @@
 // 通常新規登録ページ(sign_up.html)
+// 入力項目のフォーカスが外れた際に処理を実行
+$(function() {
+    // メールアドレスのフォーカスが外れた際にcheckInput実行
+    $('#email').on('blur', function() {
+        checkInput();
+    });
+    // 会員規約がクリックされた際にcheckInput実行
+    $('#terms').on('click', function() {
+        checkInput();
+    })
+});
 // 入力項目を確認し、仮登録ボタン有効化/無効化切り替え
 function checkInput() {
     // メールアドレスが入力された場合、emailCheckにtrueを格納
-
     var emailCheck = '';
     if (document.getElementById('email').value.length > 0) {
         emailCheck = true;
