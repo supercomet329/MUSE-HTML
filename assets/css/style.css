@@ -1,3 +1,110 @@
+header img {
+  width: 100px;
+  height: 100px;
+}
+
+header .change-logo {
+  width: 60px;
+  height: 60px;
+}
+
+footer img {
+  width: 60px;
+  height: 60px;
+}
+
+footer nav .notifications{
+  position: relative;
+}
+
+footer nav .messages{
+  position: relative;
+}
+
+.tweet-area .profile-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.header-text {
+  font-size: 32px;
+  font-weight: bold;
+  color: #3c7fc3;
+}
+
+.unread-count {
+  position: absolute;
+  bottom: 20px;
+  right: -2px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 11px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: rgb(252, 158, 173);
+}
+
+header nav {
+  border-bottom: solid 2px #3c7fc3;
+}
+
+footer nav {
+  border-top: solid 2px #3c7fc3;
+}
+
+ul.horizontal-list {
+  margin-top: 10px;
+  padding-left: 0% !important;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+ul.horizontal-list li.item {
+	display: inline-block;
+	margin-top: 24px;
+	margin-bottom: 10px;
+  margin-right: 22px;
+}
+ul.horizontal-list li.item img {
+  width: 100px;
+  height: 100px;
+}
+
+.tweet-area {
+  margin:0; padding-left:0; padding-right:0;
+}
+
+.tweet-area .text-area {
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+  margin-left:10px;
+  margin-top: -2px;
+}
+
+.tweet-area .post-time {
+  font-size: 14px;
+  color: #e2d2d2;
+}
+
+.timeline-image img {
+	width: 100%;
+  height: 60vh;;
+  object-fit: cover;
+}
+
+.logo-area img{
+  width: 80px;
+  height: 80px;
+}
+
+.logo-area {
+  margin: 10px 0;
+  padding-left: 15px;
+}
+
 .content {
   display: flex;
 }
@@ -129,15 +236,80 @@
   margin-left: 2%;
 }
 
-@media screen and (max-width: 600px) {
-  header img, footer img {
-    width: 28px;
-    height: 28px;
+@media only screen and (max-width: 1024px) {
+  header {
+    padding-bottom: 5em;
   }
+
+  footer {
+    padding-bottom: 3em;
+  }
+
+  body .popular_artist {
+    padding-bottom: 3em;
+  }
+
+  header nav {
+    border-bottom: solid 2px #3c7fc3;
+  }
+
+  header img{
+    width: 50px;
+    height: 50px;
+  }
+
+  header .change-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  footer img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .unread-count {
+    bottom: -3px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .attention-artist {
+    padding-top: 100px;
+  }
+
+  .horizontal-list {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .horizontal-list::-webkit-scrollbar {
+    display:none;
+  }
+
+  .tweet-area .profile-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .header-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3c7fc3;
+    text-align: center;
+  }
+
   .profile-icon {
     width: 28px;
     height: 28px;
   }
+
+  .logo-area img{
+    width: 40px;
+    height: 40px;
+  }
+
   .p-b-10{
     padding-bottom: 4em;
   }
@@ -198,6 +370,25 @@
   .profile-area .username {
     margin-left: 3%;
     font-size: 0.8em;
+  }
+
+  ul.horizontal-list li.item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  header {
+    padding-bottom: 9em;
+  }
+
+  footer {
+    padding-top: 5em;
+  }
+
+  body .popular_artist {
+    padding-bottom: 6em;
   }
 }
 
@@ -497,6 +688,11 @@ body.is-drag-over .p-membership-form__image-upload-tiny__drop.is-drag-over .p-me
 }
 /* 会員規約リンク */
 .terms-link {
+    font-size: 12px;
+    font-weight: bold;
+}
+/* 会員規約非リンク文字 */
+.agree {
     color: #000000;
     font-size: 12px;
     font-weight: bold;
@@ -522,7 +718,7 @@ input[type=checkbox] {
     border-radius: 6px;
     width: 18px;
     height: 18px;
-    margin-top: -10px;
+    margin-top: -18px;
     position: absolute;
     top: 50%;
     left: 5px;
@@ -538,10 +734,15 @@ input[type=checkbox] {
     left: 11px;
     width: 6px;
     height: 9px;
-    margin-top: -7px;
+    margin-top: -15px;
     transform: rotate(45deg);
     opacity: 0;
 }
 input[type=checkbox]:checked + .terms-check::after {
     opacity: 1;
+}
+/* 仮登録ボタン */
+#register-btn:disabled {
+    background-color: #75b8ff !important;
+    border: #75b8ff !important;
 }

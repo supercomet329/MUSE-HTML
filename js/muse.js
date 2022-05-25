@@ -5,7 +5,7 @@ var checkInput = function() {
     email.addEventListener('change', checkInput);
 
     var emailCheck = '';
-    if ($('#email').val().length > 0) {
+    if (document.getElementById('email').value.length > 0) {
         emailCheck = true;
     } else {
         emailCheck = false;
@@ -16,9 +16,10 @@ var checkInput = function() {
     terms.addEventListener('change', checkInput);
 
     // メールアドレスが入力されている、かつ会員規約にチェックがついている場合ボタンを有効化
+    var registerBtn = document.getElementById('register-btn');
     if (emailCheck === true && terms.checked === true) {
-        $('button').prop('disabled', false);
+        registerBtn.disabled = false;
     } else {
-        $('button').prop('disabled', true);
+        registerBtn.disabled = true;
     }
 }
