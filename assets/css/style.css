@@ -919,6 +919,7 @@ body.is-drag-over .p-membership-form__image-upload-tiny__drop.is-drag-over .p-me
     border-radius: 300px !important;
     border: none !important;
     background-color: #e7e7e7 !important;
+    height: 29px !important;
 }
 /* 会員規約リンク */
 .terms-link {
@@ -979,4 +980,76 @@ input[type=checkbox]:checked + .terms-check::after {
 #register-btn:disabled {
     background-color: #75b8ff !important;
     border: #75b8ff !important;
+}
+
+/* ログインページ */
+/* ログイン情報記憶チェックボックス */
+.remember {
+    color: #000000;
+    font-size: 10px;
+}
+/* パスワードリセットリンク */
+.reset-password {
+    text-align: right;
+    margin-bottom: 10px;
+}
+.reset-password-link {
+    color: #ffcdd2;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* 横線 */
+.hr-line {
+    width: 100%;
+    margin: 0;
+    border-top: 2px dotted #e7e7e7;
+}
+/* Twitterでログインするボタン */
+.login-with-sns {
+    text-align: center;
+}
+.twitter-btn {
+    border-radius: 300px;
+    border: none;
+    background-color: #1D9BF0;
+    height: 25px;
+    width: 95%;
+    color: #ffffff;
+    font-size: 16px;
+}
+/* Twitterアイコン */
+.twitter-icon {
+    height: 24px;
+    width: 24px;
+    margin-top: -4px;
+}
+/* Googleでログインする */
+.google-btn {
+    border-radius: 300px;
+    border: none;
+    background-color: #ffffff;
+    height: 25px;
+    width: 95%;
+    color: #616161;
+    font-size: 16px;
+    border: 1px solid #616161;
+    padding: 0 6px;
+}
+/* Googleアイコン */
+.google-icon {
+    height: 13.5px;
+    width: 13.5px;
+    margin-top: -5px;
+    margin-right: 18px;
+}
+/* 新規会員登録 */
+.register-notes {
+    text-align: center;
+}
+.register-notes-text {
+    color: #e02126;
+    font-size: 12px;
+    width: 90%;
+    display: inline-block;
+    text-align: left;
 }
