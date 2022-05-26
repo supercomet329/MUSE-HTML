@@ -32,11 +32,11 @@ function checkInput() {
     }
 }
 // 画像サイズの検証
-function validateImageSize(file) {
+function validateImageSize(file, fileInput) {
     const sizeLimit = 1024 * 1024 * 1;
     if (file.size > sizeLimit) {
-        alert('ファイルのサイズは100MB以下にしてください')
-        $('#cover_img_file_input').get(0).value = '';
+        alert('ファイルのサイズは100MB以下にしてください');
+        fileInput.value = '';
         exit();
     }
 }

@@ -104,15 +104,17 @@
   $(function() {
     $('#cover_img_file_input').change(function() {
       let file = this.files[0];
+      let fileInput = $('#cover_img_file_input').get(0);
       let image = $('#cover_image').get(0);
-      validateImageSize(file)
+      validateImageSize(file, fileInput)
       replaceImage(file, image);
     });
 
     $('#profile_img_file_input').change(function() {
       let file = this.files[0];
+      let fileInput = $('#profile_img_file_input').get(0);
       let image = $('#profile_image').get(0);
-      validateImageSize(file)
+      validateImageSize(file, fileInput)
       replaceImage(file, image);
     });
   });
