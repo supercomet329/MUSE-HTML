@@ -31,3 +31,21 @@ function checkInput() {
         registerBtn.disabled = true;
     }
 }
+// 画像サイズの検証
+function validateImageSize(file) {
+    const sizeLimit = 1024 * 1024 * 1;
+    if (file.size > sizeLimit) {
+        alert('ファイルのサイズは100MB以下にしてください')
+        $('#cover_img_file_input').get(0).value = '';
+        exit();
+    }
+}
+
+// 選択した画像に置き換える
+function replaceImage(file, image) {
+    let fr = new FileReader();
+    fr.readAsDataURL(file);
+    fr.onload = function() {
+        image.setAttribute('src', fr.result);
+    }
+}
