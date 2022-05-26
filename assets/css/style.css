@@ -102,6 +102,10 @@ body .title {
   color: #3c7fc3;
 }
 
+input[type="file"] {
+  display: none;
+}
+
 ul.horizontal-list {
   margin-top: 10px;
   padding-left: 0% !important;
@@ -160,8 +164,24 @@ ul.horizontal-list li.item img {
   background-color: #3c7fc3 !important;
 }
 
+.follow-btn, .following-btn{
+  width: 120px;
+  height: 30px;
+}
+
 .outline-btn {
   font-weight: 2px;
+}
+
+.subtext {
+  font-size: 10px;
+  color: #e0e0e0;
+}
+
+.save-btn {
+  background-color: #f54337 !important;
+  width: 50%;
+  border-radius:30px !important;
 }
 
 .outline-btn:hover {
@@ -408,6 +428,10 @@ body .profile-edit-area input, body .profile-edit-area textarea {
   text-decoration: none;
 }
 
+.production-title {
+  height: 40px; background-color: #f8f8f8;
+}
+
 @media only screen and (max-width: 1024px) {
   header {
     padding-bottom: 4.2em;
@@ -469,6 +493,10 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 
   .horizontal-list::-webkit-scrollbar {
     display:none;
+  }
+
+  .border-bottom-dashed {
+    border-bottom: dashed 1px #e0e0e0;
   }
 
   .tweet-area .profile-icon {
