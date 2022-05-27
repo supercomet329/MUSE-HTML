@@ -241,3 +241,79 @@ function checkRegisterInput() {
     }
     $('#register-btn').attr('disabled', disabledFlag);
 }
+
+/**
+ * パスワードリセットページ(pass_reset.html)
+ */
+// 入力項目のフォーカスが外れた際に処理を実行
+$(function() {
+    // パスワードのフォーカスが外れた際にcheckSetPwInput実行
+    $('#newPw').on('blur', function() {
+        checkSetPwInput();
+        showTypePwMsg();
+    });
+    // 新しいパスワードを再入力のフォーカスが外れた際にcheckSetPwInput実行
+    $('#newPwConfirm').on('blur', function() {
+        checkSetPwInput();
+        showTypePwConfirmMsg();
+    });
+});
+
+// 入力項目を確認し、新規登録ボタン有効化/無効化切り替え
+function checkSetPwInput() {
+    // 新規登録ボタン有効化フラグ
+    var disabledFlag = true;
+
+    // 入力項目フラグ定義
+    var flagNewPw = false;
+    var flagNewPwConfirm = false;
+
+    // パスワードの値取得
+    var newPwVal = $('#newPw').val();
+    // パスワードを再入力の値取得
+    var newPwConfirmVal = $('#newPwConfirm').val();
+
+    // パスワードが入力されているかを確認
+    if (newPwVal.length > 0) {
+        // パスワードが入力されている場合、エラーメッセージを非表示
+        $('#inputPwMsg').hide();
+        // パスワードに空白文字が含まれていないかを確認
+        if (!newPwVal.match(/[\x20\u3000]/)) {
+            // パスワードのフォーマットを確認
+            var flagNewPw = validatePassword(newPwVal);
+        }
+    }
+
+    // パスワードを再入力が入力されているかを確認
+    if (newPwConfirmVal.length > 0) {
+        // パスワードを再入力が入力されている場合、エラーメッセージを非表示
+        $('#inputPwConfirmMsg').hide();
+        // パスワードとパスワードを再入力の値が同じかを確認
+        if (newPwVal === newPwConfirmVal) {
+            flagNewPwConfirm = true;
+        }
+    }
+
+    // 入力項目の値が正しい場合、新規登録ボタンを有効化
+    if (flagNewPw === true && flagNewPwConfirm === true) {
+        disabledFlag = false;
+    }
+    $('#setpw-btn').attr('disabled', disabledFlag);
+}
+
+// パスワードが入力されていない場合、メッセージを表示
+function showTypePwMsg() {
+    // パスワードの値取得
+    var newPwLength = $('#newPw').val().length;
+    if (newPwLength <= 0) {
+        $('#inputPwMsg').empty().append("<p id=\"inputPwMsg\">パスワードを入力してください</p>");
+    }
+} 
+// パスワードを再入力が入力されていない場合、メッセージを表示
+function showTypePwConfirmMsg() {
+    // パスワードを再入力の値取得
+    var newPwConfirmLength = $('#newPwConfirm').val().length;
+    if (newPwConfirmLength <= 0) {
+        $('#inputPwConfirmMsg').empty().append("<p id=\"inputPwConfirmMsg\">パスワードを入力してください</p>");
+    }
+} 
