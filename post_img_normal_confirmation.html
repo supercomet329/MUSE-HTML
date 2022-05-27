@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <title>Muse | Confirm Post</title>
+  <!-- Required meta tags -->
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta charset="utf-8">
+  <!-- Icon -->
+  <link rel="shortcut icon" href="assets/img/icon/logo.png">
+  <link rel="apple-touch-icon" href="assets/img/icon/logo.png">
+  <!-- Main CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="fixed-top navbar navbar-light bg-light">
+      <a href="profile.html"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
+      <a href="picture_mode.html"><img src="assets/img/icon/logo.png" alt="logo"></a>
+      <div><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
+    </nav>
+  </header>
+  <div class="container mt-3 confirm-area">
+    <form action="POST">
+      <div class="row">
+        <div class="col-12 item-text mb-2">
+          投稿画像（必須）
+        </div>
+        <div class="col-12 mb-2 confirm-image-area">
+          <img src="assets/img/icon/profile.jpg">
+        </div>
+        <div class="col-12 item-text mb-2">
+          タイトル（必須）
+        </div>
+        <div class="col-12 mb-2">
+          <input type="text" value="タイトル" class="border border-0" readonly>
+        </div>
+        <div class="col-12 item-text mb-2">
+          詳細（任意）
+        </div>
+        <div class="col-12 mb-2">
+          <textarea name="" id="" cols="50" rows="5" class="border border-0" readonly>詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳
+          </textarea>
+        </div>
+        <div class="col-12 mb-2 item-text">
+          販売形式（必須）
+        </div>
+        <div class="col-12 mb-2">
+          <div class="mb-2">
+            <input type="text" value="通常販売" class="border border-0" readonly >
+          </div>
+          <div>
+            <input type="text" value="全年齢" class="border border-0" readonly >
+          </div>
+        </div>
+        <div class="col-12 item-text mb-2">
+          販売価格（必須）
+        </div>
+        <div class="col-12 mb-2">
+          <div class="mb-2">
+            <input type="text" value="10000円" class="border border-0" readonly >
+          </div>
+          <div>
+            <input type="text" value="（手数料差引額〇〇〇円）" class="border border-0" readonly >
+          </div>
+        </div>
+        <div class="col-12 item-text mb-2">
+          即決価格（必須）
+        </div>
+        <div class="col-12 mb-2">
+          <input type="text" value="10000円" class="border border-0" readonly >
+        </div>
+        <div class="col-12 my-2">
+          <div class="text-center custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="terms_service">
+            <label class="custom-control-label font-weight-bold small" for="terms_service">利用規約に同意する</label>
+          </div>
+        </div>
+        <div class="col-12 my-3 text-center">
+          <button type="submit" class="btn btn-primary save-btn text-white" id="save_btn" disabled>画像投稿</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <nav class="navbar navbar-light bg-light fixed-bottom">
+      <a href="normal_mode.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
+      <a href="search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
+      <a href="post.html"><img src="assets/img/icon/post_blue.png" alt="post"></a>
+      <div class="notifications">
+        <a href="notification.html"><img src="assets/img/icon/notification_blue.png" alt="notification"></a>
+        <p class="unread-count rounded-circle">2000</p>
+      </div>
+      <div class="messages">
+        <a href="message.html"><img src="assets/img/icon/message_blue.png" alt="message"></a>
+        <p class="unread-count top-left rounded-circle">2000</p>
+      </div>
+    </nav>
+  </footer>
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery -->
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  $(function () {
+    $('#terms_service').click(function() {
+      let termsChecked = $('#terms_service').get(0).checked;
+      if (termsChecked === true) {
+        $('#save_btn').attr('disabled', false);
+      } else {
+        $('#save_btn').attr('disabled', true);
+      }
+    });
+  });
+</script>
+
+</html>
