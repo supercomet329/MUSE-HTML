@@ -1199,6 +1199,28 @@ input[type=checkbox]:checked + .terms-check::after {
     border: #75b8ff !important;
 }
 
+/* パスワードリセットページ */
+/* Email入力フォーム */
+.resetpw-email {
+    border-radius: 300px !important;
+    border: none !important;
+    background-color: #e7e7e7 !important;
+    height: 29px !important;
+}
+/* パスワードリセット注意書き */
+.resetpw-notes {
+    font-size: 12px;
+    color: #e02126;
+    width: 90%;
+    margin-top: 40px;
+}
+/* メールアドレス未入力メッセージ */
+#emailErrMsg {
+    font-size: 12px;
+    color: #e02126;
+    margin-bottom: -20px;
+}
+
 /* ログインページ */
 /* ログイン情報記憶チェックボックス */
 .remember {
