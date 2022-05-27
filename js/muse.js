@@ -33,7 +33,7 @@ function checkInput() {
 }
 // 画像サイズの検証
 function validateImageSize(file, fileInput) {
-    const sizeLimit = 1024 * 1024 * 1;
+    const sizeLimit = 1024 * 1024 * 100;
     if (file.size > sizeLimit) {
         alert('ファイルのサイズは100MB以下にしてください');
         fileInput.value = '';
