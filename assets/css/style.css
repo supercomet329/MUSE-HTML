@@ -102,6 +102,10 @@ body .title {
   color: #3c7fc3;
 }
 
+input[type="file"] {
+  display: none;
+}
+
 ul.horizontal-list {
   margin-top: 10px;
   padding-left: 0% !important;
@@ -162,6 +166,12 @@ ul.horizontal-list li.item img {
 
 .outline-btn {
   font-weight: 2px;
+}
+
+.save-btn {
+  background-color: #f54337 !important;
+  width: 50%;
+  border-radius:30px !important;
 }
 
 .outline-btn:hover {
@@ -469,6 +479,10 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 
   .horizontal-list::-webkit-scrollbar {
     display:none;
+  }
+
+  .border-bottom-dashed {
+    border-bottom: dashed 1px #e0e0e0;
   }
 
   .tweet-area .profile-icon {
@@ -1052,4 +1066,23 @@ input[type=checkbox]:checked + .terms-check::after {
     width: 90%;
     display: inline-block;
     text-align: left;
+}
+/* メールアドレス送信済みメッセージ */
+.emailSentMsg {
+    color: #3c7fc3;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -8px;
+    padding-bottom: 8px;
+}
+
+/* 本登録ページ */
+/* 本登録入力フォーム */
+.register-form {
+    border-radius: 300px !important;
+    border: none !important;
+    background-color: #e7e7e7 !important;
+    height: 29px !important;
+    color: #616161 !important;
 }
