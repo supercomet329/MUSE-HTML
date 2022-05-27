@@ -36,6 +36,24 @@ function checkInput() {
         registerBtn.disabled = true;
     }
 }
+// 画像サイズの検証
+function validateImageSize(file, fileInput) {
+    const sizeLimit = 1024 * 1024 * 100;
+    if (file.size > sizeLimit) {
+        alert('ファイルのサイズは100MB以下にしてください');
+        fileInput.value = '';
+        exit();
+    }
+}
+
+// 選択した画像に置き換える
+function replaceImage(file, image) {
+    let fr = new FileReader();
+    fr.readAsDataURL(file);
+    fr.onload = function() {
+        image.setAttribute('src', fr.result);
+    }
+}
 
 // メール送信済みメッセージを表示
 function showEmailSentMsg() {

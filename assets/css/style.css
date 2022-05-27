@@ -102,6 +102,10 @@ body .title {
   color: #3c7fc3;
 }
 
+input[type="file"] {
+  display: none;
+}
+
 ul.horizontal-list {
   margin-top: 10px;
   padding-left: 0% !important;
@@ -162,6 +166,12 @@ ul.horizontal-list li.item img {
 
 .outline-btn {
   font-weight: 2px;
+}
+
+.save-btn {
+  background-color: #f54337 !important;
+  width: 50%;
+  border-radius:30px !important;
 }
 
 .outline-btn:hover {
@@ -469,6 +479,10 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 
   .horizontal-list::-webkit-scrollbar {
     display:none;
+  }
+
+  .border-bottom-dashed {
+    border-bottom: dashed 1px #e0e0e0;
   }
 
   .tweet-area .profile-icon {
