@@ -189,6 +189,7 @@ ul.horizontal-list li.item img {
   width: 50%;
   height: 40px;
   border-radius:10px !important;
+  font-size: 20px !important;
 }
 
 .outline-btn:hover {
