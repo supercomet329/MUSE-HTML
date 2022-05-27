@@ -123,6 +123,9 @@ ul.horizontal-list li.item img {
   height: 100px;
 }
 
+/* ul.horizontal-list li button {
+} */
+
 .tweet-area {
   margin:0; padding-left:0; padding-right:0;
 }
@@ -212,6 +215,10 @@ ul.horizontal-list li.item img {
 
 .border-bottom-dashed {
   border-bottom: dashed 2px #e0e0e0;
+}
+
+.border-bottom-solid {
+  border-bottom: solid 3px #3c7fc3;
 }
 
 .following-list {
@@ -622,6 +629,10 @@ img.search-option {
 
   .border-bottom-dashed {
     border-bottom: dashed 1px #e0e0e0;
+  }
+
+  .border-bottom-solid {
+    border-bottom: solid 2px #3c7fc3;
   }
 
   .tweet-area .profile-icon {
