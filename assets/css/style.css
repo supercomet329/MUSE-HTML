@@ -980,6 +980,15 @@ input[type=checkbox]:checked + .terms-check::after {
     background-color: #75b8ff !important;
     border: #75b8ff !important;
 }
+/* メールアドレス送信済みメッセージ */
+.emailSentMsg {
+    color: #3c7fc3;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -8px;
+    padding-bottom: 8px;
+}
 
 /* 本登録ページ */
 /* 本登録入力フォーム */

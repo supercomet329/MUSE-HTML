@@ -9,7 +9,12 @@ $(function() {
     $('#terms').on('click', function() {
         checkInput();
     })
+    // 仮登録ボタンを押された際に、メール送信済みメッセージを表示
+    $('#register-btn').on('click', function() {
+        showEmailSentMsg();
+    })
 });
+
 // 入力項目を確認し、仮登録ボタン有効化/無効化切り替え
 function checkInput() {
     // メールアドレスが入力された場合、emailCheckにtrueを格納
@@ -32,6 +37,10 @@ function checkInput() {
     }
 }
 
+// メール送信済みメッセージを表示
+function showEmailSentMsg() {
+    $('#emailSentMsg').append("<p>下記のメールアドレスに仮登録メールを送信いたしました。</p>");
+}
 /**
  * 本登録ページ(register.html)
  */
