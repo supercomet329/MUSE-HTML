@@ -31,34 +31,30 @@
       <input class="search-box mb-2" id="search_box" name="search" type="text" placeholder="検索" />
       <img class="modal-open" src="assets/img/icon/search_option.png" alt="search_option" width="40" class="float-right search-option" >
       <!-- モーダル本体 -->
-<div class="modal-container">
-	<div class="modal-body">
-		<!-- モーダル内のコンテンツ -->
-		<div class="modal-content text-left p-3">
-      <p class="item-text mx-auto">検索オプション</p>
-      <form class="search-post" method="POST">
-        <div class="mb-2 item-text">
-          対象
+      <div class="modal-container">
+        <div class="modal-body">
+          <!-- モーダル内のコンテンツ -->
+          <div class="modal-content text-left p-3">
+            <p class="item-text mx-auto">検索オプション</p>
+            <form class="search-post" method="POST">
+              <div class="mb-2 item-text">
+                対象
+              </div>
+              <div class="select-wrap">
+                <select class="select-box" >
+                  <option value="">全年齢</option>
+                  <option value="">R-18</option>
+                </select>
+              </div>
+              <div class="text-center mt-3">
+                <button type="submit" class="btn btn-primary search-btn btn-sm btn-lg text-white">検索</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="select-wrap">
-          <select class="select-box" >
-            <option value="">全年齢</option>
-            <option value="">R-18</option>
-          </select>
-        </div>
-        <div class="text-center mt-3">
-          <button type="submit" class="btn btn-primary search-btn btn-sm btn-lg text-white">検索</button>
-        </div>
-      </form>
-		</div>
-	</div>
-</div>
+      </div>
       <input class="search-button btn rounded-pill btn-sm font-weight-bold" name="submit" type="submit" value="検索" /> 
     </form>
-    <!-- <div class="tab">
-      <button type="button" class="btn rounded-pill btn-sm font-weight-bold selected-tab desc" id="desc">新しい順</button>
-      <button type="button" class="btn rounded-pill btn-sm font-weight-bold not-selected-tab ml-4 asc" id="asc">古い順</button>
-    </div> -->
   </div>
   <div>
     <div class="content mt-4">
