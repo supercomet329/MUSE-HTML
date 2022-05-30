@@ -276,21 +276,28 @@ function checkSetPwInput() {
     // パスワードが入力されているかを確認
     if (newPwVal.length > 0) {
         // パスワードが入力されている場合、エラーメッセージを非表示
-        $('#inputPwMsg').hide();
+        $('#inputPwErrMsg').hide();
         // パスワードに空白文字が含まれていないかを確認
         if (!newPwVal.match(/[\x20\u3000]/)) {
             // パスワードのフォーマットを確認
             var flagNewPw = validatePassword(newPwVal);
+            if (flagNewPw === false) {
+                // パスワードのフォーマットが正しくない場合、エラーメッセージを表示
+                showPwValidateMsg();
+            }
         }
     }
 
     // パスワードを再入力が入力されているかを確認
     if (newPwConfirmVal.length > 0) {
         // パスワードを再入力が入力されている場合、エラーメッセージを非表示
-        $('#inputPwConfirmMsg').hide();
+        $('#inputPwConfirmErrMsg').hide();
         // パスワードとパスワードを再入力の値が同じかを確認
         if (newPwVal === newPwConfirmVal) {
             flagNewPwConfirm = true;
+        } else {
+            // パスワードが合っていない場合、エラーメッセージを表示
+            showPwNotMatchMsg();
         }
     }
 
@@ -306,14 +313,25 @@ function showTypePwMsg() {
     // パスワードの値取得
     var newPwLength = $('#newPw').val().length;
     if (newPwLength <= 0) {
-        $('#inputPwMsg').empty().append("<p id=\"inputPwMsg\">パスワードを入力してください</p>");
+        $('#inputPwMsg').empty().append("<p id=\"inputPwErrMsg\" class=\"pwResetErrMsg\">パスワードを入力してください</p>");
     }
-} 
+}
+
 // パスワードを再入力が入力されていない場合、メッセージを表示
 function showTypePwConfirmMsg() {
     // パスワードを再入力の値取得
     var newPwConfirmLength = $('#newPwConfirm').val().length;
     if (newPwConfirmLength <= 0) {
-        $('#inputPwConfirmMsg').empty().append("<p id=\"inputPwConfirmMsg\">パスワードを入力してください</p>");
+        $('#inputPwConfirmMsg').empty().append("<p id=\"inputPwConfirmErrMsg\" class=\"pwResetErrMsg\">パスワードを入力してください</p>");
     }
-} 
+}
+
+// パスワードのフォーマットが正しくない場合、メッセージを表示
+function showPwValidateMsg() {
+    $('#inputPwMsg').empty().append("<p id=\"inputPwErrMsg\" class=\"pwResetErrMsg\">パスワードは半角英小文字、大文字、数字を含む9文字以上32文字以内を入力してください</p>");
+}
+
+// パスワードが合っていない場合、メッセージを表示
+function showPwNotMatchMsg() {
+    $('#inputPwConfirmMsg').empty().append("<p id=\"inputPwConfirmErrMsg\" class=\"pwResetErrMsg\">パスワードが一致しません</p>");
+}
