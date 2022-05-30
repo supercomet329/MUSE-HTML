@@ -1213,7 +1213,7 @@ input[type=checkbox]:checked + .terms-check::after {
 .resetpw-notes {
     font-size: 12px;
     color: #e02126;
-    width: 100%;
+    width: 90%;
     margin-top: 40px;
 }
 /* メールアドレス未入力メッセージ */
