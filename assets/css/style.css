@@ -507,13 +507,15 @@ body .profile-edit-area input, body .profile-edit-area textarea {
   pointer-events: none;
 }
 
-.container .tab button {
+.container .search-button {
   font-size: 24px;
   width: 160px;
   height: 60px;
+  background-color: #3c7fc3 !important;
+  color: #fff !important;
 }
 
-.container .tab button:hover {
+.container .search-button:hover {
   opacity: 0.9;
 }
 
@@ -759,7 +761,7 @@ img.search-option {
     margin-right: 30px;
   }
 
-  .container .tab button {
+  .container .search-button {
     font-size: 12px;
     width: 80px;
     height: 30px;
@@ -1234,7 +1236,7 @@ input[type=checkbox]:checked + .terms-check::after {
 }
 .reset-password-link {
     color: #ff3366; 
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
 }
 /* 横線 */
@@ -1324,3 +1326,44 @@ input[type=checkbox]:checked + .terms-check::after {
     font-size: 12px;
     margin-bottom: -19px;
 } */
+
+/*モーダルの指定*/
+.modal-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0,0,0,50%);
+	overflow: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+}
+
+/*モーダル本体の擬似要素の指定*/
+.modal-container:before{
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.modal-container.active{
+	opacity: 1;
+	visibility: visible;
+  z-index: 9999;
+}
+/*モーダル枠の指定*/
+.modal-body{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 500px;
+	width: 90%;
+}
+
+.modal-body p {
+  font-size: 18px;
+}

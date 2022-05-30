@@ -335,3 +335,22 @@ function showPwValidateMsg() {
 function showPwNotMatchMsg() {
     $('#inputPwConfirmMsg').empty().append("<p id=\"inputPwConfirmErrMsg\" class=\"pwResetErrMsg\">パスワードが一致しません</p>");
 }
+
+// 検索オプションのモーダル開閉
+$(function(){
+	var open = $('.modal-open'),
+		container = $('.modal-container');
+
+	//開くボタンをクリックしたらモーダルを表示する
+	open.on('click',function(){	
+		container.addClass('active');
+		return false;
+	});
+
+	//モーダルの外側をクリックしたらモーダルを閉じる
+	$(document).on('click',function(e) {
+		if(!$(e.target).closest('.modal-body').length) {
+			container.removeClass('active');
+		}
+	});
+});
