@@ -1234,7 +1234,7 @@ input[type=checkbox]:checked + .terms-check::after {
 }
 .reset-password-link {
     color: #ff3366; 
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
 }
 /* 横線 */
