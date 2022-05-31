@@ -123,8 +123,11 @@ ul.horizontal-list li.item img {
   height: 100px;
 }
 
-/* ul.horizontal-list li button {
-} */
+ul.horizontal-list.tab-area {
+  background-color: #bbdefb;
+  width: 100%;
+  border-radius: 20px
+}
 
 .tweet-area {
   margin:0; padding-left:0; padding-right:0;
@@ -527,11 +530,17 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 .selected-tab {
   background-color: #3c7fc3 !important;
   color: #fff !important;
+  height: 55px;
+  border-radius: 20px !important;
+  font-size: 14px !important;
 }
 
 .not-selected-tab {
   background-color: #bbdefb !important;
-  color: #000 !important;;
+  color: #000 !important;
+  height: 55px;
+  border-radius: 20px !important;
+  font-size: 14px !important;
 }
 
 .container .search-post {
