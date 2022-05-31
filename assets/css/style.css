@@ -463,13 +463,24 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 
 .search-box{
   font-size: 30px;
-  width:85%;
+  width:75%;
   height:60px;
   border-radius:20px;
   border:none;
   outline:0;
-  margin-bottom:40px;
   background:#eee;
+}
+
+.search-post img{
+  width:60px;
+  height:auto;
+}
+
+@media screen and (max-width:480px) { 
+  .search-post img{
+    width:30px;
+    height:auto;
+  }
 }
 
 .select-box {
@@ -513,6 +524,17 @@ body .profile-edit-area input, body .profile-edit-area textarea {
   height: 60px;
   background-color: #3c7fc3 !important;
   color: #fff !important;
+  vertical-align: initial;
+}
+
+.container .tab button {
+  font-size: 24px;
+  width: 160px;
+  height: 60px;
+}
+
+.container .tab button:hover {
+    opacity: 0.9;
 }
 
 .container .search-button:hover {
@@ -527,10 +549,6 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 .not-selected-tab {
   background-color: #bbdefb !important;
   color: #000 !important;;
-}
-
-.container .search-post {
-  height: 100px;
 }
 
 img.search-option {
@@ -767,14 +785,20 @@ img.search-option {
     height: 30px;
   }
 
+  .container .tab button {
+    font-size: 12px;
+    width: 80px;
+    height: 30px;
+  }
+
   .search-box{
     font-size: 16px;
-    width:85%;
+    width:60%;
     height:30px;
     border-radius:10px;
     border:none;
     outline:0;
-    margin-bottom:40px;
+    /* margin-bottom:40px; */
     background:#eee;
   }
 
@@ -805,10 +829,6 @@ img.search-option {
     transform: translateY(-50%) rotate(-135deg);
     font-size: 20px;
     pointer-events: none;
-  }
-
-  .container .search-post {
-    height: 50px;
   }
 
   img.search-option {
@@ -1366,4 +1386,8 @@ input[type=checkbox]:checked + .terms-check::after {
 
 .modal-body p {
   font-size: 18px;
+}
+
+.modal-content .search-box {
+  width: 100%;
 }

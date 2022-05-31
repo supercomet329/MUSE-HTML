@@ -27,9 +27,10 @@
     </nav>
   </header>
   <div class="container mt-4">
-    <form class="search-post">
-      <input class="search-box mb-2" id="search_box" name="search" type="text" placeholder="検索" />
-      <img class="modal-open" src="assets/img/icon/search_option.png" alt="search_option" width="40" class="float-right search-option" >
+    <form class="search-post mb-2">
+      <input class="search-box px-2 pb-0" id="search_box" name="search" type="text" placeholder="検索" />
+      <input class="search-button btn rounded-pill btn-sm font-weight-bold my-auto ml-2" name="submit" type="submit" value="検索" />
+      <img class="modal-open float-right" src="assets/img/icon/search_option.png" alt="search_option" class="float-right search-option" >
       <!-- モーダル本体 -->
       <div class="modal-container">
         <div class="modal-body">
@@ -38,10 +39,16 @@
             <p class="item-text mx-auto">検索オプション</p>
             <form class="search-post" method="POST">
               <div class="mb-2 item-text">
+                キーワード
+              </div>
+              <div class="mb-4">
+                <input class="search-box px-2 pb-0" id="search_box" name="search" type="text" placeholder="検索" />
+              </div>
+              <div class="mb-2 item-text">
                 対象
               </div>
               <div class="select-wrap">
-                <select class="select-box" >
+                <select class="select-box">
                   <option value="">全年齢</option>
                   <option value="">R-18</option>
                 </select>
@@ -53,8 +60,11 @@
           </div>
         </div>
       </div>
-      <input class="search-button btn rounded-pill btn-sm font-weight-bold" name="submit" type="submit" value="検索" /> 
     </form>
+    <div class="tab">
+      <button type="button" class="btn rounded-pill btn-sm font-weight-bold selected-tab desc" id="desc">新しい順</button>
+      <button type="button" class="btn rounded-pill btn-sm font-weight-bold not-selected-tab ml-4 asc" id="asc">古い順</button>
+    </div>
   </div>
   <div>
     <div class="content mt-4">

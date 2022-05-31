@@ -354,3 +354,17 @@ $(function(){
 		}
 	});
 });
+
+// タブの選択機能（post_search.html）
+$(function() {
+    $('#desc').click(function() {
+    $('#desc').addClass('selected-tab');
+    $('#desc').removeClass('not-selected-tab');
+    $('#asc').addClass('not-selected-tab');
+    });
+    $('#asc').click(function() {
+    $('#asc').addClass('selected-tab');
+    $('#asc').removeClass('not-selected-tab');
+    $('#desc').addClass('not-selected-tab');
+    });
+});
