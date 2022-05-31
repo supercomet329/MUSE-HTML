@@ -437,5 +437,38 @@ function check_ProfileInput(){
   }
 
   // ボタンの「disabled」の置き換え
-  $('.save-btn').attr('disabled', disabledFlag);
+  $('#save-btn').attr('disabled', disabledFlag);
 }
+
+// URL入力確認（profile_edit.html）
+$(function() {
+    // URLのフォーカスが外れた際にcheck_Profile_url_Input実行
+    $('#url_box').on('blur', function() {
+        check_Profile_url_Input();
+    });
+});
+
+function check_Profile_url_Input(){
+
+    // 入力項目フラグ定義
+    var urlflg = false;
+    // URLの値取得
+    var urlVal = $('#url_box').val();
+    // URLが入力されているかを確認
+    if (urlVal.length > 0) {
+        // URLの空白を確認
+        if (!urlVal.match(/[\x20\u3000]/)) {
+            // URLのフォーマットを確認
+            var urlflg = validateUrl(urlVal);
+            if (urlflg === false) {
+                alert('URLの形式を確認してください');
+                urlflg = true;
+            } else (urlflg === true) 
+                urlflg = false;
+        } else {
+            alert('URLに空白があります');
+            urlflg = true;
+        };
+        $('#save-btn').attr('disabled', urlflg);
+    };
+};
