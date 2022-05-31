@@ -473,13 +473,24 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 
 .search-box{
   font-size: 30px;
-  width:85%;
+  width:75%;
   height:60px;
   border-radius:20px;
   border:none;
   outline:0;
-  margin-bottom:40px;
   background:#eee;
+}
+
+.search-post img{
+  width:60px;
+  height:auto;
+}
+
+@media screen and (max-width:480px) { 
+  .search-post img{
+    width:30px;
+    height:auto;
+  }
 }
 
 .select-box {
@@ -517,6 +528,15 @@ body .profile-edit-area input, body .profile-edit-area textarea {
   pointer-events: none;
 }
 
+.container .search-button {
+  font-size: 24px;
+  width: 160px;
+  height: 60px;
+  background-color: #3c7fc3 !important;
+  color: #fff !important;
+  vertical-align: initial;
+}
+
 .container .tab button {
   font-size: 24px;
   width: 160px;
@@ -524,6 +544,10 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 }
 
 .container .tab button:hover {
+    opacity: 0.9;
+}
+
+.container .search-button:hover {
   opacity: 0.9;
 }
 
@@ -541,10 +565,6 @@ body .profile-edit-area input, body .profile-edit-area textarea {
   height: 55px;
   border-radius: 20px !important;
   font-size: 14px !important;
-}
-
-.container .search-post {
-  height: 100px;
 }
 
 img.search-option {
@@ -779,6 +799,12 @@ img.search-option {
     margin-right: 30px;
   }
 
+  .container .search-button {
+    font-size: 12px;
+    width: 80px;
+    height: 30px;
+  }
+
   .container .tab button {
     font-size: 12px;
     width: 80px;
@@ -787,12 +813,12 @@ img.search-option {
 
   .search-box{
     font-size: 16px;
-    width:85%;
+    width:60%;
     height:30px;
     border-radius:10px;
     border:none;
     outline:0;
-    margin-bottom:40px;
+    /* margin-bottom:40px; */
     background:#eee;
   }
 
@@ -823,10 +849,6 @@ img.search-option {
     transform: translateY(-50%) rotate(-135deg);
     font-size: 20px;
     pointer-events: none;
-  }
-
-  .container .search-post {
-    height: 50px;
   }
 
   img.search-option {
@@ -1254,7 +1276,7 @@ input[type=checkbox]:checked + .terms-check::after {
 }
 .reset-password-link {
     color: #ff3366; 
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
 }
 /* 横線 */
@@ -1330,4 +1352,62 @@ input[type=checkbox]:checked + .terms-check::after {
     background-color: #e7e7e7 !important;
     height: 29px !important;
     color: #616161 !important;
+}
+
+/* パスワード再設定 */
+/* エラーメッセージ */
+.pwResetErrMsg {
+    color: #e02126;
+    font-size: 12px;
+    margin-bottom: -19px;
+}
+/* #inputPwConfirmErrMsg {
+    color: #e02126;
+    font-size: 12px;
+    margin-bottom: -19px;
+} */
+
+/*モーダルの指定*/
+.modal-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0,0,0,50%);
+	overflow: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+}
+
+/*モーダル本体の擬似要素の指定*/
+.modal-container:before{
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.modal-container.active{
+	opacity: 1;
+	visibility: visible;
+  z-index: 9999;
+}
+/*モーダル枠の指定*/
+.modal-body{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 500px;
+	width: 90%;
+}
+
+.modal-body p {
+  font-size: 18px;
+}
+
+.modal-content .search-box {
+  width: 100%;
 }

@@ -241,3 +241,130 @@ function checkRegisterInput() {
     }
     $('#register-btn').attr('disabled', disabledFlag);
 }
+
+/**
+ * パスワードリセットページ(pass_reset.html)
+ */
+// 入力項目のフォーカスが外れた際に処理を実行
+$(function() {
+    // パスワードのフォーカスが外れた際にcheckSetPwInput実行
+    $('#newPw').on('blur', function() {
+        checkSetPwInput();
+        showTypePwMsg();
+    });
+    // 新しいパスワードを再入力のフォーカスが外れた際にcheckSetPwInput実行
+    $('#newPwConfirm').on('blur', function() {
+        checkSetPwInput();
+        showTypePwConfirmMsg();
+    });
+});
+
+// 入力項目を確認し、新規登録ボタン有効化/無効化切り替え
+function checkSetPwInput() {
+    // 新規登録ボタン有効化フラグ
+    var disabledFlag = true;
+
+    // 入力項目フラグ定義
+    var flagNewPw = false;
+    var flagNewPwConfirm = false;
+
+    // パスワードの値取得
+    var newPwVal = $('#newPw').val();
+    // パスワードを再入力の値取得
+    var newPwConfirmVal = $('#newPwConfirm').val();
+
+    // パスワードが入力されているかを確認
+    if (newPwVal.length > 0) {
+        // パスワードが入力されている場合、エラーメッセージを非表示
+        $('#inputPwErrMsg').hide();
+        // パスワードに空白文字が含まれていないかを確認
+        if (!newPwVal.match(/[\x20\u3000]/)) {
+            // パスワードのフォーマットを確認
+            var flagNewPw = validatePassword(newPwVal);
+            if (flagNewPw === false) {
+                // パスワードのフォーマットが正しくない場合、エラーメッセージを表示
+                showPwValidateMsg();
+            }
+        }
+    }
+
+    // パスワードを再入力が入力されているかを確認
+    if (newPwConfirmVal.length > 0) {
+        // パスワードを再入力が入力されている場合、エラーメッセージを非表示
+        $('#inputPwConfirmErrMsg').hide();
+        // パスワードとパスワードを再入力の値が同じかを確認
+        if (newPwVal === newPwConfirmVal) {
+            flagNewPwConfirm = true;
+        } else {
+            // パスワードが合っていない場合、エラーメッセージを表示
+            showPwNotMatchMsg();
+        }
+    }
+
+    // 入力項目の値が正しい場合、新規登録ボタンを有効化
+    if (flagNewPw === true && flagNewPwConfirm === true) {
+        disabledFlag = false;
+    }
+    $('#setpw-btn').attr('disabled', disabledFlag);
+}
+
+// パスワードが入力されていない場合、メッセージを表示
+function showTypePwMsg() {
+    // パスワードの値取得
+    var newPwLength = $('#newPw').val().length;
+    if (newPwLength <= 0) {
+        $('#inputPwMsg').empty().append("<p id=\"inputPwErrMsg\" class=\"pwResetErrMsg\">パスワードを入力してください</p>");
+    }
+}
+
+// パスワードを再入力が入力されていない場合、メッセージを表示
+function showTypePwConfirmMsg() {
+    // パスワードを再入力の値取得
+    var newPwConfirmLength = $('#newPwConfirm').val().length;
+    if (newPwConfirmLength <= 0) {
+        $('#inputPwConfirmMsg').empty().append("<p id=\"inputPwConfirmErrMsg\" class=\"pwResetErrMsg\">パスワードを入力してください</p>");
+    }
+}
+
+// パスワードのフォーマットが正しくない場合、メッセージを表示
+function showPwValidateMsg() {
+    $('#inputPwMsg').empty().append("<p id=\"inputPwErrMsg\" class=\"pwResetErrMsg\">パスワードは半角英小文字、大文字、数字を含む9文字以上32文字以内を入力してください</p>");
+}
+
+// パスワードが合っていない場合、メッセージを表示
+function showPwNotMatchMsg() {
+    $('#inputPwConfirmMsg').empty().append("<p id=\"inputPwConfirmErrMsg\" class=\"pwResetErrMsg\">パスワードが一致しません</p>");
+}
+
+// 検索オプションのモーダル開閉
+$(function(){
+	var open = $('.modal-open'),
+		container = $('.modal-container');
+
+	//開くボタンをクリックしたらモーダルを表示する
+	open.on('click',function(){	
+		container.addClass('active');
+		return false;
+	});
+
+	//モーダルの外側をクリックしたらモーダルを閉じる
+	$(document).on('click',function(e) {
+		if(!$(e.target).closest('.modal-body').length) {
+			container.removeClass('active');
+		}
+	});
+});
+
+// タブの選択機能（post_search.html）
+$(function() {
+    $('#desc').click(function() {
+    $('#desc').addClass('selected-tab');
+    $('#desc').removeClass('not-selected-tab');
+    $('#asc').addClass('not-selected-tab');
+    });
+    $('#asc').click(function() {
+    $('#asc').addClass('selected-tab');
+    $('#asc').removeClass('not-selected-tab');
+    $('#desc').addClass('not-selected-tab');
+    });
+});
