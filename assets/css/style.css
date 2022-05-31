@@ -1391,3 +1391,7 @@ input[type=checkbox]:checked + .terms-check::after {
 .modal-content .search-box {
   width: 100%;
 }
+
+#UserNameMsg, #NameMsg, #UrlMsg {
+  display: none;
+}

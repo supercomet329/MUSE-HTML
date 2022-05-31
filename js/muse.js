@@ -398,11 +398,13 @@ $(function() {
     $('#user_name_box').on('blur', function() {
         check_ProfileInput();
     })
+
 });
 
 // 名前・ユーザーネーム入力判定
 function check_ProfileInput(){
-
+  $('#NameMsg').hide();
+  $('#UserNameMsg').hide();
   // 保存ボタン有効化フラグ
   var disabledFlag = true;
 
@@ -417,18 +419,28 @@ function check_ProfileInput(){
 
   // 名前が入力されているかを確認
   if (nameVal.length > 0) {
-        var name = true;   
+    if (!nameVal.match(/^\s+?$/ || /^　+?$/)) {
+        name = true;
+        console.log(1);
+    } else {
+        console.log(2);
+        showNameMsg();
+    }
     }
   else {
-    alert('名前を入力してください');
+    showNameMsg();
   }
 
   // ユーザーネームが入力されているかを確認
   if (user_nameVal.length > 0) {
-        var user_name = true;
-      }
+    if (!user_nameVal.match(/^\s+?$/ || /^　+?$/)) {
+        user_name = true;
+    } else {
+        showNameMsg();
+    }
+    }
   else {
-    alert('ユーザーネームを入力してください');
+    showUserNameMsg(); 
   }
   
   // 入力されている場合、保存ボタンを有効化
@@ -440,6 +452,22 @@ function check_ProfileInput(){
   $('#save-btn').attr('disabled', disabledFlag);
 }
 
+function showNameMsg() {
+    // 名前空欄のメッセージ
+    var NameLength = $('#name_box').val().length;
+        $('#NameMsg').show();
+        $('#NameMsg').empty().append("<p id=\"inputPwConfirmErrMsg\" class=\"pwResetErrMsg\">名前を入力してください</p>");
+    
+}
+
+function showUserNameMsg() {
+    // ユーザーネーム空欄のメッセージ
+    var UserNameLength = $('#user_name_box').val().length;
+        $('#UserNameMsg').show();
+        $('#UserNameMsg').empty().append("<p id=\"inputPwConfirmErrMsg\" class=\"pwResetErrMsg\">ユーザーネームを入力してください</p>");
+    
+}
+
 // URL入力確認（profile_edit.html）
 $(function() {
     // URLのフォーカスが外れた際にcheck_Profile_url_Input実行
@@ -449,7 +477,7 @@ $(function() {
 });
 
 function check_Profile_url_Input(){
-
+    $('#UrlMsg').hide();
     // 入力項目フラグ定義
     var urlflg = false;
     // URLの値取得
@@ -461,14 +489,22 @@ function check_Profile_url_Input(){
             // URLのフォーマットを確認
             var urlflg = validateUrl(urlVal);
             if (urlflg === false) {
-                alert('URLの形式を確認してください');
                 urlflg = true;
+                showUrlMsg()
             } else (urlflg === true) 
                 urlflg = false;
         } else {
-            alert('URLに空白があります');
             urlflg = true;
+            showUrlMsg()
         };
         $('#save-btn').attr('disabled', urlflg);
     };
 };
+
+function showUrlMsg() {
+    // ユーザーネーム空欄のメッセージ
+    var UrlLength = $('#url_box').val().length;
+        $('#UrlMsg').show();
+        $('#UrlMsg').empty().append("<p id=\"inputPwConfirmErrMsg\" class=\"pwResetErrMsg\">URLを確認してください</p>");
+    
+}
