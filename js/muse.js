@@ -368,3 +368,74 @@ $(function() {
     $('#desc').addClass('not-selected-tab');
     });
 });
+
+// 画像変更（profile_edit.html）
+$(function() {
+    $('#cover_img_file_input').change(function() {
+      let file = this.files[0];
+      let fileInput = $('#cover_img_file_input').get(0);
+      let image = $('#cover_image').get(0);
+      validateImageSize(file, fileInput)
+      replaceImage(file, image);
+    });
+
+    $('#profile_img_file_input').change(function() {
+      let file = this.files[0];
+      let fileInput = $('#profile_img_file_input').get(0);
+      let image = $('#profile_image').get(0);
+      validateImageSize(file, fileInput)
+      replaceImage(file, image);
+    });
+  });
+
+// 名前・ユーザーネーム入力確認（profile_edit.html）
+$(function() {
+    // 名前のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#name_box').on('blur', function() {
+        check_ProfileInput();
+    });
+    // ユーザーネームのフォーカスが外れた際にcheck_ProfileInput実行
+    $('#user_name_box').on('blur', function() {
+        check_ProfileInput();
+    })
+});
+
+// 名前・ユーザーネーム入力判定
+function check_ProfileInput(){
+
+  // 保存ボタン有効化フラグ
+  var disabledFlag = true;
+
+  // 入力項目フラグ定義
+  var name = false;
+  var user_name = false;
+
+  // 名前の値取得
+  var nameVal = $('#name_box').val();
+  // ユーザーネームの値取得
+  var user_nameVal = $('#user_name_box').val();
+
+  // 名前が入力されているかを確認
+  if (nameVal.length > 0) {
+        var name = true;   
+    }
+  else {
+    alert('名前を入力してください');
+  }
+
+  // ユーザーネームが入力されているかを確認
+  if (user_nameVal.length > 0) {
+        var user_name = true;
+      }
+  else {
+    alert('ユーザーネームを入力してください');
+  }
+  
+  // 入力されている場合、保存ボタンを有効化
+  if (name === true && user_name === true) {
+      disabledFlag = false;
+  }
+
+  // ボタンの「disabled」の置き換え
+  $('.save-btn').attr('disabled', disabledFlag);
+}
