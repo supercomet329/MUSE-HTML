@@ -335,3 +335,36 @@ function showPwValidateMsg() {
 function showPwNotMatchMsg() {
     $('#inputPwConfirmMsg').empty().append("<p id=\"inputPwConfirmErrMsg\" class=\"pwResetErrMsg\">パスワードが一致しません</p>");
 }
+
+// 検索オプションのモーダル開閉
+$(function(){
+	var open = $('.modal-open'),
+		container = $('.modal-container');
+
+	//開くボタンをクリックしたらモーダルを表示する
+	open.on('click',function(){	
+		container.addClass('active');
+		return false;
+	});
+
+	//モーダルの外側をクリックしたらモーダルを閉じる
+	$(document).on('click',function(e) {
+		if(!$(e.target).closest('.modal-body').length) {
+			container.removeClass('active');
+		}
+	});
+});
+
+// タブの選択機能（post_search.html）
+$(function() {
+    $('#desc').click(function() {
+    $('#desc').addClass('selected-tab');
+    $('#desc').removeClass('not-selected-tab');
+    $('#asc').addClass('not-selected-tab');
+    });
+    $('#asc').click(function() {
+    $('#asc').addClass('selected-tab');
+    $('#asc').removeClass('not-selected-tab');
+    $('#desc').addClass('not-selected-tab');
+    });
+});
