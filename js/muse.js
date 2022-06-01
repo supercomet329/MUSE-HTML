@@ -368,3 +368,158 @@ $(function() {
     $('#desc').addClass('not-selected-tab');
     });
 });
+
+// 画像変更（profile_edit.html）
+$(function() {
+    $('#cover_img_file_input').change(function() {
+      let file = this.files[0];
+      let fileInput = $('#cover_img_file_input').get(0);
+      let image = $('#cover_image').get(0);
+      validateImageSize(file, fileInput)
+      replaceImage(file, image);
+    });
+
+    $('#profile_img_file_input').change(function() {
+      let file = this.files[0];
+      let fileInput = $('#profile_img_file_input').get(0);
+      let image = $('#profile_image').get(0);
+      validateImageSize(file, fileInput)
+      replaceImage(file, image);
+    });
+  });
+
+// 名前・ユーザーネーム入力確認（profile_edit.html）
+$(function() {
+    // 名前のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#name_box').on('blur', function() {
+        check_ProfileInput();
+    });
+    // ユーザーネームのフォーカスが外れた際にcheck_ProfileInput実行
+    $('#user_name_box').on('blur', function() {
+        check_ProfileInput();
+    })
+    // 生年月日のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#calendar_box').on('blur', function() {
+        check_ProfileInput();
+    });
+    // webサイトのフォーカスが外れた際にcheck_ProfileInput実行
+    $('#url_box').on('blur', function() {
+        check_ProfileInput();
+    });
+
+});
+
+// 名前・ユーザーネーム入力判定
+function check_ProfileInput(){
+    $('#NameMsg').hide();
+    $('#UserNameMsg').hide();
+    $('#CalendarMsg').hide();
+    $('#UrlMsg').hide();
+    // 保存ボタン有効化フラグ
+    var disabledFlag = true;
+
+    // 入力項目フラグ定義
+    var name_flg = false;
+    var user_name_flg = false;
+    var calendar_flg = false;
+    var url_flg = false;
+
+    // 名前の値取得
+    var nameVal = $('#name_box').val();
+    // ユーザーネームの値取得
+    var user_nameVal = $('#user_name_box').val();
+    // URLの値取得
+    var urlVal = $('#url_box').val();
+    var calendarVal = $('#calendar_box').val();
+
+    // 名前が入力されているかを確認
+    if (nameVal.length > 0) {
+        if (!nameVal.match(/^\s+?$/ || /^　+?$/)) {
+            name_flg = true;
+        } else {
+            showNameMsg();
+        }
+    } else {
+        showNameMsg();
+    }
+
+    // ユーザーネームが入力されているかを確認
+    if (user_nameVal.length > 0) {
+        if (!user_nameVal.match(/^\s+?$/ || /^　+?$/)) {
+            user_name_flg = true;
+        } else {
+            showNameMsg();
+        }
+    } else {
+        showUserNameMsg(); 
+    }
+
+    // 生年月日が入力されているかを確認
+    if (calendarVal.length > 0) {
+        // 生年月日の形式を確認
+        if(!calendarVal.match(/^\d{4}\-\d{2}\-\d{2}$/)){
+            // 形式が間違っている場合エラーメッセージ表示
+            showCalendarMsg();
+        } else {
+            calendar_flg = true;
+        };
+    } else {
+        calendar_flg = true;
+    };
+        
+
+    // URLが入力されているかを確認
+    if (urlVal.length > 0) {
+        // URLの空白を確認
+        if (!urlVal.match(/[\x20\u3000]/)) {
+            // URLのフォーマットを確認
+            url_flg = validateUrl(urlVal);
+            // URLが間違っている場合エラーメッセージ表示
+            if (url_flg === false) {
+                showUrlMsg()
+            }; 
+        // URLに空欄が入っている場合エラーメッセージ表示
+        } else {
+            showUrlMsg()
+        };
+    } else {
+        url_flg = true;
+    }
+
+    // 正しく入力されている場合、保存ボタンを有効化
+    if (name_flg === true && user_name_flg === true && calendar_flg == true && url_flg === true) {
+        disabledFlag = false;
+    }
+
+    // ボタンの「disabled」の置き換え
+    $('#save-btn').attr('disabled', disabledFlag);
+}
+
+function showNameMsg() {
+    // 名前空欄のメッセージ
+    $('#NameMsg').show();
+    $('#NameMsg').empty().append("<p id=\"inputNameErrMsg\" class=\"NameErrMsg mb-0\">名前を入力してください</p>");
+    
+}
+
+function showUserNameMsg() {
+    // ユーザーネーム空欄のメッセージ
+    $('#UserNameMsg').show();
+    $('#UserNameMsg').empty().append("<p id=\"inputUserNameErrMsg\" class=\"UserNameErrMsg mb-0\">ユーザーネームを入力してください</p>");
+    
+}
+
+function showCalendarMsg() {
+    // 日付間違っている場合のメッセージ
+    $('#CalendarMsg').show();
+    $('#CalendarMsg').empty().append("<p id=\"inputCalendarErrMsg\" class=\"CalendarErrMsg mb-0\">生年月日を正しく選択してください</p>");
+    
+}
+
+function showUrlMsg() {
+    // URL間違っている場合のメッセージ
+    $('#UrlMsg').show();
+    $('#UrlMsg').empty().append("<p id=\"inputUrlErrMsg\" class=\"UrlErrMsg mb-0\">URLを確認してください</p>");
+    
+}
+
