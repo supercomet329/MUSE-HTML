@@ -368,3 +368,316 @@ $(function() {
     $('#desc').addClass('not-selected-tab');
     });
 });
+
+/**
+ * 作品依頼（通常依頼）提案ページ
+ */
+// ファイルが選択された際、ファイル名を表示
+$('#requestFile').on('change', function() {
+    // 添付されたファイルを取得
+    var selectedFile = $(this).prop('files')[0];
+    // ファイルが存在している場合
+    if (selectedFile) {
+        // 選択されたファイルが10文字以上ある場合、10文字以下を「...」で省略
+        var selectedFileName = selectedFile.name.length > 10 ? (selectedFile.name).slice(0,10)+"..." : selectedFile.name;
+        // ファイル名を表示
+        $('#outputFileName').text(selectedFileName);
+    }
+});
+
+// 入力項目のフォーカスが外れた際に処理を実行
+$(function() {
+    // 依頼タイトルのフォーカスが外れた際にcheckRequestInput実行
+    $('#requestTitle').on('blur', function() {
+        checkRequestInput();
+        typeRequestTitleMsg();
+    });
+    // 作品タイトルのフォーカスが外れた際にcheckRequestInput実行
+    $('#workTitle').on('blur', function() {
+        checkRequestInput();
+        typeWorkTitleMsg();
+    });
+    // 本文のフォーカスが外れた際にcheckRequestInput実行
+    $('#text').on('blur', function() {
+        checkRequestInput();
+        typeTextMsg();
+    });
+    // 構図のフォーカスが外れた際にcheckRequestInput実行
+    $('#composition').on('blur', function() {
+        checkRequestInput();
+        typeCompositionMsg();
+    });
+    // キャラクターのフォーカスが外れた際にcheckRequestInput実行
+    $('#character').on('blur', function() {
+        checkRequestInput();
+        typeCharacterMsg();
+    });
+    // 参考URLのフォーカスが外れた際にcheckRequestInput実行
+    $('#refUrl').on('blur', function() {
+        checkRequestInput();
+        typeRefUrlMsg();
+    });
+    // 予算のフォーカスが外れた際にcheckRequestInput実行
+    $('#budget').on('blur', function() {
+        checkRequestInput();
+        typeBudgetMsg();
+    });
+    // 応募期限（年）のフォーカスが外れた際にcheckRequestInput実行
+    $('#appDeadlineY').on('blur', function() {
+        checkRequestInput();
+        typeAppDeadlineMsg();
+    });
+    // 応募期限（月）のフォーカスが外れた際にcheckRequestInput実行
+    $('#appDeadlineM').on('blur', function() {
+        checkRequestInput();
+        typeAppDeadlineMsg();
+    });
+    // 応募期限（日）のフォーカスが外れた際にcheckRequestInput実行
+    $('#appDeadlineD').on('blur', function() {
+        checkRequestInput();
+        typeAppDeadlineMsg();
+    });
+});
+
+// 入力項目を確認し、依頼投稿確認ボタン有効化/無効化切り替え
+function checkRequestInput() {
+    // 新規登録ボタン有効化フラグ
+    var disabledFlag = true;
+
+    // 入力項目フラグ定義
+    var flagRequestTitle = false;
+    var flagWorkTitle = false;
+    var flagText = false;
+    var flagComposition = false;
+    var flagCharacter = false;
+    var flagRefUrl = false;
+    var flagBudget = false;
+    var flagAppDeadline = false;
+
+    // 依頼タイトルの値取得
+    var requestTitleVal = $('#requestTitle').val();
+    // 作品タイトルの値取得
+    var workTitleVal = $('#workTitle').val();
+    // 本文の値取得
+    var textVal = $('#text').val();
+    // 構図の値取得
+    var compositionVal = $('#composition').val();
+    // キャラクターの値取得
+    var characterVal = $('#character').val();
+    // 参考URLの値取得
+    var refUrlVal = $('#refUrl').val();
+    // 予算の値取得
+    var budgetVal = $('#budget').val();
+    // 応募期限（年）の値取得
+    var appDeadlineYVal = $('#appDeadlineY').val();
+    // 応募期限（月）の値取得
+    var appDeadlineMVal = $('#appDeadlineM').val();
+    // 応募期限（日）の値取得
+    var appDeadlineDVal = $('#appDeadlineD').val();
+
+    // 依頼タイトルが入力されているかを確認
+    if (requestTitleVal.length > 0) {
+        // 依頼タイトルが入力されている場合、エラーメッセージを非表示
+        $('#inputRequestErrMsg').hide();
+        // 依頼タイトルに空白文字が含まれていないかを確認
+        if (!requestTitleVal.match(/[\x20\u3000]/)) {
+            flagRequestTitle = true;
+        }
+    }
+
+    // 作品タイトルが入力されているかを確認
+    if (workTitleVal.length > 0) {
+        // 作品タイトルが入力されている場合、エラーメッセージを非表示
+        $('#inputWorkErrMsg').hide();
+        // 作品タイトルに空白文字が含まれていないかを確認
+        if (!workTitleVal.match(/[\x20\u3000]/)) {
+            flagWorkTitle = true;
+        }
+    }
+
+    // 本文が入力されているかを確認
+    if (textVal.length > 0) {
+        // 本文が入力されている場合、エラーメッセージを非表示
+        $('#inputTextErrMsg').hide();
+        // 本文に空白文字が含まれていないかを確認
+        if (!textVal.match(/[\x20\u3000]/)) {
+            flagText = true;
+        }
+    }
+
+    // 構図が入力されているかを確認
+    if (compositionVal.length > 0) {
+        // 構図が入力されている場合、エラーメッセージを非表示
+        $('#inputCompositionErrMsg').hide();
+        // 構図に空白文字が含まれていないかを確認
+        if (!compositionVal.match(/[\x20\u3000]/)) {
+            flagComposition = true;
+        }
+    }
+
+    // キャラクターが入力されているかを確認
+    if (characterVal.length > 0) {
+        // キャラクターが入力されている場合、エラーメッセージを非表示
+        $('#inputCharacterErrMsg').hide();
+        // キャラクターに空白文字が含まれていないかを確認
+        if (!characterVal.match(/[\x20\u3000]/)) {
+            flagCharacter = true;
+        }
+    }
+
+    // 参考URLが入力されているかを確認
+    if (refUrlVal.length > 0) {
+        // 参考URLに空白文字が含まれていないかを確認
+        if (!refUrlVal.match(/[\x20\u3000]/)) {
+            // 参考URLの形式を確認
+            flagRefUrl = validateUrl(refUrlVal);
+            if (flagRefUrl === true) {
+                // 参考URLが入力されている場合、エラーメッセージを非表示
+                $('#validRefUrlErrMsg').hide();
+            }
+        }
+    } else {
+        // 参考URLに何も入力されていない場合、URLのフラグはtrue
+        flagRefUrl = true;
+    }
+
+    // 予算が入力されているかを確認
+    if (budgetVal.length > 0) {
+        // 予算が入力されている場合、エラーメッセージを非表示
+        $('#inputBudgetErrMsg').hide();
+        // 予算に空白文字が含まれていないかを確認
+        if (!budgetVal.match(/[\x20\u3000]/)) {
+            flagBudget = true;
+        }
+    }
+
+    // 応募期限（年）が入力されている場合
+    if (appDeadlineYVal.length > 0) {
+        // 年のフォーマットを確認
+        yearValidated = validateYear(appDeadlineYVal);
+        if (yearValidated === true) {
+            // 年のフォーマットが正しい場合、エラーメッセージを非表示
+            $('#dateFormatYErrMsg').hide();
+            // 応募期限（月）が入力されている場合
+            if (appDeadlineMVal.length > 0) {
+                // 月のフォーマットを確認
+                monthValidated = validateMonth(appDeadlineMVal);
+                if (monthValidated === true) {
+                    // 月のフォーマットが正しい場合、エラーメッセージを非表示
+                    $('#dateFormatMErrMsg').hide();
+                    // 応募期限（日）が入力されている場合
+                    if (appDeadlineDVal.length > 0) {
+                        // 日のフォーマットを確認
+                        dayValidated = validateDay(appDeadlineDVal);
+                        if (dayValidated === true) {
+                            // 日のフォーマットが正しい場合、エラーメッセージを非表示
+                            $('#dateFormatDErrMsg').hide();
+                            // 応募期限フラグをtrueに設定
+                            flagAppDeadline = true;
+                            // 年月日が設定されている場合、エラーメッセージを非表示
+                            $('#inputAppDeadlineMsg').hide();
+                        } else {
+                            dateFormatDInvalidMsg();
+                        }
+                    }
+                } else {
+                    dateFormatMInvalidMsg();
+                }
+            }
+        } else {
+            dateFormatYInvalidMsg();
+        }
+    }
+
+    // 入力項目の値が正しい場合、新規登録ボタンを有効化
+    if (flagRequestTitle === true && flagWorkTitle === true && flagText === true && flagComposition === true && flagCharacter === true && flagRefUrl === true && flagBudget === true && flagAppDeadline === true) {
+        disabledFlag = false;
+    }
+    $('#requestBtn').attr('disabled', disabledFlag);
+}
+
+// 依頼タイトルが入力されていない場合、メッセージを表示
+function typeRequestTitleMsg() {
+    // 依頼タイトルの値取得
+    var requestTitleLength = $('#requestTitle').val().length;
+    if (requestTitleLength <= 0) {
+        $('#inputRequestTitle').empty().append("<p id=\"inputRequestErrMsg\" class=\"inputRequestErrMsg\">依頼タイトルを入力してください</p>");
+    }
+}
+// 作品タイトルが入力されていない場合、メッセージを表示
+function typeWorkTitleMsg() {
+    // 作品タイトルの値取得
+    var workTitleLength = $('#workTitle').val().length;
+    if (workTitleLength <= 0) {
+        $('#inputWorkTitle').empty().append("<p id=\"inputWorkErrMsg\" class=\"inputRequestErrMsg mt-1\">作品タイトルを入力してください</p>");
+    }
+}
+// 本文が入力されていない場合、メッセージを表示
+function typeTextMsg() {
+    // 本文の値取得
+    var textLength = $('#text').val().length;
+    if (textLength <= 0) {
+        $('#inputText').empty().append("<p id=\"inputTextErrMsg\" class=\"inputRequestErrMsg mt-1\">本文タイトルを入力してください</p>");
+    }
+}
+// 構図が入力されていない場合、メッセージを表示
+function typeCompositionMsg() {
+    // 構図の値取得
+    var compositionLength = $('#composition').val().length;
+    if (compositionLength <= 0) {
+        $('#inputComposition').empty().append("<p id=\"inputCompositionErrMsg\" class=\"inputRequestErrMsg mt-1\">構図を入力してください</p>");
+    }
+}
+// キャラクターが入力されていない場合、メッセージを表示
+function typeCharacterMsg() {
+    // キャラクターの値取得
+    var characterLength = $('#character').val().length;
+    if (characterLength <= 0) {
+        $('#inputCharacter').empty().append("<p id=\"inputCharacterErrMsg\" class=\"inputRequestErrMsg mt-1\">キャラクターを入力してください</p>");
+    }
+}
+// 参考URLの形式が正しくない場合、メッセージを表示
+function typeRefUrlMsg() {
+    // 参考URLの値を取得
+    var refUrlVal = $('#refUrl').val();
+    // 参考URLの形式を確認
+    refUrlValid = validateUrl(refUrlVal);
+    if (refUrlVal.length > 0) {
+        if (refUrlValid === false) {
+            $('#validRefUrl').empty().append("<p id=\"validRefUrlErrMsg\" class=\"inputRequestErrMsg mt-1\">参考URLの形式が間違っています</p>");
+        }
+    }
+}
+// 予算が入力されていない場合、メッセージを表示
+function typeBudgetMsg() {
+    // 予算の値取得
+    var budgetLength = $('#budget').val().length;
+    if (budgetLength <= 0) {
+        $('#inputBudget').empty().append("<p id=\"inputBudgetErrMsg\" class=\"inputRequestErrMsg mt-1\">予算を入力してください</p>");
+    }
+}
+// 応募期限が入力されていない場合、メッセージを表示
+function typeAppDeadlineMsg() {
+    // 応募期限（年）の値取得
+    var appDeadlineYLength = $('#appDeadlineY').val().length;
+    // 応募期限（月）の値取得
+    var appDeadlineMLength = $('#appDeadlineM').val().length;
+    // 応募期限（日）の値取得
+    var appDeadlineDLength = $('#appDeadlineD').val().length;
+    // 応募期限の年月日がそれぞれ入力されていない場合、エラーメッセージを表示
+    if (appDeadlineYLength <= 0 || appDeadlineMLength <= 0 || appDeadlineDLength <= 0) {
+        $('#inputAppDeadline').empty().append("<p id=\"inputAppDeadlineMsg\" class=\"inputRequestErrMsg mt-1\">応募期限を年月日それぞれ入力してください</p>");
+    }
+}
+// 応募期限（年）のフォーマットが正しくない場合、メッセージを表示
+function dateFormatYInvalidMsg() {
+    $('#inputAppDeadline').empty().append("<p id=\"dateFormatYErrMsg\" class=\"inputRequestErrMsg mt-1\">年のフォーマットが正しくありません</p>");
+}
+// 応募期限（月）のフォーマットが正しくない場合、メッセージを表示
+function dateFormatMInvalidMsg() {
+    $('#inputAppDeadline').empty().append("<p id=\"dateFormatMErrMsg\" class=\"inputRequestErrMsg mt-1\">月のフォーマットが正しくありません</p>");
+}
+// 応募期限（日）のフォーマットが正しくない場合、メッセージを表示
+function dateFormatDInvalidMsg() {
+    $('#inputAppDeadline').empty().append("<p id=\"dateFormatDErrMsg\" class=\"inputRequestErrMsg mt-1\">日付のフォーマットが正しくありません</p>");
+}
