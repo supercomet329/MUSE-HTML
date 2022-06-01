@@ -579,11 +579,11 @@ img.search-option {
 }
 
 /* プロフィール編集ページエラーメッセージレイアウト */
-#UserNameMsg, #NameMsg, #UrlMsg {
+#UserNameMsg, #NameMsg, #UrlMsg, #CalendarMsg {
   display: none;
 }
 
-.UserNameErrMsg, .NameErrMsg, .UrlErrMsg {
+.UserNameErrMsg, .NameErrMsg, .UrlErrMsg, .CalendarErrMsg {
   color: #e02126;
   font-size: 12px;
 }
