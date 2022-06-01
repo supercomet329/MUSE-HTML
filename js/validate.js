@@ -26,7 +26,7 @@ function validateEmail(emailVal) {
  */
 function validateUrl(urlVal) {
     // URL形式の場合trueを返す
-    return /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#=+&!:?.%!\-\/]))?/.test(urlVal);
+    return /^(https?|ftp)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)$/.test(urlVal);
 }
 
 /**
