@@ -127,7 +127,7 @@ ul.horizontal-list li.item img {
   height: 100px;
 }
 
-.tab-area {
+ul.horizontal-list.tab-area {
   background-color: #bbdefb;
   width: 100%;
   border-radius: 20px
