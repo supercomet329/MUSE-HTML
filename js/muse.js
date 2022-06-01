@@ -355,16 +355,44 @@ $(function(){
 	});
 });
 
-// タブの選択機能（post_search.html）
+// タブの選択機能（post_search.html,request_searched_list.html）
 $(function() {
     $('#desc').click(function() {
-    $('#desc').addClass('selected-tab');
-    $('#desc').removeClass('not-selected-tab');
-    $('#asc').addClass('not-selected-tab');
+        selectTab($(this));
     });
+
     $('#asc').click(function() {
-    $('#asc').addClass('selected-tab');
-    $('#asc').removeClass('not-selected-tab');
-    $('#desc').addClass('not-selected-tab');
+        selectTab($(this));
     });
+
+    $('#low').click(function() {
+        selectTab($(this));
+    });
+
+    $('#high').click(function() {
+        selectTab($(this));
+    });
+
 });
+
+// キープ済み、キープの選択機能（request_searched_list.html,request_received_list_html）
+$(function () {
+    $(document).on('click', '.keep_off', function() {
+      let keep_on = $('<div class="border rounded-pill py-1 px-1 f-size-10 font-weight-bold keep_on">キープ<br><img src="assets/img/icon/keep_on.png" alt="keep-on" class="keep-on"></div>');
+      $(this).replaceWith(keep_on);
+    });
+
+    $(document).on('click', '.keep_on', function() {
+      let keep_off = $('<div class="border rounded-pill py-1 px-1 f-size-10 font-weight-bold keep_off">キープ済み<br><img src="assets/img/icon/keep_off.png" alt="keep-off" class="keep-off"></div>');
+      $(this).replaceWith(keep_off);
+    })
+});
+
+// タブの選択表示
+function selectTab(target) {
+    let sortTab = $('#sort_tab > button').siblings();
+    sortTab.removeClass('selected-tab');
+    sortTab.addClass('not-selected-tab');
+    target.removeClass('not-selected-tab');
+    target.addClass('selected-tab');
+}
