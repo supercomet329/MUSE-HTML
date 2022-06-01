@@ -191,10 +191,10 @@ function checkRegisterInput() {
     var disabledFlag = true;
 
     // 入力項目フラグ定義
-    var username = false;
-    var name = false;
-    var password = false;
-    var pwConfirm = false;
+    var usernameFlag = false;
+    var nameFlg = false;
+    var passwordFlg = false;
+    var pwConfirmFlg = false;
 
     // ユーザーネームの値取得
     var usernameVal = $('#username').val();
@@ -209,7 +209,7 @@ function checkRegisterInput() {
     if (usernameVal.length > 0) {
         // ユーザーネームに空白文字が含まれていないかを確認
         if (!usernameVal.match(/[\x20\u3000]/)) {
-            username = true;
+            usernameFlag = true;
         }
     }
 
@@ -217,26 +217,42 @@ function checkRegisterInput() {
     if (nameVal.length > 0) {
         // 名前に空白文字が含まれていないかを確認
         if (!nameVal.match(/[\x20\u3000]/)) {
-            name = true;
+            nameFlg = true;
         }
     }
 
     // パスワードが入力されているかを確認
     if (passwordVal.length > 0) {
-        // パスワードのフォーマットを確認
-        var password = validatePassword(passwordVal);
+        // パスワードが入力されている場合、エラーメッセージを非表示
+        $('#inputPwErrMsg').hide();
+        // パスワードに空白文字が含まれていないかを確認
+        if (!passwordVal.match(/[\x20\u3000]/)) {
+            // パスワードのフォーマットを確認
+            var passwordFlg = validatePassword(passwordVal);
+            if (passwordFlg === false) {
+                // パスワードのフォーマットが正しくない場合、エラーメッセージを表示
+                showPwValidateMsg();
+            }
+        } else {
+            showPwValidateMsg2();
+        }
     }
 
     // パスワードを再入力が入力されているかを確認
     if (pwConfirmVal.length > 0) {
+        // パスワードを再入力が入力されている場合、エラーメッセージを非表示
+        $('#inputPwConfirmErrMsg').hide();
         // パスワードとパスワードを再入力の値が同じかを確認
         if (passwordVal === pwConfirmVal) {
-            pwConfirm = true;
+            pwConfirmFlg = true;
+        } else {
+            // パスワードが合っていない場合、エラーメッセージを表示
+            showPwNotMatchMsg();
         }
     }
 
     // 入力項目の値が正しい場合、新規登録ボタンを有効化
-    if (username === true && name === true && password === true && pwConfirm === true) {
+    if (usernameFlag === true && nameFlg === true && passwordFlg === true && pwConfirmFlg === true) {
         disabledFlag = false;
     }
     $('#register-btn').attr('disabled', disabledFlag);
@@ -329,6 +345,11 @@ function showTypePwConfirmMsg() {
 // パスワードのフォーマットが正しくない場合、メッセージを表示
 function showPwValidateMsg() {
     $('#inputPwMsg').empty().append("<p id=\"inputPwErrMsg\" class=\"pwResetErrMsg\">パスワードは半角英小文字、大文字、数字を含む9文字以上32文字以内を入力してください</p>");
+}
+
+// パスワードに空欄がある場合、メッセージを表示
+function showPwValidateMsg2() {
+    $('#inputPwMsg').empty().append("<p id=\"inputPwErrMsg\" class=\"pwResetErrMsg\">パスワードにスペースは含めないでください</p>");
 }
 
 // パスワードが合っていない場合、メッセージを表示
