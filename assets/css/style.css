@@ -21,6 +21,10 @@ footer nav .messages{
   position: relative;
 }
 
+.w-40 {
+  width: 40% !important;
+}
+
 ul.list-area {
   margin:0; padding:0;
   list-style: none;
@@ -123,7 +127,7 @@ ul.horizontal-list li.item img {
   height: 100px;
 }
 
-ul.horizontal-list.tab-area {
+.tab-area {
   background-color: #bbdefb;
   width: 100%;
   border-radius: 20px
@@ -180,8 +184,16 @@ ul.horizontal-list.tab-area {
 }
 
 .subtext {
-  font-size: 10px;
+  font-size: 12px;
   color: #e0e0e0;
+}
+
+.f-size-12 {
+  font-size: 12px;
+}
+
+.f-size-10 {
+  font-size: 10px;
 }
 
 .save-btn {
@@ -419,18 +431,6 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 .p-b-10 {
   padding-bottom: 10em;
 }
-.f-size-1 {
-  font-size: 1.25rem;
-}
-.f-size-2 {
-  font-size: 1.5rem;
-}
-.f-size-3 {
-  font-size: 1.75rem;
-}
-.f-size-4 {
-  font-size: 2.0rem;
-}
 .self-introduction {
   border: 0.9px rgba(90, 90, 90, 0.473) solid;
   width:100%;
@@ -472,9 +472,9 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 }
 
 .search-box{
-  font-size: 30px;
+  font-size: 24px;
   width:75%;
-  height:60px;
+  height:50px;
   border-radius:20px;
   border:none;
   outline:0;
@@ -484,6 +484,34 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 .search-post img{
   width:60px;
   height:auto;
+}
+
+.request-list {
+  position: relative;
+}
+
+.request-list .selected-tab, .request-list .not-selected-tab{
+  height: 40px;
+}
+
+.request-list .tab-area {
+  height: 50px;
+}
+
+.request-list .search, .request-list .search-option{
+  height: 60px !important;
+  width: 60px !important;
+}
+
+.post-icon-area {
+  position: fixed;
+  bottom: 150px;
+  right: 25%;
+}
+
+.post-icon-area .icon {
+  width: 75px;
+  height: 75px;
 }
 
 @media screen and (max-width:480px) { 
@@ -529,9 +557,9 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 }
 
 .container .search-button {
-  font-size: 24px;
+  font-size: 20px;
   width: 160px;
-  height: 60px;
+  height: 40px;
   background-color: #3c7fc3 !important;
   color: #fff !important;
   vertical-align: initial;
@@ -540,7 +568,7 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 .container .tab button {
   font-size: 24px;
   width: 160px;
-  height: 60px;
+  height: 40px;
 }
 
 .container .tab button:hover {
@@ -568,14 +596,23 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 }
 
 img.search-option {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
 .confirm-image-area img{
   width: 100%;
   height: 30vh;
   object-fit: cover;
+}
+
+.request-list .search, .request-list .search_option{
+  height: 60px;
+}
+
+.request-list img.keep-on, .request-list img.keep-off {
+  width: 20px;
+  height: 20px;
 }
 
 /* プロフィール編集ページエラーメッセージレイアウト */
@@ -864,6 +901,35 @@ img.search-option {
   img.search-option {
     width: 40px;
     height: 40px;
+  }
+
+  .request-list .search, .request-list .search-option{
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  .request-list .selected-tab, .request-list .not-selected-tab{
+    height: 30px;
+  }
+
+  .request-list .tab-area {
+    height: 40px;
+  }
+
+  .post-icon-area {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+  }
+
+  .post-icon-area .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .selected-tab, .not-selected-tab {
+    border-radius: 20px !important;
+    font-size: 10px !important;
   }
 }
 
