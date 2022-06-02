@@ -8,11 +8,11 @@ $(function() {
     // 会員規約がクリックされた際にcheckInput実行
     $('#terms').on('click', function() {
         checkInput();
-    })
+    });
     // 仮登録ボタンを押された際に、メール送信済みメッセージを表示
     $('#register-btn').on('click', function() {
         showEmailSentMsg();
-    })
+    });
 });
 
 // 入力項目を確認し、仮登録ボタン有効化/無効化切り替え
@@ -97,7 +97,7 @@ $(function() {
     // パスワードのフォーカスが外れた際にcheckLoginInput実行
     $('#loginPassword').on('blur', function() {
         checkLoginInput();
-    })
+    });
 });
 
 // 入力項目を確認し、ログインボタン有効化/無効化切り替え
@@ -378,6 +378,12 @@ $(function(){
 
 // タブの選択機能（post_search.html,request_searched_list.html）
 $(function() {
+
+    $('#front_search_box').on('blur', function() {
+        var search_txt = jQuery('#front_search_box').val();
+        $('#modal_search_box').val(search_txt);
+    });
+
     $('#desc').click(function() {
         selectTab($(this));
     });
@@ -406,7 +412,7 @@ $(function () {
     $(document).on('click', '.keep_on', function() {
       let keep_off = $('<div class="border rounded-pill py-1 px-1 f-size-10 font-weight-bold keep_off">キープ済み<br><img src="assets/img/icon/keep_off.png" alt="keep-off" class="keep-off"></div>');
       $(this).replaceWith(keep_off);
-    })
+    });
 });
 
 /**
@@ -758,7 +764,7 @@ $(function() {
     // ユーザーネームのフォーカスが外れた際にcheck_ProfileInput実行
     $('#user_name_box').on('blur', function() {
         check_ProfileInput();
-    })
+    });
     // 生年月日のフォーカスが外れた際にcheck_ProfileInput実行
     $('#calendar_box').on('blur', function() {
         check_ProfileInput();
