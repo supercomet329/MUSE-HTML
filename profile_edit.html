@@ -43,33 +43,37 @@
           <img src="assets/img/pixta_40272765_M.jpg" class="profile-image rounded-circle" id="profile_image">
         </label>
         </div>
-        <div class="col-6 text-center title py-2 mt-0 border-bottom-dashed">
+        <div class="col-12 text-center title my-2" id="NameMsg"></div>
+        <div class="col-12 text-center title my-2" id="UserNameMsg"></div>
+        <div class="col-12 text-center title my-2" id="CalendarMsg"></div>
+        <div class="col-12 text-center title my-2" id="UrlMsg"></div>
+        <div class="col-6 text-left title py-2 mt-0 border-bottom-dashed">
           名前
         </div>
-        <input type="text" value="ミューズ" class="col-6 border-bottom-dashed">
-        <div class="col-6 text-center title border-bottom-dashed mt-0 py-2">
+        <input type="text" value="ミューズ" id="name_box" name="name_box" class="col-6 border-bottom-dashed">
+        <div class="col-6 text-left title border-bottom-dashed mt-0 py-2">
           ユーザーネーム
         </div>
-        <input type="text" value="muse-username" class="col-6 border-bottom-dashed">
-        <div class="col-6 text-center title border-bottom-dashed d-flex justify-content-center align-items-center py-2 mt-0">
+        <input type="text" value="muse-user" id="user_name_box" name="user_name_box" class="col-6 border-bottom-dashed">
+        <div class="col-6 text-left title border-bottom-dashed d-flex align-items-center py-2 mt-0">
           プロフィール
         </div>
         <textarea type="text" class="col-6 border-bottom-dashed py-1" cols="50"
           rows="3">プロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィール</textarea>
-        <div class="col-6 text-center title py-2 mt-0 border-bottom-dashed">
+        <div class="col-6 text-left title py-2 mt-0 border-bottom-dashed">
           生年月日
         </div>
-        <input type="text" value="yyyy/mm/dd" class="col-6 border-bottom-dashed">
-        <div class="col-6 text-center title py-2 mt-0 border-bottom-dashed">
+        <input type="date" value="1988-07-04" class="col-6 border-bottom-dashed" id="calendar_box">
+        <div class="col-6 text-left title py-2 mt-0 border-bottom-dashed">
           所在地
         </div>
         <input type="text" value="東京都​" class="col-6 border-bottom-dashed">
-        <div class="col-6 text-center title py-2 mt-0 border-bottom-dashed my-auto">
+        <div class="col-6 text-left title py-2 mt-0 border-bottom-dashed my-auto">
           webサイト
         </div>
-        <input type="text" value="https://muse.fwm.bz/" class="col-6 border-bottom-dashed text-primary">
+        <input type="text" value="https://muse.fwm.bz/" id="url_box" name="url_box" class="col-6 border-bottom-dashed text-primary">
         <div class="col-12 text-center my-4">
-          <button type="submit" class="btn btn-lg btn-danger save-btn">　保存　</button>
+          <button type="submit" class="btn btn-lg btn-danger save-btn" id="save-btn">　保存　</button>
         </div>
       </div>
     </div>
@@ -100,24 +104,6 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <!-- Javascript(js/muse.js)読み込み -->
 <script type="text/javascript" src="js/muse.js"></script>
-<script>
-  $(function() {
-    $('#cover_img_file_input').change(function() {
-      let file = this.files[0];
-      let fileInput = $('#cover_img_file_input').get(0);
-      let image = $('#cover_image').get(0);
-      validateImageSize(file, fileInput)
-      replaceImage(file, image);
-    });
-
-    $('#profile_img_file_input').change(function() {
-      let file = this.files[0];
-      let fileInput = $('#profile_img_file_input').get(0);
-      let image = $('#profile_image').get(0);
-      validateImageSize(file, fileInput)
-      replaceImage(file, image);
-    });
-  });
-</script>
-
+<!-- Javascript(js/validate.js)読み込み -->
+<script type="text/javascript" src="js/validate.js"></script>
 </html>
