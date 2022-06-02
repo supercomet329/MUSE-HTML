@@ -516,15 +516,15 @@ body .profile-edit-area input, body .profile-edit-area textarea {
   position: relative;
   padding: 17px 13px 15px 18px;
   border-radius: 12px;
-  background: #8bc34a;
-  color:#ffffff;
+  background-color: #e0e0e0;
+  color:#000;
   box-sizing:border-box;
   margin:0 !important;
   line-height:1.5;
 }
 .balloon_r .says {
-  background-color: #e0e0e0;
-  color:#000
+  background: #8bc34a;
+  color:#ffffff;
 }
 .says p{
   margin:8px 0 0 !important; 
@@ -539,20 +539,20 @@ body .profile-edit-area input, body .profile-edit-area textarea {
 }
 .balloon_l .says:after {
   left: -26px;
-  border-right: 22px solid #8bc34a;
+  border-right: 22px solid #e0e0e0;
 }
 .balloon_r .says:after {
   right: -26px;
-  border-left: 22px solid #e0e0e0;
+  border-left: 22px solid #8bc34a;
 }
-/* .message-show-area {
+.message-show-area {
   position: relative;
 }
 .message-create-area {
   position: fixed;
   bottom: 100px;
   width: 80% !important;
-} */
+}
 
 @media screen and (max-width:480px) { 
   .search-post img{
