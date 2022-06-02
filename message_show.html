@@ -16,6 +16,15 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Javascript(js/muse.js)読み込み -->
+    <script type="text/javascript" src="js/muse.js"></script>
+    <!-- Javascript(js/validate.js)読み込み -->
+    <script type="text/javascript" src="js/validate.js"></script>
 </head>
 
 <body>
@@ -26,17 +35,17 @@
             <div><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
         </nav>
     </header>
-    <div class="container message-show-area">
+    <div class="container message-show-area" id="message_show_area">
         <div class="font-weight-bold title border-bottom-solid mt-4">
             相手のユーザー名
         </div>
-        <div class="row" id="message_area">
+        <div class="row mb-5 pb-3">
             <div class="d-flex col-12 justify-content-center">
                 <div class="main-color font-weight-bold text-white text-center rounded-pill small w-25 mt-4">
                     4/12
                 </div>
             </div>
-            <div class="col-12 ml-3">
+            <div class="col-12">
                 <div class="balloon_l">
                     <div class="faceicon">
                         <img src="assets/img/pixta_40272765_M.jpg" alt="" class="rounded-circle">
@@ -67,7 +76,7 @@
                     4/14
                 </div>
             </div>
-            <div class="col-12 ml-3">
+            <div class="col-12">
                 <div class="balloon_l">
                     <div class="faceicon">
                         <img src="assets/img/pixta_40272765_M.jpg" alt="" class="rounded-circle">
@@ -76,7 +85,7 @@
                         </div>
                     </div>
                     <p class="says">左側の吹き出し左側の吹き出し左側の吹き出し左側の吹き出し
-                        左側の吹き出し左側の吹き出し左側の吹き出し
+                        左側の吹き出し左側の吹き出し
                     </p>
                 </div>
             </div>
@@ -89,32 +98,19 @@
                         </div>
                     </div>
                     <div class="says">
-                        <p>右側の吹き出し右側の吹き出し右側の吹き出し右側の吹き出し</p>
+                        <p>右側の吹き出し</p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 ml-3">
-                <div class="balloon_l">
+            <div class="col-12">
+                <div class="balloon_r">
                     <div class="faceicon">
-                        <img src="assets/img/pixta_40272765_M.jpg" alt="" class="rounded-circle">
+                        <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle" alt="">
                         <div class="ml-xl-4 ml-1">
-                            08:45
+                            08:50
                         </div>
                     </div>
-                    <p class="says">左側の吹き出し左側の吹き出し左側の吹き出し左側の吹き出し
-                    </p>
-                </div>
-            </div>
-            <div class="col-12 ml-3">
-                <div class="balloon_l">
-                    <div class="faceicon">
-                        <img src="assets/img/pixta_40272765_M.jpg" alt="" class="rounded-circle">
-                        <div class="ml-xl-4 ml-1">
-                            08:45
-                        </div>
-                    </div>
-                    <p class="says">左側の吹き出し左側の吹き出し
-                    </p>
+                    <img src="assets/img/pixta_64747350_M.jpg" class="post-image result">
                 </div>
             </div>
         </div>
@@ -122,20 +118,27 @@
         <div class="row text-center message-create">
             <div>
                 <div class="col-9">
-                    <textarea name="" rows="3" id="chat-input"></textarea>
+                    <textarea name="" rows="3" id="chat_input" class="border border-0"></textarea>
                 </div>
                 <div class="col-2 icon-area">
                     <div>
                         <label>
-                            <input type="file" name="file" accept="image/png, image/jpeg">
+                            <input type="file" name="file" accept="image/png, image/jpeg" id="messages_file_input">
                             <img src="assets/img/icon/camera_bule.png" class="camera" alt="camera">
                         </label>
                     </div>
-                    <button type="button" class="border border-0 bg-white" id="chat-button" onclick="btnFunc()">
-                        <img src="assets/img/icon/arrow.png" class="send" alt="send">
-                    </button>
+                    <img src="assets/img/icon/arrow.png" class="send" alt="send" id="chat_button">
                 </div>
             </div>
+        </div>
+        <!-- 画像投稿時のモーダル -->
+        <div class="modal">
+            <div class="text-center title">
+                投稿画像確認
+            </div>
+            <div class="bigimg"><img src="" alt="bigimg"></div>
+            <p class="close-btn"><a href="">✖</a></p>
+            <button class="btn btn-primary rounded-pill btn-sm text-white btn-lg main-color post-image-btn" id="post_image_btn">投稿する</button>
         </div>
     </div>
 
