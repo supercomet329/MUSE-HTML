@@ -889,14 +889,6 @@ function showUrlMsg() {
     $('#UrlMsg').empty().append("<p id=\"inputUrlErrMsg\" class=\"UrlErrMsg mb-0\">URLを確認してください</p>");
 }
 
-$(function () {
-    $('#chat_button').on('click', function () {
-        let inputText = document.getElementById('chat_input');
-        let appendArea = document.getElementById('message_show_area');
-        outputMessage(inputText, appendArea);
-    });
-});
-
 // メッセージを画面に出力
 function outputMessage(text, area) {
     if (!text.value) return false;
@@ -921,6 +913,13 @@ function outputImage(imgSrc, area) {
 
 // メッセージ詳細画面（message_show.html）
 $(function() {
+    $('#chat_button').on('click', function () {
+        let inputText = document.getElementById('chat_input');
+        let appendArea = document.getElementById('message_show_area');
+        outputMessage(inputText, appendArea);
+        inputText.value = '';
+    });
+
     $('#messages_file_input').change(function() {
         let file = this.files[0];
         let fr = new FileReader();
