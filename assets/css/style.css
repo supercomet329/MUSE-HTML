@@ -128,6 +128,17 @@ ul.horizontal-list li.item img {
 }
 
 .tab-area {
+  overflow-x: scroll !important;
+  overflow-y: hidden;
+}
+
+.tab-menu {
+  display: flex;
+  width: 30em !important;
+  height: auto !important;
+}
+
+.tab-area {
   background-color: #bbdefb;
   width: 100%;
   border-radius: 20px
@@ -233,6 +244,7 @@ ul.horizontal-list li.item img {
 }
 
 .border-bottom-solid {
+  width: 100% !important;
   border-bottom: solid 3px #3c7fc3;
 }
 
