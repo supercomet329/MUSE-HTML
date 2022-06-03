@@ -941,3 +941,24 @@ $(function() {
         $('.modal').fadeOut();
     });
 });
+
+
+
+$(function() {
+    // 販売形式のラジオボタン変更で、表示するフォーム切り替え
+    $('[name="saleType"]:radio').change(function() {
+        // 通常販売にチェックがついている場合
+        if ($('#sale').prop('checked')) {
+            $('.saleTypeSection').hide();
+            $('.saleSection').show();
+        // オークションにチェックがついている場合
+        } else if ($('#auction').prop('checked')) {
+            $('.saleTypeSection').hide();
+            $('.auctionSection').show();
+        // 販売しないにチェックがついている場合
+        } else {
+            $('.saleTypeSection').hide();
+            $('.notForSaleSection').show();
+        }
+    });
+})

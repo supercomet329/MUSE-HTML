@@ -1740,3 +1740,89 @@ input[type=checkbox]:checked + .terms-check::after {
     font-weight: bold;
     margin-bottom: -22px;
 }
+
+
+.saleTypeSection {
+    display: none;
+}
+.saleSection {
+    display: block;
+}
+.post-radio input {
+    margin-right: 10px;
+    accent-color: #000000;
+}
+.post-input-title {
+    color: #3c7fc3;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: -6px;
+}
+.post-input {
+    border-radius: 300px !important;
+    border: none !important;
+    background-color: #e7e7e7 !important;
+    height: 29px !important;
+    margin-top: 5px;
+}
+.image-price-input {
+    position: relative;
+}
+.image-price-jpy {
+    position: absolute;
+    right: -12px;
+    top: 2px;
+    color: #616161;
+    font-size: 15px;
+}
+.commission-title {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.commission-price {
+    margin-top: -10px;
+    margin-bottom: 7px;
+    color: #616161;
+}
+.post-terms-check {
+    box-sizing: border-box;
+    padding: 5px 30px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: auto;
+}
+/* 利用規約チェックボックスが押される前 */
+.post-terms-check::before {
+    content: '';
+    display: block;
+    background: #ffffff;
+    border: 1px solid #231815;
+    border-radius: 6px;
+    width: 18px;
+    height: 18px;
+    margin-top: -18px;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+}
+/* 利用規約チェックボックスが押された後 */
+.post-terms-check::after {
+    content: '';
+    display: block;
+    border-right: 2px solid #3c7fc3;
+    border-bottom: 2px solid #3c7fc3;
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    width: 6px;
+    height: 9px;
+    margin-top: -15px;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+input[type=checkbox]:checked + .post-terms-check::after {
+    opacity: 1;
+}
