@@ -813,8 +813,12 @@ img.search-option {
 }
 
 .request-list img.keep-on, .request-list img.keep-off {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: auto;
+}
+
+.request-keep .keep_on {
+  border:1px solid #ffd800;
 }
 
 .request_show img.keep-on, .request_show img.keep-off {
