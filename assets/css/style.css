@@ -686,6 +686,25 @@ img.post-image.result{
   border-top: 2px dotted #3c7fc3;
 }
 
+/* 発注依頼一覧ページ新規作成アイコンエリア */
+.request-add-icon-area {
+  position: fixed;
+  bottom: 110px;
+}
+
+@media only screen and (max-width: 480px) {
+  .request-add-icon-area {
+    position: fixed;
+    bottom: 70px;
+  }
+}
+
+/* 発注依頼一覧ページ新規作成アイコンサイズ */
+.request-add-icon {
+  width: 50px;
+  height: auto;
+}
+
 .post-icon-area {
   position: fixed;
   bottom: 150px;
