@@ -951,14 +951,257 @@ $(function() {
         if ($('#sale').prop('checked')) {
             $('.saleTypeSection').hide();
             $('.saleSection').show();
+            $('.termsSection').show();
         // オークションにチェックがついている場合
         } else if ($('#auction').prop('checked')) {
             $('.saleTypeSection').hide();
             $('.auctionSection').show();
+            $('.termsSection').show();
         // 販売しないにチェックがついている場合
         } else {
             $('.saleTypeSection').hide();
+            $('.termsSection').hide();
             $('.notForSaleSection').show();
         }
     });
-})
+});
+
+// 入力項目のフォーカスが外れた際に処理を実行(post.html）
+$(function() {
+    // タイトルのフォーカスが外れた際にcheck_ProfileInput実行
+    $('#postTitle').on('blur', function() {
+        checkSaleType();
+    });
+    // 詳細のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#postDetail').on('blur', function() {
+        checkSaleType();
+    });
+    // 販売価格のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#imagePrice').on('blur', function() {
+        checkSaleType();
+    });
+    // 即決価格のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#binPrice').on('blur', function() {
+        checkSaleType();
+    });
+    // オークション開始日時(年)のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#auctionDateY').on('blur', function() {
+        checkSaleType();
+    });
+    // オークション開始日時(月)のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#auctionDateM').on('blur', function() {
+        checkSaleType();
+    });
+    // オークション開始日時(日)のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#auctionDateD').on('blur', function() {
+        checkSaleType();
+    });
+    // オークション開始日時(時)のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#auctionDateH').on('blur', function() {
+        checkSaleType();
+    });
+    // オークション開始日時(分)のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#auctionDateMin').on('blur', function() {
+        checkSaleType();
+    });
+    // オークション終了日時(年)のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#auctionEndDateY').on('blur', function() {
+        checkSaleType();
+    });
+    // オークション終了日時(月)のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#auctionEndDateM').on('blur', function() {
+        checkSaleType();
+    });
+    // オークション終了日時(日)のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#auctionEndDateD').on('blur', function() {
+        checkSaleType();
+    });
+    // オークション終了日時(時)のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#auctionEndDateH').on('blur', function() {
+        checkSaleType();
+    });
+    // オークション終了日時(分)のフォーカスが外れた際にcheck_ProfileInput実行
+    $('#auctionEndDateMin').on('blur', function() {
+        checkSaleType();
+    });
+    // 利用規約にチェックされた際にcheck_ProfileInput実行
+    $('#postTermsCheck').on('click', function() {
+        checkSaleType();
+    });
+});
+
+// 通常販売時
+function checkSaleInput() {
+    // 新規登録ボタン有効化フラグ
+    var disabledFlag = true;
+
+    // 入力項目フラグ定義
+    var flagPostTitle = false;
+    var flagPostDetail = false;
+    var flagImagePrice = false;
+    var flagBinPrice = false;
+    var flagPostTerms = false;
+
+    // タイトルの値取得
+    var postTitleVal = $('#postTitle').val();
+    // 詳細の値取得
+    var postDetailVal = $('#postDetail').val();
+    // 販売価格の値取得
+    var imagePriceVal = $('#imagePrice').val();
+    // 即決価格の値取得
+    var binPriceVal = $('#binPrice').val();
+
+    // タイトルが入力されているかを確認
+    if (postTitleVal.length > 0) {
+        // タイトルに空白文字が含まれていないかを確認
+        if (!postTitleVal.match(/[\x20\u3000]/)) {
+            flagPostTitle = true;
+        }
+    }
+    // 詳細が入力されているかを確認
+    if (postDetailVal.length > 0) {
+        // 詳細に空白文字が含まれていないかを確認
+        if (!postDetailVal.match(/[\x20\u3000]/)) {
+            flagPostDetail = true;
+        }
+    }
+    // 販売価格が入力されているかを確認
+    if (imagePriceVal.length > 0) {
+        // 販売価格に空白文字が含まれていないかを確認
+        if (!imagePriceVal.match(/[\x20\u3000]/)) {
+            flagImagePrice = true;
+        }
+    }
+    // 即決価格が入力されているかを確認
+    if (binPriceVal.length > 0) {
+        // 即決価格に空白文字が含まれていないかを確認
+        if (!binPriceVal.match(/[\x20\u3000]/)) {
+            flagBinPrice = true;
+        }
+    }
+
+    if (flagPostTitle === true && flagPostDetail === true && flagImagePrice === true && flagBinPrice === true) {
+        disabledFlag = false;
+    }
+    $('#postBtn').attr('disabled', disabledFlag);
+}
+
+// オークション時
+function checkAuctionInput() {
+    // 新規登録ボタン有効化フラグ
+    var disabledFlag = true;
+
+    // 入力項目フラグ定義
+    var flagPostTitle = false;
+    var flagPostDetail = false;
+    var flagAuctionStartDate = false;
+    var flagAuctionEndDate = false;
+
+    // タイトルの値取得
+    var postTitleVal = $('#postTitle').val();
+    // 詳細の値取得
+    var postDetailVal = $('#postDetail').val();
+    // オークション開始日時(年)の値取得
+    var auctionDateYVal = $('#auctionDateY').val();
+    // オークション開始日時(月)の値取得
+    var auctionDateMVal = $('#auctionDateM').val();
+    // オークション開始日時(日)の値取得
+    var auctionDateDVal = $('#auctionDateD').val();
+    // オークション開始日時(時)の値取得
+    var auctionDateHVal = $('#auctionDateH').val();
+    // オークション開始日時(分)の値取得
+    var auctionDateMinVal = $('#auctionDateMin').val();
+    // オークション終了日時(年)の値取得
+    var auctionEndDateYVal = $('#auctionEndDateY').val();
+    // オークション終了日時(月)の値取得
+    var auctionEndDateMVal = $('#auctionEndDateM').val();
+    // オークション終了日時(日)の値取得
+    var auctionEndDateDVal = $('#auctionEndDateD').val();
+    // オークション終了日時(時)の値取得
+    var auctionEndDateHVal = $('#auctionEndDateH').val();
+    // オークション終了日時(分)の値取得
+    var auctionEndDateMinVal = $('#auctionEndDateMin').val();
+
+    // タイトルが入力されているかを確認
+    if (postTitleVal.length > 0) {
+        // タイトルに空白文字が含まれていないかを確認
+        if (!postTitleVal.match(/[\x20\u3000]/)) {
+            flagPostTitle = true;
+        }
+    }
+    // 詳細が入力されているかを確認
+    if (postDetailVal.length > 0) {
+        // 詳細に空白文字が含まれていないかを確認
+        if (!postDetailVal.match(/[\x20\u3000]/)) {
+            flagPostDetail = true;
+        }
+    }
+    // オークション開始日時（年）が入力されている場合
+    if (auctionDateYVal.length > 0) {
+        // 年のフォーマットを確認
+        yearValidated = validateYear(auctionDateYVal);
+        if (yearValidated === true) {
+            // オークション開始日時（月）が入力されている場合
+            if (auctionDateMVal.length > 0) {
+                // 月のフォーマットを確認
+                monthValidated = validateMonth(auctionDateMVal);
+                if (monthValidated === true) {
+                    // オークション開始日時（日）が入力されている場合
+                    if (auctionDateDVal.length > 0) {
+                        // 日のフォーマットを確認
+                        dayValidated = validateDay(auctionDateDVal);
+                        if (dayValidated === true) {
+                            // オークション開始日時フラグをtrueに設定
+                            flagAuctionStartDate = true;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // オークション終了日時（年）が入力されている場合
+    if (auctionEndDateYVal.length > 0) {
+        // 年のフォーマットを確認
+        yearValidated = validateYear(auctionEndDateYVal);
+        if (yearValidated === true) {
+            // オークション終了日時（月）が入力されている場合
+            if (auctionEndDateMVal.length > 0) {
+                // 月のフォーマットを確認
+                monthValidated = validateMonth(auctionEndDateMVal);
+                if (monthValidated === true) {
+                    // オークション開始日時（日）が入力されている場合
+                    if (auctionEndDateDVal.length > 0) {
+                        // 日のフォーマットを確認
+                        dayValidated = validateDay(auctionEndDateDVal);
+                        if (dayValidated === true) {
+                            // オークション開始日時フラグをtrueに設定
+                            flagAuctionEndDate = true;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    if (flagPostTitle === true && flagPostDetail === true && flagAuctionStartDate === true && flagAuctionEndDate === true) {
+        disabledFlag = false;
+    }
+    console.log(disabledFlag);
+    $('#postBtn').attr('disabled', disabledFlag);
+}
+// 販売しない時
+function checkNotForSaleInput() {
+    console.log('not for sale');
+}
+
+// 販売形式確認
+function checkSaleType() {
+    var getSaleType = '';
+    if ($('#sale').prop('checked')) {
+        getSaleType = checkSaleInput();
+    } else if ($('#auction').prop('checked')) {
+        getSaleType = checkAuctionInput();
+    } else {
+        getSaleType = checkNotForSaleInput();
+    }
+    return getSaleType;
+}

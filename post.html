@@ -29,10 +29,61 @@
 
     <div class="pt-sm-5 mt-sm-5">
         <div class="container pt-5">
-            <div class="row">
-                <form action="POST">
-
+            <form method="POST" enctype="multipart/form-data">
+                <div class="row">
                     <div class="col-12">
+                        <label for="saleType" class="label-text post-input-title">投稿画像（必須）</label>
+                    </div>
+                    <div class="col-12 post-file-input px-1">
+                        <label class="post-file">
+                            <input type="file" name="postFile" id="postFile">
+                            <img src="assets/img/icon/camera_BGblue.png" class="post-file-img">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-2 px-1">
+                                <label class="post-file-sub-img post-local-file">
+                                    <input type="file">
+                                </label>
+                            </div>
+                            <div class="col-2 px-1">
+                                <label class="post-file-sub-img post-app-file">
+                                    <input type="file">
+                                </label>
+                            </div>
+                            <div class="col-2 px-1">
+                                <img src="assets/img/pixta_45010284_M.jpg" class="post-images">
+                            </div>
+                            <div class="col-2 px-1">
+                                <img src="assets/img/pixta_58642077_M.jpg" class="post-images">
+                            </div>
+                            <div class="col-2 px-1">
+                                <img src="assets/img/pixta_58266021_M.jpg" class="post-images">
+                            </div>
+                            <div class="col-2 px-1">
+                                <img src="assets/img/pixta_40272765_M.jpg" class="post-images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <label for="saleType" class="label-text post-input-title">タイトル（必須）</label>
+                    </div>
+                    <div class="col-12">
+                        <input class="form-control post-input" type="text" name="postTitle" id="postTitle" placeholder="タイトルを入力">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <label for="saleType" class="label-text post-input-title">詳細（必須）</label>
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control post-detail" name="postDetail" id="postDetail" placeholder="詳細を入力"></textarea>
+                    </div>
+                    <div class="col-12 mt-2">
                         <label for="saleType" class="label-text post-input-title">販売形式（必須）</label>
                     </div>
                     <div class="col-12 row">
@@ -60,9 +111,9 @@
                     </div>
 
                     <!-- 販売形式フォーム-->
-                    <div class="saleSection saleTypeSection">
+                    <div class="saleSection saleTypeSection mb-4">
                         <div class="col-12">
-                            <label for="image-price" class="label-text post-input-title">販売価格（必須）</label>
+                            <label for="imagePrice" class="label-text post-input-title">販売価格（必須）</label>
                         </div>
                         <div class="col-11">
                             <input class="form-control post-input image-price-input" type="number" name="imagePrice" id="imagePrice" placeholder="金額を入力">
@@ -75,10 +126,10 @@
                             <p class="commission-price">○○○円</p>
                         </div>
                         <div class="col-12">
-                            <label for="price" class="label-text post-input-title">即決価格（必須）</label>
+                            <label for="binPrice" class="label-text post-input-title">即決価格（必須）</label>
                         </div>
                         <div class="col-11">
-                            <input class="form-control post-input image-price-input" type="number" name="imagePrice" id="imagePrice" placeholder="金額を入力">
+                            <input class="form-control post-input image-price-input" type="number" name="binPrice" id="binPrice" placeholder="金額を入力">
                             <div class="image-price-jpy">
                                 円
                             </div>
@@ -86,27 +137,101 @@
                     </div>
 
                     <!-- オークション形式フォーム-->
-                    <div class="col-12 auctionSection saleTypeSection">
-                        auction
+                    <div class="auctionSection saleTypeSection">
+                        <div class="col-12">
+                            <label for="auctionStartDate" class="label-text post-input-title">オークション開始日時（必須）</label>
+                        </div>
+                        <div class="col-12 row">
+                            <div class="col-5 post-radio ml-2">
+                                <label><input type="radio" name="auctionStartDate" value="notSpecified" id="notSpecified" checked>指定しない</label>
+                            </div>
+                            <div class="col-5 post-radio ml-2">
+                                <label><input type="radio" name="auctionStartDate" value="specify" id="specify">開始時間指定</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="auctionStartDate" class="label-text post-input-title">オークション開始日時</label>
+                        </div>
+                        <div class="col-12 row">
+                            <div class="col-2">
+                                <input type="number" class="auction-input" placeholder="yyyy" name="auctionDateY" id="auctionDateY">
+                                <p class="auction-date">年</p>
+                            </div>
+                            <div class="col-2">
+                                <input type="number" class="auction-input" placeholder="mm" name="auctionDateM" id="auctionDateM">
+                                <p class="auction-date">月</p>
+                            </div>
+                            <div class="col-2">
+                                <input type="number" class="auction-input" placeholder="dd" name="auctionDateD" id="auctionDateD">
+                                <p class="auction-date">日</p>
+                            </div>
+                            <div class="col-2">
+                                <input type="number" class="auction-input" placeholder="hh" name="auctionDateH" id="auctionDateH">
+                                <p class="auction-date">時</p>
+                            </div>
+                            <div class="col-2">
+                                <input type="number" class="auction-input" placeholder="mm" name="auctionDateMin" id="auctionDateMin">
+                                <p class="auction-date">分</p>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="auctionStartDate" class="label-text post-input-title">オークション終了日時</label>
+                        </div>
+                        <div class="col-12 row">
+                            <div class="col-2">
+                                <input type="number" class="auction-input" placeholder="yyyy" name="auctionEndDateY" id="auctionEndDateY">
+                                <p class="auction-date">年</p>
+                            </div>
+                            <div class="col-2">
+                                <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateM" id="auctionEndDateM">
+                                <p class="auction-date">月</p>
+                            </div>
+                            <div class="col-2">
+                                <input type="number" class="auction-input" placeholder="dd" name="auctionEndDateD" id="auctionEndDateD">
+                                <p class="auction-date">日</p>
+                            </div>
+                            <div class="col-2">
+                                <input type="number" class="auction-input" placeholder="hh" name="auctionEndDateH" id="auctionEndDateH">
+                                <p class="auction-date">時</p>
+                            </div>
+                            <div class="col-2">
+                                <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateMin" id="auctionEndDateMin">
+                                <p class="auction-date">分</p>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="auctionStartDate" class="label-text post-input-title">オークション自動延長</label>
+                        </div>
+                        <div class="col-12 row">
+                            <div class="col-5 post-radio ml-2">
+                                <label><input type="radio" name="extendAuction" value="enableAutoExtend" id="enableAutoExtend" checked>あり</label>
+                            </div>
+                            <div class="col-5 post-radio ml-2">
+                                <label><input type="radio" name="extendAuction" value="disableAutoExtend" id="disableAutoExtend">なし</label>
+                            </div>
+                        </div>
+                        <p class="auction-notes">※終了5分前に入札されると、5分延長されます。</p>
                     </div>
 
                     <!-- 販売しない形式フォーム-->
                     <div class="col-12 notForSaleSection saleTypeSection">
-                        not for sale
                     </div>
 
-                    <div class="col-12 text-center pt-4">
-                        <input class="form-check-input" type="checkbox" value="1" id="postTermsCheck" name="postTermsCheck">
-                        <label class="form-check-label post-terms-check pb-2" for="postTermsCheck">
-                            <p class="agree">利用規約に同意する</p>
-                        </label>
-                    </div>
-                    <div class="col-12 text-center mt-2">
-                        <button type="button" class="btn btn-primary text-white submit-btn" id="register-btn" disabled>画像投稿確認</button>
+                    <div class="termsSection saleTypeSection">
+                        <div class="col-12 text-center">
+                            <input class="form-check-input" type="checkbox" value="1" id="postTermsCheck" name="postTermsCheck">
+                            <label class="form-check-label post-terms-check pb-2" for="postTermsCheck">
+                                <p class="agree">利用規約に同意する</p>
+                            </label>
+                        </div>
                     </div>
 
-                </form>
-            </div>
+                    <div class="col-12 text-center mt-3 mb-5">
+                        <button type="submit" class="btn btn-primary text-white submit-btn" id="postBtn" disabled>画像投稿確認</button>
+                    </div>
+
+                </div>
+            </form>
         </div>
     </div>
 
