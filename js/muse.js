@@ -919,8 +919,6 @@ function outputImage(imgSrc, area) {
     $(area).append(image);
 }
 
-
-
 // メッセージ詳細画面（message_show.html）
 $(function() {
     $('#chat_button').on('click', function () {
@@ -949,5 +947,16 @@ $(function() {
         let appendArea = document.getElementById('message_show_area');
         outputImage(imgResult, appendArea)
         $('.modal').fadeOut();
+    });
+});
+
+$(function() {
+    $('#terms_service').click(function() {
+        let termsChecked = $('#terms_service').get(0).checked;
+        if (termsChecked === true) {
+          $('#save_btn').attr('disabled', false);
+        } else {
+          $('#save_btn').attr('disabled', true);
+        }
     });
 });
