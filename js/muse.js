@@ -18,22 +18,24 @@ $(function() {
 // 入力項目を確認し、仮登録ボタン有効化/無効化切り替え
 function checkInput() {
     // メールアドレスが入力された場合、emailCheckにtrueを格納
-    var emailCheck = '';
-    if (document.getElementById('email').value.length > 0) {
-        emailCheck = true;
-    } else {
-        emailCheck = false;
-    }
-
+    var emailCheck = false;
+    // メールアドレスの入力フォーム要素を取得
+    var email = document.getElementById('email');
     // 会員規約のチェックボックス要素を取得
     var terms = document.getElementById('terms');
+    // 仮登録のボタン要素を取得
+    var registerBtn = document.getElementById('register-btn');
+
+    // メールアドレスに空白文字が含まれていないかを確認
+    if (!email.value.match(/[\x20\u3000]/)) {
+        // メールアドレスのフォーマットを確認
+        emailCheck = validateEmail(email.value);
+    }
 
     // メールアドレスが入力されている、かつ会員規約にチェックがついている場合ボタンを有効化
-    var registerBtn = document.getElementById('register-btn');
+    registerBtn.disabled = true;
     if (emailCheck === true && terms.checked === true) {
         registerBtn.disabled = false;
-    } else {
-        registerBtn.disabled = true;
     }
 }
 
@@ -405,12 +407,12 @@ $(function() {
 // キープ済み、キープの選択機能（request_searched_list.html,request_received_list_html）
 $(function () {
     $(document).on('click', '.keep_off', function() {
-      let keep_on = $('<div class="border rounded-pill py-1 px-1 f-size-10 font-weight-bold keep_on">キープ<br><img src="assets/img/icon/keep_on.png" alt="keep-on" class="keep-on"></div>');
+      let keep_on = $('<div class="rounded-pill text-center mb-1 px-1 keep_on"><img src="assets/img/icon/keep_on.png" alt="keep-on" class="keep-on"></div>');
       $(this).replaceWith(keep_on);
     });
 
     $(document).on('click', '.keep_on', function() {
-      let keep_off = $('<div class="border rounded-pill py-1 px-1 f-size-10 font-weight-bold keep_off">キープ済み<br><img src="assets/img/icon/keep_off.png" alt="keep-off" class="keep-off"></div>');
+      let keep_off = $('<div class="border rounded-pill text-center mb-1 px-1 keep_off"><img src="assets/img/icon/keep_off.png" alt="keep-off" class="keep-off"></div>');
       $(this).replaceWith(keep_off);
     });
 });
@@ -917,8 +919,6 @@ function outputImage(imgSrc, area) {
     $(area).append(image);
 }
 
-
-
 // メッセージ詳細画面（message_show.html）
 $(function() {
     $('#chat_button').on('click', function () {
@@ -947,5 +947,16 @@ $(function() {
         let appendArea = document.getElementById('message_show_area');
         outputImage(imgResult, appendArea)
         $('.modal').fadeOut();
+    });
+});
+
+$(function() {
+    $('#terms_service').click(function() {
+        let termsChecked = $('#terms_service').get(0).checked;
+        if (termsChecked === true) {
+          $('#save_btn').attr('disabled', false);
+        } else {
+          $('#save_btn').attr('disabled', true);
+        }
     });
 });
