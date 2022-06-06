@@ -25,6 +25,10 @@ footer nav .messages{
   width: 40% !important;
 }
 
+.h-50px {
+  height: 50px;
+}
+
 ul.list-area {
   margin:0; padding:0;
   list-style: none;
@@ -617,6 +621,10 @@ img.post-image.result{
   height: 40px;
 }
 
+.request-area {
+  background-color: #fafafa;
+}
+
 .request-list {
   position: relative;
 }
@@ -637,6 +645,27 @@ img.post-image.result{
 .request-user-icon {
   width: 50px;
   height: auto;
+}
+
+.request-list .requester {
+  font-size: 14px;
+}
+
+.request-area .request-title {
+  color: #000000;
+}
+
+.request-detail {
+  font-size: 12px;
+}
+
+.request-budget, .request-deadline {
+  font-size: 12px;
+  color: #e02126;
+}
+
+.request-boundary {
+  border-top: 2px dotted #3c7fc3;
 }
 
 .post-icon-area {
