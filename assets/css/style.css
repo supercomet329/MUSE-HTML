@@ -634,6 +634,11 @@ img.post-image.result{
   width: 60px !important;
 }
 
+.request-user-icon {
+  width: 50px;
+  height: auto;
+}
+
 .post-icon-area {
   position: fixed;
   bottom: 150px;
