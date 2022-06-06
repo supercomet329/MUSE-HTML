@@ -65,6 +65,33 @@ ul.list-area li span.name{
   font-size: 16px;
 }
 
+.tab-area {
+  overflow-x: scroll !important;
+  overflow-y: hidden;
+  border-radius: 20px;
+}
+
+.tab-area .tab-menu {
+  width: 100%;
+}
+
+.tab-area .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  height: 55px;
+}
+
+.tab-area .active {
+  background-color: #3c7fc3 !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+.tab-area .nav-item .nav-link:hover {
+  background-color: #3c7fc3 !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
 .tweet-area .profile-icon {
   width: 100px;
   height: 100px;
@@ -128,20 +155,8 @@ ul.horizontal-list li.item img {
 }
 
 .tab-area {
-  overflow-x: scroll !important;
-  overflow-y: hidden;
-}
-
-.tab-menu {
-  display: flex;
-  width: 30em !important;
-  height: auto !important;
-}
-
-.tab-area {
   background-color: #bbdefb;
   width: 100%;
-  border-radius: 20px
 }
 
 .tweet-area {
@@ -244,7 +259,6 @@ ul.horizontal-list li.item img {
 }
 
 .border-bottom-solid {
-  width: 100% !important;
   border-bottom: solid 3px #3c7fc3;
 }
 
@@ -746,6 +760,15 @@ img.search-option {
   height: 20px;
 }
 
+.request_show img.keep-on, .request_show img.keep-off {
+  width: 20px;
+  height: 20px;
+}
+
+span.keep_off, span.keep_on {
+  width: 25%;
+}
+
 /* プロフィール編集ページエラーメッセージレイアウト */
 #UserNameMsg, #NameMsg, #UrlMsg, #CalendarMsg {
   display: none;
@@ -828,12 +851,12 @@ img.search-option {
     color: #3c7fc3;
   }
 
-  .horizontal-list {
+  .horizontal-list, .tab-area {
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
 
-  .horizontal-list::-webkit-scrollbar {
+  .horizontal-list::-webkit-scrollbar, .tab-area::-webkit-scrollbar {
     display:none;
   }
 
@@ -1096,6 +1119,10 @@ img.search-option {
     width: 80%;
     height: 30vh;
     object-fit: cover;
+  }
+
+  .tab-area .tab-menu {
+    width: 30em;
   }
 }
 
