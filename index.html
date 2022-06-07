@@ -1,53 +1,131 @@
+<!doctype html>
+<html lang="ja">
+
 <head>
-    <title>Muse</title>
+    <title>Muse | ログイン</title>
+    <!-- Required meta tags -->
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta name="description" content="">
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="">
-    <link rel="apple-touch-icon" href="">
+    <!-- Icon -->
+    <link rel="shortcut icon" href="assets/img/icon/logo.png">
+    <link rel="apple-touch-icon" href="assets/img/icon/logo.png">
+    <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script type="text/javascript" src=""></script>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Javascript(js/muse.js)読み込み -->
+    <script type="text/javascript" src="js/muse.js"></script>
+    <!-- Javascript(js/validate.js)読み込み -->
+    <script type="text/javascript" src="js/validate.js"></script>
 </head>
 
-<section class="vh-100 bg-image">
-    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-        <div class="container">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-lg-9 col-xl-7">
+<body>
+    <header class="popular_artist">
+        <nav class="fixed-top navbar navbar-light bg-light">
+            <a href="profile.html"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
+            <a href="picture_mode.html"><img src="assets/img/icon/logo.png" alt="logo"></a>
+            <div><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
+        </nav>
+    </header>
 
-<h2 class="text-center my-3"><a href="login.html" target="_blank">ログイン</a></h2>
-<h2 class="text-center my-3"><a href="sign_up.html" target="_blank">サインアップ</a></h2>
-<h2 class="text-center my-3"><a href="normal_mode.html" target="_blank">タイムライン</a></h2>
-<h2 class="text-center my-3"><a href="picture_mode.html" target="_blank">ピクチャーモード</a></h2>
-<h2 class="text-center my-3"><a href="profile.html" target="_blank">プロフィール</a></h2>
-<h2 class="text-center my-3"><a href="post.html" target="_blank">作品投稿</a></h2>
-<h2 class="text-center my-3"><a href="request.html" target="_blank">作品依頼</a></h2>
-<h2 class="text-center my-3"><a href="request_confirm.html" target="_blank">作品依頼確認</a></h2>
-<h2 class="text-center my-3"><a href="search.html" target="_blank">検索結果</a></h2>
-<h2 class="text-center my-3"><a href="message.html" target="_blank">メッセージ一覧</a></h2>
-<h2 class="text-center my-3"><a href="notification.html" target="_blank">通知一覧</a></h2>
-<h2 class="text-center my-3"><a href="pass_reset.html" target="_blank">パスワードリセット</a></h2>
-<h2 class="text-center my-3"><a href="send_mail.html" target="_blank">再設定メールアドレス送信完了</a></h2>
-<h2 class="text-center my-3"><a href="pass_reset_confirm.html" target="_blank">パスワード再設定</a></h2>
-<h2 class="text-center my-3"><a href="authenticate.html" target="_blank">仮登録完了</a></h2>
-
+    <div class="pt-sm-5 mt-sm-5">
+        <div class="container pt-5">
+            <form>
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center mb-4 contents-title font-weight-bold">ログイン</h1>
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="label-text">メールアドレス</label>
+                    </div>
+                    <div class="col-12 pt-2 pb-2">
+                        <input class="form-control email-form" type="email" name="loginEmail" id="loginEmail" placeholder="aaaa@muse.co.jp">
+                    </div>
+                    <div class="col-12">
+                        <label for="loginPassword" class="label-text">パスワード</label>
+                    </div>
+                    <div class="col-12 pt-2 pb-2">
+                        <input class="form-control email-form" type="password" name="loginPassword" id="loginPassword" placeholder="Musepass1">
+                    </div>
+                    <div class="col-12 reset-password text-center"> 
+                        <a href="pass_reset.html" class="reset-password-link">&gt;&gt;パスワードを忘れた場合はこちら</a>
+                    </div>
+                    <div class="col-12 text-center pt-2">
+                        <button type="submit" class="btn btn-primary text-white submit-btn" id="login-btn" disabled>ログイン</button>
+                    </div>
+                    <div class="col-12 text-center pt-3">
+                        <input class="form-check-input" type="checkbox" value="1" id="remember" name="remember">
+                        <label class="form-check-label terms-check pb-2" for="remember">
+                            <p class="remember">ログイン情報を記憶する</p>
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <hr class="hr-line">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center mt-3 mb-3 contents-title font-weight-bold">SNSログイン</h1>
+                </div>
+                <div class="col-12 login-with-sns">
+                    <a href="https://twitter.com" target="_blank" rel="noreferrer">
+                        <button class="twitter-btn">
+                            <img src="assets/img/icon/twitter_icon.png" alt="twitter" class="twitter-icon">
+                            Twitterでログインする
+                        </button>
+                    </a>
+                </div>
+                <div class="col-12 login-with-sns mt-3">
+                    <a href="https://google.com" target="_blank" rel="noreferrer">
+                        <button class="google-btn">
+                            <img src="assets/img/icon/g-logo.png" alt="google" class="google-icon">
+                            Googleアカウントでログインする
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <hr class="hr-line mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center mt-3 mb-3 contents-title font-weight-bold">新規会員登録</h1>
+                </div>
+                <div class="col-12 register-notes">
+                    <p class="register-notes-text text-center">
+                        会員ではない方は会員登録してください
+                    </p>
+                </div>
+                <div class="col-12 text-center pt-1">
+                    <a href="sign_up.html">
+                        <button type="button" class="btn btn-primary text-white submit-btn">新規会員登録はこちら</button>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-</section>
+
+    <footer>
+        <nav class="navbar navbar-light bg-light fixed-bottom">
+            <a href="normal_mode.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
+            <a href="post_search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
+            <a href="post.html"><img src="assets/img/icon/post_blue.png" alt="post"></a>
+            <div class="notifications">
+                <a href="notification.html"><img src="assets/img/icon/notification_blue.png" alt="notification"></a>
+                <p class="unread-count rounded-circle">2000</p>
+            </div>
+            <div class="messages">
+                <a href="message.html"><img src="assets/img/icon/message_blue.png" alt="message"></a>
+                <p class="unread-count top-left rounded-circle">2000</p>
+            </div>
+        </nav>
+    </footer>
+
+</body>
+
+</html>

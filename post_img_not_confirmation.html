@@ -16,6 +16,15 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="assets/css/all.min.css">
+  <!-- Optional JavaScript -->
+  <!-- jQuery -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- Javascript(js/muse.js)読み込み -->
+  <script type="text/javascript" src="js/muse.js"></script>
+  <!-- Javascript(js/validate.js)読み込み -->
+  <script type="text/javascript" src="js/validate.js"></script>
 </head>
 
 <body>
@@ -27,7 +36,7 @@
     </nav>
   </header>
   <div class="container mt-3 confirm-area">
-    <form action="POST">
+    <form method="POST">
       <div class="row">
         <div class="col-12 item-text mb-2">
           投稿画像（必須）
@@ -39,24 +48,23 @@
           タイトル（必須）
         </div>
         <div class="col-12 mb-4">
-          <input type="text" value="タイトル" class="border border-0" readonly>
+          タイトル
         </div>
         <div class="col-12 item-text mb-2">
           詳細（任意）
         </div>
         <div class="col-12 mb-4">
-          <textarea name="" id="" cols="50" rows="5" class="border border-0" readonly>詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳
-          </textarea>
+          詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳
         </div>
         <div class="col-12 mb-2 item-text">
           販売形式（必須）
         </div>
         <div class="col-12 mb-2">
           <div class="mb-2">
-            <input type="text" value="販売しない" class="border border-0" readonly >
+            販売しない
           </div>
           <div>
-            <input type="text" value="全年齢" class="border border-0" readonly >
+            全年齢
           </div>
         </div>
         <div class="col-12 my-2">
@@ -75,7 +83,7 @@
   <footer>
     <nav class="navbar navbar-light bg-light fixed-bottom">
       <a href="normal_mode.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
-      <a href="search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
+      <a href="post_search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
       <a href="post.html"><img src="assets/img/icon/post_blue.png" alt="post"></a>
       <div class="notifications">
         <a href="notification.html"><img src="assets/img/icon/notification_blue.png" alt="notification"></a>
@@ -88,24 +96,5 @@
     </nav>
   </footer>
 </body>
-
-<!-- Optional JavaScript -->
-<!-- jQuery -->
-<script src="assets/js/jquery-3.6.0.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  $(function () {
-    $('#terms_service').click(function() {
-      let termsChecked = $('#terms_service').get(0).checked;
-      if (termsChecked === true) {
-        $('#save_btn').attr('disabled', false);
-      } else {
-        $('#save_btn').attr('disabled', true);
-      }
-    });
-  });
-</script>
 
 </html>
