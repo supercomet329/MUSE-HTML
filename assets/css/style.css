@@ -773,14 +773,15 @@ img.post-image.result{
   vertical-align: initial;
 }
 
-.container .tab button {
+.container .tab button, .container .tab a{
   font-size: 24px;
   width: 160px;
   height: 40px;
 }
 
-.container .tab button:hover {
+.container .tab button:hover, .container .tab a:hover {
     opacity: 0.9;
+    text-decoration: none;
 }
 
 .container .search-button:hover {
@@ -1078,7 +1079,7 @@ span.keep_off, span.keep_on {
     height: 30px;
   }
 
-  .container .tab button {
+  .container .tab button, .container .tab a {
     font-size: 12px;
     width: 80px;
     height: 30px;
