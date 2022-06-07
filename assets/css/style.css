@@ -667,6 +667,7 @@ img.post-image.result{
   bottom: 100px;
   left: 20%;
   width: 60% !important;
+  resize: none;
 }
 
 .message-create .icon-area .camera {
@@ -1181,7 +1182,7 @@ span.keep_off, span.keep_on {
   }
 
   .says {
-    max-width:150px;
+    max-width:250px;
   }
 
   .message-create textarea {
