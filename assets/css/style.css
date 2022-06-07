@@ -1904,6 +1904,13 @@ input[type=checkbox]:checked + .post-terms-check::after {
 .termsSection {
     display: block;
 }
+.postErrMsg {
+    color: #e02126;
+    font-size: 12px;
+    margin-top: 15px;
+    text-align: left;
+    font-weight: bold;
+}
 @media screen and (max-width: 480px) {
     .post-file-sub-img {
         border: solid 2px #e7e7e7;

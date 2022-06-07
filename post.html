@@ -46,12 +46,12 @@
                         <div class="row">
                             <div class="col-2 px-1">
                                 <label class="post-file-sub-img post-local-file">
-                                    <input type="file">
+                                    <input type="file" name="postFile2" id="postFile2">
                                 </label>
                             </div>
                             <div class="col-2 px-1">
                                 <label class="post-file-sub-img post-app-file">
-                                    <input type="file">
+                                    <input type="file" name="postFile3" id="postFile3">
                                 </label>
                             </div>
                             <div class="col-2 px-1">
@@ -69,16 +69,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12 mx-0 px-0 mt-3">
+                    <div class="selectPostFile" id="selectPostFile"></div>
+                </div>
 
-                <div class="row mt-4">
+                <div class="row">
                     <div class="col-12">
                         <label for="saleType" class="label-text post-input-title">タイトル（必須）</label>
                     </div>
                     <div class="col-12">
                         <input class="form-control post-input" type="text" name="postTitle" id="postTitle" placeholder="タイトルを入力">
                     </div>
-                    <div class="col-12 mt-3">
-                        <label for="saleType" class="label-text post-input-title">詳細（必須）</label>
+                    <div class="col-12">
+                        <div class="inputPostTitle" id="inputPostTitle"></div>
+                    </div>
+                    <div class="col-12">
+                        <label for="saleType" class="label-text post-input-title">詳細（任意）</label>
                     </div>
                     <div class="col-12">
                         <textarea class="form-control post-detail" name="postDetail" id="postDetail" placeholder="詳細を入力"></textarea>
@@ -122,8 +128,11 @@
                             </div>
                         </div>
                         <div class="col-12">
+                            <div class="inputImagePrice" id="inputImagePrice"></div>
+                        </div>
+                        <div class="col-12">
                             <p class="commission-title">手数料差し引き残額</p>
-                            <p class="commission-price">○○○円</p>
+                            <p class="commission-price">0円</p>
                         </div>
                         <div class="col-12">
                             <label for="binPrice" class="label-text post-input-title">即決価格（必須）</label>
@@ -133,6 +142,9 @@
                             <div class="image-price-jpy">
                                 円
                             </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="inputBinPrice" id="inputBinPrice"></div>
                         </div>
                     </div>
 
@@ -174,6 +186,9 @@
                                 <p class="auction-date">分</p>
                             </div>
                         </div>
+                        <div class="col-12">
+                            <div class="inputAppDeadline" id="inputAppDeadline"></div>
+                        </div>
                         <div class="col-12 mt-3">
                             <label for="auctionStartDate" class="label-text post-input-title">オークション終了日時</label>
                         </div>
@@ -198,6 +213,9 @@
                                 <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateMin" id="auctionEndDateMin">
                                 <p class="auction-date">分</p>
                             </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="inputAuctionEnd" id="inputAuctionEnd"></div>
                         </div>
                         <div class="col-12 mt-3">
                             <label for="auctionStartDate" class="label-text post-input-title">オークション自動延長</label>
