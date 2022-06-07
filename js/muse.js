@@ -949,3 +949,18 @@ $(function() {
         $('.modal').fadeOut();
     });
 });
+
+
+// フォローする、フォロー中の選択機能
+$(function () {
+    $(document).on('click', '.follow-off', function() {
+      let follow_on = $('<button type="button"class="btn btn-primary rounded-pill btn-sm text-white btn-lg main-color follow-btn follow-on">フォロー中</button>');
+      $(this).replaceWith(follow_on);
+    });
+
+    $(document).on('click', '.follow-on', function() {
+      let follow_off = $('<button type="button" class="btn rounded-pill btn-outline-primary btn-sm follow-btn follow-off">フォローする</button>');
+      $(this).replaceWith(follow_off);
+    });
+});
+
