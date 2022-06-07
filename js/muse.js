@@ -430,7 +430,30 @@ $('#requestFile').on('change', function() {
         var selectedFileName = selectedFile.name.length > 10 ? (selectedFile.name).slice(0,10)+"..." : selectedFile.name;
         // ファイル名を表示
         $('#outputFileName').text(selectedFileName);
+        // バリデーション文言を非表示
+        $('#inputRequestErrMsgArea').addClass('d-none');
+    } else {
+        // 添付ファイルを空に変更
+        this.value = '';
+        // ファイル名を空に変更
+        $('#outputFileName').text('');
+        // バリデーション文言を表示
+        $('#inputRequestErrMsgArea').removeClass('d-none');
     }
+    // 必須項目のチェック
+    checkRequestInput();
+});
+/**
+ * 作品依頼（通常依頼）提案ページ
+ */
+// ファイル選択ボタンがクリックされた際、バリデーション文言を表示
+$('#requestFile').on('click', function() {
+    // ファイルが存在しない場合、バリデーション文言を表示
+    if (this.files.length === 0) {
+        $('#inputRequestErrMsgArea').removeClass('d-none');
+    };
+    // 必須項目のチェック
+    checkRequestInput();
 });
 
 // 入力項目のフォーカスが外れた際に処理を実行
@@ -498,6 +521,7 @@ function checkRequestInput() {
     var flagText = false;
     var flagComposition = false;
     var flagCharacter = false;
+    var flagRequestFile = false;
     var flagRefUrl = false;
     var flagBudget = false;
     var flagAppDeadline = false;
@@ -512,6 +536,8 @@ function checkRequestInput() {
     var compositionVal = $('#composition').val();
     // キャラクターの値取得
     var characterVal = $('#character').val();
+    // 添付ファイルの値取得
+    var requestFileVal = $('#requestFile').val();
     // 参考URLの値取得
     var refUrlVal = $('#refUrl').val();
     // 予算の値取得
@@ -571,6 +597,13 @@ function checkRequestInput() {
         if (!characterVal.match(/[\x20\u3000]/)) {
             flagCharacter = true;
         }
+    }
+
+    // 添付ファイルが入力されているかを確認
+    if (requestFileVal) {
+        // 添付ファイルが入力されている場合、エラーメッセージを非表示
+        flagRequestFile = true;
+        $('#inputRequestErrMsgArea').addClass('d-none');
     }
 
     // 参考URLが入力されているかを確認
@@ -638,7 +671,7 @@ function checkRequestInput() {
     }
 
     // 入力項目の値が正しい場合、新規登録ボタンを有効化
-    if (flagRequestTitle === true && flagWorkTitle === true && flagText === true && flagComposition === true && flagCharacter === true && flagRefUrl === true && flagBudget === true && flagAppDeadline === true) {
+    if (flagRequestTitle === true && flagWorkTitle === true && flagText === true && flagComposition === true && flagCharacter === true && flagRefUrl === true && flagBudget === true && flagAppDeadline === true && flagRequestFile === true) {
         disabledFlag = false;
     }
     $('#requestBtn').attr('disabled', disabledFlag);

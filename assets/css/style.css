@@ -247,6 +247,10 @@ ul.horizontal-list li.item img {
   background-color: #3c7fc3 !important;
 }
 
+.alert-color {
+  color: #e02126 !important;
+}
+
 .follow-btn, .following-btn{
   width: 120px;
   height: 30px;
