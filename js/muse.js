@@ -1104,6 +1104,8 @@ function checkSaleInput() {
         flagPostFile = true;
     } else {
         selectPostFileMsg();
+        this.value = '';
+        $('#cover_img').addClass('d-none');
     }
     // タイトルが入力されているかを確認
     if (postTitleVal.length > 0) {
@@ -1183,6 +1185,8 @@ function checkAuctionInput() {
         flagPostFile = true;
     } else {
         selectPostFileMsg();
+        this.value = '';
+        $('#cover_img').addClass('d-none');
     }
 
     // タイトルが入力されているかを確認
@@ -1350,6 +1354,8 @@ function checkNotForSaleInput() {
         flagPostFile = true;
     } else {
         selectPostFileMsg();
+        this.value = '';
+        $('#cover_img').addClass('d-none');
     }
     // タイトルが入力されているかを確認
     if (postTitleVal.length > 0) {
@@ -1483,6 +1489,30 @@ $(function() {
           $('#save_btn').attr('disabled', false);
         } else {
           $('#save_btn').attr('disabled', true);
+        }
+    });
+});
+
+/**
+ * 画像投稿ページ(post.html)
+ */
+$(function() {
+    // 投稿画像を表示
+    $('#postFile').change(function() {
+        let file = this.files[0];
+        let fr = new FileReader();
+        fr.readAsDataURL(file);
+        fr.onload = function() {
+            $('#cover_img').attr('src', fr.result);
+            $('#cover_img').removeClass('d-none')
+        }
+    });
+    // オークション開始日時指定の表示切替
+    $('[name="auctionStartDate"]:radio').change(function() {
+        if ($('#specify').prop('checked')) {
+            $('#auction_datetime').removeClass('d-none');
+        } else {
+            $('#auction_datetime').addClass('d-none');
         }
     });
 });
