@@ -1546,11 +1546,13 @@ $(function() {
     // 投稿画像を表示
     $('#postFile').change(function() {
         let file = this.files[0];
-        let fr = new FileReader();
-        fr.readAsDataURL(file);
-        fr.onload = function() {
-            $('#cover_img').attr('src', fr.result);
-            $('#cover_img').removeClass('d-none')
+        if (file) {
+            let fr = new FileReader();
+            fr.readAsDataURL(file);
+            fr.onload = function() {
+                $('#cover_img').attr('src', fr.result);
+                $('#cover_img').removeClass('d-none')
+            }
         }
     });
     // オークション開始日時指定の表示切替
