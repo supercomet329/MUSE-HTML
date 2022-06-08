@@ -76,22 +76,24 @@
 
                 <div class="row">
                     <div class="col-12">
-                        <label for="saleType" class="label-text post-input-title">タイトル（必須）</label>
+                        <label for="saleType" class="label-text post-input-title mt-4">タイトル（必須）</label>
                     </div>
                     <div class="col-12">
-                        <input class="form-control post-input" type="text" name="postTitle" id="postTitle" placeholder="タイトルを入力">
+                        <input class="form-control post-input" type="text" name="postTitle" id="postTitle"
+                            placeholder="タイトルを入力">
                     </div>
                     <div class="col-12">
                         <div class="inputPostTitle" id="inputPostTitle"></div>
                     </div>
                     <div class="col-12">
-                        <label for="saleType" class="label-text post-input-title">詳細（任意）</label>
+                        <label for="saleType" class="label-text post-input-title mt-4">詳細（任意）</label>
                     </div>
                     <div class="col-12">
-                        <textarea class="form-control post-detail" name="postDetail" id="postDetail" placeholder="詳細を入力"></textarea>
+                        <textarea class="form-control post-detail" name="postDetail" id="postDetail"
+                            placeholder="詳細を入力"></textarea>
                     </div>
                     <div class="col-12 mt-2">
-                        <label for="saleType" class="label-text post-input-title">販売形式（必須）</label>
+                        <label for="saleType" class="label-text post-input-title mt-4">販売形式（必須）</label>
                     </div>
                     <div class="col-12 row">
                         <div class="col-5 post-radio ml-2">
@@ -106,11 +108,12 @@
                     </div>
 
                     <div class="col-12">
-                        <label for="suitableAges" class="label-text post-input-title">対象（必須）</label>
+                        <label for="suitableAges" class="label-text post-input-title mt-4">対象（必須）</label>
                     </div>
                     <div class="col-12 row">
                         <div class="col-5 post-radio ml-2">
-                            <label><input type="radio" name="suitableAges" value="allAges" id="allAges" checked>全年齢</label>
+                            <label><input type="radio" name="suitableAges" value="allAges" id="allAges"
+                                    checked>全年齢</label>
                         </div>
                         <div class="col-5 post-radio ml-2">
                             <label><input type="radio" name="suitableAges" value="r18" id="restrictedAge">R-18</label>
@@ -120,10 +123,11 @@
                     <!-- 販売形式フォーム-->
                     <div class="saleSection saleTypeSection mb-4">
                         <div class="col-12">
-                            <label for="imagePrice" class="label-text post-input-title">販売価格（必須）</label>
+                            <label for="imagePrice" class="label-text post-input-title mt-4">販売価格（必須）</label>
                         </div>
                         <div class="col-11">
-                            <input class="form-control post-input image-price-input" type="number" name="imagePrice" id="imagePrice" placeholder="金額を入力">
+                            <input class="form-control post-input image-price-input" type="number" name="imagePrice"
+                                id="imagePrice" placeholder="金額を入力">
                             <div class="image-price-jpy">
                                 円
                             </div>
@@ -136,10 +140,11 @@
                             <p class="commission-price">0円</p>
                         </div>
                         <div class="col-12">
-                            <label for="binPrice" class="label-text post-input-title">即決価格（必須）</label>
+                            <label for="binPrice" class="label-text post-input-title mt-4">即決価格（必須）</label>
                         </div>
                         <div class="col-11">
-                            <input class="form-control post-input image-price-input" type="number" name="binPrice" id="binPrice" placeholder="金額を入力">
+                            <input class="form-control post-input image-price-input" type="number" name="binPrice"
+                                id="binPrice" placeholder="金額を入力">
                             <div class="image-price-jpy">
                                 円
                             </div>
@@ -152,39 +157,48 @@
                     <!-- オークション形式フォーム-->
                     <div class="auctionSection saleTypeSection">
                         <div class="col-12">
-                            <label for="auctionStartDate" class="label-text post-input-title">オークション開始日時（必須）</label>
+                            <label for="auctionStartDate"
+                                class="label-text post-input-title mt-4">オークション開始日時（必須）</label>
                         </div>
                         <div class="col-12 row">
                             <div class="col-5 post-radio ml-2">
-                                <label><input type="radio" name="auctionStartDate" value="notSpecified" id="notSpecified" checked>指定しない</label>
+                                <label><input type="radio" name="auctionStartDate" value="notSpecified"
+                                        id="notSpecified" checked>指定しない</label>
                             </div>
                             <div class="col-5 post-radio ml-2">
-                                <label><input type="radio" name="auctionStartDate" value="specify" id="specify">開始時間指定</label>
+                                <label><input type="radio" name="auctionStartDate" value="specify"
+                                        id="specify">開始時間指定</label>
                             </div>
                         </div>
                         <div id="auction_datetime" class="d-none">
                             <div class="col-12">
-                                <label for="auctionStartDate" class="label-text post-input-title">オークション開始日時</label>
+                                <label for="auctionStartDate"
+                                    class="label-text post-input-title mt-4">オークション開始日時</label>
                             </div>
                             <div class="col-12 row">
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="yyyy" name="auctionDateY" id="auctionDateY">
+                                    <input type="number" class="auction-input" placeholder="yyyy" name="auctionDateY"
+                                        id="auctionDateY">
                                     <p class="auction-date">年</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionDateM" id="auctionDateM">
+                                    <input type="number" class="auction-input" placeholder="mm" name="auctionDateM"
+                                        id="auctionDateM">
                                     <p class="auction-date">月</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="dd" name="auctionDateD" id="auctionDateD">
+                                    <input type="number" class="auction-input" placeholder="dd" name="auctionDateD"
+                                        id="auctionDateD">
                                     <p class="auction-date">日</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="hh" name="auctionDateH" id="auctionDateH">
+                                    <input type="number" class="auction-input" placeholder="hh" name="auctionDateH"
+                                        id="auctionDateH">
                                     <p class="auction-date">時</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionDateMin" id="auctionDateMin">
+                                    <input type="number" class="auction-input" placeholder="mm" name="auctionDateMin"
+                                        id="auctionDateMin">
                                     <p class="auction-date">分</p>
                                 </div>
                             </div>
@@ -192,27 +206,33 @@
                                 <div class="inputAppDeadline" id="inputAppDeadline"></div>
                             </div>
                             <div class="col-12 mt-3">
-                                <label for="auctionStartDate" class="label-text post-input-title">オークション終了日時</label>
+                                <label for="auctionStartDate"
+                                    class="label-text post-input-title mt-4">オークション終了日時</label>
                             </div>
                             <div class="col-12 row">
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="yyyy" name="auctionEndDateY" id="auctionEndDateY">
+                                    <input type="number" class="auction-input" placeholder="yyyy" name="auctionEndDateY"
+                                        id="auctionEndDateY">
                                     <p class="auction-date">年</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateM" id="auctionEndDateM">
+                                    <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateM"
+                                        id="auctionEndDateM">
                                     <p class="auction-date">月</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="dd" name="auctionEndDateD" id="auctionEndDateD">
+                                    <input type="number" class="auction-input" placeholder="dd" name="auctionEndDateD"
+                                        id="auctionEndDateD">
                                     <p class="auction-date">日</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="hh" name="auctionEndDateH" id="auctionEndDateH">
+                                    <input type="number" class="auction-input" placeholder="hh" name="auctionEndDateH"
+                                        id="auctionEndDateH">
                                     <p class="auction-date">時</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateMin" id="auctionEndDateMin">
+                                    <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateMin"
+                                        id="auctionEndDateMin">
                                     <p class="auction-date">分</p>
                                 </div>
                             </div>
@@ -220,14 +240,17 @@
                                 <div class="inputAuctionEnd" id="inputAuctionEnd"></div>
                             </div>
                             <div class="col-12 mt-3">
-                                <label for="auctionStartDate" class="label-text post-input-title">オークション自動延長</label>
+                                <label for="auctionStartDate"
+                                    class="label-text post-input-title mt-4">オークション自動延長</label>
                             </div>
                             <div class="col-12 row">
                                 <div class="col-5 post-radio ml-2">
-                                    <label><input type="radio" name="extendAuction" value="enableAutoExtend" id="enableAutoExtend" checked>あり</label>
+                                    <label><input type="radio" name="extendAuction" value="enableAutoExtend"
+                                            id="enableAutoExtend" checked>あり</label>
                                 </div>
                                 <div class="col-5 post-radio ml-2">
-                                    <label><input type="radio" name="extendAuction" value="disableAutoExtend" id="disableAutoExtend">なし</label>
+                                    <label><input type="radio" name="extendAuction" value="disableAutoExtend"
+                                            id="disableAutoExtend">なし</label>
                                 </div>
                             </div>
                             <p class="auction-notes">※終了5分前に入札されると、5分延長されます。</p>
@@ -240,7 +263,8 @@
 
                     <div class="termsSection saleTypeSection">
                         <div class="col-12 text-center">
-                            <input class="form-check-input" type="checkbox" value="1" id="postTermsCheck" name="postTermsCheck">
+                            <input class="form-check-input" type="checkbox" value="1" id="postTermsCheck"
+                                name="postTermsCheck">
                             <label class="form-check-label post-terms-check pb-2" for="postTermsCheck">
                                 <p class="agree">利用規約に同意する</p>
                             </label>
@@ -248,7 +272,8 @@
                     </div>
 
                     <div class="col-12 text-center mt-3 mb-5">
-                        <button type="submit" class="btn btn-primary text-white submit-btn" id="postBtn" disabled>画像投稿確認</button>
+                        <button type="submit" class="btn btn-primary text-white submit-btn" id="postBtn"
+                            disabled>画像投稿確認</button>
                     </div>
 
                 </div>
@@ -258,9 +283,9 @@
 
     <footer>
         <nav class="navbar navbar-light bg-light fixed-bottom">
-            <a href="normal_mode.html"><img src="assets/img/icon/home_blue.png" alt="home"></a>
+            <a href="normal_mode.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
             <a href="post_search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
-            <a href="post.html"><img src="assets/img/icon/post_blue_on.png" alt="post"></a>
+            <a href="post.html"><img src="assets/img/icon/post_blue.png" alt="post"></a>
             <div class="notifications">
                 <a href="notification.html"><img src="assets/img/icon/notification_blue.png" alt="notification"></a>
                 <p class="unread-count rounded-circle">2000</p>
