@@ -16,7 +16,6 @@ function validatePassword(passwordVal) {
  */
 function validateEmail(emailVal) {
     // メールアドレス形式の場合trueを返す
-    
     return /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_-]{1,}\.[A-Za-z0-9]{1,}\.{0,1}[A-Za-z0-9]{1,}$/.test(emailVal);
 }
 
@@ -36,8 +35,9 @@ function validateUrl(urlVal) {
  * @returns {boolean} フォーマットが正しい場合はtrueを返す
  */
 function validateYear(year) {
-    // 年が2022年以降2100年以下である場合はtrueを返す
-    if (year >= 2022 && year <= 2100) {
+    let dateCLass =  new Date();
+    // 年が現在の年以降2100年以下である場合はtrueを返す
+    if (year >= dateCLass.getFullYear() && year <= 2100) {
         yearValidate = true;
     } else {
         yearValidate = false;
