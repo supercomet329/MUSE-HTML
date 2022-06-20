@@ -900,7 +900,7 @@ span.keep_off, span.keep_on {
 
 @media only screen and (max-width: 1024px) {
   header {
-    padding-bottom: 4.2em;
+    padding-bottom: 1.2em;
   }
 
   header nav {
@@ -917,7 +917,7 @@ span.keep_off, span.keep_on {
   }
 
   body .popular_artist {
-    padding-bottom: 3em;
+    padding-bottom: 0em;
   }
 
   header nav {
