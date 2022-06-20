@@ -900,7 +900,7 @@ span.keep_off, span.keep_on {
 
 @media only screen and (max-width: 1024px) {
   header {
-    padding-bottom: 4.2em;
+    padding-bottom: 1.2em;
   }
 
   header nav {
@@ -917,7 +917,7 @@ span.keep_off, span.keep_on {
   }
 
   body .popular_artist {
-    padding-bottom: 3em;
+    padding-bottom: 0em;
   }
 
   header nav {
@@ -1859,14 +1859,14 @@ input[type=checkbox]:checked + .terms-check::after {
 }
 /* 作品依頼　応募期限 */
 .deadline-input {
-    width: 50%;
+    width: 100%;
     position: relative;
     border: solid 2px #e7e7e7;
     border-radius: 10px;
 }
 .deadline-date {
     position: absolute;
-    right: 33%;
+    right: -5%;
     top: 3px;
 }
 /* 作品依頼　特記事項 */
