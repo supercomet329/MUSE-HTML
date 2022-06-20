@@ -607,6 +607,7 @@ function checkRequestInput() {
     }
 
     // 参考URLが入力されているかを確認
+    $('#validRefUrlErrMsg').hide();
     if (refUrlVal.length > 0) {
         // 参考URLに空白文字が含まれていないかを確認
         if (!refUrlVal.match(/[\x20\u3000]/)) {
