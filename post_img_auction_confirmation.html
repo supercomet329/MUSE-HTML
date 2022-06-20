@@ -26,6 +26,11 @@
       <div><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
     </nav>
   </header>
+  <div class="row ml-2 mt-2">
+    <a href="./profile.html">
+      ← 戻る
+    </a>
+  </div>
   <div class="container mt-3 confirm-area">
     <form action="POST">
       <div class="row">
@@ -35,6 +40,11 @@
         <div class="col-12 mb-4 confirm-image-area">
           <img src="assets/img/icon/profile.jpg">
         </div>
+        <div class="logo-area">
+            <img src="assets/img/icon/iine_on.png" alt="iine">
+            <img src="assets/img/icon/social_tipping_on.png" alt="social_tipping_on">
+        </div>
+
         <div class="col-12 item-text mb-2">
           タイトル（必須）
         </div>
@@ -54,9 +64,6 @@
         <div class="col-12 mb-4">
           <div class="mb-2">
             <input type="text" value="オークション" class="border border-0" readonly >
-          </div>
-          <div>
-            <input type="text" value="全年齢" class="border border-0" readonly >
           </div>
         </div>
         <div class="col-12 item-text mb-2">
@@ -86,12 +93,6 @@
         <div class="text-danger mb-3 ml-3 small">
           ※終了5分前に入札されると、5分延長されます。
         </div>
-        <div class="col-12 my-2">
-          <div class="text-center custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="terms_service">
-            <label class="custom-control-label font-weight-bold small" for="terms_service">利用規約に同意する</label>
-          </div>
-        </div>
         <div class="col-12 my-3 text-center">
           <button type="submit" class="btn btn-primary save-btn text-white" id="save_btn" disabled>オークションに参加</button>
         </div>
@@ -101,7 +102,7 @@
 
   <footer>
     <nav class="navbar navbar-light bg-light fixed-bottom">
-      <a href="normal_mode.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
+      <a href="timeline.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
       <a href="post_search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
       <a href="post.html"><img src="assets/img/icon/post_blue.png" alt="post"></a>
       <div class="notifications">
