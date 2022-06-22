@@ -2153,3 +2153,20 @@ input[type=checkbox]:checked + .post-terms-check::after {
     margin-bottom: 2px;
     border-bottom-color: #1E90FF;
 }
+
+#msg-btn {
+  background-color: #3c7fc3;
+}
+
+.msg p {
+  font-size: 13px;
+}
+
+.msg-date {
+  color: #948f8f;
+  font-size: 12px;
+}
+
+.bg-gray {
+  background-color: #fafafa;
+}
