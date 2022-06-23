@@ -2153,3 +2153,18 @@ input[type=checkbox]:checked + .post-terms-check::after {
     margin-bottom: 2px;
     border-bottom-color: #1E90FF;
 }
+
+/* Swiperに関連Css（notification.html） */
+.tab-menu {
+  border-bottom: 1px solid #CCC;
+}
+.tab-menu .swiper-slide {
+  width: auto;
+  padding: 10px 0;
+}
+
+.swiper-slide-thumb-active {
+  border-bottom: 2px solid #3c7fc3;
+  color: rgb(9, 8, 53) !important;
+  font-weight: bold;
+}
