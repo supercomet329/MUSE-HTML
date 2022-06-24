@@ -2160,6 +2160,23 @@ input[type=checkbox]:checked + .post-terms-check::after {
     border-bottom-color: #1E90FF;
 }
 
+#msg-btn {
+  background-color: #3c7fc3;
+}
+
+.msg p {
+  font-size: 13px;
+}
+
+.msg-date {
+  color: #948f8f;
+  font-size: 12px;
+}
+
+.bg-gray {
+  background-color: #fafafa;
+}
+
 /* Swiperに関連Css（notification.html） */
 .tab-menu {
   border-bottom: 1px solid #CCC;
