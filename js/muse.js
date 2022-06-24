@@ -1565,3 +1565,33 @@ $(function() {
         }
     });
 });
+
+/**
+ * タイムラインページ(timeline.html)
+ * スライダー処理
+ */
+$(function(){
+        // ページ内に該当のクラス名のカウント
+        var swiper_list = document.querySelectorAll('.swiperlist');
+        var swiper_tum = document.querySelectorAll('.swipertum');
+    
+        
+        if(swiper_list.length > 0){
+         // スライダーのループ処理    
+            for (let i = 0; i < swiper_list.length; i++) {  
+                swiper_list[i].className += i;
+                swiper_tum[i].className += i;
+            var swiper = new Swiper('.swiperlist' + i, {
+                spaceBetween: 10,//サムネイルの隙間
+                slidesPerView: 4,//表示するサムネイル数
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+            var swiper_tumnail = new Swiper('.swipertum' + i, {
+                thumbs: {
+                swiper: swiper,
+                },
+            });
+            }
+        }
+})
