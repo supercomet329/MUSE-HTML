@@ -2191,3 +2191,23 @@ input[type=checkbox]:checked + .post-terms-check::after {
   color: rgb(9, 8, 53) !important;
   font-weight: bold;
 }
+
+.ranking-table {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.ranking-table th, .ranking-table td {
+  padding: 4px 8px;
+  border-top: initial!important;
+  border-bottom: initial!important;
+}
+
+.ranking-table th {
+  background-color: #3c7fc3;
+}
+
+.ranking-table td:nth-child(1) {
+  font-weight: bold;
+  text-align: center;
+}
