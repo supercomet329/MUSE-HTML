@@ -590,6 +590,12 @@ body .profile-edit-area input, body .profile-edit-area textarea {
   height:auto;
 }
 
+.message-show-area .form-control {
+  font-size: 15px;
+  border-radius: 20px;
+  border:2px solid #3c7fc3;
+}
+
 .balloon_l,
 .balloon_r{
   margin: 30px 0;
@@ -2152,4 +2158,36 @@ input[type=checkbox]:checked + .post-terms-check::after {
     margin-left: -10px;
     margin-bottom: 2px;
     border-bottom-color: #1E90FF;
+}
+
+#msg-btn {
+  background-color: #3c7fc3;
+}
+
+.msg p {
+  font-size: 13px;
+}
+
+.msg-date {
+  color: #948f8f;
+  font-size: 12px;
+}
+
+.bg-gray {
+  background-color: #fafafa;
+}
+
+/* Swiperに関連Css（notification.html） */
+.tab-menu {
+  border-bottom: 1px solid #CCC;
+}
+.tab-menu .swiper-slide {
+  width: auto;
+  padding: 10px 0;
+}
+
+.swiper-slide-thumb-active {
+  border-bottom: 2px solid #3c7fc3;
+  color: rgb(9, 8, 53) !important;
+  font-weight: bold;
 }
