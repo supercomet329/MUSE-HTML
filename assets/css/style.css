@@ -2294,3 +2294,21 @@ input[type=checkbox]:checked + .post-terms-check::after {
 .report label {
   color: #3c7fc3;
 }
+
+.request_show .tab-area .nav-item .nav-link {
+  width: 110px;
+  height:30px;
+}
+.custom-nav{
+  overflow-x:scroll;
+  flex-wrap: nowrap!important;
+  }
+
+.custom-nav::-webkit-scrollbar {  
+  display: none;
+}
+
+.request_show .nav-link{
+  border-radius: 20px !important;
+  font-size: 10px !important;
+}
