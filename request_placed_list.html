@@ -37,8 +37,17 @@
   <div class="container mt-3 request-list">
     <div class="row d-flex justify-content-center">
       <div class="col-8 tab-area text-center pt-1 pb-1 ml-1 mr-2">
-        <a href="./request_placed_list.html"><button class="btn text-white selected-tab w-40 text-nowrap">募集リクエスト</button></a>
-        <a href="./request_received_list.html"><button class="btn text-white not-selected-tab w-50 text-nowrap">リクエスト</button></a>
+        <ul class="nav nav-pills nav-fill custom-nav">
+          <li class="nav-item each-tab mx-2">
+            <a class="nav-link active btn text-white selected-tab" href="./request_placed_list.html"><div class="mx-auto">募集リクエスト</div></a>
+          </li>
+          <li class="nav-item each-tab mx-2">
+            <a class="nav-link btn text-white not-selected-tab" href="./request_received_list.html" ><div class="mx-auto">リクエスト</div></a>
+          </li>
+          <li class="nav-item each-tab mx-2">
+            <a class="nav-link btn text-white not-selected-tab" href="./progress_list.html" ><div class="mx-auto">進行中</div></a>
+          </li>
+        </ul>
       </div>
       <span class="ml-auto mr-auto">
         <a href="./request_searched_list.html"><img class="mr-2 search" src="assets/img/icon/search_blue.png" alt="search"></a>
