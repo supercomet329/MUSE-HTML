@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <title>Muse | 検索一覧ページ</title>
+    <!-- Required meta tags -->
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta charset="utf-8">
+    <!-- Icon -->
+    <link rel="shortcut icon" href="assets/img/icon/logo.png">
+    <link rel="apple-touch-icon" href="assets/img/icon/logo.png">
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+</head>
+
+<body>
+    <header class="popular_artist">
+        <nav class="navbar navbar-light bg-light">
+            <a href="profile.html"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
+            <a href="picture_mode.html"><img src="assets/img/icon/logo.png" alt="logo"></a>
+            <div><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
+        </nav>
+    </header>
+
+    <div class="container mt-4 mb-4">
+        <form class="search-post mb-2">
+            <input class="search-box px-2 pb-0" id="front_search_box" name="search" type="text" placeholder="検索" />
+            <input class="search-button btn rounded-pill btn-sm font-weight-bold my-auto ml-2" name="submit" type="submit" value="検索" />
+            <img class="modal-open float-right" src="assets/img/icon/search_option.png" alt="search_option" class="float-right search-option" >
+            <!-- モーダル本体 -->
+            <div class="modal-container">
+                <div class="modal-body">
+                    <!-- モーダル内のコンテンツ -->
+                    <div class="modal-content text-left p-3">
+                        <p class="item-text mx-auto">検索オプション</p>
+                        <form class="search-post" method="POST">
+                            <div class="mb-2 item-text">
+                                キーワード
+                            </div>
+                            <div class="mb-4">
+                                <input class="search-box px-2 pb-0" id="modal_search_box" name="search" type="text" placeholder="検索" />
+                            </div>
+                            <div class="mb-2 item-text">
+                                対象
+                            </div>
+                            <div class="select-wrap">
+                                <select class="select-box">
+                                <option value="">全年齢</option>
+                                <option value="">R-18</option>
+                                </select>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button type="submit" class="btn btn-primary search-btn btn-sm btn-lg text-white">検索</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-12 pt-1">
+        <ul class="tweet-area">
+            <li class="d-flex align-items-start">
+                <figure>
+                    <a href="./profile.html">
+                        <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon">
+                    </a>
+                </figure>
+                <div class="text-area">
+                    <a href="./profile.html">
+                        <span>投稿者名</span><br>
+                    </a>
+                    <span class="post-time">2022/04/11 16:00</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="timeline-image">
+        <div class="my-2 slid-img swiper swipertum">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid" src="assets/img/pixta_85053177_M.jpg"/></a></div>
+                <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid" src="assets/img/pixta_27669641_M.jpg"/></a></div>
+                <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid" src="assets/img/pixta_64747350_M.jpg"/></a></div>
+                <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid" src="assets/img/pixta_58266021_M.jpg"/></a></div>
+                <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid" src="assets/img/pixta_40272765_M.jpg"/></a></div>
+                <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid" src="assets/img/pixta_56091176_M.jpg"/></a></div>
+            </div>
+        </div>
+        <div class="swiper slid-list swiperlist">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/img/pixta_85053177_M.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/pixta_27669641_M.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/pixta_64747350_M.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/pixta_58266021_M.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/pixta_40272765_M.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/pixta_56091176_M.jpg"/></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo-area d-flex flex-row bd-highlight mb-3">
+        <div class="p-2 bd-highlight col-6 text-nowrap">
+            <img class="float-left" src="assets/img/icon/iine_on.png" alt="iine">
+            <p class="mb-1 float-left mt-2 ml-2 mr-4 font-weight-bold">400</p>
+            <img src="assets/img/icon/social_tipping_on.png" alt="social_tipping_on">
+            <img src="assets/img/icon/favorite_on.png" alt="favorite_on">
+        </div>
+        <div class="p-2 bd-highlight col-4"></div>
+        <div class="col-2 text-right">
+            <a class="text-dark" href="post_img_comment.html">…</a>
+        </div>
+        <!-- <div class="p-2 bd-highlight col-5"></div>
+        <div class="p-2 bd-highlight col-4 arrow_box">
+            <a href="./post_img_normal_confirmation.html">
+                and more
+            </a>
+        </div> -->
+    </div>
+
+    <div class="col-12 pt-3">
+        <ul class="tweet-area">
+            <li class="d-flex align-items-start">
+                <a href="./profile.html">
+                    <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon">
+                </a>
+                <div class="text-area">
+                    <a href="./profile.html">
+                        <span>投稿者名</span><br>
+                    </a>
+                    <span class="post-time">2022/04/11 16:00</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="timeline-image col-12">
+        <div class="my-2 slid-img swiper swipertum">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid" src="assets/img/pixta_85053177_M.jpg"/></a></div>
+                <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid" src="assets/img/pixta_27669641_M.jpg"/></a></div>
+            </div>
+        </div>
+        <div class="swiper slid-list swiperlist">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/img/pixta_85053177_M.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/pixta_27669641_M.jpg"/></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo-area d-flex flex-row bd-highlight mb-3">
+        <div class="p-2 bd-highlight col-6 text-nowrap">
+            <img class="float-left" src="assets/img/icon/iine_on.png" alt="iine">
+            <p class="mb-1 float-left mt-2 ml-2 mr-4 font-weight-bold">400</p>
+            <img src="assets/img/icon/social_tipping_on.png" alt="social_tipping_on">
+            <img src="assets/img/icon/favorite_on.png" alt="favorite_on">
+        </div>
+        <div class="p-2 bd-highlight col-4"></div>
+        <div class="col-2 text-right">
+            <a class="text-dark" href="post_img_comment.html">…</a>
+        </div>
+        <!-- <div class="p-2 bd-highlight col-5"></div>
+        <div class="p-2 bd-highlight col-4 arrow_box">
+            <a href="./post_img_normal_confirmation.html">
+                and more
+            </a>
+        </div> -->
+    </div>
+
+    <footer>
+        <nav class="navbar navbar-light bg-light fixed-bottom">
+            <a href="timeline.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
+            <a href="post_search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
+            <a href="post.html"><img src="assets/img/icon/post_blue.png" alt="post"></a>
+            <div class="notifications">
+                <a href="notification.html"><img src="assets/img/icon/notification_blue.png" alt="notification"></a>
+                <p class="unread-count rounded-circle">2000</p>
+            </div>
+            <div class="messages">
+                <a href="message.html"><img src="assets/img/icon/message_blue.png" alt="message"></a>
+                <p class="unread-count top-left rounded-circle">2000</p>
+            </div>
+        </nav>
+    </footer>
+
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery -->
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="assets/js/swiper-bundle.min.js"></script>
+
+<script src="js/muse.js"></script>
+
+</html>
