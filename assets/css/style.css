@@ -711,6 +711,20 @@ img.post-image.result{
   height: 40px;
 }
 
+.request-list .tab-area .nav-item .nav-link {
+  width: 110px;
+  height:30px;
+}
+
+.custom-nav{
+  overflow-x:scroll;
+  flex-wrap: nowrap!important;
+  }
+
+.custom-nav::-webkit-scrollbar {  
+  display: none;
+}
+
 .request-list .tab-area {
   height: 50px;
 }
