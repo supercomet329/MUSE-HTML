@@ -1615,17 +1615,35 @@ $(function() {
 });
 
 // tableの列にリンク設定（ranking.html）
-$( function($) {
-    $('tbody tr[data-href]').addClass('clickable').click( function() {
-        window.location = $(this).attr('data-href');
-    }).find('a').hover( function() {
-        $(this).parents('tr').unbind('click');
-    }, function() {
-        $(this).parents('tr').click( function() {
-            window.location = $(this).attr('data-href');
-        });
+// $( function($) {
+//     $('tbody tr[data-href]').addClass('clickable').click( function() {
+//         window.location = $(this).attr('data-href');
+//     }).find('a').hover( function() {
+//         $(this).parents('tr').unbind('click');
+//     }, function() {
+//         $(this).parents('tr').click( function() {
+//             window.location = $(this).attr('data-href');
+//         });
+//     });
+// });
+
+// ランキングページ詳細開閉（ranking.html）
+$(function() {
+    $('.sp-btn').click(function() {
+        var parent = $(this).closest("tr").attr('class').split(" ")[0];
+        var detail_rank = ".detail-" + parent
+        if($(this).hasClass('more')) {
+            $(detail_rank).removeClass('not-show');
+            $(this).removeClass('more');
+            $(this).addClass('less');
+        } else {
+            $(detail_rank).addClass('not-show');
+            $(this).removeClass('less');
+            $(this).addClass('more');
+        }
     });
-});
+})
+
 // 通報内容確認（report.html）
 $(function() {
     // タイトルのフォーカスが外れた際にcheck_ProfileInput実行
