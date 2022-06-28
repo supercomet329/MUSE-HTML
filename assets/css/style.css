@@ -2273,3 +2273,12 @@ input[type=checkbox]:checked + .post-terms-check::after {
   color: rgb(9, 8, 53) !important;
   font-weight: bold;
 }
+
+.report-subject .post-img {
+  width: auto;
+  height:50vw;
+}
+
+.report label {
+  color: #3c7fc3;
+}
