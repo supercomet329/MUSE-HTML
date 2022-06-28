@@ -411,7 +411,12 @@ ul.horizontal-list li.item img {
 }
 
 .profile-area {
-  margin-top: -60px;
+  /* margin-top: -60px; */
+}
+
+.profile-money {
+  font-size: 11px;
+  color:#e02126;
 }
 
 .profile-area .username, .profile-area .name {
@@ -424,12 +429,12 @@ ul.horizontal-list li.item img {
   font-size: 13px;
 }
 
-.profile-area .edit-btn {
-  position: absolute; bottom: 0px; right: 0px;
+.profile-area .edit-btn, .profile-area .report-btn {
+  bottom: 0px; right: 0px;
 }
 
-.profile-area .request-btn {
-  position: absolute; bottom: 0px; right: 7em;
+.profile-area .request-btn, .profile-area .request-btn {
+  bottom: 0px; right: 7em;
 }
 
 .profile-area .follower, .profile-area .follow{
@@ -1076,11 +1081,14 @@ span.keep_off, span.keep_on {
     height: 200px;
   }
   .profile-area .icon img {
+    position: absolute;
     width: 90px;
     height: 90px;
+    top: -50px;
+    left:30px;
   }
   .profile-area {
-    margin-top: -40px;
+    /* margin-top: -40px; */
   }
   .profile-area .name {
     margin-left: 3%;
@@ -1089,6 +1097,10 @@ span.keep_off, span.keep_on {
   .profile-area .username {
     margin-left: 3%;
     font-size: 0.8em;
+  }
+
+  .profile-area .profile-btn button {
+    font-size: 12px;
   }
 
   .profile-area .favorite-area img {
@@ -2292,4 +2304,13 @@ input[type=checkbox]:checked + .post-terms-check::after {
 .ranking-table td:nth-child(1) {
   font-weight: bold;
   text-align: center;
+}
+
+.report-subject .post-img {
+  width: auto;
+  height:50vw;
+}
+
+.report label {
+  color: #3c7fc3;
 }
