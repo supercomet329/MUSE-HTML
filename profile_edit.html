@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="assets/css/all.min.css">
+  <!-- cropper.css -->
+  <link rel="stylesheet" href="assets/css/cropper.min.css">
 </head>
 
 <body>
@@ -31,17 +33,17 @@
     <div class="cover-area">
       <img src="https://i.imgur.com/Qtrsrk5.jpg" class="img-fluid cover-image" id="cover_image">
       <label>
-        <input type="file" name="file" id="cover_img_file_input" accept="image/png, image/jpeg">
+        <input type="file" name="file" id="cover_img_file_input" accept="image/png, image/jpeg" class="image">
         <img src="assets/img/icon/camera_BGblue.png" class="camera-image rounded-circle" id="camera_image" alt="camera-image">
       </label>
     </div>
     <div class="container">
       <div class="row profile-edit-area">
         <div class="col-12 text-center pt-3">
-        <label>
-          <input type="file" name="file" id="profile_img_file_input" accept="image/png, image/jpeg">
-          <img src="assets/img/pixta_40272765_M.jpg" class="profile-image rounded-circle" id="profile_image">
-        </label>
+          <label>
+            <input type="file" name="file" id="profile_img_file_input" accept="image/png, image/jpeg" class="image">
+            <img src="assets/img/pixta_40272765_M.jpg" class="profile-image rounded-circle" id="profile_image">
+          </label>
         </div>
         <div class="col-12 text-center title my-2" id="NameMsg"></div>
         <div class="col-12 text-center title my-2" id="UserNameMsg"></div>
@@ -58,8 +60,7 @@
         <div class="col-6 text-left title border-bottom-dashed d-flex align-items-center py-2 mt-0">
           プロフィール
         </div>
-        <textarea type="text" class="col-6 border-bottom-dashed py-1" cols="50"
-          rows="3">プロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィール</textarea>
+        <textarea type="text" class="col-6 border-bottom-dashed py-1" cols="50" rows="3">プロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィールプロフィール</textarea>
         <div class="col-6 text-left title py-2 mt-0 border-bottom-dashed">
           生年月日
         </div>
@@ -71,7 +72,12 @@
         <div class="col-6 text-left title py-2 mt-0 border-bottom-dashed my-auto">
           webサイト
         </div>
+
         <input type="text" value="https://muse.fwm.bz/" id="url_box" name="url_box" class="col-6 border-bottom-dashed text-primary">
+        <input type="hidden" id="upload-image-x" name="profileImageX" value="0" />
+        <input type="hidden" id="upload-image-y" name="profileImageY" value="0" />
+        <input type="hidden" id="upload-image-w" name="profileImageW" value="0" />
+        <input type="hidden" id="upload-image-h" name="profileImageH" value="0" />
         <div class="col-12 text-center my-4">
           <button type="submit" class="btn btn-lg btn-danger save-btn" id="save-btn">　保存　</button>
         </div>
@@ -79,6 +85,38 @@
     </div>
   </form>
 
+  <!-- モーダル -->
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="img-container">
+            <div class="row">
+              <div class="col-md-8">
+                <img id="image" id="preview" src="https://avatars0.githubusercontent.com/u/3456749">
+              </div>
+              <!-- <div class="col-md-4">
+                <div class="preview"></div>
+              </div> -->
+              <div class="mt-3 col-md-8">
+                <input type="range" value="0" id="zoom" min="0" max="3" step="0.1" class="w-100">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scrollbar"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+          <button type="button" class="btn btn-primary" id="crop">保存</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <nav class="navbar navbar-light bg-light fixed-bottom">
@@ -106,4 +144,7 @@
 <script type="text/javascript" src="js/muse.js"></script>
 <!-- Javascript(js/validate.js)読み込み -->
 <script type="text/javascript" src="js/validate.js"></script>
+<!-- cropper.js -->
+<script src="assets/js/cropper.min.js"></script>
+
 </html>
