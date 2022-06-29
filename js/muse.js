@@ -1566,6 +1566,35 @@ $(function() {
     });
 });
 
+/**
+ * タイムラインページ(timeline.html)
+ * スライダー処理
+ */
+$(function(){
+        // ページ内に該当のクラス名のカウント
+        var swiper_list = document.querySelectorAll('.swiperlist');
+        var swiper_tum = document.querySelectorAll('.swipertum');
+    
+        
+        if(swiper_list.length > 0){
+         // スライダーのループ処理    
+            for (let i = 0; i < swiper_list.length; i++) {  
+                swiper_list[i].className += i;
+                swiper_tum[i].className += i;
+            var swiper = new Swiper('.swiperlist' + i, {
+                spaceBetween: 10,//サムネイルの隙間
+                slidesPerView: 4,//表示するサムネイル数
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+            var swiper_tumnail = new Swiper('.swipertum' + i, {
+                thumbs: {
+                swiper: swiper,
+                },
+            });
+            }
+        }
+})
 // Swiperによる、タブ切り替え（notification.html）
 $(function() {
     //初期化
@@ -1584,3 +1613,47 @@ $(function() {
     });
     
 });
+
+// 通報内容確認（report.html）
+$(function() {
+    // タイトルのフォーカスが外れた際にcheck_ProfileInput実行
+    $('#report-reason').on('blur', function() {
+        check_ReportInput();
+    });
+});
+
+// 通報内容入力判定
+function check_ReportInput(){
+    $('#inputReportReasonMsg').hide();
+    // 保存ボタン有効化フラグ
+    var disabledFlag = true;
+
+    // 入力項目フラグ定義
+    var textarea_flg = false;
+
+    // 通報理由の値取得
+    var textarea_val = $('#report-reason').val();
+
+    // 通報理由が入力されているかを確認
+    if (textarea_val.length > 0) {
+        textarea_flg = true;
+    } else {
+        showReportReasonMsg();
+    }
+
+    // 正しく入力されている場合、通報ボタンを有効化
+    if (textarea_flg === true) {
+        disabledFlag = false;
+    }
+
+    // ボタンの「disabled」の置き換え
+    $('#report-btn').attr('disabled', disabledFlag);
+}
+
+function showReportReasonMsg() {
+    // 通報理由が入力されてない際のメッセージ
+    var ReportReasonLength = $('#report-reason').val().length;
+    if (ReportReasonLength <= 0) {
+        $('#inputReportReason').empty().append("<p id=\"inputReportReasonMsg\" class=\"inputReportReasonMsg postErrMsg my-0\">理由を入力して下さい</p>");
+    }
+}
