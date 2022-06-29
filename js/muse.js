@@ -782,13 +782,13 @@ $(function() {
       replaceImage(file, image);
     });
 
-    $('#profile_img_file_input').change(function() {
-      let file = this.files[0];
-      let fileInput = $('#profile_img_file_input').get(0);
-      let image = $('#profile_image').get(0);
-      validateImageSize(file, fileInput)
-      replaceImage(file, image);
-    });
+    // $('#profile_img_file_input').change(function() {
+    //   let file = this.files[0];
+    //   let fileInput = $('#profile_img_file_input').get(0);
+    //   let image = $('#profile_image').get(0);
+    //   validateImageSize(file, fileInput)
+    //   replaceImage(file, image);
+    // });
 });
 
 // 名前・ユーザーネーム入力確認（profile_edit.html）
@@ -826,13 +826,14 @@ function check_ProfileInput(){
     var user_name_flg = false;
     var calendar_flg = false;
     var url_flg = false;
-
+    
     // 名前の値取得
     var nameVal = $('#name_box').val();
     // ユーザーネームの値取得
     var user_nameVal = $('#user_name_box').val();
     // URLの値取得
     var urlVal = $('#url_box').val();
+    // 生年月日の値取得
     var calendarVal = $('#calendar_box').val();
 
     // 名前が入力されているかを確認
@@ -869,7 +870,6 @@ function check_ProfileInput(){
     } else {
         calendar_flg = true;
     };
-        
 
     // URLが入力されているかを確認
     if (urlVal.length > 0) {
@@ -1679,7 +1679,7 @@ $(function() {
             image.src = url;
             $modal.modal('show');
         };
-
+        console.log(image);
         // FileReader、選択ファイル、生成URLを初期化
         let reader;
         let file;
@@ -1709,6 +1709,7 @@ $(function() {
             cropBoxResizable: false,
             dragMode: 'move',
             viewMode: 3,
+            zoomable: false,
             // preview: '.preview',
         });
         }).on('hidden.bs.modal', function () {
@@ -1742,13 +1743,14 @@ $(function() {
         });
         })
 
+        // <!-- NOTE:拡大バー一旦処理外す。 -->
         // 画像拡大用のスクロールバーを変更した時のイベント
-        $('#zoom').on('input', function () {
-        let oldVal = $zoom.data('oldVal');
-        let volume = $(this).val();
-        let result = volume - oldVal;
-        cropper.zoom(result);
-        $zoom.data('oldVal', volume);
-        });
+        // $('#zoom').on('input', function () {
+        // let oldVal = $zoom.data('oldVal');
+        // let volume = $(this).val();
+        // let result = volume - oldVal;
+        // cropper.zoom(result);
+        // $zoom.data('oldVal', volume);
+        // });
     });
 });
