@@ -54,42 +54,42 @@
         </ul>
     </sidebar>
 
-        <div class="container pt-2">
-            <div class="row mb-2">
+    <div class="container pt-2">
+        <div class="row mb-2">
+            <div class="col-12">
+                <a href="javascript:history.back();">← 戻る</a>
+            </div>
+        </div>
+        <form>
+            <div class="row">
                 <div class="col-12">
-                    <a href="javascript:history.back();">← 戻る</a>
+                    <h1 class="text-center mb-4 contents-title font-weight-bold">パスワードリセット</h1>
+                </div>
+                <div class="col-12">
+                    <label for="newPw" class="label-text">新しいパスワード</label>
+                </div>
+                <div class="col-12 pt-2 pb-2">
+                    <input class="form-control resetpw-email" type="password" name="newPw" id="newPw" placeholder="Musepass2">
+                </div>
+                <div class="col-12">
+                    <div class="inputPwMsg" id="inputPwMsg"></div>
+                </div>
+                <div class="col-12 mt-4">
+                    <label for="newPwConfirm" class="label-text">新しいパスワードを再入力</label>
+                </div>
+                <div class="col-12 pt-2 pb-2">
+                    <input class="form-control resetpw-email" type="password" name="newPwConfirm" id="newPwConfirm" placeholder="Musepass2">
+                </div>
+                <div class="col-12">
+                    <div class="inputPwConfirmMsg" id="inputPwConfirmMsg"></div>
+                </div>
+
+                <div class="col-12 text-center mt-4">
+                    <button type="submit" class="btn btn-primary text-white submit-btn" id="setpw-btn" disabled>新しいパスワード設定</button>
                 </div>
             </div>
-            <form>
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="text-center mb-4 contents-title font-weight-bold">パスワードリセット</h1>
-                    </div>
-                    <div class="col-12">
-                        <label for="newPw" class="label-text">新しいパスワード</label>
-                    </div>
-                    <div class="col-12 pt-2 pb-2">
-                        <input class="form-control resetpw-email" type="password" name="newPw" id="newPw" placeholder="Musepass2">
-                    </div>
-                    <div class="col-12">
-                        <div class="inputPwMsg" id="inputPwMsg"></div>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <label for="newPwConfirm" class="label-text">新しいパスワードを再入力</label>
-                    </div>
-                    <div class="col-12 pt-2 pb-2">
-                        <input class="form-control resetpw-email" type="password" name="newPwConfirm" id="newPwConfirm" placeholder="Musepass2">
-                    </div>
-                    <div class="col-12">
-                        <div class="inputPwConfirmMsg" id="inputPwConfirmMsg"></div>
-                    </div>
-
-                    <div class="col-12 text-center mt-4">
-                        <button type="submit" class="btn btn-primary text-white submit-btn" id="setpw-btn" disabled>新しいパスワード設定</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+        </form>
+    </div>
 
 
     <footer>
