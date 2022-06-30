@@ -58,53 +58,53 @@
         </ul>
     </sidebar>
 
-        <div class="container pt-2">
-            <div class="row mb-2">
+    <div class="container pt-2">
+        <div class="row mb-2">
+            <div class="col-12">
+                <a href="javascript:history.back();">← 戻る</a>
+            </div>
+        </div>
+        <form class="validateRegisterForm">
+            <div class="row">
                 <div class="col-12">
-                    <a href="javascript:history.back();">← 戻る</a>
+                    <h1 class="text-center mt-1 mb-4 contents-title font-weight-bold">会員登録</h1>
+                </div>
+                <div class="col-12">
+                    <label for="username" class="label-text">ユーザーネーム</label>
+                </div>
+                <div class="col-12 pb-2">
+                    <input class="form-control register-form" type="text" name="username" id="username" placeholder="username">
+                </div>
+                <div class="col-12 pt-4">
+                    <label for="name" class="label-text">名前</label>
+                </div>
+                <div class="col-12 pb-2">
+                    <input class="form-control register-form" type="text" name="name" id="name" placeholder="namae">
+                </div>
+                <div class="col-12 pt-4">
+                    <label for="password" class="label-text">パスワード</label>
+                </div>
+                <div class="col-12 pb-2">
+                    <input class="form-control register-form" type="password" name="password" id="password" placeholder="Musepass1">
+                </div>
+                <div class="col-12">
+                    <div class="inputPwMsg mx-2" id="inputPwMsg"></div>
+                </div>
+                <div class="col-12 pt-4">
+                    <label for="password_confirmation" class="label-text">パスワードを再入力</label>
+                </div>
+                <div class="col-12 pb-2">
+                    <input class="form-control register-form" type="password" name="password_confirmation" id="password_confirmation" placeholder="Musepass1">
+                </div>
+                <div class="col-12 pb-4">
+                    <div class="inputPwConfirmMsg mx-2" id="inputPwConfirmMsg"></div>
+                </div>
+                <div class="col-12 text-center pt-3">
+                    <button type="submit" class="btn btn-primary text-white submit-btn" id="register-btn" disabled>新規登録</button>
                 </div>
             </div>
-            <form class="validateRegisterForm">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="text-center mt-1 mb-4 contents-title font-weight-bold">会員登録</h1>
-                    </div>
-                    <div class="col-12">
-                        <label for="username" class="label-text">ユーザーネーム</label>
-                    </div>
-                    <div class="col-12 pb-2">
-                        <input class="form-control register-form" type="text" name="username" id="username" placeholder="username">
-                    </div>
-                    <div class="col-12 pt-4">
-                        <label for="name" class="label-text">名前</label>
-                    </div>
-                    <div class="col-12 pb-2">
-                        <input class="form-control register-form" type="text" name="name" id="name" placeholder="namae">
-                    </div>
-                    <div class="col-12 pt-4">
-                        <label for="password" class="label-text">パスワード</label>
-                    </div>
-                    <div class="col-12 pb-2">
-                        <input class="form-control register-form" type="password" name="password" id="password" placeholder="Musepass1">
-                    </div>
-                    <div class="col-12">
-                        <div class="inputPwMsg mx-2" id="inputPwMsg"></div>
-                    </div>
-                    <div class="col-12 pt-4">
-                        <label for="password_confirmation" class="label-text">パスワードを再入力</label>
-                    </div>
-                    <div class="col-12 pb-2">
-                        <input class="form-control register-form" type="password" name="password_confirmation" id="password_confirmation" placeholder="Musepass1">
-                    </div>
-                    <div class="col-12 pb-4">
-                        <div class="inputPwConfirmMsg mx-2" id="inputPwConfirmMsg"></div>
-                    </div>
-                    <div class="col-12 text-center pt-3">
-                        <button type="submit" class="btn btn-primary text-white submit-btn" id="register-btn" disabled>新規登録</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+        </form>
+    </div>
 
     <footer>
         <nav class="navbar navbar-light bg-light fixed-bottom">
