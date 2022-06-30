@@ -2001,7 +2001,7 @@ input[type=checkbox]:checked + .terms-check::after {
     display: none;
 }
 .saleSection {
-    display: block;
+    display: none;
 }
 .post-radio input {
     margin-right: 10px;
