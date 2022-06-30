@@ -19,297 +19,319 @@
 </head>
 
 <body>
-    <header class="popular_artist">
+    <header>
         <nav class="navbar navbar-light bg-light">
-            <a href="profile.html"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
+            <div id="menu-container" class="d-block d-sm-none">
+                <div id="menu-wrapper">
+                   <div id="hamburger-menu"><span></span><span></span><span></span></div>
+                </div>
+             </div>
+            <a href="profile.html" class="d-none d-sm-block"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
             <a href="picture_mode.html"><img src="assets/img/icon/logo.png" alt="logo"></a>
-            <div><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
+            <div class="d-none d-sm-block"><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
+            <a href="profile.html" class="d-block d-sm-none"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
         </nav>
     </header>
 
-    <div class="pt-sm-5 mt-sm-5">
-        <div class="container pt-5">
-            <form method="POST">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="text-left font-weight-bold request-title">依頼タイトル（必須）</h1>
-                    </div>
-                    <hr class="request-hr">
-                    <div class="col-12 pb-4">
-                        <input class="form-control request-input" type="text" name="requestTitle" id="requestTitle" placeholder="タイトル">
-                    </div>
-                    <div class="col-12">
-                        <div class="inputRequestTitle" id="inputRequestTitle"></div>
-                    </div>
-                    <div class="col-12">
-                        <div class="requestTitleMsg" id="requestTitleMsg"></div>
-                    </div>
-                    <div class="col-12 pt-2">
-                        <h1 class="text-left font-weight-bold request-title">依頼内容（必須）</h1>
-                    </div>
-                    <hr class="request-hr">
-                    <div class="col-12">
-                        <!-- 不特定多数の場合非表示 -->
-                        <label for="work-title" class="label-text request-input-title">作品タイトル</label>
-                    </div>
-                    <div class="col-12">
-                        <!-- 不特定多数の場合非表示 -->
-                        <input class="form-control request-input" type="text" name="workTitle" id="workTitle" placeholder="作品タイトル">
-                        
-                        <!-- 不特定多数の場合表示 -->
-                        <!-- <select class="form-control" name="workTitle" id="unspecifiedworkTitle">
-                            <option value="selectbox-1">セレクトボックス1</option>
-                            <option value="selectbox-2">セレクトボックス2</option>
-                            <option value="selectbox-3">セレクトボックス3</option>
-                            <option value="selectbox-4">セレクトボックス4</option>
-                        </select> -->
-                    </div>
-                    <div class="col-12">
-                        <div class="inputWorkTitle" id="inputWorkTitle"></div>
-                    </div>
+    <sidebar class="d-block d-sm-none">
+        <ul class="menu-list accordion">
+            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目1</span></a></li>
+            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目2</span></a></li>
+            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目3</span></a></li>
+            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目4</span></a></li>
+            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目5</span></a></li>
+            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目6</span></a></li>
+            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目7</span></a></li>
+            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目8</span></a></li>
+            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目9</span></a></li>
+            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目10</span></a></li>
+            <div class="side_down">&nbsp;</div>
+        </ul>
+    </sidebar>
 
-                    <div class="col-12 mt-4">
-                        <label for="text" class="label-text request-input-title">本文</label>
-                    </div>
-                    <div class="col-12">
-                        <textarea class="form-control" name="text" id="text" placeholder="本文" rows="5"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <div class="inputText" id="inputText"></div>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <label for="composition" class="label-text request-input-title">構図</label>
-                    </div>
-                    <div class="col-12">
-                        <input class="form-control request-input" type="text" name="composition" id="composition" placeholder="構図">
-                    </div>
-                    <div class="col-12">
-                        <div class="inputComposition" id="inputComposition"></div>
-                    </div>
+    <div class="container pt-2">
+        <div class="row mb-2">
+            <div class="col-12">
+                <a href="javascript:history.back();">← 戻る</a>
+            </div>
+        </div>
+        <form method="POST">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-left font-weight-bold request-title">依頼タイトル（必須）</h1>
+                </div>
+                <hr class="request-hr">
+                <div class="col-12 pb-4">
+                    <input class="form-control request-input" type="text" name="requestTitle" id="requestTitle" placeholder="タイトル">
+                </div>
+                <div class="col-12">
+                    <div class="inputRequestTitle" id="inputRequestTitle"></div>
+                </div>
+                <div class="col-12">
+                    <div class="requestTitleMsg" id="requestTitleMsg"></div>
+                </div>
+                <div class="col-12 pt-2">
+                    <h1 class="text-left font-weight-bold request-title">依頼内容（必須）</h1>
+                </div>
+                <hr class="request-hr">
+                <div class="col-12">
+                    <!-- 不特定多数の場合非表示 -->
+                    <label for="work-title" class="label-text request-input-title">作品タイトル</label>
+                </div>
+                <div class="col-12">
+                    <!-- 不特定多数の場合非表示 -->
+                    <input class="form-control request-input" type="text" name="workTitle" id="workTitle" placeholder="作品タイトル">
+                    
+                    <!-- 不特定多数の場合表示 -->
+                    <!-- <select class="form-control" name="workTitle" id="unspecifiedworkTitle">
+                        <option value="selectbox-1">セレクトボックス1</option>
+                        <option value="selectbox-2">セレクトボックス2</option>
+                        <option value="selectbox-3">セレクトボックス3</option>
+                        <option value="selectbox-4">セレクトボックス4</option>
+                    </select> -->
+                </div>
 
-                    <div class="col-12 mt-4">
-                        <label for="character" class="label-text request-input-title">キャラクター</label>
-                    </div>
-                    <div class="col-12">
-                        <input class="form-control request-input" type="text" name="character" id="character" placeholder="キャラクター">
-                    </div>
-                    <div class="col-12 mb-3">
-                        <div class="inputCharacter" id="inputCharacter"></div>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <h1 class="text-left font-weight-bold request-title">添付ファイル</h1>
-                    </div>
-                    <hr class="request-hr">
-                    <div class="col-12 request-file-input">
-                        <label class="request-file">
-                            <input type="file" name="requestFile" id="requestFile">
-                            <img src="assets/img/icon/camera_BGblue.png" class="request-file-img">
-                        <p id="outputFileName"></p>
-                        </label>
-                        <div class="col-12 mb-3 d-none" id="inputRequestErrMsgArea">
-                            <div class="inputFile" id="inputFile">
-                                <p id="inputRequestErrMsg" class="alert-color font-weight-bold">添付ファイルを入力してください</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <h1 class="text-left font-weight-bold request-title">参考URL（任意）</h1>
-                    </div>
-                    <hr class="request-hr">
-                    <div class="col-12">
-                        <input class="form-control request-input" type="text" name="refUrl" id="refUrl" placeholder="参考URL">
-                    </div>
-                    <div class="col-12 mb-4">
-                        <div class="validRefUrl" id="validRefUrl"></div>
-                    </div>
-                    <div class="col-12 mt-2">
-                        <h1 class="text-left font-weight-bold request-title">予算（必須）</h1>
-                    </div>
-                    <hr class="request-hr">
-                    <div class="col-11">
-                        <input class="form-control request-input request-budget-input" type="number" name="budget" id="budget" placeholder="10000">
-                        <div class="request-budget-jpy">
-                            円～
-                        </div>
-                    </div>
-                    <div class="col-12 mb-4">
-                        <div class="inputBudget" id="inputBudget"></div>
-                    </div>
-                    <div class="col-12 mt-2">
-                        <h1 class="text-left font-weight-bold request-title">応募期限（必須）</h1>
-                    </div>
-                    <hr class="request-hr mb-2">
-                    <div class="col-12 row">
-                        <div class="col-4">
-                            <select name="appDeadlineY" id="appDeadlineY" class="deadline-input">
-                                <option value=""></option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                            </select>
+                <div class="col-12 mt-4">
+                    <label for="text" class="label-text request-input-title">本文</label>
+                </div>
+                <div class="col-12">
+                    <textarea class="form-control" name="text" id="text" placeholder="本文" rows="5"></textarea>
+                </div>
+                <div class="col-12">
+                    <div class="inputText" id="inputText"></div>
+                </div>
+                <div class="col-12 mt-4">
+                    <label for="composition" class="label-text request-input-title">構図</label>
+                </div>
+                <div class="col-12">
+                    <input class="form-control request-input" type="text" name="composition" id="composition" placeholder="構図">
+                </div>
+                <div class="col-12">
+                    <div class="inputComposition" id="inputComposition"></div>
+                </div>
 
-                            <p class="deadline-date">年</p>
+                <div class="col-12 mt-4">
+                    <label for="character" class="label-text request-input-title">キャラクター</label>
+                </div>
+                <div class="col-12">
+                    <input class="form-control request-input" type="text" name="character" id="character" placeholder="キャラクター">
+                </div>
+                <div class="col-12 mb-3">
+                    <div class="inputCharacter" id="inputCharacter"></div>
+                </div>
+                <div class="col-12 mt-4">
+                    <h1 class="text-left font-weight-bold request-title">添付ファイル</h1>
+                </div>
+                <hr class="request-hr">
+                <div class="col-12 request-file-input">
+                    <label class="request-file">
+                        <input type="file" name="requestFile" id="requestFile">
+                        <img src="assets/img/icon/camera_BGblue.png" class="request-file-img">
+                    <p id="outputFileName"></p>
+                    </label>
+                    <div class="col-12 mb-3 d-none" id="inputRequestErrMsgArea">
+                        <div class="inputFile" id="inputFile">
+                            <p id="inputRequestErrMsg" class="alert-color font-weight-bold">添付ファイルを入力してください</p>
                         </div>
-                        <div class="col-4">
-                            <select name="appDeadlineM" id="appDeadlineM" class="deadline-input">
-                                <option value=""></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                            <p class="deadline-date">月</p>
-                        </div>
-                        <div class="col-4">
-                            <select name="appDeadlineD" id="appDeadlineD" class="deadline-input">
-                                <option value=""></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                                <option value="25">25</option>
-                                <option value="26">26</option>
-                                <option value="27">27</option>
-                                <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
-                            </select>
-                            <p class="deadline-date">日</p>
-                        </div>
-                    </div>
-                    <div class="col-12 mb-4">
-                        <div class="inputAppDeadline" id="inputAppDeadline"></div>
-                    </div>
-                    <div class="col-12 mt-2">
-                        <h1 class="text-left font-weight-bold request-title">納品希望日（任意）</h1>
-                    </div>
-                    <hr class="request-hr mb-2">
-                    <div class="col-12 pb-4 row">
-                        <div class="col-4">
-                            <select name="desiredDateY" class="deadline-input" id="desiredDateY">
-                                <option value=""></option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                            </select>
-                            <p class="deadline-date">年</p>
-                        </div>
-                        <div class="col-4">
-                            <select name="desiredDateM" class="deadline-input" id="desiredDateM">
-                                <option value=""></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                            <p class="deadline-date">月</p>
-                        </div>
-                        <div class="col-4">
-                            <select name="desiredDateD" id="desiredDateD" class="deadline-input">
-                                <option value=""></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                                <option value="25">25</option>
-                                <option value="26">26</option>
-                                <option value="27">27</option>
-                                <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
-                            </select>
-                            <p class="deadline-date">日</p>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="inputDesiredDate" id="inputDesiredDate"></div>
-                    </div>
-                    <div class="col-12 mt-2">
-                        <h1 class="text-left font-weight-bold request-title">受付依頼数</h1>
-                    </div>
-                    <hr class="request-hr mb-2">
-                    <div class="col-12 pb-4 row">
-                        <div class="col-4">
-                            <input type="number" class="deadline-input" name="orderQuantity" id="orderQuantity">
-                            <p class="deadline-date">件</p>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center mt-3 mb-5">
-                        <button type="submit" class="btn btn-primary text-white submit-btn" id="requestBtn" disabled>依頼投稿確認</button>
                     </div>
                 </div>
-            </form>
-        </div>
+                <div class="col-12 mt-4">
+                    <h1 class="text-left font-weight-bold request-title">参考URL（任意）</h1>
+                </div>
+                <hr class="request-hr">
+                <div class="col-12">
+                    <input class="form-control request-input" type="text" name="refUrl" id="refUrl" placeholder="参考URL">
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="validRefUrl" id="validRefUrl"></div>
+                </div>
+                <div class="col-12 mt-2">
+                    <h1 class="text-left font-weight-bold request-title">予算（必須）</h1>
+                </div>
+                <hr class="request-hr">
+                <div class="col-11">
+                    <input class="form-control request-input request-budget-input" type="number" name="budget" id="budget" placeholder="10000">
+                    <div class="request-budget-jpy">
+                        円～
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="inputBudget" id="inputBudget"></div>
+                </div>
+                <div class="col-12 mt-2">
+                    <h1 class="text-left font-weight-bold request-title">応募期限（必須）</h1>
+                </div>
+                <hr class="request-hr mb-2">
+                <div class="col-12 row">
+                    <div class="col-4">
+                        <select name="appDeadlineY" id="appDeadlineY" class="deadline-input">
+                            <option value=""></option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+
+                        <p class="deadline-date">年</p>
+                    </div>
+                    <div class="col-4">
+                        <select name="appDeadlineM" id="appDeadlineM" class="deadline-input">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <p class="deadline-date">月</p>
+                    </div>
+                    <div class="col-4">
+                        <select name="appDeadlineD" id="appDeadlineD" class="deadline-input">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <p class="deadline-date">日</p>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="inputAppDeadline" id="inputAppDeadline"></div>
+                </div>
+                <div class="col-12 mt-2">
+                    <h1 class="text-left font-weight-bold request-title">納品希望日（任意）</h1>
+                </div>
+                <hr class="request-hr mb-2">
+                <div class="col-12 pb-4 row">
+                    <div class="col-4">
+                        <select name="desiredDateY" class="deadline-input" id="desiredDateY">
+                            <option value=""></option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+                        <p class="deadline-date">年</p>
+                    </div>
+                    <div class="col-4">
+                        <select name="desiredDateM" class="deadline-input" id="desiredDateM">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <p class="deadline-date">月</p>
+                    </div>
+                    <div class="col-4">
+                        <select name="desiredDateD" id="desiredDateD" class="deadline-input">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <p class="deadline-date">日</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="inputDesiredDate" id="inputDesiredDate"></div>
+                </div>
+                <div class="col-12 mt-2">
+                    <h1 class="text-left font-weight-bold request-title">受付依頼数</h1>
+                </div>
+                <hr class="request-hr mb-2">
+                <div class="col-12 pb-4 row">
+                    <div class="col-4">
+                        <input type="number" class="deadline-input" name="orderQuantity" id="orderQuantity">
+                        <p class="deadline-date">件</p>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-3 mb-5">
+                    <button type="submit" class="btn btn-primary text-white submit-btn" id="requestBtn" disabled>依頼投稿確認</button>
+                </div>
+            </div>
+        </form>
     </div>
 
     <footer>

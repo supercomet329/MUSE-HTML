@@ -1,3 +1,31 @@
+// ハンバーガーボタン押すことによる、サイドバーの開閉動作
+$(function() {
+    function slideMenu() {
+        var activeState = $(".menu-list").hasClass("active");
+        $(".menu-list").animate({left: activeState ? "0%" : "-300px"}, 400);
+    }
+    $("#menu-wrapper").click(function(event) {
+        event.stopPropagation();
+        $("#hamburger-menu").toggleClass("open");
+        $(".menu-list").toggleClass("active");
+        slideMenu();
+        if ($("#hamburger-menu").hasClass("open")) {
+            $('body').css({
+              'position': 'fixed',
+              'width': '100%',
+              'z-index': '1',
+            });
+        } else {
+            $('body').css({
+              'position': 'relative',
+              'width': 'auto',
+              'top': 'auto'
+            });
+        }
+        
+    });
+});
+
 // 通常新規登録ページ(sign_up.html)
 // 入力項目のフォーカスが外れた際に処理を実行
 $(function() {
@@ -1598,19 +1626,23 @@ $(function(){
 // Swiperによる、タブ切り替え（notification.html）
 $(function() {
     //初期化
-    const galleryThumbs = new Swiper('.tab-menu', {
-        spaceBetween: 20,
-        slidesPerView: 'auto',
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        slideActiveClass: 'swiper-slide-active'
-    });
-    const galleryTop = new Swiper('.tab-contents', {
-        autoHeight: true,
-        thumbs: {
-        swiper: galleryThumbs
-        }
-    });
+    // ページ内に該当のクラス名のカウント
+    var swiper_list = document.querySelectorAll('.tab-menu');
+        if(swiper_list.length > 0) {
+        const galleryThumbs = new Swiper('.tab-menu', {
+            spaceBetween: 20,
+            slidesPerView: 'auto',
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            slideActiveClass: 'swiper-slide-active'
+        });
+        const galleryTop = new Swiper('.tab-contents', {
+            autoHeight: true,
+            thumbs: {
+            swiper: galleryThumbs
+            }
+        });
+    }
     
 });
 
