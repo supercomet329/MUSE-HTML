@@ -26,15 +26,16 @@
                    <div id="hamburger-menu"><span></span><span></span><span></span></div>
                 </div>
              </div>
-            <a href="profile.html"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
+            <a href="profile.html" class="d-none d-sm-block"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
             <a href="picture_mode.html"><img src="assets/img/icon/logo.png" alt="logo"></a>
-            <div><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
+            <div class="d-none d-sm-block"><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
+            <a href="profile.html" class="d-block d-sm-none"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
         </nav>
     </header>
 
     <sidebar class="d-block d-sm-none">
         <ul class="menu-list accordion">
-            <!-- <li class="toggle accordion-toggle side_mar my-3"><a href="profile.html" class="py-0 pl-4"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle mr-3"><span>ユーザー名</span></a></li> -->
+            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目1</span></a></li>
             <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目2</span></a></li>
             <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目3</span></a></li>
             <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span>項目4</span></a></li>
@@ -48,8 +49,13 @@
         </ul>
     </sidebar>
 
-    <div class="pt-sm-5 mt-sm-5">
-        <div class="container pt-4">
+    <div>
+        <div class="container pt-2">
+            <div class="row mb-3">
+                <div class="col-12">
+                    <a href="javascript:history.back();">← 戻る</a>
+                </div>
+            </div>
             <form method="POST">
                 <div class="row">
                     <div class="col-12">

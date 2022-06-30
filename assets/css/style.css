@@ -1372,7 +1372,7 @@ span.keep_off, span.keep_on {
   }
 
   body .popular_artist {
-    padding-bottom: 6em;
+    padding-bottom: 0em;
   }
 
   .selected-icon {
