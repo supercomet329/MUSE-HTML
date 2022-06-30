@@ -1915,7 +1915,7 @@ input[type=checkbox]:checked + .terms-check::after {
 .request-title {
     font-size: 18px;
     color: #3c7fc3;
-    margin-top: -5px;
+    margin-top: 5px;
 }
 /* 作品依頼　水平線 */
 .request-hr {
