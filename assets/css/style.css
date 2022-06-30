@@ -268,7 +268,7 @@ ul.horizontal-list {
 }
 ul.horizontal-list li.item {
 	display: inline-block;
-	margin-top: 24px;
+	/* margin-top: 10px; */
 	margin-bottom: 10px;
   margin-right: 22px;
 }
