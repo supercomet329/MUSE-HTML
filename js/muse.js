@@ -1735,98 +1735,206 @@ function showReportReasonMsg() {
 }
 
 $(function() {
-    $(document).ready(function () {
-        // エンドポイントを定義
-        const endpoint = "http://localhost:3000/api";
+    // ページ内に該当のクラス名のカウント
+    var cropper_profile = document.querySelectorAll('#profile_img_file_input');
+    if(cropper_profile.length > 0) {
+        $(document).ready(function () {
+            // エンドポイントを定義
+            const endpoint = "http://localhost:3000/api";
 
-        // 拡大表示で使用する変数定義
-        let $zoom = $('#zoom');
-        $zoom.data('oldVal', $zoom.val());
+            // 拡大表示で使用する変数定義
+            let $zoom = $('#zoom');
+            $zoom.data('oldVal', $zoom.val());
 
-        // モーダル、画像、クロッパーの初期化
-        let $modal = $('#modal');
-        let image = document.getElementById('image');
-        let cropper;
+            // モーダル、画像、クロッパーの初期化
+            let $modal = $('#modal');
+            let image = document.getElementById('image');
+            let cropper;
 
-        // ファイル選択後のイベント
-        $("body").on("change", ".image", function (e) {
-        let files = e.target.files;
-        let done = function (url) {
-            image.src = url;
-            $modal.modal('show');
-        };
-        console.log(image);
-        // FileReader、選択ファイル、生成URLを初期化
-        let reader;
-        let file;
-        let url;
-
-        // ファイルが選択された場合
-        if (files && files.length > 0) {
-            file = files[0];
-            if (URL) {
-            done(URL.createObjectURL(file));
-            } else if (FileReader) {
-            reader = new FileReader();
-            reader.onload = function (e) {
-                done(reader.result);
+            // ファイル選択後のイベント
+            $("body").on("change", ".image", function (e) {
+            let files = e.target.files;
+            let done = function (url) {
+                image.src = url;
+                $modal.modal('show');
             };
-            reader.readAsDataURL(file);
+            console.log(image);
+            // FileReader、選択ファイル、生成URLを初期化
+            let reader;
+            let file;
+            let url;
+
+            // ファイルが選択された場合
+            if (files && files.length > 0) {
+                file = files[0];
+                if (URL) {
+                done(URL.createObjectURL(file));
+                } else if (FileReader) {
+                reader = new FileReader();
+                reader.onload = function (e) {
+                    done(reader.result);
+                };
+                reader.readAsDataURL(file);
+                }
             }
-        }
-        });
+            });
 
-        // cropper.jsでトリミング可能な画像を表示
-        $modal.on('shown.bs.modal', function (event) {
-        cropper = new Cropper(image, {
-            aspectRatio: 1,
-            initialAspectRatio: 1,
-            autoCropArea: 1,
-            cropBoxResizable: false,
-            dragMode: 'move',
-            viewMode: 3,
-            zoomable: false,
-            // preview: '.preview',
-        });
-        }).on('hidden.bs.modal', function () {
-        cropper.destroy();
-        cropper = null;
-        });
-
-        // 保存ボタンを押下時のイベント
-        $("#crop").click(function () {
-        canvas = cropper.getCroppedCanvas({
-            width: cropper['cropBoxData']['width'],
-            height: cropper['cropBoxData']['height'],
-        });
-        canvas.toBlob(function (blob) {
-            url = URL.createObjectURL(blob);
-            let reader = new FileReader();
-            reader.readAsDataURL(blob);
-            reader.onloadend = function () {
-            let base64data = reader.result;
-            const base64EncodedFile = base64data.replace(/data:.*\/.*;base64,/, '');
-            $('#profile_image').attr('src', base64data);
-            $modal.modal('hide');
-            $zoom.val(0);
-            $zoom.data('oldVal', 0);
+            // cropper.jsでトリミング可能な画像を表示
+            $modal.on('shown.bs.modal', function (event) {
+            cropper = new Cropper(image, {
+                aspectRatio: 1,
+                initialAspectRatio: 1,
+                autoCropArea: 1,
+                cropBoxResizable: false,
+                dragMode: 'move',
+                viewMode: 3,
+                zoomable: false,
+                // preview: '.preview',
+            });
+            }).on('hidden.bs.modal', function () {
+            cropper.destroy();
+            cropper = null;
+            });
             console.log(cropper);
-            $('#upload-image-x').val(cropper['cropBoxData']['left']);
-            $('#upload-image-y').val(cropper['cropBoxData']['top']);
-            $('#upload-image-w').val(cropper['cropBoxData']['width']);
-            $('#upload-image-h').val(cropper['cropBoxData']['height']);
-            }
-        });
-        })
+            // 保存ボタンを押下時のイベント
+            $("#crop").click(function () {
+            canvas = cropper.getCroppedCanvas({
+                width: cropper['cropBoxData']['width'],
+                height: cropper['cropBoxData']['height'],
+            });
+            console.log(canvas);
+            canvas.toBlob(function (blob) {
+                url = URL.createObjectURL(blob);
+                let reader = new FileReader();
+                reader.readAsDataURL(blob);
+                reader.onloadend = function () {
+                let base64data = reader.result;
+                const base64EncodedFile = base64data.replace(/data:.*\/.*;base64,/, '');
+                $('#profile_image').attr('src', base64data);
+                $modal.modal('hide');
+                $zoom.val(0);
+                $zoom.data('oldVal', 0);
+                console.log(cropper);
+                $('#upload-image-x').val(cropper['cropBoxData']['left']);
+                $('#upload-image-y').val(cropper['cropBoxData']['top']);
+                $('#upload-image-w').val(cropper['cropBoxData']['width']);
+                $('#upload-image-h').val(cropper['cropBoxData']['height']);
+                }
+            });
+            })
 
-        // <!-- NOTE:拡大バー一旦処理外す。 -->
-        // 画像拡大用のスクロールバーを変更した時のイベント
-        // $('#zoom').on('input', function () {
-        // let oldVal = $zoom.data('oldVal');
-        // let volume = $(this).val();
-        // let result = volume - oldVal;
-        // cropper.zoom(result);
-        // $zoom.data('oldVal', volume);
-        // });
-    });
+            // <!-- NOTE:拡大バー一旦処理外す。 -->
+            // 画像拡大用のスクロールバーを変更した時のイベント
+            // $('#zoom').on('input', function () {
+            // let oldVal = $zoom.data('oldVal');
+            // let volume = $(this).val();
+            // let result = volume - oldVal;
+            // cropper.zoom(result);
+            // $zoom.data('oldVal', volume);
+            // });
+        });
+    }
 });
+
+$(function() {
+     // ページ内に該当のクラス名のカウント
+     var cropper_post = document.querySelectorAll('#post_file');
+     if(cropper_post.length > 0) {
+
+        $(document).ready(function () {
+            // エンドポイントを定義
+            const endpoint = "http://localhost:3000/api";
+
+            // 拡大表示で使用する変数定義
+            let $zoom = $('#zoom');
+            $zoom.data('oldVal', $zoom.val());
+            // モーダル、画像、クロッパーの初期化
+            let $modal = $('#modal');
+            let image = document.getElementById('image');
+            let cropper_post;
+
+            // ファイル選択後のイベント
+            $("body").on("change", "#postFile", function (e) {
+            let files = e.target.files;
+            let done = function (url) {
+                image.src = url;
+                $modal.modal('show');
+            };
+            console.log(image);
+            // FileReader、選択ファイル、生成URLを初期化
+            let reader;
+            let file;
+            let url;
+
+            // ファイルが選択された場合
+            if (files && files.length > 0) {
+                console.log(2)
+                file = files[0];
+                if (URL) {
+                done(URL.createObjectURL(file));
+                } else if (FileReader) {
+                reader = new FileReader();
+                reader.onload = function (e) {
+                    done(reader.result);
+                };
+                reader.readAsDataURL(file);
+                }
+            }
+            });
+
+            // cropper.jsでトリミング可能な画像を表示
+            $modal.on('shown.bs.modal', function (event) {
+            cropper_post = new Cropper(image, {
+                aspectRatio: 1,
+                initialAspectRatio: 1,
+                autoCropArea: 1,
+                cropBoxResizable: false,
+                dragMode: 'move',
+                viewMode: 3,
+                zoomable: false,
+                // preview: '.preview',
+            });
+            }).on('hidden.bs.modal', function () {
+            cropper_post.destroy();
+            cropper_post = null;
+            });
+    console.log(cropper_post);
+            // 保存ボタンを押下時のイベント
+            $("#crop").click(function () {
+            canvas = cropper_post.getCroppedCanvas({
+                width: cropper_post['cropBoxData']['width'],
+                height: cropper_post['cropBoxData']['height'],
+            });
+            canvas.toBlob(function (blob) {
+                url = URL.createObjectURL(blob);
+                let reader = new FileReader();
+                reader.readAsDataURL(blob);
+                reader.onloadend = function () {
+                let base64data = reader.result;
+                const base64EncodedFile = base64data.replace(/data:.*\/.*;base64,/, '');
+                $('#cover_img').attr('src', base64data);
+                $modal.modal('hide');
+                $zoom.val(0);
+                $zoom.data('oldVal', 0);
+                console.log(cropper_post);
+                $('#upload-image-x').val(cropper_post['cropBoxData']['left']);
+                $('#upload-image-y').val(cropper_post['cropBoxData']['top']);
+                $('#upload-image-w').val(cropper_post['cropBoxData']['width']);
+                $('#upload-image-h').val(cropper_post['cropBoxData']['height']);
+                }
+            });
+            })
+
+            // <!-- NOTE:拡大バー一旦処理外す。 -->
+            // 画像拡大用のスクロールバーを変更した時のイベント
+            // $('#zoom').on('input', function () {
+            // let oldVal = $zoom.data('oldVal');
+            // let volume = $(this).val();
+            // let result = volume - oldVal;
+            // cropper.zoom(result);
+            // $zoom.data('oldVal', volume);
+            // });
+        });
+    };
+});
+

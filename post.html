@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- cropper.css -->
+    <link rel="stylesheet" href="assets/css/cropper.min.css">
 </head>
 
 <body>
@@ -410,7 +412,10 @@
                         </label>
                     </div>
                 </div>
-
+                <input type="hidden" id="upload-image-x" name="profileImageX" value="0" />
+                <input type="hidden" id="upload-image-y" name="profileImageY" value="0" />
+                <input type="hidden" id="upload-image-w" name="profileImageW" value="0" />
+                <input type="hidden" id="upload-image-h" name="profileImageH" value="0" />
                 <div class="col-12 text-center mt-3 mb-5">
                     <button type="submit" class="btn btn-primary text-white submit-btn" id="postBtn"
                         disabled>画像投稿確認</button>
@@ -418,6 +423,37 @@
 
             </div>
         </form>
+    </div>
+
+    <!-- モーダル -->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <div class="img-container">
+                <div class="row">
+                <div class="col-md-8">
+                    <img id="image" id="preview" src="https://avatars0.githubusercontent.com/u/3456749">
+                </div>
+                <!-- NOTE:拡大バー一旦処理外す。 -->
+                <!-- <div class="mt-3 col-md-8">
+                    <input type="range" value="0" id="zoom" min="0" max="3" step="0.1" class="w-100">
+                </div> -->
+                </div>
+            </div>
+            </div>
+            <div class="scrollbar"></div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+            <button type="button" class="btn btn-primary" id="crop">保存</button>
+            </div>
+        </div>
+        </div>
     </div>
 
     <footer>
@@ -446,5 +482,7 @@
 <script type="text/javascript" src="js/muse.js"></script>
 <!-- Javascript(js/validate.js)読み込み -->
 <script type="text/javascript" src="js/validate.js"></script>
+<!-- cropper.js -->
+<script src="assets/js/cropper.min.js"></script>
 
 </html>
