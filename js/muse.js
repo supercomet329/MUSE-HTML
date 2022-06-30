@@ -1626,19 +1626,23 @@ $(function(){
 // Swiperによる、タブ切り替え（notification.html）
 $(function() {
     //初期化
-    const galleryThumbs = new Swiper('.tab-menu', {
-        spaceBetween: 20,
-        slidesPerView: 'auto',
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        slideActiveClass: 'swiper-slide-active'
-    });
-    const galleryTop = new Swiper('.tab-contents', {
-        autoHeight: true,
-        thumbs: {
-        swiper: galleryThumbs
-        }
-    });
+    // ページ内に該当のクラス名のカウント
+    var swiper_list = document.querySelectorAll('.tab-menu');
+        if(swiper_list.length > 0) {
+        const galleryThumbs = new Swiper('.tab-menu', {
+            spaceBetween: 20,
+            slidesPerView: 'auto',
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            slideActiveClass: 'swiper-slide-active'
+        });
+        const galleryTop = new Swiper('.tab-contents', {
+            autoHeight: true,
+            thumbs: {
+            swiper: galleryThumbs
+            }
+        });
+    }
     
 });
 
