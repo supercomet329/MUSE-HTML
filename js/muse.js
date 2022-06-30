@@ -1034,15 +1034,29 @@ $(function() {
             $('.saleSection').show();
             $('.termsSection').show();
         // オークションにチェックがついている場合
-        } else if ($('#auction').prop('checked')) {
-            $('.saleTypeSection').hide();
-            $('.auctionSection').show();
-            $('.termsSection').show();
+        // } else if ($('#auction').prop('checked')) {
+        //     $('.saleTypeSection').hide();
+        //     $('.auctionSection').show();
+        //     $('.termsSection').show();
         // 販売しないにチェックがついている場合
         } else {
             $('.saleTypeSection').hide();
             $('.termsSection').hide();
             $('.notForSaleSection').show();
+        }
+    });
+});
+
+$(function() {
+    // オークション開催有無のラジオボタン変更で、表示するフォーム切り替え
+    $('[name="selectAuction"]:radio').change(function() {
+        // オークション開催ありにチェックがついている場合
+        if ($('#auction').prop('checked')) {
+            $('.notholdauctionSection').hide();
+            $('.holdauctionSection').show();
+        } else {
+            $('.holdauctionSection').hide();
+            $('.notholdauctionSection').show();
         }
     });
 });
@@ -1123,9 +1137,9 @@ $(function() {
         checkSaleType();
     });
     // オークションクリック時に
-    $('#auction').on('click', function() {
-        checkSaleType();
-    });
+    // $('#auction').on('click', function() {
+    //     checkSaleType();
+    // });
     // 販売しないクリック時に
     $('#notForSale').on('click', function() {
         checkSaleType();
@@ -1455,8 +1469,8 @@ function checkSaleType() {
     var getSaleType = '';
     if ($('#sale').prop('checked')) {
         getSaleType = checkSaleInput();
-    } else if ($('#auction').prop('checked')) {
-        getSaleType = checkAuctionInput();
+    // } else if ($('#auction').prop('checked')) {
+    //     getSaleType = checkAuctionInput();
     } else {
         getSaleType = checkNotForSaleInput();
     }
