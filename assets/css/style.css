@@ -2476,3 +2476,8 @@ img {
   border-radius: 20px !important;
   font-size: 10px !important;
 }
+
+/* 会員規約チェックボックス */
+.report-reason input[type=checkbox] {
+  display: initial;
+}
