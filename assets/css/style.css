@@ -1097,8 +1097,8 @@ span.keep_off, span.keep_on {
   }
 
   .logo-area img{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
   }
 
   .p-b-10{
@@ -2287,8 +2287,8 @@ input[type=checkbox]:checked + .post-terms-check::after {
 }
 .timeline-image .slid-img .swiper-slide img {
   display: block;
-  width: auto; 
-  height: 40vw;
+  width: 90%; 
+  height: auto;
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
@@ -2323,7 +2323,7 @@ input[type=checkbox]:checked + .post-terms-check::after {
 
 .timeline-image .slid-list img {
   width:85px;
-  height:40px;
+  height:85px;
 }
 
 .font-gold {
