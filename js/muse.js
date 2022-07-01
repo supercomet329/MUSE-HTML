@@ -1885,7 +1885,7 @@ $(function() {
             // cropper.jsでトリミング可能な画像を表示
             $modal.on('shown.bs.modal', function (event) {
             cropper_post = new Cropper(image, {
-                aspectRatio: 16/9,
+                aspectRatio: 9/16,
                 initialAspectRatio: 1,
                 autoCropArea: 1,
                 cropBoxResizable: false,
@@ -1918,6 +1918,7 @@ $(function() {
                 }
                 num++;
             }
+            $('#post_file').css('height','auto');
 
             canvas = cropper_post.getCroppedCanvas({
                 width: cropper_post['cropBoxData']['width'],
