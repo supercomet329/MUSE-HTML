@@ -1898,14 +1898,32 @@ $(function() {
             cropper_post.destroy();
             cropper_post = null;
             });
-    console.log(cropper_post);
+
             // 保存ボタンを押下時のイベント
             $("#crop").click(function () {
+            // cover_imgの数カウント
+            var cnt = $("img[id*=cover_img]").length;
+
+            var num = 1;
+            while (num < cnt + 1) {
+                var img_id = "#cover_img" + num;
+                var img_src = $(img_id).attr('src');
+                if ( img_src === "" ) {
+                    var cover_img = img_id
+                    var upload_image_x = "#upload-image-x-" + num;
+                    var upload_image_y = "#upload-image-y-" + num;
+                    var upload_image_w = "#upload-image-w-" + num;
+                    var upload_image_h = "#upload-image-h-" + num;
+                    break;
+                }
+                num++;
+            }
+
             canvas = cropper_post.getCroppedCanvas({
                 width: cropper_post['cropBoxData']['width'],
                 height: cropper_post['cropBoxData']['height'],
             });
-            $('#cover_img').removeClass('d-none')
+            $(cover_img).removeClass('d-none')
             canvas.toBlob(function (blob) {
                 url = URL.createObjectURL(blob);
                 let reader = new FileReader();
@@ -1913,15 +1931,15 @@ $(function() {
                 reader.onloadend = function () {
                 let base64data = reader.result;
                 const base64EncodedFile = base64data.replace(/data:.*\/.*;base64,/, '');
-                $('#cover_img').attr('src', base64data);
+                $(cover_img).attr('src', base64data);
                 $modal.modal('hide');
                 $zoom.val(0);
                 $zoom.data('oldVal', 0);
                 console.log(cropper_post);
-                $('#upload-image-x').val(cropper_post['cropBoxData']['left']);
-                $('#upload-image-y').val(cropper_post['cropBoxData']['top']);
-                $('#upload-image-w').val(cropper_post['cropBoxData']['width']);
-                $('#upload-image-h').val(cropper_post['cropBoxData']['height']);
+                $(upload_image_x).val(cropper_post['cropBoxData']['left']);
+                $(upload_image_y).val(cropper_post['cropBoxData']['top']);
+                $(upload_image_w).val(cropper_post['cropBoxData']['width']);
+                $(upload_image_h).val(cropper_post['cropBoxData']['height']);
                 }
             });
             })
