@@ -1587,17 +1587,17 @@ $(function() {
  */
 $(function() {
     // 投稿画像を表示
-    $('#postFile').change(function() {
-        let file = this.files[0];
-        if (file) {
-            let fr = new FileReader();
-            fr.readAsDataURL(file);
-            fr.onload = function() {
-                $('#cover_img').attr('src', fr.result);
-                $('#cover_img').removeClass('d-none')
-            }
-        }
-    });
+    // $('#postFile').change(function() {
+    //     let file = this.files[0];
+    //     if (file) {
+    //         let fr = new FileReader();
+    //         fr.readAsDataURL(file);
+    //         fr.onload = function() {
+    //             $('#cover_img').attr('src', fr.result);
+    //             $('#cover_img').removeClass('d-none')
+    //         }
+    //     }
+    // });
     // オークション開始日時指定の表示切替
     $('[name="auctionStartDate"]:radio').change(function() {
         if ($('#specify').prop('checked')) {
@@ -1905,6 +1905,7 @@ $(function() {
                 width: cropper_post['cropBoxData']['width'],
                 height: cropper_post['cropBoxData']['height'],
             });
+            $('#cover_img').removeClass('d-none')
             canvas.toBlob(function (blob) {
                 url = URL.createObjectURL(blob);
                 let reader = new FileReader();
