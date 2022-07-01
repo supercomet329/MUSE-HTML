@@ -1854,95 +1854,91 @@ $(function() {
             let cropper_post;
 
             // ファイル選択後のイベント
-            $("body").on("change", "#postFile", function (e) {
-            let files = e.target.files;
-            let done = function (url) {
-                image.src = url;
-                $modal.modal('show');
-            };
-            console.log(image);
-            // FileReader、選択ファイル、生成URLを初期化
-            let reader;
-            let file;
-            let url;
-
-            // ファイルが選択された場合
-            if (files && files.length > 0) {
-                console.log(2)
-                file = files[0];
-                if (URL) {
-                done(URL.createObjectURL(file));
-                } else if (FileReader) {
-                reader = new FileReader();
-                reader.onload = function (e) {
-                    done(reader.result);
+            $("body").on("change", "#postFile", function(e) {
+                let files = e.target.files;
+                let done = function(url) {
+                    image.src = url;
+                    $modal.modal('show');
                 };
-                reader.readAsDataURL(file);
+                console.log(image);
+                // FileReader、選択ファイル、生成URLを初期化
+                let reader;
+                let file;
+                let url;
+
+                // ファイルが選択された場合
+                if (files && files.length > 0) {
+                    console.log(2)
+                    file = files[0];
+                    if (URL) {
+                        done(URL.createObjectURL(file));
+                    } else if (FileReader) {
+                        reader = new FileReader();
+                        reader.onload = function(e) {
+                            done(reader.result);
+                        };
+                        reader.readAsDataURL(file);
+                    }
                 }
-            }
             });
 
             // cropper.jsでトリミング可能な画像を表示
-            $modal.on('shown.bs.modal', function (event) {
-            cropper_post = new Cropper(image, {
-                aspectRatio: 9/16,
-                initialAspectRatio: 1,
-                autoCropArea: 1,
-                cropBoxResizable: false,
-                dragMode: 'move',
-                viewMode: 3,
-                zoomable: false,
-                // preview: '.preview',
-            });
-            }).on('hidden.bs.modal', function () {
-            cropper_post.destroy();
-            cropper_post = null;
+            $modal.on('shown.bs.modal', function(event) {
+                cropper_post = new Cropper(image, {
+                    aspectRatio: 9 / 16,
+                    initialAspectRatio: 1,
+                    autoCropArea: 1,
+                    cropBoxResizable: false,
+                    dragMode: 'move',
+                    viewMode: 3,
+                    zoomable: false,
+                    // preview: '.preview',
+                });
+            }).on('hidden.bs.modal', function() {
+                cropper_post.destroy();
+                cropper_post = null;
             });
 
             // 保存ボタンを押下時のイベント
-            $("#crop").click(function () {
-            // cover_imgの数カウント
-            var cnt = $("img[id*=cover_img]").length;
+            $("#crop").click(function() {
+                // cover_imgの数カウント
 
-            var num = 1;
-            while (num < cnt + 1) {
-                var img_id = "#cover_img" + num;
+                var img_id = "#cover_img1";
                 var img_src = $(img_id).attr('src');
-                if ( img_src === "" ) {
+                if (img_src === "") {
                     var cover_img = img_id
-                    var upload_image_x = "#upload-image-x-" + num;
-                    var upload_image_y = "#upload-image-y-" + num;
-                    var upload_image_w = "#upload-image-w-" + num;
-                    var upload_image_h = "#upload-image-h-" + num;
-                    break;
+                    var upload_image_x = "#upload-image-x";
+                    var upload_image_y = "#upload-image-y";
+                    var upload_image_w = "#upload-image-w";
+                    var upload_image_h = "#upload-image-h";
                 }
-                num++;
-            }
-            $('#post_file').css('height','auto');
 
-            canvas = cropper_post.getCroppedCanvas({
-                width: cropper_post['cropBoxData']['width'],
-                height: cropper_post['cropBoxData']['height'],
-            });
-            $(cover_img).removeClass('d-none')
-            canvas.toBlob(function (blob) {
-                url = URL.createObjectURL(blob);
-                let reader = new FileReader();
-                reader.readAsDataURL(blob);
-                reader.onloadend = function () {
-                let base64data = reader.result;
-                const base64EncodedFile = base64data.replace(/data:.*\/.*;base64,/, '');
-                $(cover_img).attr('src', base64data);
-                $modal.modal('hide');
-                $zoom.val(0);
-                $zoom.data('oldVal', 0);
-                console.log(cropper_post);
-                $(upload_image_x).val(cropper_post['cropBoxData']['left']);
-                $(upload_image_y).val(cropper_post['cropBoxData']['top']);
-                $(upload_image_w).val(cropper_post['cropBoxData']['width']);
-                $(upload_image_h).val(cropper_post['cropBoxData']['height']);
-                }
-            });
+
+                $('#post_file').css('height', 'auto');
+
+                canvas = cropper_post.getCroppedCanvas({
+                    width: cropper_post['cropBoxData']['width'],
+                    height: cropper_post['cropBoxData']['height'],
+                });
+                $(cover_img).removeClass('d-none')
+                canvas.toBlob(function(blob) {
+                    url = URL.createObjectURL(blob);
+                    let reader = new FileReader();
+                    reader.readAsDataURL(blob);
+                    reader.onloadend = function() {
+                        let base64data = reader.result;
+                        const base64EncodedFile = base64data.replace(/data:.*\/.*;base64,/, '');
+                        $(cover_img).attr('src', base64data);
+                        $modal.modal('hide');
+                        $zoom.val(0);
+                        $zoom.data('oldVal', 0);
+                        console.log(cropper_post);
+                        $(upload_image_x).val(cropper_post['cropBoxData']['left']);
+                        $(upload_image_y).val(cropper_post['cropBoxData']['top']);
+                        $(upload_image_w).val(cropper_post['cropBoxData']['width']);
+                        $(upload_image_h).val(cropper_post['cropBoxData']['height']);
+                    }
+                });
             })
 
             // <!-- NOTE:拡大バー一旦処理外す。 -->
