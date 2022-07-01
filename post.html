@@ -4,8 +4,7 @@
 <head>
     <title>Muse | 作品依頼提案</title>
     <!-- Required meta tags -->
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta charset="utf-8">
     <!-- Icon -->
     <link rel="shortcut icon" href="assets/img/icon/logo.png">
@@ -25,9 +24,9 @@
         <nav class="navbar navbar-light bg-light">
             <div id="menu-container" class="d-block d-sm-none">
                 <div id="menu-wrapper">
-                   <div id="hamburger-menu"><span></span><span></span><span></span></div>
+                    <div id="hamburger-menu"><span></span><span></span><span></span></div>
                 </div>
-             </div>
+            </div>
             <a href="profile.html" class="d-none d-sm-block"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
             <a href="picture_mode.html"><img src="assets/img/icon/logo.png" alt="logo"></a>
             <div class="d-none d-sm-block"><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
@@ -71,22 +70,22 @@
                 </div>
                 <div class="row col-12 mx-auto">
                     <div class="col-4 post-file-input px-1">
-                        <label class="post-file" id="post_file2">
-                            <img src="" class="cover-img d-none" id="cover_img2" class="mx-auto">
+                        <label class="post-file" id="image_file2">
+                            <img src="" class="sub-cover-img d-none" id="cover_img2" class="mx-auto">
                             <input type="file" name="postFile2" id="postFile_2" accept="image/png, image/jpeg">
                             <img src="assets/img/icon/camera_BGblue.png" class="post-file-img">
                         </label>
                     </div>
                     <div class="col-4 post-file-input px-1">
-                        <label class="post-file" id="post_file3">
-                            <img src="" class="cover-img d-none" id="cover_img3" class="mx-auto">
+                        <label class="post-file" id="image_file3">
+                            <img src="" class="sub-cover-img d-none" id="cover_img3" class="mx-auto">
                             <input type="file" name="postFile3" id="postFile_3" accept="image/png, image/jpeg">
                             <img src="assets/img/icon/camera_BGblue.png" class="post-file-img">
                         </label>
                     </div>
                     <div class="col-4 post-file-input px-1">
-                        <label class="post-file" id="post_file">
-                            <img src="" class="cover-img d-none" id="cover_img4" class="mx-auto">
+                        <label class="post-file" id="image_file4">
+                            <img src="" class="sub-cover-img d-none" id="cover_img4" class="mx-auto">
                             <input type="file" name="postFile4" id="postFile_4" accept="image/png, image/jpeg">
                             <img src="assets/img/icon/camera_BGblue.png" class="post-file-img">
                         </label>
@@ -130,8 +129,7 @@
                     <label for="saleType" class="label-text post-input-title mt-4">タイトル（必須）</label>
                 </div>
                 <div class="col-12">
-                    <input class="form-control post-input" type="text" name="postTitle" id="postTitle"
-                        placeholder="タイトルを入力">
+                    <input class="form-control post-input" type="text" name="postTitle" id="postTitle" placeholder="タイトルを入力">
                 </div>
                 <div class="col-12">
                     <div class="inputPostTitle" id="inputPostTitle"></div>
@@ -140,8 +138,7 @@
                     <label for="saleType" class="label-text post-input-title mt-4">詳細（任意）</label>
                 </div>
                 <div class="col-12">
-                    <textarea class="form-control post-detail" name="postDetail" id="postDetail"
-                        placeholder="詳細を入力"></textarea>
+                    <textarea class="form-control post-detail" name="postDetail" id="postDetail" placeholder="詳細を入力"></textarea>
                 </div>
                 <div class="col-12 mt-2">
                     <label for="saleType" class="label-text post-input-title mt-4">販売形式（必須）</label>
@@ -186,8 +183,7 @@
                     <!-- オークションあり形式フォーム -->
                     <div class="holdauctionSection selectAuctionsection">
                         <div class="col-12">
-                            <label for="auctionStartDate"
-                                class="label-text post-input-title mt-4">オークション開始日時（必須）</label>
+                            <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション開始日時（必須）</label>
                         </div>
                         <div class="col-12 row">
                             <div class="col-5 post-radio ml-2">
@@ -201,33 +197,27 @@
                         </div>
                         <div id="auction_datetime" class="d-none">
                             <div class="col-12">
-                                <label for="auctionStartDate"
-                                    class="label-text post-input-title mt-4">オークション開始日時</label>
+                                <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション開始日時</label>
                             </div>
                             <div class="col-12 row">
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="yyyy" name="auctionDateY"
-                                        id="auctionDateY">
+                                    <input type="number" class="auction-input" placeholder="yyyy" name="auctionDateY" id="auctionDateY">
                                     <p class="auction-date">年</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionDateM"
-                                        id="auctionDateM">
+                                    <input type="number" class="auction-input" placeholder="mm" name="auctionDateM" id="auctionDateM">
                                     <p class="auction-date">月</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="dd" name="auctionDateD"
-                                        id="auctionDateD">
+                                    <input type="number" class="auction-input" placeholder="dd" name="auctionDateD" id="auctionDateD">
                                     <p class="auction-date">日</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="hh" name="auctionDateH"
-                                        id="auctionDateH">
+                                    <input type="number" class="auction-input" placeholder="hh" name="auctionDateH" id="auctionDateH">
                                     <p class="auction-date">時</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionDateMin"
-                                        id="auctionDateMin">
+                                    <input type="number" class="auction-input" placeholder="mm" name="auctionDateMin" id="auctionDateMin">
                                     <p class="auction-date">分</p>
                                 </div>
                             </div>
@@ -235,33 +225,27 @@
                                 <div class="inputAppDeadline" id="inputAppDeadline"></div>
                             </div>
                             <div class="col-12 mt-3">
-                                <label for="auctionStartDate"
-                                    class="label-text post-input-title mt-4">オークション終了日時</label>
+                                <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション終了日時</label>
                             </div>
                             <div class="col-12 row">
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="yyyy" name="auctionEndDateY"
-                                        id="auctionEndDateY">
+                                    <input type="number" class="auction-input" placeholder="yyyy" name="auctionEndDateY" id="auctionEndDateY">
                                     <p class="auction-date">年</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateM"
-                                        id="auctionEndDateM">
+                                    <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateM" id="auctionEndDateM">
                                     <p class="auction-date">月</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="dd" name="auctionEndDateD"
-                                        id="auctionEndDateD">
+                                    <input type="number" class="auction-input" placeholder="dd" name="auctionEndDateD" id="auctionEndDateD">
                                     <p class="auction-date">日</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="hh" name="auctionEndDateH"
-                                        id="auctionEndDateH">
+                                    <input type="number" class="auction-input" placeholder="hh" name="auctionEndDateH" id="auctionEndDateH">
                                     <p class="auction-date">時</p>
                                 </div>
                                 <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateMin"
-                                        id="auctionEndDateMin">
+                                    <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateMin" id="auctionEndDateMin">
                                     <p class="auction-date">分</p>
                                 </div>
                             </div>
@@ -269,8 +253,7 @@
                                 <div class="inputAuctionEnd" id="inputAuctionEnd"></div>
                             </div>
                             <div class="col-12 mt-3">
-                                <label for="auctionStartDate"
-                                    class="label-text post-input-title mt-4">オークション自動延長</label>
+                                <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション自動延長</label>
                             </div>
                             <div class="col-12 row">
                                 <div class="col-5 post-radio ml-2">
@@ -291,8 +274,7 @@
                             <label for="imagePrice" class="label-text post-input-title mt-4">販売価格（必須）</label>
                         </div>
                         <div class="col-11">
-                            <input class="form-control post-input image-price-input" type="number" name="imagePrice"
-                                id="imagePrice" placeholder="金額を入力">
+                            <input class="form-control post-input image-price-input" type="number" name="imagePrice" id="imagePrice" placeholder="金額を入力">
                             <div class="image-price-jpy">
                                 円
                             </div>
@@ -308,8 +290,7 @@
                             <label for="binPrice" class="label-text post-input-title mt-4">即決価格（必須）</label>
                         </div>
                         <div class="col-11">
-                            <input class="form-control post-input image-price-input" type="number" name="binPrice"
-                                id="binPrice" placeholder="金額を入力">
+                            <input class="form-control post-input image-price-input" type="number" name="binPrice" id="binPrice" placeholder="金額を入力">
                             <div class="image-price-jpy">
                                 円
                             </div>
@@ -428,8 +409,7 @@
 
                 <div class="termsSection saleTypeSection">
                     <div class="col-12 text-center">
-                        <input class="form-check-input" type="checkbox" value="1" id="postTermsCheck"
-                            name="postTermsCheck">
+                        <input class="form-check-input" type="checkbox" value="1" id="postTermsCheck" name="postTermsCheck">
                         <label class="form-check-label post-terms-check pb-2" for="postTermsCheck">
                             <p class="agree">利用規約に同意する</p>
                         </label>
@@ -460,8 +440,7 @@
                 <input type="hidden" id="upload-image-w-6" name="profileImageW" value="0" />
                 <input type="hidden" id="upload-image-h-6" name="profileImageH" value="0" />
                 <div class="col-12 text-center mt-3 mb-5">
-                    <button type="submit" class="btn btn-primary text-white submit-btn" id="postBtn"
-                        disabled>画像投稿確認</button>
+                    <button type="submit" class="btn btn-primary text-white submit-btn" id="postBtn" disabled>画像投稿確認</button>
                 </div>
 
             </div>
@@ -471,31 +450,31 @@
     <!-- モーダル -->
     <div class="modal fade image-post-modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">×</span>
             </button>
-            </div>
-            <div class="modal-body">
-            <div class="img-container">
-                <div class="row">
-                <div class="col-md-8">
-                    <img id="image" id="preview" src="https://avatars0.githubusercontent.com/u/3456749">
                 </div>
-                <!-- NOTE:拡大バー一旦処理外す。 -->
-                <!-- <div class="mt-3 col-md-8">
+                <div class="modal-body">
+                    <div class="img-container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <img id="image" id="preview" src="https://avatars0.githubusercontent.com/u/3456749">
+                            </div>
+                            <!-- NOTE:拡大バー一旦処理外す。 -->
+                            <!-- <div class="mt-3 col-md-8">
                     <input type="range" value="0" id="zoom" min="0" max="3" step="0.1" class="w-100">
                 </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="scrollbar"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+                    <button type="button" class="btn btn-primary" id="crop">保存</button>
                 </div>
             </div>
-            </div>
-            <div class="scrollbar"></div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
-            <button type="button" class="btn btn-primary" id="crop">保存</button>
-            </div>
-        </div>
         </div>
     </div>
 
