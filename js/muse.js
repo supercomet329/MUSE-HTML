@@ -2,7 +2,7 @@
 $(function() {
     function slideMenu() {
         var activeState = $(".menu-list").hasClass("active");
-        $(".menu-list").animate({left: activeState ? "0%" : "-300px"}, 400);
+        $(".menu-list").animate({ left: activeState ? "0%" : "-300px" }, 400);
     }
     $("#menu-wrapper").click(function(event) {
         event.stopPropagation();
@@ -11,18 +11,18 @@ $(function() {
         slideMenu();
         if ($("#hamburger-menu").hasClass("open")) {
             $('body').css({
-              'position': 'fixed',
-              'width': '100%',
-              'z-index': '1',
+                'position': 'fixed',
+                'width': '100%',
+                'z-index': '1',
             });
         } else {
             $('body').css({
-              'position': 'relative',
-              'width': 'auto',
-              'top': 'auto'
+                'position': 'relative',
+                'width': 'auto',
+                'top': 'auto'
             });
         }
-        
+
     });
 });
 
@@ -388,22 +388,22 @@ function showPwNotMatchMsg() {
 }
 
 // 検索オプションのモーダル開閉
-$(function(){
-	var open = $('.modal-open'),
-		container = $('.modal-container');
+$(function() {
+    var open = $('.modal-open'),
+        container = $('.modal-container');
 
-	//開くボタンをクリックしたらモーダルを表示する
-	open.on('click',function(){	
-		container.addClass('active');
-		return false;
-	});
+    //開くボタンをクリックしたらモーダルを表示する
+    open.on('click', function() {
+        container.addClass('active');
+        return false;
+    });
 
-	//モーダルの外側をクリックしたらモーダルを閉じる
-	$(document).on('click',function(e) {
-		if(!$(e.target).closest('.modal-body').length) {
-			container.removeClass('active');
-		}
-	});
+    //モーダルの外側をクリックしたらモーダルを閉じる
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest('.modal-body').length) {
+            container.removeClass('active');
+        }
+    });
 });
 
 // タブの選択機能（post_search.html,request_searched_list.html）
@@ -433,15 +433,15 @@ $(function() {
 });
 
 // キープ済み、キープの選択機能（request_searched_list.html,request_received_list_html）
-$(function () {
+$(function() {
     $(document).on('click', '.keep_off', function() {
-      let keep_on = $('<div class="rounded-pill text-center mb-1 px-1 keep_on"><img src="assets/img/icon/keep_on.png" alt="keep-on" class="keep-on"></div>');
-      $(this).replaceWith(keep_on);
+        let keep_on = $('<div class="rounded-pill text-center mb-1 px-1 keep_on"><img src="assets/img/icon/keep_on.png" alt="keep-on" class="keep-on"></div>');
+        $(this).replaceWith(keep_on);
     });
 
     $(document).on('click', '.keep_on', function() {
-      let keep_off = $('<div class="border rounded-pill text-center mb-1 px-1 keep_off"><img src="assets/img/icon/keep_off.png" alt="keep-off" class="keep-off"></div>');
-      $(this).replaceWith(keep_off);
+        let keep_off = $('<div class="border rounded-pill text-center mb-1 px-1 keep_off"><img src="assets/img/icon/keep_off.png" alt="keep-off" class="keep-off"></div>');
+        $(this).replaceWith(keep_off);
     });
 });
 
@@ -455,7 +455,7 @@ $('#requestFile').on('change', function() {
     // ファイルが存在している場合
     if (selectedFile) {
         // 選択されたファイルが10文字以上ある場合、10文字以下を「...」で省略
-        var selectedFileName = selectedFile.name.length > 10 ? (selectedFile.name).slice(0,10)+"..." : selectedFile.name;
+        var selectedFileName = selectedFile.name.length > 10 ? (selectedFile.name).slice(0, 10) + "..." : selectedFile.name;
         // ファイル名を表示
         $('#outputFileName').text(selectedFileName);
         // バリデーション文言を非表示
@@ -803,11 +803,11 @@ function selectTab(target) {
 // 画像変更（profile_edit.html）
 $(function() {
     $('#cover_img_file_input').change(function() {
-      let file = this.files[0];
-      let fileInput = $('#cover_img_file_input').get(0);
-      let image = $('#cover_image').get(0);
-      validateImageSize(file, fileInput)
-      replaceImage(file, image);
+        let file = this.files[0];
+        let fileInput = $('#cover_img_file_input').get(0);
+        let image = $('#cover_image').get(0);
+        validateImageSize(file, fileInput)
+        replaceImage(file, image);
     });
 
     // $('#profile_img_file_input').change(function() {
@@ -841,7 +841,7 @@ $(function() {
 });
 
 // 名前・ユーザーネーム入力判定
-function check_ProfileInput(){
+function check_ProfileInput() {
     $('#NameMsg').hide();
     $('#UserNameMsg').hide();
     $('#CalendarMsg').hide();
@@ -854,7 +854,7 @@ function check_ProfileInput(){
     var user_name_flg = false;
     var calendar_flg = false;
     var url_flg = false;
-    
+
     // 名前の値取得
     var nameVal = $('#name_box').val();
     // ユーザーネームの値取得
@@ -883,13 +883,13 @@ function check_ProfileInput(){
             showNameMsg();
         }
     } else {
-        showUserNameMsg(); 
+        showUserNameMsg();
     }
 
     // 生年月日が入力されているかを確認
     if (calendarVal.length > 0) {
         // 生年月日の形式を確認
-        if(!calendarVal.match(/^\d{4}\-\d{2}\-\d{2}$/)){
+        if (!calendarVal.match(/^\d{4}\-\d{2}\-\d{2}$/)) {
             // 形式が間違っている場合エラーメッセージ表示
             showCalendarMsg();
         } else {
@@ -908,8 +908,8 @@ function check_ProfileInput(){
             // URLが間違っている場合エラーメッセージ表示
             if (url_flg === false) {
                 showUrlMsg()
-            }; 
-        // URLに空欄が入っている場合エラーメッセージ表示
+            };
+            // URLに空欄が入っている場合エラーメッセージ表示
         } else {
             showUrlMsg()
         };
@@ -930,21 +930,21 @@ function showNameMsg() {
     // 名前空欄のメッセージ
     $('#NameMsg').show();
     $('#NameMsg').empty().append("<p id=\"inputNameErrMsg\" class=\"NameErrMsg mb-0\">名前を入力してください</p>");
-    
+
 }
 
 function showUserNameMsg() {
     // ユーザーネーム空欄のメッセージ
     $('#UserNameMsg').show();
     $('#UserNameMsg').empty().append("<p id=\"inputUserNameErrMsg\" class=\"UserNameErrMsg mb-0\">ユーザーネームを入力してください</p>");
-    
+
 }
 
 function showCalendarMsg() {
     // 日付間違っている場合のメッセージ
     $('#CalendarMsg').show();
     $('#CalendarMsg').empty().append("<p id=\"inputCalendarErrMsg\" class=\"CalendarErrMsg mb-0\">生年月日を正しく選択してください</p>");
-    
+
 }
 
 function showUrlMsg() {
@@ -953,8 +953,8 @@ function showUrlMsg() {
     $('#UrlMsg').empty().append("<p id=\"inputUrlErrMsg\" class=\"UrlErrMsg mb-0\">URLを確認してください</p>");
 }
 
-$(function () {
-    $('#chat_button').on('click', function () {
+$(function() {
+    $('#chat_button').on('click', function() {
         let inputText = document.getElementById('chat_input');
         let appendArea = document.getElementById('message_show_area');
         outputMessage(inputText, appendArea);
@@ -966,7 +966,7 @@ function outputMessage(text, area) {
     if (!text.value) return false;
     let time = new Date();
     let hour = ('00' + time.getHours()).slice(-2);
-    let min  = ('00' + time.getMinutes()).slice(-2);
+    let min = ('00' + time.getMinutes()).slice(-2);
     let message = $(`<div class="col-12 pb-5 mb-5 pr-0" style="z-index: -1;"><div class="balloon_r"><div class="faceicon"><img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle" alt=""><div class="ml-xl-4 ml-1">${hour + ":" + min }</div></div><div class="says"><p>${text.value}</p></div></div></div>`);
     $(area).append(message);
 }
@@ -976,14 +976,14 @@ function outputImage(imgSrc, area) {
     if (!imgSrc) return false;
     let time = new Date();
     let hour = ('00' + time.getHours()).slice(-2);
-    let min  = ('00' + time.getMinutes()).slice(-2);
+    let min = ('00' + time.getMinutes()).slice(-2);
     let image = $(`<div class="col-12 pb-5 mb-5 pr-0" style="z-index: -1;" ><div class="balloon_r"><div class="faceicon"><img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle" alt=""><div class="ml-xl-4 ml-1">${hour + ":" + min }</div></div><img src="${imgSrc}" class="post-image result"></div></div>`);
     $(area).append(image);
 }
 
 // メッセージ詳細画面（message_show.html）
 $(function() {
-    $('#chat_button').on('click', function () {
+    $('#chat_button').on('click', function() {
         let inputText = document.getElementById('chat_input');
         let appendArea = document.getElementById('message_show_area');
         outputMessage(inputText, appendArea);
@@ -996,8 +996,8 @@ $(function() {
         fr.readAsDataURL(file);
         fr.onload = function() {
             $('.bigimg').children().attr('src', fr.result).css({
-                'width':'40vh',
-                'height':'30vh',
+                'width': '40vh',
+                'height': '30vh',
                 'object-fit': 'cover'
             });
             $('.modal').fadeIn();
@@ -1013,15 +1013,15 @@ $(function() {
 });
 
 // フォローする、フォロー中の選択機能
-$(function () {
+$(function() {
     $(document).on('click', '.follow-off', function() {
-      let follow_on = $('<button type="button"class="btn btn-primary rounded-pill btn-sm text-white btn-lg main-color follow-btn follow-on">フォロー中</button>');
-      $(this).replaceWith(follow_on);
+        let follow_on = $('<button type="button"class="btn btn-primary rounded-pill btn-sm text-white btn-lg main-color follow-btn follow-on">フォロー中</button>');
+        $(this).replaceWith(follow_on);
     });
 
     $(document).on('click', '.follow-on', function() {
-      let follow_off = $('<button type="button" class="btn rounded-pill btn-outline-primary btn-sm follow-btn follow-off">フォローする</button>');
-      $(this).replaceWith(follow_off);
+        let follow_off = $('<button type="button" class="btn rounded-pill btn-outline-primary btn-sm follow-btn follow-off">フォローする</button>');
+        $(this).replaceWith(follow_off);
     });
 });
 
@@ -1033,16 +1033,30 @@ $(function() {
             $('.saleTypeSection').hide();
             $('.saleSection').show();
             $('.termsSection').show();
-        // オークションにチェックがついている場合
-        } else if ($('#auction').prop('checked')) {
-            $('.saleTypeSection').hide();
-            $('.auctionSection').show();
-            $('.termsSection').show();
-        // 販売しないにチェックがついている場合
+            // オークションにチェックがついている場合
+            // } else if ($('#auction').prop('checked')) {
+            //     $('.saleTypeSection').hide();
+            //     $('.auctionSection').show();
+            //     $('.termsSection').show();
+            // 販売しないにチェックがついている場合
         } else {
             $('.saleTypeSection').hide();
             $('.termsSection').hide();
             $('.notForSaleSection').show();
+        }
+    });
+});
+
+$(function() {
+    // オークション開催有無のラジオボタン変更で、表示するフォーム切り替え
+    $('[name="selectAuction"]:radio').change(function() {
+        // オークション開催ありにチェックがついている場合
+        if ($('#auction').prop('checked')) {
+            $('.notholdauctionSection').hide();
+            $('.holdauctionSection').show();
+        } else {
+            $('.holdauctionSection').hide();
+            $('.notholdauctionSection').show();
         }
     });
 });
@@ -1123,9 +1137,9 @@ $(function() {
         checkSaleType();
     });
     // オークションクリック時に
-    $('#auction').on('click', function() {
-        checkSaleType();
-    });
+    // $('#auction').on('click', function() {
+    //     checkSaleType();
+    // });
     // 販売しないクリック時に
     $('#notForSale').on('click', function() {
         checkSaleType();
@@ -1148,7 +1162,182 @@ $(function() {
     $('#notSpecified').on('click', function() {
         checkSaleType();
     });
+
+    $('#postFile_2').on('change', function(e) {
+
+        var file = e.target.files[0];
+        var reader = new FileReader();
+
+        if (file.type.indexOf("image") < 0) {
+            return false;
+        }
+
+        console.log(reader.result);
+    });
+
+    $('#postFile_2').on('change', function() {
+        var file = $(this).prop('files')[0];
+        if (!file.type.match('image.*')) {
+            return;
+        }
+        var fileReader = new FileReader();
+        fileReader.onloadend = function() {
+            $('#cover_img2').removeClass('d-none');
+            $("#cover_img2").attr("src", fileReader.result);
+
+        }
+        fileReader.readAsDataURL(file);
+    });
+
+    $('#postFile_3').on('change', function() {
+        var file = $(this).prop('files')[0];
+        if (!file.type.match('image.*')) {
+            return;
+        }
+        var fileReader = new FileReader();
+        fileReader.onloadend = function() {
+            $('#cover_img3').removeClass('d-none');
+            $("#cover_img3").attr("src", fileReader.result);
+
+        }
+        fileReader.readAsDataURL(file);
+    });
+
+    $('#postFile_4').on('change', function() {
+        var file = $(this).prop('files')[0];
+        if (!file.type.match('image.*')) {
+            return;
+        }
+        var fileReader = new FileReader();
+        fileReader.onloadend = function() {
+            $('#cover_img4').removeClass('d-none');
+            $("#cover_img4").attr("src", fileReader.result);
+
+        }
+        fileReader.readAsDataURL(file);
+    });
+
+    setAuctionSelBox();
 });
+
+// 使用HTML(post.html)
+function setAuctionSelBox() {
+
+    var nowYear = new Date().getFullYear();
+
+    var setAuctionDateY = $('#setAuctionDateY').val();
+    var htmlAuctionDateY = '';
+    for (var year = nowYear; year < nowYear + 3; year++) {
+        if (year == setAuctionDateY) {
+            htmlAuctionDateY += '<option value="' + year + '" selected>' + year + '</option>';
+        } else {
+            htmlAuctionDateY += '<option value="' + year + '">' + year + '</option>';
+        }
+    }
+    $('#auctionDateY').html(htmlAuctionDateY);
+
+
+    var setAuctionEndDateY = $('#setAuctionEndDateY').val();
+    var htmlAuctionEndDateY = '';
+    for (var year = nowYear; year < nowYear + 3; year++) {
+        if (year == setAuctionEndDateY) {
+            htmlAuctionEndDateY += '<option value="' + year + '" selected>' + year + '</option>';
+        } else {
+            htmlAuctionEndDateY += '<option value="' + year + '">' + year + '</option>';
+        }
+    }
+    $('#auctionEndDateY').html(htmlAuctionEndDateY);
+
+    var setAuctionDateM = $('#setAuctionDateM').val();
+    var htmlAuctionDateM = '';
+    for (var month = 1; month < 12; month++) {
+        if (month == setAuctionDateM) {
+            htmlAuctionDateM += '<option value="' + month + '" selected>' + month + '</option>';
+        } else {
+            htmlAuctionDateM += '<option value="' + month + '">' + month + '</option>';
+        }
+    }
+    $('#auctionDateM').html(htmlAuctionDateM);
+
+    var setAuctionEndDateM = $('#setAuctionEndDateM').val();
+    var htmlAuctionEndDateM = '';
+    for (var month = 1; month < 12; month++) {
+        if (month == setAuctionEndDateM) {
+            htmlAuctionEndDateM += '<option value="' + month + '" selected>' + month + '</option>';
+        } else {
+            htmlAuctionEndDateM += '<option value="' + month + '">' + month + '</option>';
+        }
+    }
+    $('#auctionEndDateM').html(htmlAuctionEndDateM);
+
+    var setAuctionDateD = $('#setAuctionDateD').val();
+    var htmlAuctionDateD = '';
+    for (var day = 1; day <= 31; day++) {
+        if (day == setAuctionDateD) {
+            htmlAuctionDateD += '<option value="' + day + '" selected>' + day + '</option>';
+        } else {
+            htmlAuctionDateD += '<option value="' + day + '">' + day + '</option>';
+        }
+    }
+    $('#auctionDateD').html(htmlAuctionDateD);
+
+    var setAuctionEndDateD = $('#setAuctionEndDateD').val();
+    var htmlAuctionEndDateD = '';
+    for (var day = 1; day <= 31; day++) {
+        if (day == setAuctionEndDateD) {
+            htmlAuctionEndDateD += '<option value="' + day + '" selected>' + day + '</option>';
+        } else {
+            htmlAuctionEndDateD += '<option value="' + day + '">' + day + '</option>';
+        }
+    }
+    $('#auctionEndDateD').html(htmlAuctionEndDateD);
+
+    var setAuctionDateH = $('#setAuctionDateH').val();
+    var htmlAuctionDateH = '';
+    for (var hour = 1; hour <= 24; hour++) {
+        if (hour == setAuctionDateH) {
+            htmlAuctionDateH += '<option value="' + hour + '" selected>' + hour + '</option>';
+        } else {
+            htmlAuctionDateH += '<option value="' + hour + '">' + hour + '</option>';
+        }
+    }
+    $('#auctionDateH').html(htmlAuctionDateH);
+
+    var setAuctionEndDateH = $('#setAuctionEndDateH').val();
+    var htmlAuctionEndDateH = '';
+    for (var hour = 1; hour <= 24; hour++) {
+        if (hour == setAuctionEndDateH) {
+            htmlAuctionEndDateH += '<option value="' + hour + '" selected>' + hour + '</option>';
+        } else {
+            htmlAuctionEndDateH += '<option value="' + hour + '">' + hour + '</option>';
+        }
+    }
+    $('#auctionEndDateH').html(htmlAuctionEndDateH);
+
+    var setAuctionDateMin = $('#setAuctionDateMin').val();
+    var htmlAuctionDateMin = '';
+    for (var min = 1; min <= 59; min++) {
+        if (min == setAuctionDateMin) {
+            htmlAuctionDateMin += '<option value="' + min + '" selected>' + min + '</option>';
+        } else {
+            htmlAuctionDateMin += '<option value="' + min + '">' + min + '</option>';
+        }
+    }
+    $('#auctionDateMin').html(htmlAuctionDateMin);
+
+    var setAuctionEndDateMin = $('#setAuctionEndDateMin').val();
+    var htmlAuctionEndDateMin = '';
+    for (var min = 1; min <= 59; min++) {
+        if (min == setAuctionEndDateMin) {
+            htmlAuctionEndDateMin += '<option value="' + min + '" selected>' + min + '</option>';
+        } else {
+            htmlAuctionEndDateMin += '<option value="' + min + '">' + min + '</option>';
+        }
+    }
+    $('#auctionEndDateMin').html(htmlAuctionEndDateMin);
+
+
+}
 
 // 通常販売時
 function checkSaleInput() {
@@ -1393,7 +1582,7 @@ function checkAuctionInput() {
                 auctionEndYInvalidMsg();
             }
         }
-    // オークション開始日時が指定されていない場合
+        // オークション開始日時が指定されていない場合
     } else {
         flagAuctionStartDate = true;
         flagAuctionEndDate = true;
@@ -1455,8 +1644,8 @@ function checkSaleType() {
     var getSaleType = '';
     if ($('#sale').prop('checked')) {
         getSaleType = checkSaleInput();
-    } else if ($('#auction').prop('checked')) {
-        getSaleType = checkAuctionInput();
+        // } else if ($('#auction').prop('checked')) {
+        //     getSaleType = checkAuctionInput();
     } else {
         getSaleType = checkNotForSaleInput();
     }
@@ -1470,6 +1659,7 @@ function selectPostFileMsg() {
         $('#selectPostFile').empty().append("<p id=\"selectPostFileMsg\" class=\"selectPostFileMsg postErrMsg mb-0\">画像を選択してください</p>");
     }
 }
+
 function inputPostTitle() {
     // タイトルが入力されてない際のメッセージ
     var postTitleLength = $('#postTitle').val().length;
@@ -1477,6 +1667,7 @@ function inputPostTitle() {
         $('#inputPostTitle').empty().append("<p id=\"inputPostTitleMsg\" class=\"inputPostTitleMsg postErrMsg my-0\">タイトルを入力して下さい</p>");
     }
 }
+
 function inputImagePrice() {
     // 販売価格が入力されてない際のメッセージ
     var imagePriceLength = $('#imagePrice').val().length;
@@ -1484,6 +1675,7 @@ function inputImagePrice() {
         $('#inputImagePrice').empty().append("<p id=\"inputImagePriceMsg\" class=\"inputImagePriceMsg postErrMsg my-0\">販売価格を入力して下さい</p>");
     }
 }
+
 function inputBinPrice() {
     // タイトルが入力されてない際のメッセージ
     var binPriceLength = $('#binPrice').val().length;
@@ -1561,9 +1753,9 @@ $(function() {
     $('#terms_service').click(function() {
         let termsChecked = $('#terms_service').get(0).checked;
         if (termsChecked === true) {
-          $('#save_btn').attr('disabled', false);
+            $('#save_btn').attr('disabled', false);
         } else {
-          $('#save_btn').attr('disabled', true);
+            $('#save_btn').attr('disabled', true);
         }
     });
 });
@@ -1573,17 +1765,17 @@ $(function() {
  */
 $(function() {
     // 投稿画像を表示
-    $('#postFile').change(function() {
-        let file = this.files[0];
-        if (file) {
-            let fr = new FileReader();
-            fr.readAsDataURL(file);
-            fr.onload = function() {
-                $('#cover_img').attr('src', fr.result);
-                $('#cover_img').removeClass('d-none')
-            }
-        }
-    });
+    // $('#postFile').change(function() {
+    //     let file = this.files[0];
+    //     if (file) {
+    //         let fr = new FileReader();
+    //         fr.readAsDataURL(file);
+    //         fr.onload = function() {
+    //             $('#cover_img').attr('src', fr.result);
+    //             $('#cover_img').removeClass('d-none')
+    //         }
+    //     }
+    // });
     // オークション開始日時指定の表示切替
     $('[name="auctionStartDate"]:radio').change(function() {
         if ($('#specify').prop('checked')) {
@@ -1598,37 +1790,37 @@ $(function() {
  * タイムラインページ(timeline.html)
  * スライダー処理
  */
-$(function(){
+$(function() {
         // ページ内に該当のクラス名のカウント
         var swiper_list = document.querySelectorAll('.swiperlist');
         var swiper_tum = document.querySelectorAll('.swipertum');
-    
-        
-        if(swiper_list.length > 0){
-         // スライダーのループ処理    
-            for (let i = 0; i < swiper_list.length; i++) {  
+
+
+        if (swiper_list.length > 0) {
+            // スライダーのループ処理    
+            for (let i = 0; i < swiper_list.length; i++) {
                 swiper_list[i].className += i;
                 swiper_tum[i].className += i;
-            var swiper = new Swiper('.swiperlist' + i, {
-                spaceBetween: 10,//サムネイルの隙間
-                slidesPerView: 4,//表示するサムネイル数
-                freeMode: true,
-                watchSlidesProgress: true,
-            });
-            var swiper_tumnail = new Swiper('.swipertum' + i, {
-                thumbs: {
-                swiper: swiper,
-                },
-            });
+                var swiper = new Swiper('.swiperlist' + i, {
+                    spaceBetween: 10, //サムネイルの隙間
+                    slidesPerView: 4, //表示するサムネイル数
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                });
+                var swiper_tumnail = new Swiper('.swipertum' + i, {
+                    thumbs: {
+                        swiper: swiper,
+                    },
+                });
             }
         }
-})
-// Swiperによる、タブ切り替え（notification.html）
+    })
+    // Swiperによる、タブ切り替え（notification.html）
 $(function() {
     //初期化
     // ページ内に該当のクラス名のカウント
     var swiper_list = document.querySelectorAll('.tab-menu');
-        if(swiper_list.length > 0) {
+    if (swiper_list.length > 0) {
         const galleryThumbs = new Swiper('.tab-menu', {
             spaceBetween: 20,
             slidesPerView: 'auto',
@@ -1639,11 +1831,11 @@ $(function() {
         const galleryTop = new Swiper('.tab-contents', {
             autoHeight: true,
             thumbs: {
-            swiper: galleryThumbs
+                swiper: galleryThumbs
             }
         });
     }
-    
+
 });
 
 // tableの列にリンク設定（ranking.html）
@@ -1664,7 +1856,7 @@ $(function() {
     $('.sp-btn').click(function() {
         var parent = $(this).closest("tr").attr('class').split(" ")[0];
         var detail_rank = ".detail-" + parent
-        if($(this).hasClass('more')) {
+        if ($(this).hasClass('more')) {
             $(detail_rank).removeClass('not-show');
             $(this).removeClass('more');
             $(this).addClass('less');
@@ -1685,7 +1877,7 @@ $(function() {
 });
 
 // 通報内容入力判定
-function check_ReportInput(){
+function check_ReportInput() {
     $('#inputReportReasonMsg').hide();
     // 保存ボタン有効化フラグ
     var disabledFlag = true;
@@ -1721,98 +1913,219 @@ function showReportReasonMsg() {
 }
 
 $(function() {
-    $(document).ready(function () {
-        // エンドポイントを定義
-        const endpoint = "http://localhost:3000/api";
+    // ページ内に該当のクラス名のカウント
+    var cropper_profile = document.querySelectorAll('#profile_img_file_input');
+    if (cropper_profile.length > 0) {
+        $(document).ready(function() {
+            // エンドポイントを定義
+            const endpoint = "http://localhost:3000/api";
 
-        // 拡大表示で使用する変数定義
-        let $zoom = $('#zoom');
-        $zoom.data('oldVal', $zoom.val());
+            // 拡大表示で使用する変数定義
+            let $zoom = $('#zoom');
+            $zoom.data('oldVal', $zoom.val());
 
-        // モーダル、画像、クロッパーの初期化
-        let $modal = $('#modal');
-        let image = document.getElementById('image');
-        let cropper;
+            // モーダル、画像、クロッパーの初期化
+            let $modal = $('#modal');
+            let image = document.getElementById('image');
+            let cropper;
 
-        // ファイル選択後のイベント
-        $("body").on("change", ".image", function (e) {
-        let files = e.target.files;
-        let done = function (url) {
-            image.src = url;
-            $modal.modal('show');
-        };
-        console.log(image);
-        // FileReader、選択ファイル、生成URLを初期化
-        let reader;
-        let file;
-        let url;
+            // ファイル選択後のイベント
+            $("body").on("change", ".image", function(e) {
+                let files = e.target.files;
+                let done = function(url) {
+                    image.src = url;
+                    $modal.modal('show');
+                };
+                console.log(image);
+                // FileReader、選択ファイル、生成URLを初期化
+                let reader;
+                let file;
+                let url;
 
-        // ファイルが選択された場合
-        if (files && files.length > 0) {
-            file = files[0];
-            if (URL) {
-            done(URL.createObjectURL(file));
-            } else if (FileReader) {
-            reader = new FileReader();
-            reader.onload = function (e) {
-                done(reader.result);
-            };
-            reader.readAsDataURL(file);
-            }
-        }
-        });
+                // ファイルが選択された場合
+                if (files && files.length > 0) {
+                    file = files[0];
+                    if (URL) {
+                        done(URL.createObjectURL(file));
+                    } else if (FileReader) {
+                        reader = new FileReader();
+                        reader.onload = function(e) {
+                            done(reader.result);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                }
+            });
 
-        // cropper.jsでトリミング可能な画像を表示
-        $modal.on('shown.bs.modal', function (event) {
-        cropper = new Cropper(image, {
-            aspectRatio: 1,
-            initialAspectRatio: 1,
-            autoCropArea: 1,
-            cropBoxResizable: false,
-            dragMode: 'move',
-            viewMode: 3,
-            zoomable: false,
-            // preview: '.preview',
-        });
-        }).on('hidden.bs.modal', function () {
-        cropper.destroy();
-        cropper = null;
-        });
-
-        // 保存ボタンを押下時のイベント
-        $("#crop").click(function () {
-        canvas = cropper.getCroppedCanvas({
-            width: cropper['cropBoxData']['width'],
-            height: cropper['cropBoxData']['height'],
-        });
-        canvas.toBlob(function (blob) {
-            url = URL.createObjectURL(blob);
-            let reader = new FileReader();
-            reader.readAsDataURL(blob);
-            reader.onloadend = function () {
-            let base64data = reader.result;
-            const base64EncodedFile = base64data.replace(/data:.*\/.*;base64,/, '');
-            $('#profile_image').attr('src', base64data);
-            $modal.modal('hide');
-            $zoom.val(0);
-            $zoom.data('oldVal', 0);
+            // cropper.jsでトリミング可能な画像を表示
+            $modal.on('shown.bs.modal', function(event) {
+                cropper = new Cropper(image, {
+                    aspectRatio: 1,
+                    initialAspectRatio: 1,
+                    autoCropArea: 1,
+                    cropBoxResizable: false,
+                    dragMode: 'move',
+                    viewMode: 3,
+                    zoomable: false,
+                    // preview: '.preview',
+                });
+            }).on('hidden.bs.modal', function() {
+                cropper.destroy();
+                cropper = null;
+            });
             console.log(cropper);
-            $('#upload-image-x').val(cropper['cropBoxData']['left']);
-            $('#upload-image-y').val(cropper['cropBoxData']['top']);
-            $('#upload-image-w').val(cropper['cropBoxData']['width']);
-            $('#upload-image-h').val(cropper['cropBoxData']['height']);
-            }
-        });
-        })
+            // 保存ボタンを押下時のイベント
+            $("#crop").click(function() {
+                canvas = cropper.getCroppedCanvas({
+                    width: cropper['cropBoxData']['width'],
+                    height: cropper['cropBoxData']['height'],
+                });
+                console.log(canvas);
+                canvas.toBlob(function(blob) {
+                    url = URL.createObjectURL(blob);
+                    let reader = new FileReader();
+                    reader.readAsDataURL(blob);
+                    reader.onloadend = function() {
+                        let base64data = reader.result;
+                        const base64EncodedFile = base64data.replace(/data:.*\/.*;base64,/, '');
+                        $('#profile_image').attr('src', base64data);
+                        $modal.modal('hide');
+                        $zoom.val(0);
+                        $zoom.data('oldVal', 0);
+                        console.log(cropper);
+                        $('#upload-image-x').val(cropper['cropBoxData']['left']);
+                        $('#upload-image-y').val(cropper['cropBoxData']['top']);
+                        $('#upload-image-w').val(cropper['cropBoxData']['width']);
+                        $('#upload-image-h').val(cropper['cropBoxData']['height']);
+                    }
+                });
+            })
 
-        // <!-- NOTE:拡大バー一旦処理外す。 -->
-        // 画像拡大用のスクロールバーを変更した時のイベント
-        // $('#zoom').on('input', function () {
-        // let oldVal = $zoom.data('oldVal');
-        // let volume = $(this).val();
-        // let result = volume - oldVal;
-        // cropper.zoom(result);
-        // $zoom.data('oldVal', volume);
-        // });
-    });
+            // <!-- NOTE:拡大バー一旦処理外す。 -->
+            // 画像拡大用のスクロールバーを変更した時のイベント
+            // $('#zoom').on('input', function () {
+            // let oldVal = $zoom.data('oldVal');
+            // let volume = $(this).val();
+            // let result = volume - oldVal;
+            // cropper.zoom(result);
+            // $zoom.data('oldVal', volume);
+            // });
+        });
+    }
+});
+
+$(function() {
+    // ページ内に該当のクラス名のカウント
+    var cropper_post = document.querySelectorAll('#post_file');
+    if (cropper_post.length > 0) {
+
+        $(document).ready(function() {
+            // エンドポイントを定義
+            const endpoint = "http://localhost:3000/api";
+
+            // 拡大表示で使用する変数定義
+            let $zoom = $('#zoom');
+            $zoom.data('oldVal', $zoom.val());
+            // モーダル、画像、クロッパーの初期化
+            let $modal = $('#modal');
+            let image = document.getElementById('image');
+            let cropper_post;
+
+            // ファイル選択後のイベント
+            $("body").on("change", "#postFile", function(e) {
+                let files = e.target.files;
+                let done = function(url) {
+                    image.src = url;
+                    $modal.modal('show');
+                };
+                console.log(image);
+                // FileReader、選択ファイル、生成URLを初期化
+                let reader;
+                let file;
+                let url;
+
+                // ファイルが選択された場合
+                if (files && files.length > 0) {
+                    console.log(2)
+                    file = files[0];
+                    if (URL) {
+                        done(URL.createObjectURL(file));
+                    } else if (FileReader) {
+                        reader = new FileReader();
+                        reader.onload = function(e) {
+                            done(reader.result);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                }
+            });
+
+            // cropper.jsでトリミング可能な画像を表示
+            $modal.on('shown.bs.modal', function(event) {
+                cropper_post = new Cropper(image, {
+                    aspectRatio: 9 / 16,
+                    initialAspectRatio: 1,
+                    autoCropArea: 1,
+                    cropBoxResizable: false,
+                    dragMode: 'move',
+                    viewMode: 3,
+                    zoomable: false,
+                    // preview: '.preview',
+                });
+            }).on('hidden.bs.modal', function() {
+                cropper_post.destroy();
+                cropper_post = null;
+            });
+
+            // 保存ボタンを押下時のイベント
+            $("#crop").click(function() {
+                // cover_imgの数カウント
+
+                var img_id = "#cover_img1";
+                var img_src = $(img_id).attr('src');
+                if (img_src === "") {
+                    var cover_img = img_id
+                    var upload_image_x = "#upload-image-x";
+                    var upload_image_y = "#upload-image-y";
+                    var upload_image_w = "#upload-image-w";
+                    var upload_image_h = "#upload-image-h";
+                }
+                $('#post_file').css('height', 'auto');
+
+                canvas = cropper_post.getCroppedCanvas({
+                    width: cropper_post['cropBoxData']['width'],
+                    height: cropper_post['cropBoxData']['height'],
+                });
+                $(cover_img).removeClass('d-none')
+                canvas.toBlob(function(blob) {
+                    url = URL.createObjectURL(blob);
+                    let reader = new FileReader();
+                    reader.readAsDataURL(blob);
+                    reader.onloadend = function() {
+                        let base64data = reader.result;
+                        const base64EncodedFile = base64data.replace(/data:.*\/.*;base64,/, '');
+                        $(cover_img).attr('src', base64data);
+                        $modal.modal('hide');
+                        $zoom.val(0);
+                        $zoom.data('oldVal', 0);
+                        console.log(cropper_post);
+                        $(upload_image_x).val(cropper_post['cropBoxData']['left']);
+                        $(upload_image_y).val(cropper_post['cropBoxData']['top']);
+                        $(upload_image_w).val(cropper_post['cropBoxData']['width']);
+                        $(upload_image_h).val(cropper_post['cropBoxData']['height']);
+                    }
+                });
+            })
+
+            // <!-- NOTE:拡大バー一旦処理外す。 -->
+            // 画像拡大用のスクロールバーを変更した時のイベント
+            // $('#zoom').on('input', function () {
+            // let oldVal = $zoom.data('oldVal');
+            // let volume = $(this).val();
+            // let result = volume - oldVal;
+            // cropper.zoom(result);
+            // $zoom.data('oldVal', volume);
+            // });
+        });
+    };
 });
