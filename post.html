@@ -174,10 +174,10 @@
                     </div>
                     <div class="col-12 row">
                         <div class="col-5 post-radio ml-2">
-                            <label><input type="radio" name="selectAuction" value="Auction" id="auction">あり</label>
+                            <label><input type="radio" name="selectAuction" value="Auction" id="auction" checked>あり</label>
                         </div>
                         <div class="col-5 post-radio ml-2">
-                            <label><input type="radio" name="selectAuction" value="notAuction" id="notAuction" checked>なし</label>
+                            <label><input type="radio" name="selectAuction" value="notAuction" id="notAuction">なし</label>
                         </div>
                     </div>
                     <!-- オークションあり形式フォーム -->
@@ -199,26 +199,45 @@
                             <div class="col-12">
                                 <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション開始日時</label>
                             </div>
-                            <div class="col-12 row">
-                                <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="yyyy" name="auctionDateY" id="auctionDateY">
+                            <div class="col-12 row mt-1">
+                                <div class="col-4">
+                                    <select class="auction-input" placeholder="yyyy" name="auctionDateY" id="auctionDateY">
+                                    </select>
                                     <p class="auction-date">年</p>
+                                    <input type="hidden" value="2023" id="setAuctionDateY" />
                                 </div>
-                                <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionDateM" id="auctionDateM">
+                                <div class="col-4">
+                                    <select class="auction-input" placeholder="mm" name="auctionDateM" id="auctionDateM">
+                                    </select>
                                     <p class="auction-date">月</p>
+                                    <input type="hidden" value="2" id="setAuctionDateM" />
                                 </div>
-                                <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="dd" name="auctionDateD" id="auctionDateD">
+                                <div class="col-4">
+                                    <select class="auction-input" placeholder="dd" name="auctionDateD" id="auctionDateD">
+                                    </select>
+
                                     <p class="auction-date">日</p>
+                                    <input type="hidden" value="2" id="setAuctionDateD" />
                                 </div>
-                                <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="hh" name="auctionDateH" id="auctionDateH">
+
+                            </div>
+                            <div class="col-12 row mt-1">
+                                <div class="col-4">
+                                    <select class="auction-input" placeholder="dd" name="auctionDateD" id="auctionDateH">
+                                    </select>
                                     <p class="auction-date">時</p>
+                                    <input type="hidden" value="2" id="setAuctionDateH" />
                                 </div>
-                                <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionDateMin" id="auctionDateMin">
+                                <div class="col-4">
+                                    <select class="auction-input" placeholder="mm" name="auctionDateMin" id="auctionDateMin">
+                                    </select>
                                     <p class="auction-date">分</p>
+
+                                    <input type="hidden" value="2" id="setAuctionDateMin" />
+
+                                </div>
+                                <div class="col-4">
+
                                 </div>
                             </div>
                             <div class="col-12">
@@ -228,81 +247,94 @@
                                 <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション終了日時</label>
                             </div>
                             <div class="col-12 row">
-                                <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="yyyy" name="auctionEndDateY" id="auctionEndDateY">
+                                <div class="col-4">
+                                    <select class="auction-input" placeholder="yyyy" name="auctionEndDateY" id="auctionEndDateY">
+                                    </select>
                                     <p class="auction-date">年</p>
+                                    <input type="hidden" value="2024" id="setAuctionEndDateY" />
                                 </div>
-                                <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateM" id="auctionEndDateM">
+                                <div class="col-4">
+                                    <select class="auction-input" placeholder="mm" name="auctionEndDateM" id="auctionEndDateM">
+                                    </select>
                                     <p class="auction-date">月</p>
+                                    <input type="hidden" value="2" id="setAuctionEndDateM" />
                                 </div>
-                                <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="dd" name="auctionEndDateD" id="auctionEndDateD">
+                                <div class="col-4">
+                                    <select class="auction-input" placeholder="dd" name="auctionEndDateD" id="auctionEndDateD">
+                                    </select>
                                     <p class="auction-date">日</p>
+                                    <input type="hidden" value="2" id="setAuctionEndDateD" />
                                 </div>
-                                <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="hh" name="auctionEndDateH" id="auctionEndDateH">
+                            </div>
+                            <div class="col-12 row">
+                                <div class="col-4">
+                                    <select class="auction-input" placeholder="dd" name="auctionDateD" id="auctionEndDateH">
+                                    </select>
                                     <p class="auction-date">時</p>
+                                    <input type="hidden" value="2" id="setAuctionEndDateH" />
                                 </div>
-                                <div class="col-2">
-                                    <input type="number" class="auction-input" placeholder="mm" name="auctionEndDateMin" id="auctionEndDateMin">
+                                <div class="col-4">
+                                    <select class="auction-input" placeholder="mm" name="auctionEndDateMin" id="auctionEndDateMin">
+                                    </select>
                                     <p class="auction-date">分</p>
+                                    <input type="hidden" value="2" id="setAuctionEndDateMin" />
+                                </div>
+                                <div class="col-4">
+                                </div>
+                                <div class="col-12">
+                                    <div class="inputAuctionEnd" id="inputAuctionEnd"></div>
+                                </div>
+                                <div class="col-12 mt-3">
+                                    <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション自動延長</label>
+                                </div>
+                                <div class="col-12 row">
+                                    <div class="col-5 post-radio ml-2">
+                                        <label><input type="radio" name="extendAuction" value="enableAutoExtend"
+                                            id="enableAutoExtend" checked>あり</label>
+                                    </div>
+                                    <div class="col-5 post-radio ml-2">
+                                        <label><input type="radio" name="extendAuction" value="disableAutoExtend"
+                                            id="disableAutoExtend">なし</label>
+                                    </div>
+                                </div>
+                                <p class="auction-notes">※終了5分前に入札されると、5分延長されます。</p>
+                            </div>
+                        </div>
+                        <!-- オークションなし形式フォーム -->
+                        <div class="notholdauctionSection selectAuctionsection">
+                            <div class="col-12">
+                                <label for="imagePrice" class="label-text post-input-title mt-4">販売価格（必須）</label>
+                            </div>
+                            <div class="col-11">
+                                <input class="form-control post-input image-price-input" type="number" name="imagePrice" id="imagePrice" placeholder="金額を入力">
+                                <div class="image-price-jpy">
+                                    円
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="inputAuctionEnd" id="inputAuctionEnd"></div>
+                                <div class="inputImagePrice" id="inputImagePrice"></div>
                             </div>
-                            <div class="col-12 mt-3">
-                                <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション自動延長</label>
+                            <div class="col-12">
+                                <p class="commission-title">手数料差し引き残額</p>
+                                <p class="commission-price">0円</p>
                             </div>
-                            <div class="col-12 row">
-                                <div class="col-5 post-radio ml-2">
-                                    <label><input type="radio" name="extendAuction" value="enableAutoExtend"
-                                            id="enableAutoExtend" checked>あり</label>
+                            <div class="col-12">
+                                <label for="binPrice" class="label-text post-input-title mt-4">即決価格（必須）</label>
+                            </div>
+                            <div class="col-11">
+                                <input class="form-control post-input image-price-input" type="number" name="binPrice" id="binPrice" placeholder="金額を入力">
+                                <div class="image-price-jpy">
+                                    円
                                 </div>
-                                <div class="col-5 post-radio ml-2">
-                                    <label><input type="radio" name="extendAuction" value="disableAutoExtend"
-                                            id="disableAutoExtend">なし</label>
-                                </div>
                             </div>
-                            <p class="auction-notes">※終了5分前に入札されると、5分延長されます。</p>
+                            <div class="col-12">
+                                <div class="inputBinPrice" id="inputBinPrice"></div>
+                            </div>
                         </div>
                     </div>
-                    <!-- オークションなし形式フォーム -->
-                    <div class="notholdauctionSection selectAuctionsection">
-                        <div class="col-12">
-                            <label for="imagePrice" class="label-text post-input-title mt-4">販売価格（必須）</label>
-                        </div>
-                        <div class="col-11">
-                            <input class="form-control post-input image-price-input" type="number" name="imagePrice" id="imagePrice" placeholder="金額を入力">
-                            <div class="image-price-jpy">
-                                円
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="inputImagePrice" id="inputImagePrice"></div>
-                        </div>
-                        <div class="col-12">
-                            <p class="commission-title">手数料差し引き残額</p>
-                            <p class="commission-price">0円</p>
-                        </div>
-                        <div class="col-12">
-                            <label for="binPrice" class="label-text post-input-title mt-4">即決価格（必須）</label>
-                        </div>
-                        <div class="col-11">
-                            <input class="form-control post-input image-price-input" type="number" name="binPrice" id="binPrice" placeholder="金額を入力">
-                            <div class="image-price-jpy">
-                                円
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="inputBinPrice" id="inputBinPrice"></div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- オークション形式フォーム-->
-                <!-- <div class="auctionSection saleTypeSection">
+                    <!-- オークション形式フォーム-->
+                    <!-- <div class="auctionSection saleTypeSection">
                     <div class="col-12">
                         <label for="auctionStartDate"
                             class="label-text post-input-title mt-4">オークション開始日時（必須）</label>
@@ -403,96 +435,96 @@
                         <p class="auction-notes">※終了5分前に入札されると、5分延長されます。</p>
                     </div>
                 </div> -->
-                <!-- 販売しない形式フォーム-->
-                <div class="col-12 notForSaleSection saleTypeSection">
-                </div>
+                    <!-- 販売しない形式フォーム-->
+                    <div class="col-12 notForSaleSection saleTypeSection">
+                    </div>
 
-                <div class="termsSection saleTypeSection">
-                    <div class="col-12 text-center">
-                        <input class="form-check-input" type="checkbox" value="1" id="postTermsCheck" name="postTermsCheck">
-                        <label class="form-check-label post-terms-check pb-2" for="postTermsCheck">
+                    <div class="termsSection saleTypeSection">
+                        <div class="col-12 text-center">
+                            <input class="form-check-input" type="checkbox" value="1" id="postTermsCheck" name="postTermsCheck">
+                            <label class="form-check-label post-terms-check pb-2" for="postTermsCheck">
                             <p class="agree">利用規約に同意する</p>
                         </label>
-                    </div>
-                </div>
-                <input type="hidden" id="upload-image-x-1" name="profileImageX" value="0" />
-                <input type="hidden" id="upload-image-y-1" name="profileImageY" value="0" />
-                <input type="hidden" id="upload-image-w-1" name="profileImageW" value="0" />
-                <input type="hidden" id="upload-image-h-1" name="profileImageH" value="0" />
-                <input type="hidden" id="upload-image-x-2" name="profileImageX" value="0" />
-                <input type="hidden" id="upload-image-y-2" name="profileImageY" value="0" />
-                <input type="hidden" id="upload-image-w-2" name="profileImageW" value="0" />
-                <input type="hidden" id="upload-image-h-2" name="profileImageH" value="0" />
-                <input type="hidden" id="upload-image-x-3" name="profileImageX" value="0" />
-                <input type="hidden" id="upload-image-y-3" name="profileImageY" value="0" />
-                <input type="hidden" id="upload-image-w-3" name="profileImageW" value="0" />
-                <input type="hidden" id="upload-image-h-3" name="profileImageH" value="0" />
-                <input type="hidden" id="upload-image-x-4" name="profileImageX" value="0" />
-                <input type="hidden" id="upload-image-y-4" name="profileImageY" value="0" />
-                <input type="hidden" id="upload-image-w-4" name="profileImageW" value="0" />
-                <input type="hidden" id="upload-image-h-4" name="profileImageH" value="0" />
-                <input type="hidden" id="upload-image-x-5" name="profileImageX" value="0" />
-                <input type="hidden" id="upload-image-y-5" name="profileImageY" value="0" />
-                <input type="hidden" id="upload-image-w-5" name="profileImageW" value="0" />
-                <input type="hidden" id="upload-image-h-5" name="profileImageH" value="0" />
-                <input type="hidden" id="upload-image-x-6" name="profileImageX" value="0" />
-                <input type="hidden" id="upload-image-y-6" name="profileImageY" value="0" />
-                <input type="hidden" id="upload-image-w-6" name="profileImageW" value="0" />
-                <input type="hidden" id="upload-image-h-6" name="profileImageH" value="0" />
-                <div class="col-12 text-center mt-3 mb-5">
-                    <button type="submit" class="btn btn-primary text-white submit-btn" id="postBtn" disabled>画像投稿確認</button>
-                </div>
-
-            </div>
-        </form>
-    </div>
-
-    <!-- モーダル -->
-    <div class="modal fade image-post-modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-            </button>
-                </div>
-                <div class="modal-body">
-                    <div class="img-container">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <img id="image" id="preview" src="https://avatars0.githubusercontent.com/u/3456749">
-                            </div>
-                            <!-- NOTE:拡大バー一旦処理外す。 -->
-                            <!-- <div class="mt-3 col-md-8">
-                    <input type="range" value="0" id="zoom" min="0" max="3" step="0.1" class="w-100">
-                </div> -->
                         </div>
                     </div>
+                    <input type="hidden" id="upload-image-x-1" name="profileImageX" value="0" />
+                    <input type="hidden" id="upload-image-y-1" name="profileImageY" value="0" />
+                    <input type="hidden" id="upload-image-w-1" name="profileImageW" value="0" />
+                    <input type="hidden" id="upload-image-h-1" name="profileImageH" value="0" />
+                    <input type="hidden" id="upload-image-x-2" name="profileImageX" value="0" />
+                    <input type="hidden" id="upload-image-y-2" name="profileImageY" value="0" />
+                    <input type="hidden" id="upload-image-w-2" name="profileImageW" value="0" />
+                    <input type="hidden" id="upload-image-h-2" name="profileImageH" value="0" />
+                    <input type="hidden" id="upload-image-x-3" name="profileImageX" value="0" />
+                    <input type="hidden" id="upload-image-y-3" name="profileImageY" value="0" />
+                    <input type="hidden" id="upload-image-w-3" name="profileImageW" value="0" />
+                    <input type="hidden" id="upload-image-h-3" name="profileImageH" value="0" />
+                    <input type="hidden" id="upload-image-x-4" name="profileImageX" value="0" />
+                    <input type="hidden" id="upload-image-y-4" name="profileImageY" value="0" />
+                    <input type="hidden" id="upload-image-w-4" name="profileImageW" value="0" />
+                    <input type="hidden" id="upload-image-h-4" name="profileImageH" value="0" />
+                    <input type="hidden" id="upload-image-x-5" name="profileImageX" value="0" />
+                    <input type="hidden" id="upload-image-y-5" name="profileImageY" value="0" />
+                    <input type="hidden" id="upload-image-w-5" name="profileImageW" value="0" />
+                    <input type="hidden" id="upload-image-h-5" name="profileImageH" value="0" />
+                    <input type="hidden" id="upload-image-x-6" name="profileImageX" value="0" />
+                    <input type="hidden" id="upload-image-y-6" name="profileImageY" value="0" />
+                    <input type="hidden" id="upload-image-w-6" name="profileImageW" value="0" />
+                    <input type="hidden" id="upload-image-h-6" name="profileImageH" value="0" />
+                    <div class="col-12 text-center mt-3 mb-5">
+                        <button type="submit" class="btn btn-primary text-white submit-btn" id="postBtn" disabled>画像投稿確認</button>
+                    </div>
+
                 </div>
-                <div class="scrollbar"></div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
-                    <button type="button" class="btn btn-primary" id="crop">保存</button>
+        </form>
+        </div>
+
+        <!-- モーダル -->
+        <div class="modal fade image-post-modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="img-container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <img id="image" id="preview" src="https://avatars0.githubusercontent.com/u/3456749">
+                                </div>
+                                <!-- NOTE:拡大バー一旦処理外す。 -->
+                                <!-- <div class="mt-3 col-md-8">
+                    <input type="range" value="0" id="zoom" min="0" max="3" step="0.1" class="w-100">
+                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scrollbar"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+                        <button type="button" class="btn btn-primary" id="crop">保存</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <footer>
-        <nav class="navbar navbar-light bg-light fixed-bottom">
-            <a href="timeline.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
-            <a href="post_search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
-            <a href="post.html"><img src="assets/img/icon/post_blue.png" alt="post"></a>
-            <div class="notifications">
-                <a href="notification.html"><img src="assets/img/icon/notification_blue.png" alt="notification"></a>
-                <p class="unread-count rounded-circle">2000</p>
-            </div>
-            <div class="messages">
-                <a href="message.html"><img src="assets/img/icon/message_blue.png" alt="message"></a>
-                <p class="unread-count top-left rounded-circle">2000</p>
-            </div>
-        </nav>
-    </footer>
+        <footer>
+            <nav class="navbar navbar-light bg-light fixed-bottom">
+                <a href="timeline.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
+                <a href="post_search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
+                <a href="post.html"><img src="assets/img/icon/post_blue.png" alt="post"></a>
+                <div class="notifications">
+                    <a href="notification.html"><img src="assets/img/icon/notification_blue.png" alt="notification"></a>
+                    <p class="unread-count rounded-circle">2000</p>
+                </div>
+                <div class="messages">
+                    <a href="message.html"><img src="assets/img/icon/message_blue.png" alt="message"></a>
+                    <p class="unread-count top-left rounded-circle">2000</p>
+                </div>
+            </nav>
+        </footer>
 </body>
 
 <!-- Optional JavaScript -->

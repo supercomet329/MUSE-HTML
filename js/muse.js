@@ -1216,7 +1216,128 @@ $(function() {
         }
         fileReader.readAsDataURL(file);
     });
+
+    setAuctionSelBox();
 });
+
+// 使用HTML(post.html)
+function setAuctionSelBox() {
+
+    var nowYear = new Date().getFullYear();
+
+    var setAuctionDateY = $('#setAuctionDateY').val();
+    var htmlAuctionDateY = '';
+    for (var year = nowYear; year < nowYear + 3; year++) {
+        if (year == setAuctionDateY) {
+            htmlAuctionDateY += '<option value="' + year + '" selected>' + year + '</option>';
+        } else {
+            htmlAuctionDateY += '<option value="' + year + '">' + year + '</option>';
+        }
+    }
+    $('#auctionDateY').html(htmlAuctionDateY);
+
+
+    var setAuctionEndDateY = $('#setAuctionEndDateY').val();
+    var htmlAuctionEndDateY = '';
+    for (var year = nowYear; year < nowYear + 3; year++) {
+        if (year == setAuctionEndDateY) {
+            htmlAuctionEndDateY += '<option value="' + year + '" selected>' + year + '</option>';
+        } else {
+            htmlAuctionEndDateY += '<option value="' + year + '">' + year + '</option>';
+        }
+    }
+    $('#auctionEndDateY').html(htmlAuctionEndDateY);
+
+    var setAuctionDateM = $('#setAuctionDateM').val();
+    var htmlAuctionDateM = '';
+    for (var month = 1; month < 12; month++) {
+        if (month == setAuctionDateM) {
+            htmlAuctionDateM += '<option value="' + month + '" selected>' + month + '</option>';
+        } else {
+            htmlAuctionDateM += '<option value="' + month + '">' + month + '</option>';
+        }
+    }
+    $('#auctionDateM').html(htmlAuctionDateM);
+
+    var setAuctionEndDateM = $('#setAuctionEndDateM').val();
+    var htmlAuctionEndDateM = '';
+    for (var month = 1; month < 12; month++) {
+        if (month == setAuctionEndDateM) {
+            htmlAuctionEndDateM += '<option value="' + month + '" selected>' + month + '</option>';
+        } else {
+            htmlAuctionEndDateM += '<option value="' + month + '">' + month + '</option>';
+        }
+    }
+    $('#auctionEndDateM').html(htmlAuctionEndDateM);
+
+    var setAuctionDateD = $('#setAuctionDateD').val();
+    var htmlAuctionDateD = '';
+    for (var day = 1; day <= 31; day++) {
+        if (day == setAuctionDateD) {
+            htmlAuctionDateD += '<option value="' + day + '" selected>' + day + '</option>';
+        } else {
+            htmlAuctionDateD += '<option value="' + day + '">' + day + '</option>';
+        }
+    }
+    $('#auctionDateD').html(htmlAuctionDateD);
+
+    var setAuctionEndDateD = $('#setAuctionEndDateD').val();
+    var htmlAuctionEndDateD = '';
+    for (var day = 1; day <= 31; day++) {
+        if (day == setAuctionEndDateD) {
+            htmlAuctionEndDateD += '<option value="' + day + '" selected>' + day + '</option>';
+        } else {
+            htmlAuctionEndDateD += '<option value="' + day + '">' + day + '</option>';
+        }
+    }
+    $('#auctionEndDateD').html(htmlAuctionEndDateD);
+
+    var setAuctionDateH = $('#setAuctionDateH').val();
+    var htmlAuctionDateH = '';
+    for (var hour = 1; hour <= 24; hour++) {
+        if (hour == setAuctionDateH) {
+            htmlAuctionDateH += '<option value="' + hour + '" selected>' + hour + '</option>';
+        } else {
+            htmlAuctionDateH += '<option value="' + hour + '">' + hour + '</option>';
+        }
+    }
+    $('#auctionDateH').html(htmlAuctionDateH);
+
+    var setAuctionEndDateH = $('#setAuctionEndDateH').val();
+    var htmlAuctionEndDateH = '';
+    for (var hour = 1; hour <= 24; hour++) {
+        if (hour == setAuctionEndDateH) {
+            htmlAuctionEndDateH += '<option value="' + hour + '" selected>' + hour + '</option>';
+        } else {
+            htmlAuctionEndDateH += '<option value="' + hour + '">' + hour + '</option>';
+        }
+    }
+    $('#auctionEndDateH').html(htmlAuctionEndDateH);
+
+    var setAuctionDateMin = $('#setAuctionDateMin').val();
+    var htmlAuctionDateMin = '';
+    for (var min = 1; min <= 59; min++) {
+        if (min == setAuctionDateMin) {
+            htmlAuctionDateMin += '<option value="' + min + '" selected>' + min + '</option>';
+        } else {
+            htmlAuctionDateMin += '<option value="' + min + '">' + min + '</option>';
+        }
+    }
+    $('#auctionDateMin').html(htmlAuctionDateMin);
+
+    var setAuctionEndDateMin = $('#setAuctionEndDateMin').val();
+    var htmlAuctionEndDateMin = '';
+    for (var min = 1; min <= 59; min++) {
+        if (min == setAuctionEndDateMin) {
+            htmlAuctionEndDateMin += '<option value="' + min + '" selected>' + min + '</option>';
+        } else {
+            htmlAuctionEndDateMin += '<option value="' + min + '">' + min + '</option>';
+        }
+    }
+    $('#auctionEndDateMin').html(htmlAuctionEndDateMin);
+
+
+}
 
 // 通常販売時
 function checkSaleInput() {

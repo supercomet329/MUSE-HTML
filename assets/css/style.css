@@ -2242,7 +2242,7 @@ input[type=checkbox]:checked+.post-terms-check::after {
 }
 
 .auction-input {
-    width: 40px;
+    width: 80%;
     position: relative;
     border: solid 2px #e7e7e7;
     border-radius: 10px;
@@ -2250,7 +2250,7 @@ input[type=checkbox]:checked+.post-terms-check::after {
 
 .auction-date {
     position: absolute;
-    right: -12px;
+    right: 8px;
     top: 3px;
 }
 
