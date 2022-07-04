@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="assets/css/all.min.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -61,7 +63,18 @@
           投稿画像（必須）
         </div>
         <div class="col-12 mb-4 confirm-image-area">
-          <img src="assets/img/icon/profile.jpg">
+          <div class="my-2 slid-img swiper swipertum">
+            <div class="swiper-wrapper d-flex align-items-center">
+                <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid mx-auto" src="assets/img/pixta_85053177_M.jpg"/></a></div>
+                <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid mx-auto" src="assets/img/pixta_27669641_M.jpg"/></a></div>
+            </div>
+          </div>
+          <div class="swiper slid-list swiperlist">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/img/pixta_85053177_M.jpg"/></div>
+                <div class="swiper-slide"><img src="assets/img/pixta_27669641_M.jpg"/></div>
+            </div>
+          </div>
           <p class="mb-0 mt-3 text-right"><a class="text-dark" href="post_img_comment.html">…</a></p>
         </div>
         <div class="logo-area col-6">
@@ -137,6 +150,8 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <!-- Javascript(js/muse.js)読み込み -->
 <script type="text/javascript" src="js/muse.js"></script>
+<!-- Swiper JS -->
+<script src="assets/js/swiper-bundle.min.js"></script>
 
 
 <script>
