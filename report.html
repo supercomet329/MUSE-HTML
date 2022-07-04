@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -63,7 +65,18 @@
                 <div class="col-12 report-subject">
                     <!-- 画像の場合 -->
                     <label class="form-label font-weight-bold mb-2">対象画像</label>
-                    <img class="post-img text-center" src="assets/img/pixta_40272765_M.jpg" alt="">
+                    <div class="my-2 slid-img swiper swipertum">
+                        <div class="swiper-wrapper d-flex align-items-center">
+                            <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid mx-auto" src="assets/img/pixta_85053177_M.jpg"/></a></div>
+                            <div class="swiper-slide"><a href="post_img_comment.html"><img class="img-fluid mx-auto" src="assets/img/pixta_27669641_M.jpg"/></a></div>
+                        </div>
+                    </div>
+                    <div class="swiper slid-list swiperlist">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="assets/img/pixta_85053177_M.jpg"/></div>
+                            <div class="swiper-slide"><img src="assets/img/pixta_27669641_M.jpg"/></div>
+                        </div>
+                    </div>
                     <!-- ユーザーの場合 -->
                     <!-- <label class="form-label font-weight-bold mb-2">対象ユーザー</label>
                     <p class="user-name mb-1">UserName</p> -->
@@ -129,5 +142,7 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <!-- Javascript(js/muse.js)読み込み -->
 <script type="text/javascript" src="js/muse.js"></script>
+<!-- Swiper JS -->
+<script src="assets/js/swiper-bundle.min.js"></script>
 
 </html>
