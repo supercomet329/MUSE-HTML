@@ -279,8 +279,8 @@ ul.horizontal-list {
 ul.horizontal-list li.item {
     display: inline-block;
     /* margin-top: 10px; */
-    margin-bottom: 10px;
-    margin-right: 22px;
+    /* margin-bottom: 10px; */
+    margin-right: 5px;
 }
 
 ul.horizontal-list li.item img {
@@ -2564,7 +2564,15 @@ span.keep_on {
         font-weight: bold;
         text-align: center;
     }
+    
+    .icon-box {
+      position: relative;
+    }
     @media only screen and (max-width: 480px) {
+        .after-icon{
+          position: absolute;
+          top: 10px;
+        }
         .ranking-table th:nth-child(4),
         .ranking-table th:nth-child(5),
         .ranking-table th:nth-child(6),
@@ -2573,6 +2581,15 @@ span.keep_on {
         .ranking-table td:nth-child(6) {
             display: none;
         }
+    }
+
+    .ranking-icon-box {
+        margin-right: -20% !important;
+    }
+
+    .ranking-icon {
+        width: 30% !important;
+        height: auto !important;
     }
     .ranking-table .not-show {
         display: none;
