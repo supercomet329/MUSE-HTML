@@ -2565,11 +2565,14 @@ span.keep_on {
         text-align: center;
     }
     
-    .after_icon{
-      margin-top: -49px;
+    .icon-box {
+      position: relative;
     }
-
     @media only screen and (max-width: 480px) {
+        .after-icon{
+          position: absolute;
+          top: 10px;
+        }
         .ranking-table th:nth-child(4),
         .ranking-table th:nth-child(5),
         .ranking-table th:nth-child(6),
