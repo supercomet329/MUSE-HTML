@@ -1991,7 +1991,7 @@ $(function() {
                     cropBoxResizable: false,
                     dragMode: 'move',
                     viewMode: 3,
-                    zoomable: false,
+                    zoomable: true,
                     // preview: '.preview',
                 });
             }).on('hidden.bs.modal', function() {
@@ -2028,13 +2028,14 @@ $(function() {
 
             // <!-- NOTE:拡大バー一旦処理外す。 -->
             // 画像拡大用のスクロールバーを変更した時のイベント
-            // $('#zoom').on('input', function () {
-            // let oldVal = $zoom.data('oldVal');
-            // let volume = $(this).val();
-            // let result = volume - oldVal;
-            // cropper.zoom(result);
-            // $zoom.data('oldVal', volume);
-            // });
+            $('#zoom').on('input', function () {
+              let oldVal = $zoom.data('oldVal');
+              let volume = $(this).val();
+              let result = volume - oldVal;
+              cropper.zoom(result);
+              console.log(result);
+              $zoom.data('oldVal', volume);
+            });
         });
     }
 });
