@@ -1044,7 +1044,11 @@ span.keep_on {
 /* プロフィール編集ページエラーメッセージレイアウト */
 
 .profile-dm_icon {
-  width:20px;
+  width: 30px;
+}
+
+.dm-icon-block {
+  margin-left: 10%;
 }
 
 #UserNameMsg,
