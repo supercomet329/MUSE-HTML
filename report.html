@@ -89,20 +89,17 @@
                 <div class="col-12 report-reason">
                     <label class="form-label font-weight-bold mb-2">通報理由</label>
                 </div>
-                <div class="col-12 report-reason">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">項目1</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">項目2</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                        <label class="form-check-label" for="inlineCheckbox3">その他</label>
-                    </div>   
+                <div class="container message-show-area">
+                    <select id="sel_report" class="shadow-none form-control form-control-sm col-12 col-md-5 col-lg-4 mb-2">
+                        <option value="" selected>通報内容を選択して下さい</option>
+                        <option value="1">通報1</option>
+                        <option value="2">通報2</option>
+                        <option value="3">通報3</option>
+                        <option value="4">通報4</option>
+                        <option value="5">通報5</option>
+                    </select>
                 </div>
+
                 <div class="col-12 report-reason">
                     <textarea id="report-reason" class="form-control" rows="3"></textarea>
                     <!-- 通報理由任意に伴い無効化 -->

@@ -1874,18 +1874,8 @@ $(function() {
     $('#report-reason').on('blur', function() {
         check_ReportInput();
     });
-    // 項目1がクリックされた際にcheckInput実行
-    $('#inlineCheckbox1').on('click', function() {
-        check_ReportInput();
-    });
-    
-    // 項目2がクリックされた際にcheckInput実行
-    $('#inlineCheckbox2').on('click', function() {
-        check_ReportInput();
-    });
-    3
-    // 項目がクリックされた際にcheckInput実行
-    $('#inlineCheckbox3').on('click', function() {
+
+    $('#sel_report').on('change', function() {
         check_ReportInput();
     });
 });
@@ -1911,17 +1901,23 @@ function check_ReportInput() {
     // }
 
     // 項目のチェックボックス要素を取得
-    var checkbox_1 = document.getElementById('inlineCheckbox1');
-    var checkbox_2 = document.getElementById('inlineCheckbox2');
-    var checkbox_3 = document.getElementById('inlineCheckbox3');
+    // var checkbox_1 = document.getElementById('inlineCheckbox1');
+    // var checkbox_2 = document.getElementById('inlineCheckbox2');
+    // var checkbox_3 = document.getElementById('inlineCheckbox3');
     
     // 正しく入力されている場合、通報ボタンを有効化
-    if (checkbox_1.checked === true) {
-        disabledFlag = false;
-    } else if (checkbox_2.checked === true) {
-        disabledFlag = false;
-    } else if (checkbox_3.checked === true && textarea_val.length > 0) {
-        disabledFlag = false;
+    // if (checkbox_1.checked === true) {
+    //     disabledFlag = false;
+    // } else if (checkbox_2.checked === true) {
+    //     disabledFlag = false;
+    // } else if (checkbox_3.checked === true && textarea_val.length > 0) {
+    //     disabledFlag = false;
+    // }
+    
+    var sel_repot_val = $('#sel_report').val();
+    console.log(sel_repot_val);
+    if(sel_repot_val > 0) {
+      disabledFlag = false;
     }
 
     // ボタンの「disabled」の置き換え
