@@ -103,35 +103,20 @@
                 <div class="col-12">
                     <label for="saleType" class="label-text post-input-title mt-4">投稿内容（任意）</label>
                 </div>
-				
-					
                 <div class="col-12">
-					<div class="form-imgarea-area1">
-                    
-					<div class="FlexTextarea">
-						<div class="FlexTextarea__dummy" aria-hidden="true"></div>
-						<textarea class="FlexTextarea__textarea" name="postDetail" id="postDetail" placeholder="詳細を入力"></textarea>
-					</div>
-						
-					<div class="clear">&nbsp;</div>			
-						
+					<div class="form-imgarea-one">
+                    <textarea class="form-control_2 post-detail_2" name="postDetail" id="postDetail" placeholder="詳細を入力"></textarea>								
+					<!-- 1枚目 -->		
+                    <div class="post-block-area-one text-right">
+                        <div class="post-main-one"><img src="assets/img/pixta_85053177_M.jpg" /></div>
+						<div class="post-delete-one"><a href="#"><img src="assets/img/icon/post-x.png" /></a></div>
+                    </div>					
 					<!--追加ボタン-->	
-					<div class="img-plus clearfix"><a href="#"><img src="assets/img/icon/post-plus.png" /></a></div>
+					<div class="post-plus"><a href="#"><img src="assets/img/icon/post-plus.png" /></a></div>
+					
 						
 					</div>
 				</div>
-				
-					<script>
-					function flexTextarea(el) {
-					  const dummy = el.querySelector('.FlexTextarea__dummy')
-					  el.querySelector('.FlexTextarea__textarea').addEventListener('input', e => {
-						dummy.textContent = e.target.value + '\u200b'
-					  })
-					}
-					document.querySelectorAll('.FlexTextarea').forEach(flexTextarea)
-					</script>				
-
-				
                 <div class="col-12 mt-2">
                     <label for="saleType" class="label-text post-input-title mt-4">販売形式（必須）</label>
                 </div>
