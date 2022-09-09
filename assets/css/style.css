@@ -173,7 +173,7 @@
         margin-top: 10px;
     }
     
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 2024px) {
         .list-area .profile-icon {
             width: 50px;
             height: 50px;
@@ -255,7 +255,16 @@
         color: #fff !important;
         font-weight: bold;
     }
-    
+
+	.nav-tabs .nav-link{
+		background-color:#D4D4D4;
+		color: #FFFFFF;
+	}
+
+	.nav-tabs .nav-link.active{
+		font-weight: bold;
+	}
+
     .tweet-area .profile-icon {
         width: 50px;
         height: 50px;
@@ -1132,7 +1141,7 @@
         display: none;
     }
     
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 2024px) {
         header {
             /* ヘッダー常に表示しなくなったため無効化 */
             /* padding-bottom: 1.2em; */
@@ -1340,7 +1349,7 @@
         .container .tab a {
             font-size: 12px;
         }
-        @media only screen and (max-width: 1024px) {
+        @media only screen and (max-width: 2024px) {
             header {
                 /* ヘッダー常に表示しなくなったため無効化 */
                 /* padding-bottom: 1.2em; */
@@ -1634,7 +1643,7 @@
                 width: 30em;
             }
         }
-        @media only screen and (min-width: 1025px) {
+        @media only screen and (min-width: 2025px) {
             header {
                 /* ヘッダー常に表示しなくなったため無効化 */
                 /* padding-bottom: 7.4em; */
@@ -2291,7 +2300,7 @@
         }
         img {
             display: block;
-            max-width: 100%;
+
         }
         /* .preview {
   overflow: hidden;
@@ -2788,25 +2797,24 @@
 				margin-left: -220px;
 			}
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 2024px) {
 		    .message-create textarea {
                 position: fixed;
                 bottom: 40px;
                 width: 500px !important;
                 padding: 10px;
-				left: 510px !important;;
+
             }
 		
 			.message-create .icon-area .camera {
 				position: fixed;
 				bottom: 40px;
-				left:780px;
+			
 			}
 
 			.message-create .icon-area .send {
 				position: fixed;
 				bottom: 80px;
-				left:780px;
 				width: 40px;
 				height: 40px;
 			}	
@@ -2920,17 +2928,17 @@
         .font-gold {
             color: #e6b422;
 			font-weight: bold;
-			font-size: 30px;
+
         }
         .font-silver {
             color: #8f8f8f;
 			font-weight: bold;
-			font-size: 26px;
+
         }
         .font-bronze {
             color: #b87333;
 			font-weight: bold;
-			font-size: 22px;
+
         }
 
 		.days-select a{
@@ -3293,6 +3301,43 @@
             margin-top: 5px;
             resize: none;
         }
+
+		.form-imgarea{
+            border-radius: 10px !important;
+            border: none !important;
+            background-color: #e7e7e7 !important;
+	
+		}
+
+        .post-detail_2 {
+            border-radius: 10px !important;
+            border: none !important;
+            height: 120px !important;
+            margin-top: 5px;
+            resize: none;
+			background-color:transparent;
+			padding: 5px;
+			border: 0px;
+        }
+
+		.form-control_2 {
+			display: block;
+			width: 100%;
+			height: calc(1.5em + 0.75rem + 2px);
+			padding: 0.375rem 0.75rem;
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			/*color: #495057;*/
+			background-color:transparent;
+			background-clip: padding-box;
+			/*border: 1px solid #ced4da;*/
+			border-radius: 0.25rem;
+			transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+			border: 0px;
+		}
+
+
         .termsSection {
             display: block;
         }
@@ -3384,3 +3429,18 @@
 			margin: 0px auto;
         }
 }
+
+        /* コメントNFT切換え */
+	.coment-tab-area{
+		width: 50%;
+		text-align: center;
+	}
+
+       /* アイコン数字位置 */
+	.icon-margin-iine p{
+		margin-top: 5px;
+	}
+
+	.icon-margin-favorite p{
+		margin-top: 5px;	
+	}

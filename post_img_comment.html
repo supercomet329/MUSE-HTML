@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<script src="js/popper.min.js"></script>	
 </head>
 
 <body>
@@ -87,9 +88,6 @@
 
 <div class="pc-center">	
 <div class="container pt-2 confirm-area">
-<div class="col-12 item-text mb-2">
-  投稿画像（必須）
-</div>	
 <div class="post-inarea">
         <div class="timeline-image timelile-pro">
             <div class="my-2 slid-img swiper swipertum">
@@ -102,17 +100,20 @@
         </div>
 
         <div class="logo-area d-flex bd-highlight icon-margin-top">
-            <div class="bd-highlight text-nowrap flex-fill bottom-icon-left icon-margin-iine post-margin2">
+            <div class="bd-highlight text-nowrap flex-fill bottom-icon-left icon-margin-iine post-marginl">
                 <img class="float-left" src="assets/img/icon/iine_on.png" alt="iine">
                 <p class="mb-1 float-left mx-1 font-weight-bold">400</p>
 			</div>	
-            <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-tipping">
+            <div class="pl-2 bd-highlight text-nowrap flex-fill icon-margin-tipping">
                 <img class="float-left" src="assets/img/icon/social_tipping_on.png" alt="social_tipping_on">
 				<p class="mb-1 float-left font-weight-bold">400円<br />400ETH</p>
 			</div>	
-            <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-favorite">
+            <div class="pl-2 bd-highlight text-nowrap flex-fill icon-margin-favorite">
                 <img class="float-left" src="assets/img/icon/favorite_on.png" alt="favorite_on">
 				<p class="mb-1 float-left mx-1 font-weight-bold">400</p>
+            </div>
+            <div class="flex-fill text-right pt-1 bottom-icon-right icon-margin-comment_up">
+          <a href="report.html" class="btn btn-primary text-white rounded-pill btn-sm text-white btn-lg main-color float-right post-sp-tuu">通報する</a>
             </div>
             <!-- <div class="p-2 bd-highlight col-5"></div>
         <div class="p-2 bd-highlight col-4 arrow_box">
@@ -123,9 +124,17 @@
         </div>
 </div>
 	
-           <div class="col-12 pt-2 item-text mb-2">
-                メッセージ
-            </div>
+<ul class="nav nav-tabs mt-3 ">
+  <li class="nav-item coment-tab-area">
+     <a href="#tab-area1" class="nav-link active" data-toggle="tab">コメント</a>
+  </li>
+  <li class="nav-item coment-tab-area">
+    <a href="#tab-area2" class="nav-link" data-toggle="tab">NFT</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div id="tab-area1" class="tab-pane active">
             <div class="col-12">
                 <div class="row my-3">
                     <div class="col-3 col-sm-2 col-lg-1 pr-0 post-pc-com">
@@ -166,13 +175,61 @@
             </div>
             <div class="col-12 my-3">
                 <form class="mx-1" action="POST">
-                    <textarea class="form-control" rows="6" placeholder="ここにメッセージを入力"></textarea>
-                    <div class="my-3 text-center">
-                        <button type="submit" class="btn btn-primary text-white" id="msg-btn">メッセージ送信</button>
+                    <textarea class="form-control" rows="6" placeholder="コメント"></textarea>
+                    <div class="my-3 text-right">
+                        <button type="submit" class="btn btn-primary text-white" id="msg-btn">送信</button>
                       </div>
                 </form>
             </div>
-        
+  </div>
+	
+  <div id="tab-area2" class="tab-pane">
+	<form action="POST">		
+	<div class="container pt-2 confirm-area">	
+		  <div class="col-12 item-text mb-2">
+			  タイトル（必須）
+			</div>
+			<div class="col-12 mb-4">
+			  <input type="text" value="タイトル" class="border border-0" readonly>
+			</div>
+			<div class="col-12 item-text mb-2">
+			  詳細（任意）
+			</div>
+			<div class="col-12 mb-4">
+			  <textarea name="" id="" cols="50" rows="5" class="border border-0" readonly>詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳細詳
+			  </textarea>
+			</div>
+			<div class="col-12 mb-2 item-text">
+			  販売形式（必須）
+			</div>
+			<div class="col-12 mb-4">
+			  <div class="mb-2">
+				<input type="text" value="NFT販売" class="border border-0" readonly >
+			  </div>
+			</div>
+			<div class="col-12 item-text mb-2">
+			  販売価格（必須）
+			</div>
+			<div class="col-12 mb-4">
+			  <div class="mb-2">
+				<input type="text" value="10000円" class="border border-0" readonly >
+			  </div>
+			</div>
+			<div class="col-12 item-text mb-2">
+			  即決価格（必須）
+			</div>
+			<div class="col-12 mb-2">
+			  <input type="text" value="10000円" class="border border-0" readonly >
+			</div>
+			<div class="col-12 my-3 text-center">
+			  <button type="submit" class="btn btn-primary save-btn text-white" id="save_btn" disabled>画像購入</button>
+			</div>
+		  </div>
+		</form>	
+  </div>
+
+</div>
+	       
         </div>
 
         <footer>
