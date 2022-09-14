@@ -24,6 +24,16 @@ $(function() {
         }
 
     });
+
+
+    // 画像クリック時にモーダルで画像表示
+    $("body").on("click", "[id=js-open]", function(e) {
+
+        var image = $(this).data('image');
+        console.log(image);
+        $('#pickup_image').attr('src', image);
+        $("#testModal").modal('show');
+    });
 });
 
 // 通常新規登録ページ(sign_up.html)
@@ -1904,7 +1914,7 @@ function check_ReportInput() {
     // var checkbox_1 = document.getElementById('inlineCheckbox1');
     // var checkbox_2 = document.getElementById('inlineCheckbox2');
     // var checkbox_3 = document.getElementById('inlineCheckbox3');
-    
+
     // 正しく入力されている場合、通報ボタンを有効化
     // if (checkbox_1.checked === true) {
     //     disabledFlag = false;
@@ -1913,11 +1923,11 @@ function check_ReportInput() {
     // } else if (checkbox_3.checked === true && textarea_val.length > 0) {
     //     disabledFlag = false;
     // }
-    
+
     var sel_repot_val = $('#sel_report').val();
     console.log(sel_repot_val);
-    if(sel_repot_val > 0) {
-      disabledFlag = false;
+    if (sel_repot_val > 0) {
+        disabledFlag = false;
     }
 
     // ボタンの「disabled」の置き換え
@@ -2024,13 +2034,13 @@ $(function() {
 
             // <!-- NOTE:拡大バー一旦処理外す。 -->
             // 画像拡大用のスクロールバーを変更した時のイベント
-            $('#zoom').on('input', function () {
-              let oldVal = $zoom.data('oldVal');
-              let volume = $(this).val();
-              let result = volume - oldVal;
-              cropper.zoom(result);
-              console.log(result);
-              $zoom.data('oldVal', volume);
+            $('#zoom').on('input', function() {
+                let oldVal = $zoom.data('oldVal');
+                let volume = $(this).val();
+                let result = volume - oldVal;
+                cropper.zoom(result);
+                console.log(result);
+                $zoom.data('oldVal', volume);
             });
         });
     }
@@ -2154,7 +2164,7 @@ $(function() {
 
 // SPアコーディオンメニュー
 $(function() {
-	$('.more_text').click(function () {
-	  $(this).toggleClass('active');
-	});
+    $('.more_text').click(function() {
+        $(this).toggleClass('active');
+    });
 });
