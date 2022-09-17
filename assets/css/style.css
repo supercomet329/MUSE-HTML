@@ -437,7 +437,11 @@
     .border-bottom-dashed {
         border-bottom: dashed 2px #e0e0e0;
     }
-    
+
+    .border-bottom-dashed {
+        border-bottom: dashed 2px #e0e0e0;
+    }
+
     .border-bottom-solid {
         border-bottom: solid 3px #3c7fc3;
     }
@@ -2237,7 +2241,7 @@
         }
         #msg-btn {
             background-color: #3c7fc3;
-        }
+        }F
         .msg p {
             font-size: 13px;
         }
@@ -2445,7 +2449,12 @@
         width: 640px;
         margin-left: 20px;
     }
-    
+ 
+    .pc-center-log {
+        width: 640px;
+		margin: 0px auto;
+    }
+
     .PC-right {
         float: right;
         width: 260px;
@@ -2560,6 +2569,15 @@
             left: 0px;
             right: 0px;
         }
+		
+        .pc-center-log {
+            float: none;
+            width: 100%;
+            margin-left: 0px;
+            left: 0px;
+            right: 0px;
+        }
+		
         footer {
             display: block!important;
         }
@@ -2629,7 +2647,7 @@
         float: left!important;
         width: 50%!important;
         margin-top: 0.5rem!important;
-        margin: 1px;
+        margin: 1px ;
     }
     
     .timeline-2block img {
@@ -2639,7 +2657,7 @@
     
     .timeline-3block-up {
         float: left!important;
-        width: 50%!important;
+        width: 49.8%!important;
         margin: 1px;
     }
     
@@ -2658,7 +2676,24 @@
         height: 250px!important;
         object-fit: cover!important;
     }
+ 
+    .timeline-4block-up {
+        float: left!important;
+        width: 49.8%!important;
+        margin: 1px;
+    }
     
+    .timeline-4block-up img {
+        height: 250px!important;
+        object-fit: cover!important;
+    }
+
+    .timeline-4block-up{
+        float: left!important;
+        width: 50%!important;
+        margin: 1px;
+    }
+
     .timeline-4block {
         float: left!important;
         width: 50%!important;
@@ -2673,7 +2708,7 @@
     
     .timeline-in {
         width: 90%!important;
-        margin-left: 60px;
+        margin-left: 40px;
     }
     
     .bottom-icon-left {
@@ -3786,9 +3821,41 @@
     }
     
     .modal-dialog-center {
-        padding-top: 50%;
+        padding-top: 0%;
     }
     
     .modal_image {
         width: 100%;
     }
+
+	.first-img{
+		width: 100%!important;
+	}
+
+	.post-icon{
+		display: block;
+
+		text-align: right;
+		margin-top: -20px;
+		margin-bottom: 10px;
+		margin-left: 580px;
+
+	}
+
+	.post-icon img{
+		width: 40px;
+	}
+
+@media screen and (max-width: 576px) {
+	.post-icon{
+		margin-left: 310px;
+
+	}	
+}
+
+.pro-com{
+	border: 1px solid #A7A7A7!important;
+	padding: 5px;
+	font-size: 14px;
+}
+
