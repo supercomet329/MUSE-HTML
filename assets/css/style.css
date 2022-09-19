@@ -1275,13 +1275,8 @@
             width: 100%;
             max-height: 120px;
         }
-        .content-item img.profile {
-            position: absolute;
-            top: 8px;
-            left: 8px;
-            width: 25px;
-            height: 25px;
-        }
+
+
         .cover-area .cover-image {
             object-fit: cover;
             width: 100%;
@@ -1485,8 +1480,8 @@
             }
             .content-item img.profile {
                 position: absolute;
-                top: 8px;
-                left: 8px;
+                top: 4px;
+                left: 4px;
                 width: 25px;
                 height: 25px;
             }
@@ -3859,3 +3854,92 @@
 	font-size: 14px;
 }
 
+.new-twit{
+	display: flex;
+	flex-direction: row;
+	z-index: 100;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	width: auto;
+    background-color: #3c7fc3;
+	border-radius: 50px;
+}
+
+.new-twit-left-ar{
+	flex: auto;
+	padding: 5px;
+	flex-wrap:nowrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFFFFF;
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+.new-twit-left{
+	flex: auto;
+	padding: 5px;
+	flex-wrap:nowrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.new-twit-right{
+	display: flex;
+	flex: auto;
+	flex-wrap:nowrap;
+	padding: 5px;
+	justify-content: center;
+	align-items: center;
+	color: #FFFFFF;
+	font-size: 14px;
+	
+}
+
+.new-twit-img{
+	width: 30px;
+    height: 30px;
+    object-fit: cover;
+	border-radius: 15px;
+	
+}
+
+.new-twit-img-arae{
+	float: left;
+}
+
+.new-twit-img-arae-2{
+	float: left;
+	margin-left: -15px;
+}
+
+
+@media screen and (max-width: 576px) {
+.new-twit{
+width: 70%;
+}
+	
+	
+.new-twit-right{
+	font-size: 14px;
+}
+
+}
+.iie-info-area{
+	width: 100%;
+	color: #515151;
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+.iie-info{
+	display: inline;
+	width: 20px;
+	margin: 5px 10px 10px 10px;
+}

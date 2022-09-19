@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <title>Muse | Top</title>
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta charset="utf-8">
+    <!-- Icon -->
+    <link rel="shortcut icon" href="assets/img/icon/logo.png">
+    <link rel="apple-touch-icon" href="assets/img/icon/logo.png">
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="popular_artist">
+            <nav class="navbar navbar-light bg-light">
+                <div id="menu-container" class="d-block d-sm-none">
+                    <div id="menu-wrapper">
+                        <div id="hamburger-menu"><span></span><span></span><span></span></div>
+                    </div>
+                </div>
+                <a href="profile.html" class="d-none d-sm-block"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
+                <a href="picture_mode.html"><img src="assets/img/icon/logo.png" alt="logo" class="logo-sp"><img src="assets/img/icon/logo-pc.png" alt="logo" class="logo-pc"></a>
+                <div class="d-none d-sm-block"><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
+                <a href="profile.html" class="d-block d-sm-none"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
+            </nav>
+        </header>
+
+        <div class="pc-left">
+            <ul class="PC-menu">
+                <li class="my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">home</span><span>ホーム</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3 "><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">star_border</span><span>ランキング</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">person_outline</span><span>プロフィール</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">color_lens</span><span>NFT売買</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">category</span><span>NFTコレクション</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">notifications</span><span>通知</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">mail_outline</span><span>メッセージ</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">list_alt</span><span>受注リクエスト</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">published_with_changes</span><span>表示変更</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">post_add</span><span>投稿</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">wallet</span><span>残高振込申請</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">integration_instructions</span><span>ガイドライン</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">local_atm</span><span>NFTについて</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">copyright</span><span>著作権について</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">logout</span><span>ログアウト</span></a></li>
+                <div class="side_down">&nbsp;</div>
+            </ul>
+        </div>
+
+        <sidebar class="d-block d-sm-none">
+            <ul class="menu-list accordion">
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">home</span><span>ホーム</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">star_border</span><span>ランキング</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">person_outline</span><span>プロフィール</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">color_lens</span><span>NFT売買</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">category</span><span>NFTコレクション</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">notifications</span><span>通知</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">mail_outline</span><span>メッセージ</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">list_alt</span><span>受注リクエスト</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">published_with_changes</span><span>表示変更</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3 more_menu">
+                    <label for="menu_bar01"><span class="material-icons-outlined">more_horiz</span><span class="more_text">もっと見る</span></label>
+                    <input type="checkbox" id="menu_bar01" />
+                    <ul id="links01">
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">post_add</span><span>投稿</span></a></li>
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">wallet</span><span>残高振込申請</span></a></li>
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">integration_instructions</span><span>ガイドライン</span></a></li>
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">local_atm</span><span>NFTについて</span></a></li>
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">copyright</span><span>著作権について</span></a></li>
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">logout</span><span>ログアウト</span></a></li>
+                    </ul>
+                </li>
+                <div class="side_down">&nbsp;</div>
+            </ul>
+        </sidebar>
+
+        <div class="pc-center">
+
+            <ul class="horizontal-list mt-3">
+                <a href="ranking.html">
+                    <li class="item ml-2 ranking-icon-box"><img src="assets/img/icon/ranking_01.png" class="ranking-icon" alt="ranking_icon"><br /></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_85053177_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_64747350_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_27669641_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_40272765_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_40855053_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_45010284_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_56091176_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_58266021_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_58642077_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="ranking.html">
+                    <li class="item"><img class="transform-x-reverse border border-dark rounded-circle" src="assets/img/icon/arrow.png" alt="profile" class="rounded-circle"></li>
+                </a>
+            </ul>
+			<div class="container">
+			<div class="post-icon"><a href="post.html"><img src="assets/img/icon/image_post.png" alt=""></a></div>
+			</div>
+			
+            <!--いいね＆リツイートしました。ブロック start-->
+            <div class="timeline-inarea">
+			<!--いいね＆リツイートしました。ブロック end-->
+				
+			<div class="iie-info-area"><img class="iie-info" src="assets/img/icon/iine_on.png">〇●さんがいいね＆リツイートしました。</div>
+			<!--標準ブロック-->	
+                <div class="col-12 pt-1">
+                    <ul class="tweet-area">
+                        <li class="d-flex align-items-start">
+                            <figure>
+                                <a href="./profile.html">
+                                    <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon">
+                                </a>
+                            </figure>
+                            <div class="text-area">
+                                <a href="./profile.html">
+                                    <span>投稿者名</span><br>
+                                </a>
+                                <span class="post-time">2022/04/11 16:00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-image timelile-pro">
+                    <div class="my-2 slid-img swiper swipertum sp-margin">
+                        <div class="swiper-wrapper d-flex align-items-center timeline-in">
+                            <div class="swiper-slide text-right ">
+                                <a id="js-open" href="#" data-image="assets/img/pixta_85053177_M.jpg"><img class="img-fluid mx-auto first-img" src="assets/img/pixta_85053177_M.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="logo-area d-flex bd-highlight icon-margin-top">
+                    <div class="bd-highlight text-nowrap flex-fill bottom-icon-left icon-margin-iine">
+                        <img class="float-left" src="assets/img/icon/iine_on.png" alt="iine">
+                        <p class="mb-1 float-left mx-1 font-weight-bold">400</p>
+                    </div>
+                    <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-tipping">
+                        <img class="float-left" src="assets/img/icon/social_tipping_on.png" alt="social_tipping_on">
+                        <p class="mb-1 float-left font-weight-bold">400円<br />400ETH</p>
+                    </div>
+                    <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-favorite">
+                        <img class="float-left" src="assets/img/icon/favorite_on.png" alt="favorite_on">
+                        <p class="mb-1 float-left mx-1 font-weight-bold">400</p>
+                    </div>
+                    <div class="pl-4 flex-fill text-right pt-1 bottom-icon-right icon-margin-comment_up">
+                        <a class="text-dark" href="post_img_comment.html"><img src="assets/img/icon/comment_up_02.png" alt="コメント"></a>
+                    </div>
+                    <!-- <div class="p-2 bd-highlight col-5"></div>
+        <div class="p-2 bd-highlight col-4 arrow_box">
+            <a href="./post_img_normal_confirmation.html">
+                and more
+            </a>
+        </div> -->
+                </div>
+            </div>
+
+            <!--横長ブロック-->
+            <div class="timeline-inarea">
+                <div class="col-12 pt-1">
+                    <ul class="tweet-area">
+                        <li class="d-flex align-items-start">
+                            <figure>
+                                <a href="./profile.html">
+                                    <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon">
+                                </a>
+                            </figure>
+                            <div class="text-area">
+                                <a href="./profile.html">
+                                    <span>投稿者名</span><br>
+                                </a>
+                                <span class="post-time">2022/04/11 16:00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-image timelile-pro">
+                    <div class="my-2 slid-img swiper swipertum sp-margin">
+                        <div class="swiper-wrapper d-flex align-items-center timeline-in">
+                            <div class="swiper-slide text-right">
+                                <a id="js-open" href="#" data-image="assets/img/pixta_27669641_M.jpg"><img class="img-fluid mx-auto first-img" src="assets/img/pixta_27669641_M.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="logo-area d-flex bd-highlight icon-margin-top">
+                    <div class="bd-highlight text-nowrap flex-fill bottom-icon-left icon-margin-iine">
+                        <img class="float-left" src="assets/img/icon/iine_on.png" alt="iine">
+                        <p class="mb-1 float-left mx-1 font-weight-bold">400</p>
+                    </div>
+                    <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-tipping">
+                        <img class="float-left" src="assets/img/icon/social_tipping_on.png" alt="social_tipping_on">
+                        <p class="mb-1 float-left font-weight-bold">400円<br />400ETH</p>
+                    </div>
+                    <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-favorite">
+                        <img class="float-left" src="assets/img/icon/favorite_on.png" alt="favorite_on">
+                        <p class="mb-1 float-left mx-1 font-weight-bold">400</p>
+                    </div>
+                    <div class="pl-4 flex-fill text-right pt-1 bottom-icon-right icon-margin-comment_up">
+                        <a class="text-dark" href="post_img_comment.html"><img src="assets/img/icon/comment_up_02.png" alt="コメント"></a>
+                    </div>
+                    <!-- <div class="p-2 bd-highlight col-5"></div>
+        <div class="p-2 bd-highlight col-4 arrow_box">
+            <a href="./post_img_normal_confirmation.html">
+                and more
+            </a>
+        </div> -->
+                </div>
+            </div>
+
+
+            <!--2段ブロック-->
+            <div class="timeline-inarea">
+                <div class="col-12 pt-1">
+                    <ul class="tweet-area">
+                        <li class="d-flex align-items-start">
+                            <figure>
+                                <a href="./profile.html">
+                                    <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon">
+                                </a>
+                            </figure>
+                            <div class="text-area">
+                                <a href="./profile.html">
+                                    <span>投稿者名</span><br>
+                                </a>
+                                <span class="post-time">2022/04/11 16:00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-image timelile-pro">
+                    <div class="my-2 slid-img swiper swipertum sp-margin">
+                        <div class="swiper-wrapper d-flex align-items-center timeline-in">
+                            <div class="swiper-slide timeline-2block text-right">
+                                <a id="js-open" href="#" data-image="assets/img/pixta_85053177_M.jpg"><img class="img-fluid mx-auto" src="assets/img/pixta_85053177_M.jpg" /></a>
+                            </div>
+                            <div class="swiper-slide timeline-2block text-right">
+                                <a id="js-open" href="#" data-image="assets/img/pixta_27669641_M.jpg"><img class="img-fluid mx-auto" src="assets/img/pixta_27669641_M.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="logo-area d-flex bd-highlight icon-margin-top">
+                    <div class="bd-highlight text-nowrap flex-fill bottom-icon-left icon-margin-iine">
+                        <img class="float-left" src="assets/img/icon/iine_on.png" alt="iine">
+                        <p class="mb-1 float-left mx-1 font-weight-bold">400</p>
+                    </div>
+                    <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-tipping">
+                        <img class="float-left" src="assets/img/icon/social_tipping_on.png" alt="social_tipping_on">
+                        <p class="mb-1 float-left font-weight-bold">400円<br />400ETH</p>
+                    </div>
+                    <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-favorite">
+                        <img class="float-left" src="assets/img/icon/favorite_on.png" alt="favorite_on">
+                        <p class="mb-1 float-left mx-1 font-weight-bold">400</p>
+                    </div>
+                    <div class="pl-4 flex-fill text-right pt-1 bottom-icon-right icon-margin-comment_up">
+                        <a class="text-dark" href="post_img_comment.html"><img src="assets/img/icon/comment_up_02.png" alt="コメント"></a>
+                    </div>
+                    <!-- <div class="p-2 bd-highlight col-5"></div>
+        <div class="p-2 bd-highlight col-4 arrow_box">
+            <a href="./post_img_normal_confirmation.html">
+                and more
+            </a>
+        </div> -->
+                </div>
+            </div>
+
+
+            <!--3段ブロック-->
+            <div class="timeline-inarea">
+                <div class="my-2 col-12 pt-1">
+                    <ul class="tweet-area">
+                        <li class="d-flex align-items-start">
+                            <figure>
+                                <a href="./profile.html">
+                                    <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon">
+                                </a>
+                            </figure>
+                            <div class="text-area">
+                                <a href="./profile.html">
+                                    <span>投稿者名</span><br>
+                                </a>
+                                <span class="post-time">2022/04/11 16:00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-image timelile-pro">
+                    <div class="slid-img swiper swipertum sp-margin">
+                        <div class="swiper-wrapper d-flex align-items-center timeline-in">
+                            <div class="swiper-slide timeline-3block-up text-right">
+                                <a id="js-open" href="#" data-image="assets/img/pixta_85053177_M.jpg"><img class="img-fluid mx-auto" src="assets/img/pixta_85053177_M.jpg" /></a>
+                            </div>
+                            <div class="swiper-slide timeline-3block-up text-right">
+                                <a id="js-open" href="#" data-image="assets/img/pixta_27669641_M.jpg"><img class="img-fluid mx-auto" src="assets/img/pixta_27669641_M.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slid-img swiper swipertum sp-margin">
+                        <div class="swiper-wrapper d-flex align-items-center timeline-in">
+                            <div class="swiper-slide timeline-3block-down text-right">
+                                <a id="js-open" href="#" data-image="assets/img/pixta_40272765_M.jpg"><img class="img-fluid mx-auto first-img" src="assets/img/pixta_40272765_M.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="logo-area d-flex bd-highlight icon-margin-top">
+                    <div class="bd-highlight text-nowrap flex-fill bottom-icon-left icon-margin-iine">
+                        <img class="float-left" src="assets/img/icon/iine_on.png" alt="iine">
+                        <p class="mb-1 float-left mx-1 font-weight-bold">400</p>
+                    </div>
+                    <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-tipping">
+                        <img class="float-left" src="assets/img/icon/social_tipping_on.png" alt="social_tipping_on">
+                        <p class="mb-1 float-left font-weight-bold">400円<br />400ETH</p>
+                    </div>
+                    <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-favorite">
+                        <img class="float-left" src="assets/img/icon/favorite_on.png" alt="favorite_on">
+                        <p class="mb-1 float-left mx-1 font-weight-bold">400</p>
+                    </div>
+                    <div class="pl-4 flex-fill text-right pt-1 bottom-icon-right icon-margin-comment_up">
+                        <a class="text-dark" href="post_img_comment.html"><img src="assets/img/icon/comment_up_02.png" alt="コメント"></a>
+                    </div>
+                    <!-- <div class="p-2 bd-highlight col-5"></div>
+        <div class="p-2 bd-highlight col-4 arrow_box">
+            <a href="./post_img_normal_confirmation.html">
+                and more
+            </a>
+        </div> -->
+                </div>
+            </div>
+
+
+            <!--4段ブロック-->
+            <div class="timeline-inarea">
+                <div class="my-2 col-12 pt-1">
+                    <ul class="tweet-area">
+                        <li class="d-flex align-items-start">
+                            <figure>
+                                <a href="./profile.html">
+                                    <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon">
+                                </a>
+                            </figure>
+                            <div class="text-area">
+                                <a href="./profile.html">
+                                    <span>投稿者名</span><br>
+                                </a>
+                                <span class="post-time">2022/04/11 16:00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline-image timelile-pro">
+                    <div class="slid-img swiper swipertum sp-margin">
+                        <div class="swiper-wrapper d-flex align-items-center timeline-in">
+                            <div class="swiper-slide timeline-4block-up text-right">
+                                <a id="js-open" href="#" data-image="assets/img/pixta_85053177_M.jpg"><img class="img-fluid mx-auto" src="assets/img/pixta_85053177_M.jpg" /></a>
+                            </div>
+                            <div class="swiper-slide timeline-4block-up text-right">
+                                <a id="js-open" href="#" data-image="assets/img/pixta_85053177_M.jpg"><img class="img-fluid mx-auto" src="assets/img/pixta_27669641_M.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slid-img swiper swipertum sp-margin">
+                        <div class="swiper-wrapper d-flex align-items-center timeline-in">
+                            <div class="swiper-slide timeline-4block text-right">
+                                <a id="js-open" href="#" data-image="assets/img/pixta_40272765_M.jpg"><img class="img-fluid mx-auto" src="assets/img/pixta_40272765_M.jpg" /></a>
+                            </div>
+                            <div class="swiper-slide timeline-4block text-right">
+                                <a id="js-open" href="#" data-image="assets/img/pixta_56091176_M.jpg"><img class="img-fluid mx-auto" src="assets/img/pixta_56091176_M.jpg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="logo-area d-flex bd-highlight icon-margin-top">
+                    <div class="bd-highlight text-nowrap flex-fill bottom-icon-left icon-margin-iine">
+                        <img class="float-left" src="assets/img/icon/iine_on.png" alt="iine">
+                        <p class="mb-1 float-left mx-1 font-weight-bold">400</p>
+                    </div>
+                    <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-tipping">
+                        <img class="float-left" src="assets/img/icon/social_tipping_on.png" alt="social_tipping_on">
+                        <p class="mb-1 float-left font-weight-bold">400円<br />400ETH</p>
+                    </div>
+                    <div class="pl-4 bd-highlight text-nowrap flex-fill icon-margin-favorite">
+                        <img class="float-left" src="assets/img/icon/favorite_on.png" alt="favorite_on">
+                        <p class="mb-1 float-left mx-1 font-weight-bold">400</p>
+                    </div>
+                    <div class="pl-4 flex-fill text-right pt-1 bottom-icon-right icon-margin-comment_up">
+                        <a class="text-dark" href="post_img_comment.html"><img src="assets/img/icon/comment_up_02.png" alt="コメント"></a>
+                    </div>
+                    <!-- <div class="p-2 bd-highlight col-5"></div>
+        <div class="p-2 bd-highlight col-4 arrow_box">
+            <a href="./post_img_normal_confirmation.html">
+                and more
+            </a>
+        </div> -->
+                </div>
+            </div>
+
+            <footer>
+                <nav class="navbar navbar-light bg-light fixed-bottom">
+                    <a href="timeline.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
+                    <a href="post_search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
+                    <a href="post.html"><img src="assets/img/icon/post_blue.png" alt="post"></a>
+                    <div class="notifications">
+                        <a href="notification.html"><img src="assets/img/icon/notification_blue.png" alt="notification"></a>
+                        <p class="unread-count rounded-circle">2000</p>
+                    </div>
+                    <div class="messages">
+                        <a href="message.html"><img src="assets/img/icon/message_blue.png" alt="message"></a>
+                        <p class="unread-count top-left rounded-circle">2000</p>
+                    </div>
+                </nav>
+            </footer>
+        </div>
+        <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-center">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="mt-2 mb-2 mx-auto">
+                        <img class="modal_image" id="pickup_image" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="PC-right">
+            <div class="search_main">
+                <div class="search_box">
+                    <form action="#" method="get">
+                        <input type="text" placeholder="キーワード検索">
+                        <input type="hidden" name="f" value="A" />
+                    </form>
+                </div>
+            </div>
+
+            <div class="trande-art-area">
+                <span class="trande-art-area-title">トレンドアート</span>
+                <div class="trande-art-area-in">
+                    <ul class="tweet-area">
+                        <li class="d-flex align-items-start">
+                            <a href="./profile.html">
+                                <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon-trande">
+                            </a>
+                            <div class="text-area-trande">
+                                <a href="./profile.html">
+                                    <span>投稿者名</span><br>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="post_img_comment.html"><img class="img-fluid mx-auto" src="assets/img/pixta_85053177_M.jpg" /></a>
+                    <div class="trande-art-area-price">￥00,000</div>
+                </div>
+
+                <div class="trande-art-area-in">
+                    <ul class="tweet-area">
+                        <li class="d-flex align-items-start">
+                            <a href="./profile.html">
+                                <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon-trande">
+                            </a>
+                            <div class="text-area-trande">
+                                <a href="./profile.html">
+                                    <span>投稿者名</span><br>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="post_img_comment.html"><img class="img-fluid mx-auto" src="assets/img/pixta_85053177_M.jpg" /></a>
+                    <div class="trande-art-area-price">￥00,000</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	
+<!-- 新規ツイートモーダル -->
+	<div class="new-twit">
+    <div class="new-twit-left-ar">↑</div>		
+	<div class="new-twit-left">
+	<div class="new-twit-img-arae"><img src="assets/img/pixta_64747350_M.jpg" class="new-twit-img" /></div>
+	<div class="new-twit-img-arae-2"><img src="assets/img/pixta_45010284_M.jpg" class="new-twit-img" /></div>
+	<div class="new-twit-img-arae-2"><img src="assets/img/pixta_85053177_M.jpg" class="new-twit-img" /></div>
+	</div>
+	<div class="new-twit-right">ツイートしました。</div>
+	</div>
+	
+	
+</body>
+
+<!-- Optional JavaScript -->
+<!-- jQuery -->
+<script src="assets/js/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="assets/js/swiper-bundle.min.js"></script>
+
+<script src="js/muse.js"></script>
+
+</html>
