@@ -2168,3 +2168,67 @@ $(function() {
         $(this).toggleClass('active');
     });
 });
+
+$(function() {
+    var words = [
+        { label: "北海道", kana: "ほっかいどう" },
+        { label: "青森県", kana: "あおもりけん" },
+        { label: "岩手県", kana: "いわてけん" },
+        { label: "宮城県", kana: "みやぎけん" },
+        { label: "秋田県", kana: "あきたけん" },
+        { label: "山形県", kana: "やまがたけん" },
+        { label: "福島県", kana: "ふくしまけん" },
+        { label: "茨城県", kana: "いばらきけん" },
+        { label: "栃木県", kana: "とちぎけん" },
+        { label: "群馬県", kana: "ぐんまけん" },
+        { label: "埼玉県", kana: "さいたまけん" },
+        { label: "千葉県", kana: "ちばけん" },
+        { label: "東京都", kana: "とうきょうと" },
+        { label: "神奈川県", kana: "かながわけん" },
+        { label: "新潟県", kana: "にいがたけん" },
+        { label: "富山県", kana: "とやまけん" },
+        { label: "石川県", kana: "いしかわけん" },
+        { label: "福井県", kana: "ふくいけん" },
+        { label: "山梨県", kana: "やまなしけん" },
+        { label: "長野県", kana: "ながのけん" },
+        { label: "岐阜県", kana: "ぎふけん" },
+        { label: "静岡県", kana: "しずおかけん" },
+        { label: "愛知県", kana: "あいちけん" },
+        { label: "三重県", kana: "みえけん" },
+        { label: "滋賀県", kana: "しがけん" },
+        { label: "京都府", kana: "きょうとふ" },
+        { label: "大阪府", kana: "おおさかふ" },
+        { label: "兵庫県", kana: "ひょうごけん" },
+        { label: "奈良県", kana: "ならけん" },
+        { label: "和歌山県", kana: "わかやまけん" },
+        { label: "鳥取県", kana: "とっとりけん" },
+        { label: "島根県", kana: "しまねけん" },
+        { label: "岡山県", kana: "おかやまけん" },
+        { label: "広島県", kana: "ひろしまけん" },
+        { label: "山口県", kana: "やまぐちけん" },
+        { label: "徳島県", kana: "とくしまけん" },
+        { label: "香川県", kana: "かがわけん" },
+        { label: "愛媛県", kana: "えひめけん" },
+        { label: "高知県", kana: "こうちけん" },
+        { label: "福岡県", kana: "ふくおかけん" },
+        { label: "佐賀県", kana: "さがけん" },
+        { label: "長崎県", kana: "ながさきけん" },
+        { label: "熊本県", kana: "くまもとけん" },
+        { label: "大分県", kana: "おおいたけん" },
+        { label: "宮崎県", kana: "みやざきけん" },
+        { label: "鹿児島県", kana: "かごしまけん" },
+        { label: "沖縄県", kana: "おきなわけん" }
+    ];
+    $("#dm_user").autocomplete({
+        source: function(request, response) {
+            var list = [];
+            list = words.filter(function(word) {
+                return (
+                    word.label.indexOf(request.term) === 0 ||
+                    word.kana.indexOf(request.term) === 0
+                );
+            });
+            response(list);
+        }
+    });
+});

@@ -19,118 +19,123 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 </head>
 
 <body>
-	<div class="wrap">
-    <header class="popular_artist">
-        <nav class="navbar navbar-light bg-light">
-            <div id="menu-container" class="d-block d-sm-none">
-                <div id="menu-wrapper">
-                    <div id="hamburger-menu"><span></span><span></span><span></span></div>
+    <div class="wrap">
+        <header class="popular_artist">
+            <nav class="navbar navbar-light bg-light">
+                <div id="menu-container" class="d-block d-sm-none">
+                    <div id="menu-wrapper">
+                        <div id="hamburger-menu"><span></span><span></span><span></span></div>
+                    </div>
                 </div>
-            </div>
-            <a href="profile.html" class="d-none d-sm-block"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
-            <a href="picture_mode.html"><img src="assets/img/icon/logo.png" alt="logo" class="logo-sp"><img src="assets/img/icon/logo-pc.png" alt="logo" class="logo-pc"></a>
-            <div class="d-none d-sm-block"><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
-            <a href="profile.html" class="d-block d-sm-none"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
-        </nav>
-    </header>
+                <a href="profile.html" class="d-none d-sm-block"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
+                <a href="picture_mode.html"><img src="assets/img/icon/logo.png" alt="logo" class="logo-sp"><img src="assets/img/icon/logo-pc.png" alt="logo" class="logo-pc"></a>
+                <div class="d-none d-sm-block"><img src="assets/img/icon/picture_blue.png" alt="change" data-toggle="modal" class="change-logo"></div>
+                <a href="profile.html" class="d-block d-sm-none"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></a>
+            </nav>
+        </header>
 
-    <div class="pc-left">
-        <ul class="PC-menu">
-            <li class="my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">home</span><span>ホーム</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3 "><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">star_border</span><span>ランキング</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">person_outline</span><span>プロフィール</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">color_lens</span><span>NFT売買</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">category</span><span>NFTコレクション</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">notifications</span><span>通知</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">mail_outline</span><span>メッセージ</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">list_alt</span><span>受注リクエスト</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">published_with_changes</span><span>表示変更</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">post_add</span><span>投稿</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">wallet</span><span>残高振込申請</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">integration_instructions</span><span>ガイドライン</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">local_atm</span><span>NFTについて</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">copyright</span><span>著作権について</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">logout</span><span>ログアウト</span></a></li>
-            <div class="side_down">&nbsp;</div>
-        </ul>
-    </div>
+        <div class="pc-left">
+            <ul class="PC-menu">
+                <li class="my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">home</span><span>ホーム</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3 "><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">star_border</span><span>ランキング</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">person_outline</span><span>プロフィール</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">color_lens</span><span>NFT売買</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">category</span><span>NFTコレクション</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">notifications</span><span>通知</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">mail_outline</span><span>メッセージ</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">list_alt</span><span>受注リクエスト</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">published_with_changes</span><span>表示変更</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">post_add</span><span>投稿</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">wallet</span><span>残高振込申請</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">integration_instructions</span><span>ガイドライン</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">local_atm</span><span>NFTについて</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">copyright</span><span>著作権について</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">logout</span><span>ログアウト</span></a></li>
+                <div class="side_down">&nbsp;</div>
+            </ul>
+        </div>
 
-    <sidebar class="d-block d-sm-none">
-        <ul class="menu-list accordion">
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">home</span><span>ホーム</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">star_border</span><span>ランキング</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">person_outline</span><span>プロフィール</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">color_lens</span><span>NFT売買</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">category</span><span>NFTコレクション</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">notifications</span><span>通知</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">mail_outline</span><span>メッセージ</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">list_alt</span><span>受注リクエスト</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">published_with_changes</span><span>表示変更</span></a></li>
-            <li class="toggle accordion-toggle side_mar my-3 more_menu">
-                <label for="menu_bar01"><span class="material-icons-outlined">more_horiz</span><span class="more_text">もっと見る</span></label>
-                <input type="checkbox" id="menu_bar01" />
-                <ul id="links01">
-                    <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">post_add</span><span>投稿</span></a></li>
-                    <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">wallet</span><span>残高振込申請</span></a></li>
-                    <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">integration_instructions</span><span>ガイドライン</span></a></li>
-                    <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">local_atm</span><span>NFTについて</span></a></li>
-                    <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">copyright</span><span>著作権について</span></a></li>
-                    <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">logout</span><span>ログアウト</span></a></li>
-                </ul>
-            </li>
-            <div class="side_down">&nbsp;</div>
-        </ul>
-    </sidebar>
+        <sidebar class="d-block d-sm-none">
+            <ul class="menu-list accordion">
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">home</span><span>ホーム</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">star_border</span><span>ランキング</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">person_outline</span><span>プロフィール</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">color_lens</span><span>NFT売買</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">category</span><span>NFTコレクション</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">notifications</span><span>通知</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">mail_outline</span><span>メッセージ</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">list_alt</span><span>受注リクエスト</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">published_with_changes</span><span>表示変更</span></a></li>
+                <li class="toggle accordion-toggle side_mar my-3 more_menu">
+                    <label for="menu_bar01"><span class="material-icons-outlined">more_horiz</span><span class="more_text">もっと見る</span></label>
+                    <input type="checkbox" id="menu_bar01" />
+                    <ul id="links01">
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">post_add</span><span>投稿</span></a></li>
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">wallet</span><span>残高振込申請</span></a></li>
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">integration_instructions</span><span>ガイドライン</span></a></li>
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">local_atm</span><span>NFTについて</span></a></li>
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">copyright</span><span>著作権について</span></a></li>
+                        <li class="toggle accordion-toggle side_mar my-3"><a href="#" class="py-0 pl-4"><span class="material-icons-outlined">logout</span><span>ログアウト</span></a></li>
+                    </ul>
+                </li>
+                <div class="side_down">&nbsp;</div>
+            </ul>
+        </sidebar>
 
-    <div class="pc-center">
-        <ul class="horizontal-list mt-3">
-			<a href="ranking.html">
-            <li class="ranking-icon-box"><img src="assets/img/icon/ranking_01.png" class="ranking-icon" alt="ranking_icon"><br /></li>
-			</a>
-            <a href="profile.html">
-                <li class="item"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></li>
-            </a>
-            <a href="profile.html">
-                <li class="item"><img src="assets/img/pixta_85053177_M.jpg" alt="profile" class="rounded-circle"></li>
-            </a>
-            <a href="profile.html">
-                <li class="item"><img src="assets/img/pixta_64747350_M.jpg" alt="profile" class="rounded-circle"></li>
-            </a>
-            <a href="profile.html">
-                <li class="item"><img src="assets/img/pixta_27669641_M.jpg" alt="profile" class="rounded-circle"></li>
-            </a>
-            <a href="profile.html">
-                <li class="item"><img src="assets/img/pixta_40272765_M.jpg" alt="profile" class="rounded-circle"></li>
-            </a>
-            <a href="profile.html">
-                <li class="item"><img src="assets/img/pixta_40855053_M.jpg" alt="profile" class="rounded-circle"></li>
-            </a>
-            <a href="profile.html">
-                <li class="item"><img src="assets/img/pixta_45010284_M.jpg" alt="profile" class="rounded-circle"></li>
-            </a>
-            <a href="profile.html">
-                <li class="item"><img src="assets/img/pixta_56091176_M.jpg" alt="profile" class="rounded-circle"></li>
-            </a>
-            <a href="profile.html">
-                <li class="item"><img src="assets/img/pixta_58266021_M.jpg" alt="profile" class="rounded-circle"></li>
-            </a>
-            <a href="profile.html">
-                <li class="item"><img src="assets/img/pixta_58642077_M.jpg" alt="profile" class="rounded-circle"></li>
-            </a>
-            <a href="ranking.html">
-                <li class="item"><img class="transform-x-reverse border border-dark rounded-circle" src="assets/img/icon/arrow.png" alt="profile" class="rounded-circle"></li>
-            </a>
-        </ul>
+        <div class="pc-center">
+            <ul class="horizontal-list mt-3">
+                <a href="ranking.html">
+                    <li class="ranking-icon-box"><img src="assets/img/icon/ranking_01.png" class="ranking-icon" alt="ranking_icon"><br /></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/icon/profile.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_85053177_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_64747350_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_27669641_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_40272765_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_40855053_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_45010284_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_56091176_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_58266021_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="profile.html">
+                    <li class="item"><img src="assets/img/pixta_58642077_M.jpg" alt="profile" class="rounded-circle"></li>
+                </a>
+                <a href="ranking.html">
+                    <li class="item"><img class="transform-x-reverse border border-dark rounded-circle" src="assets/img/icon/arrow.png" alt="profile" class="rounded-circle"></li>
+                </a>
+            </ul>
 
-    <div class="container pt-2">
-    <form method="POST">
-        <div class="container message-show-area" id="message_show_area">
-            <div class="form-group col-12 px-0 my-2">
-                <!-- ユーザー指定がない場合 -->
-                <select class="shadow-none form-control form-control-sm col-12 col-md-6 col-lg-6 mb-2">
+            <div class="container pt-2">
+                <form method="POST">
+                    <div class="container message-show-area" id="message_show_area">
+						<div class="dm_user_box">
+						<input id="dm_user" placeholder="ユーザー名を入力してください" >
+						</div>
+                        <div class="form-group col-12 px-0 my-2">
+                            <!-- ユーザー指定がない場合 -->
+                            <select class="shadow-none form-control form-control-sm col-12 col-md-6 col-lg-6 mb-2">
                     <option value="" selected>ユーザーを選択して下さい</option>
                     <option value="user1">ユーザー1</option>
                     <option value="user2">ユーザー2</option>
@@ -138,200 +143,197 @@
                     <option value="user4">ユーザー4</option>
                     <option value="user5">ユーザー5</option>
                 </select>
-            </div>
-            <!-- ユーザー指定がある場合 -->
-            <!--div class="font-weight-bold title border-bottom-solid mt-4">
+                        </div>
+                        <!-- ユーザー指定がある場合 -->
+                        <!--div class="font-weight-bold title border-bottom-solid mt-4">
                 テストユーザー
                 <input type="hidden" name="user_id" value="8" wtx-context="4C293744-6AAE-4895-9E4D-551C00D5FF73">
             </div-->
-            <div class="row mb-5 pb-3">
-			<!--メッセージブロック start -->
-                <div class="d-flex col-12 justify-content-center">
-                    <div class="main-color font-weight-bold text-white text-center rounded-pill small w-25 mt-4">
-                        4/12
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="balloon_l">
-                        <div class="faceicon">
-                            <img src="assets/img/pixta_40272765_M.jpg" alt="" class="rounded-circle">
-                            <div class="ml-xl-4 ml-1">
-                                08:45
+                        <div class="row mb-5 pb-3">
+                            <!--メッセージブロック start -->
+                            <div class="d-flex col-12 justify-content-center">
+                                <div class="main-color font-weight-bold text-white text-center rounded-pill small w-25 mt-4">
+                                    4/12
+                                </div>
                             </div>
-                        </div>
-                        <p class="says">左側の吹き出し左側の吹き出し左側の吹き出し左側の吹き出し
-                            左側の吹き出し左側の吹き出し
-                        </p>
-                    </div>
-                </div>
-			<!--メッセージブロック end -->
-			<!--メッセージブロック start -->
-                <div class="col-12">
-                    <div class="balloon_r">
-                        <div class="faceicon">
-                            <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle" alt="">
-                            <div class="ml-xl-4 ml-1">
-                                08:50
+                            <div class="col-12">
+                                <div class="balloon_l">
+                                    <div class="faceicon">
+                                        <img src="assets/img/pixta_40272765_M.jpg" alt="" class="rounded-circle">
+                                        <div class="ml-xl-4 ml-1">
+                                            08:45
+                                        </div>
+                                    </div>
+                                    <p class="says">左側の吹き出し左側の吹き出し左側の吹き出し左側の吹き出し 左側の吹き出し左側の吹き出し
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="says">
-                            <p>右側の吹き出し</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex col-12 justify-content-center">
-                    <div class="main-color font-weight-bold text-white text-center rounded-pill small w-25 mt-4">
-                        4/14
-                    </div>
-                </div>
-			<!--メッセージブロック end -->
-			<!--メッセージブロック start -->				
-                <div class="col-12">
-                    <div class="balloon_l">
-                        <div class="faceicon">
-                            <img src="assets/img/pixta_40272765_M.jpg" alt="" class="rounded-circle">
-                            <div class="ml-xl-4 ml-1">
-                                08:45
+                            <!--メッセージブロック end -->
+                            <!--メッセージブロック start -->
+                            <div class="col-12">
+                                <div class="balloon_r">
+                                    <div class="faceicon">
+                                        <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle" alt="">
+                                        <div class="ml-xl-4 ml-1">
+                                            08:50
+                                        </div>
+                                    </div>
+                                    <div class="says">
+                                        <p>右側の吹き出し</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <p class="says">左側の吹き出し左側の吹き出し左側の吹き出し左側の吹き出し
-                            左側の吹き出し左側の吹き出し
-                        </p>
-                    </div>
-                </div>
-			<!--メッセージブロック end -->
-			<!--メッセージブロック start -->
-                <div class="col-12">
-                    <div class="balloon_r">
-                        <div class="faceicon">
-                            <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle" alt="">
-                            <div class="ml-xl-4 ml-1">
-                                08:50
+                            <div class="d-flex col-12 justify-content-center">
+                                <div class="main-color font-weight-bold text-white text-center rounded-pill small w-25 mt-4">
+                                    4/14
+                                </div>
                             </div>
-                        </div>
-                        <div class="says">
-                            <p>右側の吹き出し</p>
-                        </div>
-                    </div>
-                </div>
-			<!--メッセージブロック end -->
-			<!--メッセージブロック start -->
-                <div class="col-12">
-                    <div class="balloon_r">
-                        <div class="faceicon">
-                            <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle" alt="">
-                            <div class="ml-xl-4 ml-1">
-                                08:50
+                            <!--メッセージブロック end -->
+                            <!--メッセージブロック start -->
+                            <div class="col-12">
+                                <div class="balloon_l">
+                                    <div class="faceicon">
+                                        <img src="assets/img/pixta_40272765_M.jpg" alt="" class="rounded-circle">
+                                        <div class="ml-xl-4 ml-1">
+                                            08:45
+                                        </div>
+                                    </div>
+                                    <p class="says">左側の吹き出し左側の吹き出し左側の吹き出し左側の吹き出し 左側の吹き出し左側の吹き出し
+                                    </p>
+                                </div>
                             </div>
+                            <!--メッセージブロック end -->
+                            <!--メッセージブロック start -->
+                            <div class="col-12">
+                                <div class="balloon_r">
+                                    <div class="faceicon">
+                                        <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle" alt="">
+                                        <div class="ml-xl-4 ml-1">
+                                            08:50
+                                        </div>
+                                    </div>
+                                    <div class="says">
+                                        <p>右側の吹き出し</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--メッセージブロック end -->
+                            <!--メッセージブロック start -->
+                            <div class="col-12">
+                                <div class="balloon_r">
+                                    <div class="faceicon">
+                                        <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle" alt="">
+                                        <div class="ml-xl-4 ml-1">
+                                            08:50
+                                        </div>
+                                    </div>
+                                    <img src="assets/img/pixta_64747350_M.jpg" class="post-image result">
+                                </div>
+                            </div>
+                            <!--メッセージブロック end -->
                         </div>
-                        <img src="assets/img/pixta_64747350_M.jpg" class="post-image result">
-                    </div>
-                </div>
-			<!--メッセージブロック end -->
-            </div>
 
-            <div class="row text-center message-create" style="margin-left: 10%;">
-                <div class="col-9">
-                    <textarea name="" rows="3" id="chat_input" class="border border-0"></textarea>
-                </div>
-                <div class="col-2 icon-area">
-                    <div>
-                        <label>
+                        <div class="row text-center message-create" style="margin-left: 10%;">
+                            <div class="col-9">
+                                <textarea name="" rows="3" id="chat_input" class="border border-0"></textarea>
+                            </div>
+                            <div class="col-2 icon-area">
+                                <div>
+                                    <label>
                             <input type="file" name="file" accept="image/png, image/jpeg" id="messages_file_input">
                             <img src="assets/img/icon/image_upload.png" class="camera" alt="camera">
                         </label>
-                    </div>
-                    <label>
+                                </div>
+                                <label>
                         <input type="image" name="btn_confirm" src="assets/img/icon/send.png" class="send" alt="send"
                             id="chat_button">
                     </label>
-                </div>
-            </div>
-            <!-- 画像投稿時のモーダル -->
-            <div class="modal">
-                <div class="text-center title">
-                    投稿画像確認
-                </div>
-                <div class="bigimg"><img src="" alt="bigimg"></div>
-                <p class="close-btn"><a href="">✖</a></p>
-                <button type="submit"
-                    class="btn btn-primary rounded-pill btn-sm text-white btn-lg main-color post-image-btn"
-                    id="post_image_btn">投稿する</button>
-            </div>
-        </div>
-    </form>
-    </div>
-
-		
-        <footer>
-            <nav class="navbar navbar-light bg-light fixed-bottom">
-                <a href="timeline.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
-                <a href="post_search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
-                <a href="post.html"><img src="assets/img/icon/post_blue.png" alt="post"></a>
-                <div class="notifications">
-                    <a href="notification.html"><img src="assets/img/icon/notification_blue.png" alt="notification"></a>
-                    <p class="unread-count rounded-circle">2000</p>
-                </div>
-                <div class="messages">
-                    <a href="message.html"><img src="assets/img/icon/message_blue.png" alt="message"></a>
-                    <p class="unread-count top-left rounded-circle">2000</p>
-                </div>
-            </nav>
-        </footer>
-    </div>
-    <div class="PC-right">
-        <div class="search_main">
-            <div class="search_box">
-                <form action="#" method="get">
-                    <input type="text" placeholder="キーワード検索">
-                    <input type="hidden" name="f" value="A" />
+                            </div>
+                        </div>
+                        <!-- 画像投稿時のモーダル -->
+                        <div class="modal">
+                            <div class="text-center title">
+                                投稿画像確認
+                            </div>
+                            <div class="bigimg"><img src="" alt="bigimg"></div>
+                            <p class="close-btn"><a href="">✖</a></p>
+                            <button type="submit" class="btn btn-primary rounded-pill btn-sm text-white btn-lg main-color post-image-btn" id="post_image_btn">投稿する</button>
+                        </div>
+                    </div>
                 </form>
             </div>
-        </div>
 
-        <div class="trande-art-area">
-            <span class="trande-art-area-title">トレンドアート</span>
-            <div class="trande-art-area-in">
-                <ul class="tweet-area">
-                    <li class="d-flex align-items-start">
-                        <a href="./profile.html">
-                            <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon-trande">
-                        </a>
-                        <div class="text-area-trande">
-                            <a href="./profile.html">
-                                <span>投稿者名</span><br>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                <a href="post_img_comment.html"><img class="img-fluid mx-auto" src="assets/img/pixta_85053177_M.jpg" /></a>
-                <div class="trande-art-area-price">￥00,000</div>
+
+            <footer>
+                <nav class="navbar navbar-light bg-light fixed-bottom">
+                    <a href="timeline.html"><img src="assets/img/icon/home_blue_on.png" alt="home"></a>
+                    <a href="post_search.html"><img src="assets/img/icon/search_blue.png" alt="search"></a>
+                    <a href="post.html"><img src="assets/img/icon/post_blue.png" alt="post"></a>
+                    <div class="notifications">
+                        <a href="notification.html"><img src="assets/img/icon/notification_blue.png" alt="notification"></a>
+                        <p class="unread-count rounded-circle">2000</p>
+                    </div>
+                    <div class="messages">
+                        <a href="message.html"><img src="assets/img/icon/message_blue.png" alt="message"></a>
+                        <p class="unread-count top-left rounded-circle">2000</p>
+                    </div>
+                </nav>
+            </footer>
+        </div>
+        <div class="PC-right">
+            <div class="search_main">
+                <div class="search_box">
+                    <form action="#" method="get">
+                        <input type="text" placeholder="キーワード検索">
+                        <input type="hidden" name="f" value="A" />
+                    </form>
+                </div>
             </div>
 
-            <div class="trande-art-area-in">
-                <ul class="tweet-area">
-                    <li class="d-flex align-items-start">
-                        <a href="./profile.html">
-                            <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon-trande">
-                        </a>
-                        <div class="text-area-trande">
+            <div class="trande-art-area">
+                <span class="trande-art-area-title">トレンドアート</span>
+                <div class="trande-art-area-in">
+                    <ul class="tweet-area">
+                        <li class="d-flex align-items-start">
                             <a href="./profile.html">
-                                <span>投稿者名</span><br>
+                                <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon-trande">
                             </a>
-                        </div>
-                    </li>
-                </ul>
-                <a href="post_img_comment.html"><img class="img-fluid mx-auto" src="assets/img/pixta_85053177_M.jpg" /></a>
-                <div class="trande-art-area-price">￥00,000</div>
+                            <div class="text-area-trande">
+                                <a href="./profile.html">
+                                    <span>投稿者名</span><br>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="post_img_comment.html"><img class="img-fluid mx-auto" src="assets/img/pixta_85053177_M.jpg" /></a>
+                    <div class="trande-art-area-price">￥00,000</div>
+                </div>
+
+                <div class="trande-art-area-in">
+                    <ul class="tweet-area">
+                        <li class="d-flex align-items-start">
+                            <a href="./profile.html">
+                                <img src="assets/img/pixta_64747350_M.jpg" class="rounded-circle profile-icon-trande">
+                            </a>
+                            <div class="text-area-trande">
+                                <a href="./profile.html">
+                                    <span>投稿者名</span><br>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="post_img_comment.html"><img class="img-fluid mx-auto" src="assets/img/pixta_85053177_M.jpg" /></a>
+                    <div class="trande-art-area-price">￥00,000</div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </body>
 
 <!-- Optional JavaScript -->
 <!-- jQuery -->
 <script src="assets/js/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <!-- Bootstrap JS -->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <!-- Swiper JS -->

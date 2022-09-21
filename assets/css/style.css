@@ -3943,3 +3943,83 @@ width: 70%;
 	width: 20px;
 	margin: 5px 10px 10px 10px;
 }
+
+#dm_user{
+	border-radius: 20px;
+	border: 2px solid #3c7fc3;
+	outline: none;
+	padding: .25rem .7rem;
+	font-size: 15px;
+	width: 290px;
+	color: #495057;
+	font-weight: 500;
+
+}
+
+.dm_user_box{
+        display: inline-block;
+        position: relative;	
+}
+
+.dm_user_box:after{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f002";
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        right: 25px;
+        color: #cacaca;
+        font-size: 16px;
+}
+
+
+#dm_user:focus{
+	border: 2px solid #80bdff!important;
+}
+
+@media screen and (max-width: 576px) {
+	#dm_user{
+			width: 300px;
+	}
+}
+
+.soro-area{
+		display: flex;
+        width: 100%;
+        flex-flow: wrap;
+        justify-content: space-around;
+        align-items: center;
+}
+
+.edit-btn{
+		display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #3c7fc3;
+		border-radius: 20px;
+		color: #FFFFFF;
+		width: 60px;
+		font-size: 14px;
+		padding: 3px 0px;
+}
+
+		.edit-btn:hover{
+				background-color: #7FAEDD;
+				color: #FFFFFF;
+				text-decoration: none;
+		}
+
+		.edit-area{
+			position: absolute;
+			top:0px;
+			right: 0px;
+		}
+
+		.edit-area-2{
+			position: absolute;
+			top:42px;
+			right: 0px;
+		}
