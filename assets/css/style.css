@@ -4000,9 +4000,9 @@ width: 70%;
         align-items: center;
         background-color: #3c7fc3;
 		border-radius: 20px;
-		color: #FFFFFF;
+		color: #FFFFFF!important;
 		width: 60px;
-		font-size: 14px;
+		font-size: 12px;
 		padding: 3px 0px;
 }
 
@@ -4014,8 +4014,8 @@ width: 70%;
 
 		.edit-area{
 			position: absolute;
-			top:0px;
-			right: 0px;
+			top:16px;
+			right: 10px;
 		}
 
 		.edit-area-2{
