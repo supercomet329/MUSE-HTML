@@ -181,7 +181,7 @@
                     <!-- オークションあり形式フォーム -->
                     <div class="holdauctionSection selectAuctionsection">
                         <div class="col-12">
-                            <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション開始日時（必須）</label>
+                            <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション終了日時（必須）</label>
                         </div>
                         <div class="col-12 row">
                             <div class="col-5 post-radio ml-2">
@@ -190,93 +190,25 @@
                             </div>
                             <div class="col-5 post-radio ml-2">
                                 <label><input type="radio" name="auctionStartDate" value="specify"
-                                        id="specify">開始時間指定</label>
+                                        id="specify">終了日時指定</label>
                             </div>
                         </div>
                         <div id="auction_datetime" class="d-none">
                             <div class="col-12">
-                                <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション開始日時</label>
-                            </div>
-                            <div class="col-12 row mt-1">
-                                <div class="col-4">
-                                    <select class="auction-input" placeholder="yyyy" name="auctionDateY" id="auctionDateY">
-                                    </select>
-                                    <p class="auction-date">年</p>
-                                    <input type="hidden" value="2023" id="setAuctionDateY" />
-                                </div>
-                                <div class="col-4">
-                                    <select class="auction-input" placeholder="mm" name="auctionDateM" id="auctionDateM">
-                                    </select>
-                                    <p class="auction-date">月</p>
-                                    <input type="hidden" value="2" id="setAuctionDateM" />
-                                </div>
-                                <div class="col-4">
-                                    <select class="auction-input" placeholder="dd" name="auctionDateD" id="auctionDateD">
-                                    </select>
-
-                                    <p class="auction-date">日</p>
-                                    <input type="hidden" value="2" id="setAuctionDateD" />
-                                </div>
-
-                            </div>
-                            <div class="col-12 row mt-1">
-                                <div class="col-4">
-                                    <select class="auction-input" placeholder="dd" name="auctionDateD" id="auctionDateH">
-                                    </select>
-                                    <p class="auction-date">時</p>
-                                    <input type="hidden" value="2" id="setAuctionDateH" />
-                                </div>
-                                <div class="col-4">
-                                    <select class="auction-input" placeholder="mm" name="auctionDateMin" id="auctionDateMin">
-                                    </select>
-                                    <p class="auction-date">分</p>
-
-                                    <input type="hidden" value="2" id="setAuctionDateMin" />
-
-                                </div>
-                                <div class="col-4">
-
-                                </div>
-                            </div>
-                            <div class="col-12">
                                 <div class="inputAppDeadline" id="inputAppDeadline"></div>
                             </div>
                             <div class="col-12 mt-3">
-                                <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション終了日時</label>
+                                <label for="auctionStartDate" class="label-text post-input-title mt-4">オークション終了日時設定</label>
                             </div>
                             <div class="col-12 row">
-                                <div class="col-4">
-                                    <select class="auction-input" placeholder="yyyy" name="auctionEndDateY" id="auctionEndDateY">
-                                    </select>
-                                    <p class="auction-date">年</p>
-                                    <input type="hidden" value="2024" id="setAuctionEndDateY" />
-                                </div>
-                                <div class="col-4">
-                                    <select class="auction-input" placeholder="mm" name="auctionEndDateM" id="auctionEndDateM">
-                                    </select>
-                                    <p class="auction-date">月</p>
-                                    <input type="hidden" value="2" id="setAuctionEndDateM" />
-                                </div>
                                 <div class="col-4">
                                     <select class="auction-input" placeholder="dd" name="auctionEndDateD" id="auctionEndDateD">
                                     </select>
-                                    <p class="auction-date">日</p>
-                                    <input type="hidden" value="2" id="setAuctionEndDateD" />
+                                    <p class="auction-date">日後に終了</p>
+                                    <input type="hidden" value="1" id="setAuctionEndDateD" />
                                 </div>
                             </div>
                             <div class="col-12 row">
-                                <div class="col-4">
-                                    <select class="auction-input" placeholder="dd" name="auctionDateD" id="auctionEndDateH">
-                                    </select>
-                                    <p class="auction-date">時</p>
-                                    <input type="hidden" value="2" id="setAuctionEndDateH" />
-                                </div>
-                                <div class="col-4">
-                                    <select class="auction-input" placeholder="mm" name="auctionEndDateMin" id="auctionEndDateMin">
-                                    </select>
-                                    <p class="auction-date">分</p>
-                                    <input type="hidden" value="2" id="setAuctionEndDateMin" />
-                                </div>
                                 <div class="col-4">
                                 </div>
                                 <div class="col-12">

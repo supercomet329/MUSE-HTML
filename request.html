@@ -204,7 +204,16 @@
                 </div>
                 <hr class="request-hr">
                 <div class="col-11">
-                    <input class="form-control request-input request-budget-input" type="number" name="budget" id="budget" placeholder="10000">
+					   <select name="budget" id="budget" class="deadline-input budget-area">
+                            <option value=""></option>
+                            <option value="2022">5千円未満</option>
+                            <option value="2023">5千円～1万円</option>
+                            <option value="2024">1万絵～5万円</option>
+                            <option value="2025">5万円～10万円</option>
+                            <option value="2026">10万円～30万円</option>
+                            <option value="2027">30万円～50万円</option>
+                            <option value="2028">50万円以上</option>
+                        </select>
                     <div class="request-budget-jpy">
                         円～
                     </div>
@@ -218,82 +227,20 @@
                 <hr class="request-hr mb-2">
                 <div class="col-12 row">
                     <div class="col-4">
-                        <select name="appDeadlineY" id="appDeadlineY" class="deadline-input">
-                            <option value=""></option>
-                            <option value="2022">2022</option>
-                            <option value="2023">2023</option>
-                            <option value="2024">2024</option>
-                            <option value="2025">2025</option>
-                            <option value="2026">2026</option>
-                            <option value="2027">2027</option>
-                            <option value="2028">2028</option>
-                            <option value="2029">2029</option>
-                            <option value="2030">2030</option>
-                        </select>
-
-                        <p class="deadline-date">年</p>
-                    </div>
-                    <div class="col-4">
-                        <select name="appDeadlineM" id="appDeadlineM" class="deadline-input">
-                            <option value=""></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                        </select>
-                        <p class="deadline-date">月</p>
-                    </div>
-                    <div class="col-4">
                         <select name="appDeadlineD" id="appDeadlineD" class="deadline-input">
-                            <option value=""></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option value="24">24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
+                            <option value="1週間">1週間</option>
+                            <option value="2週間" selected>2週間</option>
+                            <option value="3週間">3週間</option>
+                            <option value="4週間">4週間</option>
+                            <option value="5週間">5週間</option>
                         </select>
-                        <p class="deadline-date">日</p>
                     </div>
                 </div>
                 <div class="col-12 mb-4">
                     <div class="inputAppDeadline" id="inputAppDeadline"></div>
                 </div>
                 <div class="col-12 mt-2">
-                    <h1 class="text-left font-weight-bold request-title">納品希望日（任意）</h1>
+                    <h1 class="text-left font-weight-bold request-title">納品希望日（必須）</h1>
                 </div>
                 <hr class="request-hr mb-2">
                 <div class="col-12 pb-4 row">
